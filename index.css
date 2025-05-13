@@ -7,7 +7,7 @@ button {
     width: auto;
     overflow: visible;
 
-    background: transparent;
+    background: none;
 
     /* inherit font & color from ancestor */
     color: inherit;
