@@ -124,7 +124,7 @@ function createQuiz(quiz) {
         buttons.appendChild(showAnswerButton);
 
         nextButton.addEventListener('click', () => {
-            for(let questionElement of questionElements) {
+            for(let questionElement of questionsContainer.children) {
                 if(questionElement.classList.contains('hidden')) {
                     questionElement.classList.add('hidden');
 
