@@ -1,4 +1,4 @@
-### Relationale Algebra
+## Relationale Algebra
 ###### Selektion
 $sigma_(A = 'abc')(S)"$
 ###### Projektion
