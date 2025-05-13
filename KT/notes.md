@@ -492,3 +492,9 @@ v
 
 > [!toquiz]- Wie funktioniert DNS?
 
+> [!toquiz]- Wie funktioniert Port-basiertes NAT?
+
+> [!toquiz]- Welches Problem löst NAT?
+
+> [!toquiz]- Wie funktioniert DHCP? Wieso hat es so viele ACKS etc?
+
