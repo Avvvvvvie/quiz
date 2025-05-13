@@ -166,7 +166,7 @@ function createQuiz(quiz) {
         doneElement.className = 'done';
         doneElement.textContent = 'Good job :)';
         doneElement.classList.add('hidden');
-        quizContainer.appendChild(doneElement);
+        questionsContainer.appendChild(doneElement);
 
         questionsContainer.children[0].classList.remove('hidden');
         main.appendChild(quizContainer);

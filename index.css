@@ -64,3 +64,12 @@ li {
 .hidden {
     display: none;
 }
+
+.buttons {
+    display: flex;
+    margin: -0.5rem;
+}
+
+.buttons > * {
+    margin: 0.5rem;
+}
