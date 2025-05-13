@@ -1066,8 +1066,7 @@ String.prototype.trim = function() {
     return this.replace(/^\s+|\s+$/g, "");
 };
 
-var katex = require('katex');
-var assign = require("lodash.assign");
+var assign = lodash.assign;
 var defaults = {
     useKeyword: false
 }
