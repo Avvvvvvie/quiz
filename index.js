@@ -87,10 +87,12 @@ function createQuiz(quiz) {
     getQuiz(quiz, (questions) => {
         let quizContainer = document.createElement('div');
         quizContainer.className = 'quiz-container';
+        questionElements = [];
         questions.forEach((question) => {
             let questionElement = document.createElement('div');
             questionElement.className = 'question';
             quizContainer.appendChild(questionElement);
+            questionElement.classList.add('hidden');
 
             let title = renderMarkdown(question.title);
             title.className = 'question-title';
@@ -100,13 +102,26 @@ function createQuiz(quiz) {
             answer.className = 'question-answer';
             questionElement.appendChild(answer);
 
+            let nextButton = document.createElement('button');
+            nextButton.textContent = 'Next Question';
+            nextButton.classList.add('hidden');
+            nextButton.addEventListener('click', () => {
+                questionElement.classList.add('hidden');
+                let nextElement = questionElement.nextElementSibling;
+                nextElement.classList.remove('hidden');
+            });
+
             let showAnswerButton = document.createElement('button');
             showAnswerButton.textContent = 'Show Answer';
             showAnswerButton.addEventListener('click', () => {
-                answer.classList.toggle('hidden');
+                answer.classList.add('hidden');
+                nextButton.classList.remove('hidden');
             });
+
             questionElement.appendChild(showAnswerButton);
+            questionElements.push(questionElement);
         });
+        questionElements[0].classList.remove('hidden');
         main.appendChild(quizContainer);
         let backButton = document.createElement('button');
         backButton.textContent = 'Back';
