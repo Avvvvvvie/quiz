@@ -1,9 +1,7 @@
 
 > [!info]- Wie sieht eine geometrische Reihe aus?
-> $$
-> c ** q^(n-1)
-> a_(n-1) q
-> $$
+> $c ** q^(n-1)$
+> $a_(n-1) q$
 
 > [!info]- Wie sieht eine arithmetische Reihe aus?
 > $c + (n-1) \cdot d$
@@ -15,27 +13,17 @@
 > - aufzählende Darstellung: 1,2,3...
 
 > [!info]- Wie berechnet man Sn einer Reihe mit a1 und q?
-> $$
-> \begin{flalign*}
-> &Arithmetisch: S_n = a_1 \cdot n + \frac{n \cdot (n - 1)}{2} \cdot d = \frac{a_{1} + a_{n}}{2} \cdot d&\\
-> &Geometrisch: S_n = a_{1} \cdot \frac{q^n - 1}{q - 1}&\\
-> \end{flalign*}
-> $$
+> Arithmetisch: $S_n = a_1 \cdot n + \frac{n \cdot (n - 1)}{2} \cdot d = \frac{a_{1} + a_{n}}{2} \cdot d$
+> Geometrisch: $S_n = a_{1} \cdot \frac{q^n - 1}{q - 1}$
 
 > [!info]- Wie lautet die Produkteregel beim Ableiten?
-> $$
-> (f(x) \cdot g(x))' = f'(x) \cdot g(x) + f(x) \cdot g'(x)
-> $$
+> $(f(x) \cdot g(x))' = f'(x) \cdot g(x) + f(x) \cdot g'(x)$
 
 > [!info]- Wie lautet die Quotientenregel beim Ableiten?
-> $$
-> \left( \frac{f(x)}{g(x)} \right)' = \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{g(x)^2}
-> $$
+> $\left( \frac{f(x)}{g(x)} \right)' = \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{g(x)^2}$
 
 > [!info]- Wie lautet die Kettenregel beim Ableiten?
-> $$
-> f'(x) = (F(g(x)))' = F'(g(x)) \cdot g'(x)
-> $$
+> $f'(x) = (F(g(x)))' = F'(g(x)) \cdot g'(x)$
 
 > [!info]- Was ist eine gerade Funktion?
 > f(-x) = f(x)

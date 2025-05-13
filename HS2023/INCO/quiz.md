@@ -104,19 +104,13 @@
 > Discrete memoryless source und binary memoryless source.
 
 > [!info]- Wie berechnet man den Informationsgehalt I eines Ereignisses?
-> $$
-> \log_{2}(P(n))
-> $$
+> $\log_{2}(P(n))$
 
 > [!info]- Wie berechnet man den mittleren Informationsgehalt = die Entropie H einer Quelle?
-> $$
-> \sum P(n)\cdot \log_{2}\left( \frac{1}{P(n)} \right)
-> $$
+> $\sum P(n)\cdot \log_{2}( \frac{1}{P(n)})$
 
 > [!info]- Wie berechnet man die mittlere Länge L eines Codes?
-> $$
-> \sum P(n)\cdot l_{n}
-> $$
+> $\sum P(n)\cdot l_{n}$
 
 > [!info]- Wie berechnet man die Redundanz R?
 > L - H
