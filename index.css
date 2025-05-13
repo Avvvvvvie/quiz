@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: 1px #d0d0d0 solid;
+    border-radius: 1rem;
+}
+
+main {
+    display: flex;
+    max-width: 15rem;
+    font-family: monospace;
+}
+
+ul {
+
+}
+
+li {
+    list-style: none;
+}
+
+.quiz-list {
+
+}
+
+.quiz-item:hover, button:hover {
+    background-color: #d0d0d0;
+    transition: background-color .3s;
+}
+
+.quiz-container {
+
+}
+
+.question {
+
+}
+
+.question-title {
+
+}
+
+.question-answer {
+
+}
