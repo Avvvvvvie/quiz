@@ -15,7 +15,7 @@ function getQuizzes(callback) {
 
 function getQuiz(quiz, callback) {
     readFile(quiz, (text) => {
-        let questions = parseQuiz(text);
+        let questions = parseAnsweredQuiz(text);
         callback(questions);
     });
 }
@@ -28,7 +28,7 @@ function parseUnansweredQuiz(text) {
     return parseQuiz(text, 'toquiz');
 }
 
-function parseQuiz(test, type = 'quiz') {
+function parseQuiz(text, type = 'quiz') {
     let lines = text.split('\n');
     let questions = [];
     let inQuestion = false;

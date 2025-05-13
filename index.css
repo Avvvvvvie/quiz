@@ -33,6 +33,7 @@ li {
 }
 
 .quiz-item:hover, button:hover {
+    cursor: pointer;
     background-color: #d9e9ea;
     transition: background-color .3s;
 }
