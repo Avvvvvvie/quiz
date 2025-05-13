@@ -56,7 +56,7 @@ function parseQuiz(text, type = 'quiz') {
 function renderMarkdown(text) {
     let md = markdownit();
     let container = document.createElement('div');
-    container.innerHTML = md.renderInline(text);
+    container.innerHTML = md.render(text);
     return container;
 }
 
