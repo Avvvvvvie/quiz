@@ -21,14 +21,14 @@ function getQuiz(path, callback, type) {
 }
 
 function getAnsweredQuiz(path, callback) {
-    return getQuiz(path, callback, 'quiz');
+    return getQuiz(path, callback, 'info');
 }
 
 function getUnansweredQuiz(path, callback) {
-    return getQuiz(path, callback, 'toquiz');
+    return getQuiz(path, callback, 'question');
 }
 
-function parseQuiz(text, type = 'quiz') {
+function parseQuiz(text, type) {
     let lines = text.split('\n');
     let questions = [];
     let inQuestion = false;

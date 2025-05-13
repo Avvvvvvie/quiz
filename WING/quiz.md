@@ -8,17 +8,17 @@ zweck - nutzen - tägliches
 dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nicht rohnrbruch
 
 
-> [!quiz]- Was gibt es für Handlungsebenen des Managements?
+> [!info]- Was gibt es für Handlungsebenen des Managements?
 > 1. Normatives Management
 > 2. Strategisches Management
 > 3. Operatives Management
 
-> [!quiz]- Was ist das Optimumsprinzip?
+> [!info]- Was ist das Optimumsprinzip?
 > Es besteht aus 2 Prinzipen:
 > 1. Minimumprinzip: Mit möglichst wenig Ressourcen ein Ziel erreichen
 > 2. Maximumsprinzip: Möglichst viel erreichen mit Ressourcen
 
-> [!quiz]- Was gibt es für Gütereinteilungen?
+> [!info]- Was gibt es für Gütereinteilungen?
 > - Freie Güter -> Luft
 > - Wirtschaftliche Güter (begrenzt, kosten)
 > 	- Materielle Güter
@@ -28,27 +28,27 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 		- Dienstleistung -> Friseur
 > 		- Rechte -> Lizenz
 
-> [!quiz]- Was ist ein Unternehmen?
+> [!info]- Was ist ein Unternehmen?
 > Ein Unternehmen ist eine eigenständige, rechtliche und wirtschaftliche Einheit die Sachgüter und Dienstleistungen anbietet.
 
-> [!quiz]- Was ist ein Betrieb?
+> [!info]- Was ist ein Betrieb?
 > Der Betrieb ist die örtliche Produktionsstätte. Ein Unternehmen kann aus einen oder mehreren Betrieben bestehen.
 
-> [!quiz]- Was ist eine Firma?
+> [!info]- Was ist eine Firma?
 > Die Firma ist im rechtlichen Sinn der Name des Unternehmens, unter dem die Geschäftige getätigt werden.
 
-> [!quiz]- Wie sieht der Unternehmenskreislauf aus?
+> [!info]- Wie sieht der Unternehmenskreislauf aus?
 > 1. Beschaffung -> Gpter
 > 2. Produktion mit Kostenrechnung -> Produkt
 > 3. Absatz -> Geld
 > 4. Finanzierung mit Finanzbuchhaltung -> Geld für Beschaffung
 
-> [!quiz]- Was ist die Dreifache-Unternehmensverantwortung?
+> [!info]- Was ist die Dreifache-Unternehmensverantwortung?
 > 1. Ökologisch
 > 2. Ökonomisch
 > 3. Sozial
 
-> [!quiz]- Wie sieht das St. Galler Management Modell aus?
+> [!info]- Wie sieht das St. Galler Management Modell aus?
 > Anspruchsgruppen:
 > - Konkurrenz
 > - Lieferanten
@@ -78,22 +78,22 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Erneuerung
 > - Optimierung
 
-> [!quiz]- Was ist das Vorgehen für die Interaktionsthemenanalyse?
+> [!info]- Was ist das Vorgehen für die Interaktionsthemenanalyse?
 > - Was beschreibt das Interaktionsthema? (Ressource und Umweltsphäre)
 > - Welche Anspruchsgruppe ist betroffen? (Anliegen, Interessen, Normen und Werte)
 > - Was sind aus Unternehmenssicht die Risiken und Reaktionsmöglichkeiten?
 
-> [!toquiz]- In welcher Wechselbeziehung stehen Umwelt und Unternehmen?
+> [!question]- In welcher Wechselbeziehung stehen Umwelt und Unternehmen?
 
-> [!toquiz]- Welche Umweltfaktoren sind Chancen oder Gefahren?
+> [!question]- Welche Umweltfaktoren sind Chancen oder Gefahren?
 
-> [!toquiz]- Was ist der Stakeholder Ansatz?
+> [!question]- Was ist der Stakeholder Ansatz?
 
-> [!toquiz]- Was ist Shareholder-Value?
+> [!question]- Was ist Shareholder-Value?
 
-> [!toquiz]- Was sind die Merkmale einer Strategie?
+> [!question]- Was sind die Merkmale einer Strategie?
 
-> [!quiz]- Was ist das 5-Kräfte-Modell von Porter?
+> [!info]- Was ist das 5-Kräfte-Modell von Porter?
 > Gefahren durch folgende 5 Kräfte werden untersucht:
 > - Kunden
 > - Lieferanten
@@ -101,10 +101,10 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - potenzielle / neue Kunde
 > - RIvalität mit Konkurrenz
 
-> [!quiz]- Wie funktioniert die SWOT-Analyse?
+> [!info]- Wie funktioniert die SWOT-Analyse?
 > In der Inwelt gibt es Stärken und Schwächen. In der Umwelt gibt es Chancen und Gefahren. Diese sollen alle identifiziert werden. (Englisch: Strengths, Weaknesses, Opportunities und Threats) Zu den 4 Kombinationen von Intern+Extern können anschliessend SWOT-Strategieansätze identifiziert werden.
 
-> [!quiz]- Wie funktioniert die PESTEL-Analyse?
+> [!info]- Wie funktioniert die PESTEL-Analyse?
 > Es wird der Einfluss folgender Umweltfaktoren untersucht.
 > - Political
 > - Economical
@@ -113,7 +113,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Environmental
 > - Legal
 
-> [!quiz]- Was gibt es für Wachstums- und Wettbewerbsstrategien?
+> [!info]- Was gibt es für Wachstums- und Wettbewerbsstrategien?
 > 4 Branchenwettbewerbsstrategien
 > - Kostenführerschaft
 > - Kosten
@@ -126,7 +126,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Neue Produkte -> Entwicklungsstrategie (Innovation und Optimierung)
 > - Diversifikation -> Ausbruchsstartegie (ähnliche Produkte in Katalog aufnehmen oder Produkte, welche man für Produkt braucht)
 
-> [!quiz]- Wie sieht der Strategiefindungsprozess aus?
+> [!info]- Wie sieht der Strategiefindungsprozess aus?
 > 1. Analyse
 > 	- SWOT-Analyse
 > 	- PESTEL-Analyse
@@ -135,16 +135,16 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 3. Umsetzung
 > 4. Messung
 
-> [!quiz]- Was braucht es für die Entwicklung einer Unternehmensstrategie
+> [!info]- Was braucht es für die Entwicklung einer Unternehmensstrategie
 > - Unternehmensleitbild
 > - Unternehmensanalyse
 > - Umweltanalyse
 
-> [!quiz]- Was gibt es für Unternehmensstrategien?
+> [!info]- Was gibt es für Unternehmensstrategien?
 > - Differenzierung, um Kunden zu gewinnen
 > - Wirtschaftlichkeit, um preislich erfolg zu haben
 
-> [!quiz]- Was sind die 4 Branchen- wettbewerbsstrategien?
+> [!info]- Was sind die 4 Branchen- wettbewerbsstrategien?
 > ```mermaid
 > quadrantChart
 > 	quadrant-1 "Differenzierung"
@@ -153,7 +153,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 	quadrant-4 "Differenzierungsfokus"
 > ```
 
-> [!quiz]- Was sind die 4 Produkt-Markt-Strategien?
+> [!info]- Was sind die 4 Produkt-Markt-Strategien?
 > ```mermaid
 > quadrantChart
 > 	quadrant-1 Marktentwicklung
@@ -162,7 +162,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 	quadrant-4 Diversifikation
 > ```
 
-> [!quiz]- Was sind die 4 Strategien zu den 3 Strossrichtungen?
+> [!info]- Was sind die 4 Strategien zu den 3 Strossrichtungen?
 > ```mermaid
 > quadrantChart
 > 	quadrant-1 Entwicklungsstrategie
@@ -170,29 +170,29 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 	quadrant-3 Entwicklungsstrategie
 > 	quadrant-4 Ausbruchstrategie
 
-> [!quiz]- Was sind die 4P?
+> [!info]- Was sind die 4P?
 > - Product: Sortiment, Service, Garantie, Verpackung, Eigenschaften
 > - Price: Bestimmung, Strategie, Konditionen
 > - Place: Transport
 > - Promotion: Werbung, Sponsoring
 > - (Personen, Prozesse, Physische Einrichtungen)
 
-> [!quiz]- Wie macht man eine quantitative/qualitative Marktanalyse?
+> [!info]- Wie macht man eine quantitative/qualitative Marktanalyse?
 > - Quantitativ: Marktdaten und -grössen ermitteln
 > - Qualitativ: Kundenbedürfnisse ermitteln und verstehen
 
-> [!quiz]- Was sind primäre und sekundäre Marktforschung?
+> [!info]- Was sind primäre und sekundäre Marktforschung?
 > - Primär: Ermittlung neuer Daten
 > - Sekundär: Auswertung mit vorhandenen Daten
 
-> [!quiz]- Was gibt es für Marktgrössen?
+> [!info]- Was gibt es für Marktgrössen?
 > - Marktkapazität: Wenn der Preis keien Rolle spielt
 > - Marktpotenzial: Wenn alle Knden kaufbereit sind
 > - Marktvolumen: Umsatz aller Firmen
 > - Marktanteil: Umsatz der eigenen Firma
 > - Sättigungsgrad: Marktvoluem / Marktpotenzial * 100%
 
-> [!quiz]- Was gibt es für Kriterien für die Marktsegmentierung?
+> [!info]- Was gibt es für Kriterien für die Marktsegmentierung?
 > - Verhaltensorientiert
 > 	- Preisverhalten
 > 	- Mediennutzung
@@ -206,96 +206,96 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 	- Beruf, Ausbildung, Einkommen
 > - Soziodemographisch
 
-> [!quiz]- Was gibt es für Preisstrategien / Orientierungen
+> [!info]- Was gibt es für Preisstrategien / Orientierungen
 > - Kostenorientiert: Abhängig von den Kosten der Produktion
 > - Nachfrageorientiert: Abhängig von der Anzahl Käufer
 > - Wettbewerbsorientiert: Abhängig von der Konkurrenz
 
-> [!quiz]- Was ist die Break-Even-Analyse?
+> [!info]- Was ist die Break-Even-Analyse?
 > Es wird berechnet, wie viel man verkufen muss, um Gewinn zu machen. Es werden fixe Kosten und variable Kosten (steigen bei mehr Verkauf) berücksichgt. Dadurch erhält man die Gesamtkosten. Der Erlös hängt vom Preis ab. Der Break-Even-Point gibt es ab einer bestimmten Menge.
 
-> [!toquiz]-  Was gibt es für Preispolitische Massnahmen?
+> [!question]-  Was gibt es für Preispolitische Massnahmen?
 
-> [!toquiz]- Was ist die Skimmingstrategie?
+> [!question]- Was ist die Skimmingstrategie?
 > Man fängt mit einem hohen Preis an und wird billiger.
 
-> [!toquiz]- Was ist die Penetrationstrategie?
+> [!question]- Was ist die Penetrationstrategie?
 > Man fängt mit einem billigen Preis an und wird teurer.
 
-> [!toquiz]- Was sind Beispiele für (un-)elastische Preise?
+> [!question]- Was sind Beispiele für (un-)elastische Preise?
 
-> [!toquiz]- Was gibt es für interne Distributionsorgane?
+> [!question]- Was gibt es für interne Distributionsorgane?
 
-> [!toquiz]- Was gibt es für externe Distributionsorgane?
+> [!question]- Was gibt es für externe Distributionsorgane?
 
-> [!toquiz]- Direkter VS indirekter Absatz
+> [!question]- Direkter VS indirekter Absatz
 > - Direkt: Internet, eigene Filialen
 > - Indirekt: Grosshändler, Einzelhändler
 
-> [!quiz]- Vor- und Nachteile direkter Vertrieb
+> [!info]- Vor- und Nachteile direkter Vertrieb
 > - Höhere Marge bei direktem Vertrieb
 > - Neue und innovative Produkte benötigen Know-How
 > - Viele Kunden, häufiger Bedarf, grosses Gebiet benötigt indirekter Vertrieb
 
-> [!quiz]- Instrumente für Kommunikation
+> [!info]- Instrumente für Kommunikation
 > - Werbung
 > - Public Relations
 > - Sponsoring
 
-> [!toquiz]- Was gibt es für Werbungsbotschaften
+> [!question]- Was gibt es für Werbungsbotschaften
 
-> [!toquiz]- Was gibt es für Vermarktungsobjekte
+> [!question]- Was gibt es für Vermarktungsobjekte
 
-> [!quiz]- Was sind Ziele von Vermarktung?
+> [!info]- Was sind Ziele von Vermarktung?
 > - Umsatz
 > - Bekanntheit
 > - Wissen
 > - Einstellungen, Images
 
-> [!quiz]- Signalfunktionen von Markenführung?
+> [!info]- Signalfunktionen von Markenführung?
 > - Qualität
 > - Preis
 > - Funktionalität
 > - Emotionen
 
-> [!quiz]- Nutzen von Markenführung?
+> [!info]- Nutzen von Markenführung?
 > Informationseffizienz
 
-> [!quiz]- Was gehört zum Produkt?
+> [!info]- Was gehört zum Produkt?
 > - Kernprodukt: 
 > - Formales Produkt: Verpackung, Styling
 > - Erweitertes Produkt: Service, Zusatzangebote
 
-> [!quiz]- Was gibt es für Nutzen eines Produkts?
+> [!info]- Was gibt es für Nutzen eines Produkts?
 > - Grundnutzen
 > - Zusatznutzen (Mehr als Grundbedüfnis, ZB besondere Qualität)
 > - Erbauungsnutzen (Ästhetische Wirkung)
 > - Geltungsnutzen (Soziale Wirkung)
 
-> [!quiz]- Was für Funktionen hat die Verpackung?
+> [!info]- Was für Funktionen hat die Verpackung?
 > - Transportfunktionen
 > - Lagerfunktionen
 > - Schutzfunktionen
 > - Informationsfunktione
 > - Werbemittelfunktion
 
-> [!toquiz]- Wieso ist Markenwert wichtig?
+> [!question]- Wieso ist Markenwert wichtig?
 
-> [!quiz]- Formen der Markenführung
+> [!info]- Formen der Markenführung
 > - Einzelproduktmarken/Monomarken (Jedes Produkt hat einenen Markenname)
 > - Sortimentmarke (Eine Marke für alles im Sortiment)
 > - Mehrere Sortimentmarken (Pro Sortiment eine Marke)
 > - Mehrschichtige Markenverknüpfungen (Firmenname ist Markenname)
 
-> [!quiz]- Was heisst AIDA?
+> [!info]- Was heisst AIDA?
 > Attention Interest Desire Action
 > Dies steht für die 4 Elemente in einer Werbung. Die Werbung soll Aufmerksamkeit, Interesse und einen Kaufwunsch erwecken. Und sie soll eine Handlung auslösen, also den Kauf des Produkts.
 
-> [!quiz]- Unterschied einfache und doppelte Buchhaltung
+> [!info]- Unterschied einfache und doppelte Buchhaltung
 > - Einfach: Eingaben und Ausgaben
 > - Doppelt: Eingabe von XY zu Kasse. Ausgabe von Kasse für XY.
 
-> [!quiz]- Wie sehen Bilanz und Erfolgrechnung aus?
+> [!info]- Wie sehen Bilanz und Erfolgrechnung aus?
 > Bilanz / Aktive:
 > - Umlaufvermögen: Bargeld, Lager
 > - Anlagevermögen: Anlagen, Maschinen
@@ -305,14 +305,14 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Eigenkapital: Grundkapital, Reserven, vergangener Gewinn
 > Da der Gewinn dabei ist, haben beide dasselbe Total
 
-> [!quiz]- Was sind die Funktionen der Bilanz?
+> [!info]- Was sind die Funktionen der Bilanz?
 > - Dokumentation
 > - Information
 > - Gewinnermittlung
 
-> [!quiz] [[05_WING_Finanzen 1_Bilanz Erfolgsrechnung.pdf#page=18&selection=4,0,4,14|Welche Beträge gehören zu welchem Teil der Bilanz?]]
+> [!info] [[05_WING_Finanzen 1_Bilanz Erfolgsrechnung.pdf#page=18&selection=4,0,4,14|Welche Beträge gehören zu welchem Teil der Bilanz?]]
 
-> [!quiz]- Welche Elemente gehören in die Erfolgsrechnung?
+> [!info]- Welche Elemente gehören in die Erfolgsrechnung?
 > - Aufwand
 > 	- Betriebsaufwand
 > 	- Betriebsfremder Aufwand
@@ -323,7 +323,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 	- Betriebsfremder Ertrag
 > 	- Ausserordentlicher Ertrag
 
-> [!quiz]- Was gibt es für Gewinne?
+> [!info]- Was gibt es für Gewinne?
 > - Warenaufwand bzw. Herstellkosten
 > - Übriger liquiditätswirksamer Aufwand
 > - Abschreibungen (depreciation)
@@ -336,9 +336,9 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > EBIT =  vor Amortisation
 > EBT = vor Steuern
 
-> [!quiz] [[05_WING_Finanzen 1_Bilanz Erfolgsrechnung.pdf#page=29&selection=4,0,4,23|Was ist die Gliederung der Erfolgsrechnung?]]
+> [!info] [[05_WING_Finanzen 1_Bilanz Erfolgsrechnung.pdf#page=29&selection=4,0,4,23|Was ist die Gliederung der Erfolgsrechnung?]]
 
-> [!quiz]- Woher gibt es Geldfluss?
+> [!info]- Woher gibt es Geldfluss?
 > - Geschäftsbereich (Einnahmen)
 > 	Bsp Zahlungen an Kunden, Lieferanten, Personal, Aufwand
 > - Investitionsbereich (Einnahmen & Ausgaben)
@@ -346,13 +346,13 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Finanzierungsbereich (Ausgaben)
 > 	Bsp Hypothek, Deividendenauszahlung, Aktienkapital
 
-> [!quiz]- Was sind typische Cashflow-Schemata?
+> [!info]- Was sind typische Cashflow-Schemata?
 > - Normal: Investiert
 > - Erfolgreich mit wenig Investition, Finanziert viel, macht viel Geld
 > - Expandierende Firma: Investiert mehr als Geld aus Geschäftsbereich
 > - Startup mit Problemen: Verliert Geld im Geschäftsbereich, viel Geld kommt aus Finanzierungsbereich (Kredite)
 
-> [!quiz]- Was sind die Hauptformen der Unternehmensfinanzierung?
+> [!info]- Was sind die Hauptformen der Unternehmensfinanzierung?
 > - Aussenfinanzierung
 > 	- Kreditfinanzierung
 > 	- Beteiligungsfinanzierung
@@ -360,7 +360,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 	- Selbstfinanzierung
 > 	- Verflüssigungsfinanzierung
 
-> [!quiz]- Was sind die 3 Aufgaben des CFO?
+> [!info]- Was sind die 3 Aufgaben des CFO?
 > - Sicherheit
 > 	- Sichere Anlagen sind weniger rentabel
 > 	- Sichere Anlagen sind weniger liquid
@@ -371,7 +371,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 	- Liquide Anlagen sind weniger sicher
 > 	- Liquide Anlagen sind weniger rentabel
 
-> [!quiz]- Was gibt es für Kennzahlen zur Liquidität?
+> [!info]- Was gibt es für Kennzahlen zur Liquidität?
 > Liquiditätsgrade:
 > 
 > **Grad 1** $"flüssige Mittel" / "kurzfristiges Fremdkapital" * 100 < 20$
@@ -381,7 +381,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 
 > **Grad 3** $("flüssige Mittel" + "Forderungen" + Vorräte) / "kurzfristiges Fremdkapital" * 100 = "Umlaufvermögen" / "kurzfristiges Fremdkapital" = 100..200$
 
-> [!quiz]- Was gibt es für Kennzahlen zur Sicherheit
+> [!info]- Was gibt es für Kennzahlen zur Sicherheit
 > **Eigenkapitalquote** $"Eigenkapital" / "Gesamtkapital" * 100 > 30\%$
 > 
 > **Fremdkapitalquote** $"Fremdkapital" / "Gesamtkapital" * 100 < 70\%$
@@ -392,7 +392,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 
 > **Anlagedeckungsgrad 2** $"Eigenkapital" + "langfr. Fremdkapital" / "Anlagevermögen" * 100 = 120\%..160\%$
 
-> [!quiz]- Was gibt es für Kennzahlen zur Rentabilität
+> [!info]- Was gibt es für Kennzahlen zur Rentabilität
 > **Eigenkapitalrendite** $"Gewinn" / "Eigenkapital" * 100 >= 8\%$
 > 
 > **Gesamtkapitalrendite** $("Gewinn" + "Fremdkapitalzinsen") / ("Eigenkapital" + "Fremdkapital") * 100 >= 6\%$
@@ -401,10 +401,10 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 >
 > **EBIT-Marge** $"EBIT" / "Umsatz" * 100 > 2\%$
 
-> [!quiz]- Was ist der Leverage Effect?
+> [!info]- Was ist der Leverage Effect?
 > Wenn man mit mehr Fremdkapital mehr Gewinn erreichen kann, gibt es den Leverage-Effekt. Ein höherer Verschuldungsgrad bringt aber auch mehr Risiko mit sich.
 
-> [!quiz]- Wie funktioniert der Prozess der Kostenverrechnung
+> [!info]- Wie funktioniert der Prozess der Kostenverrechnung
 > Begriffe:
 > - Kostenart = Welche Kosten fallen an?
 > - Kostenstellen = Wo fallen Kosten an?
@@ -414,43 +414,43 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Direkte Hauptkosten -> Kostenträger
 > - Indirekte Gemeinkosten -> Hilfskostenstellen -> Hauptkostenstellen -> Kostenträger
 
-> [!quiz]- Was sind die Aufgaben der Kostenrechnung?
+> [!info]- Was sind die Aufgaben der Kostenrechnung?
 > - Ermittlung von Selbstkosten
 > - Ermittlung von Rechnungsgrundlagen
 > - Ermittlung von Bilanzsätzen
 > - Vorgabe von Sollkosten
 > - Überwachung von Erfolg, Wirtschaftlichkeit, Planung
 
-> [!quiz]- Was gibt es für Sachliche Abgrenzungen?
+> [!info]- Was gibt es für Sachliche Abgrenzungen?
 > - Kalkulatorische Zinsen
 > - Kalkulatorischer Unternehmerlohn
 > - Kalkulatorische Miete
 > - Stille Reserven
 > - Kalkulatorische Abschreibungen
 
-> [!quiz]- Was sind die Aufgaben der Kostenstellenrechnung?
+> [!info]- Was sind die Aufgaben der Kostenstellenrechnung?
 >  - Verteilung der Kostenarten (Gemeinkosten) auf Kostenstellen
 >  - Umlage von Kostenstellenkosten auf andere Kostenstellen (innerbetriebliche Leistungsverrechnung)
 >  - Ermittlung von Zuschlagssätzen für die Kostenträgerrechnung
 >  - Ermittlung von Soll-Ist-Abweichungen zur Wirtschaftlichkeitskontrolle
 
-> [!toquiz]- Wie benutzt man Zuschlagssätze?
+> [!question]- Wie benutzt man Zuschlagssätze?
 > $"Endstellenkosten der Hauptkostenstelle" / "Bezugsgrösse der Hauptkostenstelle" * 100$
 > Materialgemeinkostenzuschlagssatz = ..
 > Fertigungsgemeinkostenzuschlagssatz
 > Verwaltungskostenzuschlagssatz
 > Vertriebsgemeinkostenzuschlagssatz
 
-> [!toquiz]- Wie funktioniert die Teilkostenrechnung?
+> [!question]- Wie funktioniert die Teilkostenrechnung?
 
-> [!toquiz]- Wie berechnet man einen Ladenpreis im Industriebetrieb?
+> [!question]- Wie berechnet man einen Ladenpreis im Industriebetrieb?
 
-> [!quiz]- Aus welchen Teilen besteht die Gesamt-Kalkulation im Handlesbetrieb?
+> [!info]- Aus welchen Teilen besteht die Gesamt-Kalkulation im Handlesbetrieb?
 > - Einkaufskalkulation
 > - Betriebskalkulation
 > - Verkaufskalkulation
 
-> [!quiz]- Wie macht man die Einkaufskalkulation?
+> [!info]- Wie macht man die Einkaufskalkulation?
 > Bruttokreditaufpreis
 > -Rabatte
 > = Nettokreditkaufspreis
@@ -459,14 +459,14 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > +Bezugskosten
 > = Einstandspreis
 
-> [!quiz]- Wie macht man die Betriebskalkulation?
+> [!info]- Wie macht man die Betriebskalkulation?
 > Einstandspreis
 > +Gemeinkosten
 > = Selbstkosten
 > +Reingewinn
 > = Nettoverkaufspreis
 
-> [!quiz]- Wie macht man die Verkaufskalkulation?
+> [!info]- Wie macht man die Verkaufskalkulation?
 > Nettoverkaufspreis
 > +Verkaufssonderkosten
 > = Nettobarverkaufspreis
@@ -475,37 +475,37 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > +Rabatt
 > = Bruttokreditverkaufspreis
 
-> [!toquiz]- Was gibt es für Abschnitte in der Wertschöpfungskette?
+> [!question]- Was gibt es für Abschnitte in der Wertschöpfungskette?
 
-> [!toquiz]- Was gibt es für Wertschöpfungsarchitekturen?
+> [!question]- Was gibt es für Wertschöpfungsarchitekturen?
 
-> [!toquiz]- Was ist ein Produktionsprogramm?
+> [!question]- Was ist ein Produktionsprogramm?
 
-> [!toquiz]- Was sind Vor- und Nachteile vom selbständigen Herstellen?
+> [!question]- Was sind Vor- und Nachteile vom selbständigen Herstellen?
 
-> [!toquiz]- Was ist PPS?
+> [!question]- Was ist PPS?
 
-> [!toquiz]- Was ist die Durchlaufszeit?
+> [!question]- Was ist die Durchlaufszeit?
 
-> [!toquiz]- Was ist Vor- und Rückwärtsterminierung?
+> [!question]- Was ist Vor- und Rückwärtsterminierung?
 
-> [!toquiz]- Was gibt es für Fertigungstypen?
+> [!question]- Was gibt es für Fertigungstypen?
 
-> [!toquiz]- Was gibt es für Fertigungsverfahren?
+> [!question]- Was gibt es für Fertigungsverfahren?
 
-> [!toquiz]- Was gibt es für Kennzahlen zur Produktion?
+> [!question]- Was gibt es für Kennzahlen zur Produktion?
 
-> [!toquiz]- Wie berechnet man den Umsatz?
+> [!question]- Wie berechnet man den Umsatz?
 > Nettoerlös * anzahl verkaufte Produkte
 
-> [!toquiz]- Was ist die Stückliste
+> [!question]- Was ist die Stückliste
 
-> [!toquiz]- Was gibt es für Kunden- und Geschäftsprozesse?
+> [!question]- Was gibt es für Kunden- und Geschäftsprozesse?
 
-> [!toquiz]- Welche Bereiche gibt es in der Materialwirtschft?
+> [!question]- Welche Bereiche gibt es in der Materialwirtschft?
 > - Produktionslogistik: Verbrauchsermittlung unf Produktionsplanung
 
-> [!quiz]- Was gibt es für Beschaffungprozesse?
+> [!info]- Was gibt es für Beschaffungprozesse?
 > 1. Ermittlung Materialbedarf für Produktion
 > 2. Ermittlung Lagerbestände
 > 3. Ermittlung Beschaffungsbedarf
@@ -513,14 +513,14 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 5. Bestellungen
 > 6. Wareneingangskontrolle
 
-> [!quiz]- Was gibt es für Beschaffungsstrategien?
+> [!info]- Was gibt es für Beschaffungsstrategien?
 > - Order to Stock (Beschaffungsmenge ist grösser als Beschaffungsbedarf)
 > - Order to Make (Die Beschaffung gescheit erst, wenn es Beschaffungsbedarf gibt)
 > - Just in Time: Zum richtigen Zeitpunkt
 > - Just in Sequence: Zum richtigen Zeitpunkt in der richtigen Reihenfolge mit der richtigen Menge
 > Bei Restaurant ist es nicht kritisch, wenn ein Kunde zu viel kommt. Beim Auto ist es kritisch, wenn ein Teil des Autos nicht geliefert werden kann. Es kommt darauf an, ob man die Ware erst hat, wenn man das Produkt spezifiziert hat. Und Lager kostet.
 
-> [!quiz]- Was ist Insourcing und desser Vor- und Nachteile?
+> [!info]- Was ist Insourcing und desser Vor- und Nachteile?
 > Verlagerung von zuvor im Markt bezogenen Leistungen in die eigene Wertschöpfung. Man hat zusätzliche Fixkosten, aber muss keinen zusätzlichen Preis zahlen.
 > Vorteile von Insourcing: 
 > - Reduktion von Lieferzeiten
@@ -528,22 +528,22 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Aufrechterhaltung Qualitätsstandards
 > - Auslastung Fertigungskapazitäten
 
-> [!quiz]- Was sind Vor- und Nachteile von Outsourcing?
+> [!info]- Was sind Vor- und Nachteile von Outsourcing?
 > Vorteile von Outsourcing:
 > - Minimierung der Fixkosten
 > - Beschaffungsmenge und Zeitspanne flexibel planbar
 > - Minimierung der Lagerkosten
 > - Ausweichmöglichkeit bei Kapazitätsengpässen
 
-> [!toquiz]- Was sind die Kostentreiber vom Lager?
+> [!question]- Was sind die Kostentreiber vom Lager?
 
-> [!toquiz]- Was ist das magische Dreieck der Materialwirtschaft
+> [!question]- Was ist das magische Dreieck der Materialwirtschaft
 > - Kapitalbundung und Lagerunterhalt
 > - Beschaffungskosten
 > - Lieferbereitschaft
 >  Lieferbereitschaft soll möglichst hoch sein. Beschaffungskosten sollen möglichst tief sein. Kapitalbindung soll so tief wie möglich gehalten sein.
 
-> [!quiz]- Wie funktioniert die ABC Analyse?
+> [!info]- Wie funktioniert die ABC Analyse?
 > A Güter sind sehr wertvoll, C Güter sind nicht wertvoll. Als Faustregel hat man 80% Güter, die 20% des Wertes ausmachen.
 > 
 > | Klasse | Wert    | Menge   |
@@ -552,40 +552,40 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > | B      | 15%-20% | 30%-50% |
 > | C      | 5%-10%  | 40%-50% |
 
-> [!quiz]- Wie funktioniert die XYZ-Analyse?
+> [!info]- Wie funktioniert die XYZ-Analyse?
 > X-Güter haben regelmässigen Bedarf, Y schwankenden und Z unregelmässigen Bedarf. Dies ist wichtig für die Lagerorganisation.
 
-> [!quiz]- Was gibt es für Lager?
+> [!info]- Was gibt es für Lager?
 > - Eingangslager: Vor der Produktion, versorgen Produktion mit nötigen Materialien.
 > - Zwischenlager: Parallel zur Produktion.
 > - Fertigwarenlager: Fertigprodukte und Handelswaren.
 
-> [!toquiz]- Was gibt es für Lagerorganisation?
+> [!question]- Was gibt es für Lagerorganisation?
 
-> [!toquiz]- Was gibt es für Lagerfunktionen?
+> [!question]- Was gibt es für Lagerfunktionen?
 > - Zeitüberbrückung (Als Puffer oder um möglichst schnell zu liefern)
 > - Sicherung (Um Schwankungen ausgleichen)
 > - Spekulation (Um die Ware beim besten Preis zu kaufen)
 > - Veredlung bzw. Umformung (Essen, antike Sachen)
 > - Assortierung (zum Sortieren von Sammellieferungen, zur Präsentation)
 
-> [!quiz]- Welche Kosten fallen im Lager an?
+> [!info]- Welche Kosten fallen im Lager an?
 > - Lagerunterhalt: Mietkosten, Energiekosten, Versicherung des Lagerguts, Instandhaltung, Kosten des Bestandesrisikos (z.B. Diebstahl, Feuer)
 > - Kapitalbindung: Entgangene Zinsen alternativer Anlagemöglichkeiten (==Opportunitätskosten==)
 
-> [!toquiz]- Was gibt es für Kennzahlen zur Lagerhaltung?
+> [!question]- Was gibt es für Kennzahlen zur Lagerhaltung?
 
-> [!quiz]- In welchem Instrument sind Ertrag und Aufwände?
+> [!info]- In welchem Instrument sind Ertrag und Aufwände?
 > Erfolgsrechnung
 
-> [!toquiz]- Was sind die 4 wesentlichen Aufgaben des Personalmanagements?
+> [!question]- Was sind die 4 wesentlichen Aufgaben des Personalmanagements?
 > - **Personalplanung**: IST- und SOLL-Analyse gibt Bedarf an Mitarbeitern. Es gibt Abgänge (Fluktuation), Zugänge, Neubedarf, Ersatz, Zusatz
 > - **Personalgewinnung**: Werbung, Auswahl, Eintsellung, Einführung
 > - **Personalbeurteilung, -honorierung, -entwicklung**
 > - **Personalentwicklung**
 > - **Personalfreistellung**
 
-> [!quiz]- Was gibt es für Stellen?
+> [!info]- Was gibt es für Stellen?
 > - Linienstelle
 > 	- Führt Weisungen aus
 > 	- Ist Weisungsberechtigt
@@ -593,13 +593,13 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 	- Berät und unterstüttzt
 > 	- Ist nicht Weisungsberechtigt
 
-> [!quiz]- Was ist in der Stellenbeschreibung?
+> [!info]- Was ist in der Stellenbeschreibung?
 > - Aufgaben
 > - Verantwortung
 > - Kompetenzen
 > - Nur Idealvorstellung
 
-> [!quiz]- Welche Möglichkeiten der Personalgewinnung gibt es?
+> [!info]- Welche Möglichkeiten der Personalgewinnung gibt es?
 > - Überstungen / Mehrarbeit
 > - Verlängerung der Arbeitszeit
 > - Urlaubsverschiebung
@@ -617,29 +617,29 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Mitarbeiter werben Mitarbeiter
 > - Social Media
 
-> [!quiz]- Was sind die Vor- und Nachteile für betriebseigene oder betriebsfremde Arbeitskräfte?
+> [!info]- Was sind die Vor- und Nachteile für betriebseigene oder betriebsfremde Arbeitskräfte?
 > Eigen: Bereits integriert, tieferes Risiko, kürzere Einarbeitung, Beförderung Motiviert, schneller, weniger Pensionskasse evt
 > 
 > Fremd: Neue Ideen, evt. von Konkurrenz, Vergleich der Mitarbeiter, keine interne Intrigen
 
-> [!quiz]- Was sind die Kriterien der Personalauswahl?
+> [!info]- Was sind die Kriterien der Personalauswahl?
 > - Leistungsfähigkeit
 > - Leistungswille
 > - Entwicklungsmöglichkeiten
 > - Leistungspotenzial
 
-> [!quiz]- Was für Unterlagen gibt es zur Personalauswahl?
+> [!info]- Was für Unterlagen gibt es zur Personalauswahl?
 > - Lebenslauf
 > - Motivationsschreiben
 > - Zeugnisse
 > - Allfällige Referenzen
 
-> [!quiz]- Was gibt es für Methoden zur Beurteilung von Bewerbern?
+> [!info]- Was gibt es für Methoden zur Beurteilung von Bewerbern?
 > - Job-Interview
 > - Test-Verfahren (ZB Persönlichkeit, Intelligenz, Reaktion, Graphologishc, Stimme...)
 > - Assesment-Verfahren (Komplexe zb mit mehreren Leuten, Rollenspiele, Gruppendiskussionstest)
 
-> [!quiz]- Was gibt es für Fragenthemen in einem Interview?
+> [!info]- Was gibt es für Fragenthemen in einem Interview?
 > - Systematik / Planung
 > - Belastbarkeit / Stabilität
 > - Durchsetzung
@@ -650,7 +650,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Soziale Kompetenz
 > - Führungsanspruch
 
-> [!quiz]- Was gehört zur Kompetenz?
+> [!info]- Was gehört zur Kompetenz?
 > - Fachkompetenz
 > - Sozialkompetenz
 > - Interkulturelle Kompetenz
@@ -658,31 +658,31 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Veränderungskompetenz
 > - Unternehmerische Kompetenz
 
-> [!quiz]- Was ist die 360 Beurteilung?
+> [!info]- Was ist die 360 Beurteilung?
 > Man wird beurteilt durch...
 > - sich selbst
 > - Mitarbeiter
 > - Kunden
 > - Vorgesetzer
 
-> [!quiz]- Was gibt es für Personalentwicklung?
+> [!info]- Was gibt es für Personalentwicklung?
 > - into the job: Berufsausbildung, Traineeprogramm, Einarbeitung
 > - along the job: Laufbahnplanung, Potenzialanalyse, Karriere- und Nachfolgeplanung
 > - near the job: Qualitätszirkel, Projektarbeit
 > - out of the job: Outplacement, Pensionsvorbereitung
 
-> [!quiz]- Was gibt es für Personalhonorierung?
+> [!info]- Was gibt es für Personalhonorierung?
 > - Reine Lohnformen
 > 	- Zeitlohn
 > 	- Akkordlohn
 > - Zusammengesetzte Lohnformen
 > 	- Prämienlohn
 
-> [!toquiz]- Was ist die Humankapitaltheorie?
+> [!question]- Was ist die Humankapitaltheorie?
 
-> [!toquiz]- Was gibt es für monetäre Anreize?
+> [!question]- Was gibt es für monetäre Anreize?
 
-> [!toquiz]- Was sind mögliche Ursachen für Personalfreistellungsmassnahmen (Feuerung)?
+> [!question]- Was sind mögliche Ursachen für Personalfreistellungsmassnahmen (Feuerung)?
 > Die meisten Massnahmen lassen sich auf eine oder mehrere der folgenden Hauptursachen zurückführen:
 > - Absatz- und Produktionsrückgang als Folge der gesamtwirtschaftlichen Entwicklung
 > - Strukturelle Veränderungen
@@ -692,32 +692,32 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Reorganisation
 > - Mechanisierung und Automation
 
-> [!toquiz]- Was ist das Konzept der Investitionsrechnung?
+> [!question]- Was ist das Konzept der Investitionsrechnung?
 
-> [!toquiz]- Was ist die Net Present Value Methode?
+> [!question]- Was ist die Net Present Value Methode?
 
-> [!toquiz]- Was sind die Grenzen der Investitionsrechnung?
+> [!question]- Was sind die Grenzen der Investitionsrechnung?
 
-> [!toquiz]- Was gibt es für praktische Beispiele zur Inevstitionsrechnung?
+> [!question]- Was gibt es für praktische Beispiele zur Inevstitionsrechnung?
 > Unsicherheiten der langfristigen Betrachtung
 
-> [!toquiz]- Was ist die Definition einer Investition?
+> [!question]- Was ist die Definition einer Investition?
 > Eine Zahlungsreihe, die mit einer sicheren Einzahlung beginnt und mit späteren unsicheren Einnahmen folgt.
 
-> [!toquiz]- Wie funktioniert die Kostenvergleichsmethode?
+> [!question]- Wie funktioniert die Kostenvergleichsmethode?
 > Man vergleicht zwischen zwei Anlagen:
 > Jährliche Betriebskosten + Materialkosten = Variable Kosten
 > Kalkulatorische Abschreibung und Zinsen = Fixe Kosten
 
-> [!toquiz]- Wie funktioniert die Gewinnvergleichsmethode?
+> [!question]- Wie funktioniert die Gewinnvergleichsmethode?
 > Man vergleicht zwischen zwei Anlagen:
 > Jährlicher Nettoerlös - Variable Kosten - Fixkosten
 
-> [!toquiz]- Wie funktioniert der Rentabilitätsvergleich?
+> [!question]- Wie funktioniert der Rentabilitätsvergleich?
 > Rentabilität = (Reingewinn + Zinsen) / eingesetztes Kapital * 100
 
-> [!toquiz]- Wie funktioniert die Payback-Frist?
+> [!question]- Wie funktioniert die Payback-Frist?
 
-> [!toquiz]- Wie funktioniert die dynamische Investitionsrechnung?
+> [!question]- Wie funktioniert die dynamische Investitionsrechnung?
 
-> [!toquiz]- Wie funktioniert die Kapitalwertmethode?
+> [!question]- Wie funktioniert die Kapitalwertmethode?

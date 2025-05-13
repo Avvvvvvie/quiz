@@ -3,21 +3,21 @@
 > - Preemptive→Scheduler can interrupt a process
 > - Real-Time→Very tight timing requirements? (Deadline scheduling)
 
-> [!quiz]- Was ist der Unterschied von Programm, Prozess, Threads?
+> [!info]- Was ist der Unterschied von Programm, Prozess, Threads?
 > - Programm: Abfolge von Anweisungen
 > - Prozess: Objekt in System mit dem ein oder mehrere Threads und Code assoziiert sind. Wenn alle Threads geschlossen sind, wird der Prozess beendet. Ein Prozess beansprucht einen Memory abschnitt
 > - Thread: Benutzt die gleiche Memory wie der Prozess, zu dem er gehört.
 
-> [!quiz]- Wieso benutzt man lieber Prozesse oder lieber Threads?
+> [!info]- Wieso benutzt man lieber Prozesse oder lieber Threads?
 > Es ist einfacher, zwischen threads zu wechseln, als zwischen Prozessen, da zum Thread nur das Stack etc. gehört.
 
-> [!quiz]- Was muss man Speichern pro Thread?
+> [!info]- Was muss man Speichern pro Thread?
 > - Program Counter
 > - Gespeicherte Register
 > - Stack (Pointer dahin)
 > - Thread Metadaten
 
-> [!quiz]- Was ist der Program Counter?
+> [!info]- Was ist der Program Counter?
 > Dieser zeigt auf die Stelle, wo das Programm im Code ist.
 
 Was passiert wenn man ein objekt als referenz einer methode in einem stack weiter gibt
@@ -99,7 +99,7 @@ man kann den ausdruck einer variable zuweisen und funktionen übergeben
 Wie funktioniert Optional?
 
 
-> [!quiz]- Wann benutzt man ein Optional und wann eine Exception?
+> [!info]- Wann benutzt man ein Optional und wann eine Exception?
 > Optional
 > - es ist nichts enthalten (z.B in datenbankabfrage)
 > - programm geht weiter
@@ -110,7 +110,7 @@ Wie funktioniert Optional?
 > - stoppt programmfluss
 > - es gibt keinen rückgabewert
 
-> [!quiz]- Was sind die Unterschiede von prozeduralem vs funktionalem vs Objekt-orientiertem Programmieren?
+> [!info]- Was sind die Unterschiede von prozeduralem vs funktionalem vs Objekt-orientiertem Programmieren?
 > Prozedural
 > - y = f(x)
 > - Status ist global gespeichert
@@ -123,7 +123,7 @@ Wie funktioniert Optional?
 > - y = object.f(x)
 > - Status ist in Objektinstanzen gespeichert
 
-> [!quiz]- Was ist eine pure Funktion?
+> [!info]- Was ist eine pure Funktion?
 > Sie hat keine Nebeneffekte = nichts wird anderswo verändert, man verwendet nur die gegebenen Variablen. Soll man vermeiden wenn nicht nötig. Aber natürlich gewollt wenn man z.B etwas in der Konsole ausgibt oder in eine Datenbank schreibt. Aber nicht wenn man einfach ein Resultat abspeichert wenn man es zurückgeben könnte.
 
 Wie sieht der Lebenszyklus einer Stream-Pipeline aus?
