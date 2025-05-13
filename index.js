@@ -13,19 +13,19 @@ function getQuizzes(callback) {
     });
 }
 
-function getQuiz(path, callback, type = 'quiz') {
+function getQuiz(path, callback, type) {
     readFile(path, (text) => {
         let questions = parseQuiz(text, type);
         callback(questions);
     });
 }
 
-function getAnsweredQuiz(path) {
-    return getQuiz(path, 'quiz');
+function getAnsweredQuiz(path, callback) {
+    return getQuiz(path, callback, 'quiz');
 }
 
-function getUnansweredQuiz(path) {
-    return getQuiz(path, 'toquiz');
+function getUnansweredQuiz(path, callback) {
+    return getQuiz(path, callback, 'toquiz');
 }
 
 function parseQuiz(text, type = 'quiz') {
