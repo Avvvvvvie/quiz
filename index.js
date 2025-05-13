@@ -96,19 +96,19 @@ function createQuiz(quiz) {
         questionElements = [];
         questions.forEach((question) => {
             let questionElement = document.createElement('div');
-            questionElement.className = 'question';
-            questionsContainer.appendChild(questionElement);
+            questionElement.classList.add('question');
             questionElement.classList.add('hidden');
 
             let title = renderMarkdown(question.title);
             title.className = 'question-title';
-            questionsContainer.appendChild(title);
+            questionElement.appendChild(title);
 
             let answer = renderMarkdown(question.answer);
             answer.className = 'question-answer';
             answer.classList.add('hidden');
-            questionsContainer.appendChild(answer);
+            questionElement.appendChild(answer);
 
+            questionsContainer.appendChild(questionElement);
             questionElements.push(questionElement);
         });
 
