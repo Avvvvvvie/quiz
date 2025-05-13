@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: monospace;
 }
 
 button {
@@ -11,7 +12,6 @@ button {
 
 main {
     max-width: 15rem;
-    font-family: monospace;
     margin: 2rem auto 0;
     font-size: 1rem;
 }

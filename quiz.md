@@ -1,3 +1,3 @@
 
-> [!quiz]- Test
+> [!info]- Test
 > `math 1 + 1 Int_a^b f(x)`
