@@ -1,5 +1,5 @@
 function readFile(path, callback) {
-    fetch(window.location.href + path)
+    fetch(window.location.href + encodeURI(path))
         .then((res) => res.text())
         .then((text) => {
             callback(text);

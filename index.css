@@ -13,6 +13,7 @@ main {
     max-width: 15rem;
     font-family: monospace;
     margin: 2rem auto 0;
+    font-size: 1rem;
 }
 
 ul, ol {

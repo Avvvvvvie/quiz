@@ -1,3 +1,15 @@
+FS2024/PROG2/notes.md
+FS2024/LA/notes.md
+FS2024/AN2/notes.md
+HS2023/INCO/notes.md
+HS2023/DM/notes.md
+HS2023/AN1/notes.md
+HS2024/HM1/notes.md
+HS2024/GED/notes.md
+HS2024/DB/notes.md
+HS2024/ADS/notes.md
+HM2/notes.md
+KT/notes.md
 SNP/notes.md
 SVEN1/notes.md
 WING/notes.md
