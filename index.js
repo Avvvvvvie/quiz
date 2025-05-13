@@ -127,7 +127,7 @@ function createQuiz(quiz) {
             for(let questionElement of questionElements) {
                 if(questionElement.classList.contains('hidden')) {
                     questionElement.classList.add('hidden');
-                    
+
                     questionElement.nextElementSibling.classList.remove('hidden');
                     nextButton.classList.add('hidden');
 
@@ -168,7 +168,7 @@ function createQuiz(quiz) {
         doneElement.classList.add('hidden');
         quizContainer.appendChild(doneElement);
 
-        questionElements[0].classList.remove('hidden');
+        questionsContainer.children[0].classList.remove('hidden');
         main.appendChild(quizContainer);
     });
 }
