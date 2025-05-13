@@ -114,8 +114,9 @@ function createQuiz(quiz) {
 
             let showAnswerButton = document.createElement('button');
             showAnswerButton.textContent = 'Show Answer';
+            answer.classList.add('hidden');
             showAnswerButton.addEventListener('click', () => {
-                answer.classList.add('hidden');
+                answer.classList.remove('hidden');
                 nextButton.classList.remove('hidden');
             });
 
