@@ -35,7 +35,7 @@ var config = {
   showasciiformulaonhover: true, // helps students learn ASCIIMath
   decimalsign: ".",           // change to "," if you like, beware of `(1,2)`!
   AMdelimiter1: "`", AMescape1: "\\\\`", // can use other characters
-  AMusedelimiter2: false, 	  //whether to use second delimiter below
+  AMusedelimiter2: true, 	  //whether to use second delimiter below
   AMdelimiter2: "$", AMescape2: "\\\\\\$", AMdelimiter2regexp: "\\$",
   AMdocumentId: "wikitext",   // PmWiki element containing math (default=body)
   doubleblankmathdelimiter: false // if true,  x+1  is equal to `x+1`
