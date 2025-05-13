@@ -54,8 +54,9 @@ function parseQuiz(text, type = 'quiz') {
 }
 
 function renderMarkdown(text) {
+    let md = markdownit().use(markdownitEmoji);
     let container = document.createElement('div');
-    container.innerHTML = marked.parse(text);
+    container.innerHTML = md.renderInline(text);
     return container;
 }
 
