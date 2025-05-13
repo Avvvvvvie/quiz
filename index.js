@@ -88,50 +88,74 @@ function createQuiz(quiz) {
     getAnsweredQuiz(quiz, (questions) => {
         let quizContainer = document.createElement('div');
         quizContainer.className = 'quiz-container';
+
+        questionsContainer = document.createElement('div');
+        questionsContainer.classList.add('questions-container');
+        quizContainer.appendChild(questionsContainer);
+
         questionElements = [];
         questions.forEach((question) => {
             let questionElement = document.createElement('div');
             questionElement.className = 'question';
-            quizContainer.appendChild(questionElement);
+            questionsContainer.appendChild(questionElement);
             questionElement.classList.add('hidden');
 
             let title = renderMarkdown(question.title);
             title.className = 'question-title';
-            questionElement.appendChild(title);
+            questionsContainer.appendChild(title);
 
             let answer = renderMarkdown(question.answer);
             answer.className = 'question-answer';
-            questionElement.appendChild(answer);
-
-            let nextButton = document.createElement('button');
-            nextButton.textContent = 'Next Question';
-            nextButton.classList.add('hidden');
-            nextButton.addEventListener('click', () => {
-                questionElement.classList.add('hidden');
-                let nextElement = questionElement.nextElementSibling;
-                nextElement.classList.remove('hidden');
-            });
-            questionElement.appendChild(nextButton);
-
-            let showAnswerButton = document.createElement('button');
-            showAnswerButton.textContent = 'Show Answer';
-            answer.classList.add('hidden');
-            showAnswerButton.addEventListener('click', () => {
-                answer.classList.remove('hidden');
-                showAnswerButton.classList.add('hidden');
-                nextButton.classList.remove('hidden');
-            });
-            questionElement.appendChild(showAnswerButton);
+            questionsContainer.appendChild(answer);
 
             questionElements.push(questionElement);
         });
+
+        let buttons = document.createElement('div');
+        buttons.className = 'buttons';
+        quizContainer.appendChild(buttons);
+
+        let nextButton = document.createElement('button');
+        nextButton.textContent = 'Next Question';
+        nextButton.classList.add('hidden');
+        buttons.appendChild(nextButton);
+
+        let showAnswerButton = document.createElement('button');
+        showAnswerButton.textContent = 'Show Answer';
+        answer.classList.add('hidden');
+        buttons.appendChild(showAnswerButton);
+
+        nextButton.addEventListener('click', () => {
+            for(let questionElement of questionElements) {
+                if(questionElement.classList.contains('hidden')) {
+                    questionElement.classList.add('hidden');
+                    questionElement.nextElementSibling.classList.remove('hidden');
+                    nextButton.classList.add('hidden');
+                    showAnswerButton.classList.remove('hidden');
+                    break;
+                }
+            }
+        });
+
+
+        showAnswerButton.addEventListener('click', () => {
+            for(let questionElement of questionElements) {
+                if(questionElement.classList.contains('hidden')) {
+                    questionElement.querySelector('.question-answer').classList.remove('hidden');
+                    nextButton.classList.remove('hidden');
+                    showAnswerButton.classList.add('hidden');
+                    break;
+                }
+            }
+        });
+
 
         let backButton = document.createElement('button');
         backButton.textContent = 'Back';
         backButton.addEventListener('click', () => {
             createQuizSelection(quizzes);
         });
-        quizContainer.appendChild(backButton);
+        buttons.appendChild(backButton);
 
         let doneElement = document.createElement('div');
         doneElement.className = 'done';
