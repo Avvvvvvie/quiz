@@ -32,20 +32,20 @@ function parseQuiz(text, type = 'quiz') {
     let lines = text.split('\n');
     let questions = [];
     let inQuestion = false;
-    let currentQuestion = '';
+    let currentAnswer = '';
     let currentTitle = '';
     for(let i = 0; i < lines.length; i++) {
         if (lines[i].startsWith('> [!' + type +']-')) {
             inQuestion = true;
-            currentTitle = lines[i].substring(9,lines[i].length).trim();
+            currentTitle = lines[i].substring(10,lines[i].length).trim();
         } else if(inQuestion) {
             if(lines[i].startsWith('>')) {
-                currentQuestion += lines[i].substring(1,lines[i].length).trim() + '\n';
+                currentAnswer += lines[i].substring(1,lines[i].length).trim() + '\n';
             } else {
                 inQuestion = false;
-                currentQuestion = '';
+                questions.push(new Question(currentTitle, currentAnswer));
+                currentAnswer = '';
                 currentTitle = '';
-                questions.push(new Question(currentTitle, currentQuestion));
             }
         }
     }
@@ -60,8 +60,8 @@ function renderMarkdown(text) {
 
 
 class Question {
-    constructor(question, answer) {
-        this.question = question;
+    constructor(title, answer) {
+        this.title = title;
         this.answer = answer;
     }
 }
@@ -92,7 +92,7 @@ function createQuiz(quiz) {
             questionElement.className = 'question';
             quizContainer.appendChild(questionElement);
 
-            let title = renderMarkdown(question.question);
+            let title = renderMarkdown(question.title);
             title.className = 'question-title';
             questionElement.appendChild(title);
 
