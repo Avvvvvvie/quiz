@@ -125,7 +125,7 @@ function createQuiz(quiz) {
 
         nextButton.addEventListener('click', () => {
             for(let questionElement of questionsContainer.children) {
-                if(questionElement.classList.contains('hidden')) {
+                if(!questionElement.classList.contains('hidden')) {
                     questionElement.classList.add('hidden');
 
                     questionElement.nextElementSibling.classList.remove('hidden');
@@ -144,7 +144,7 @@ function createQuiz(quiz) {
 
         showAnswerButton.addEventListener('click', () => {
             for(let questionElement of questionsContainer.children) {
-                if(questionElement.classList.contains('hidden')) {
+                if(!questionElement.classList.contains('hidden')) {
                     let answer = questionElement.querySelector('.question-answer')
                     answer.classList.remove('hidden');
                     nextButton.classList.remove('hidden');
