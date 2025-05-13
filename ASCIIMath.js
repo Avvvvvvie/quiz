@@ -10,9 +10,8 @@ var options;
 
 function ASCIIMath(md, o) {
     // use defaults if no options set
-    options = o;
-    if (typeof options.useKeyword === 'undefined') {
-        options.useKeyword = defaults.useKeyword;
+    options = {
+        useKeyword: true
     }
 
     var useKeyword = options.useKeyword;
