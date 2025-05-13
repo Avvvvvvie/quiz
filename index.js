@@ -38,6 +38,7 @@ function parseQuiz(text, type = 'quiz') {
         if (lines[i].startsWith('> [!' + type +']-')) {
             inQuestion = true;
             currentTitle = lines[i].substring(10,lines[i].length).trim();
+            currentTitle = "### " + currentTitle;
         } else if(inQuestion) {
             if(lines[i].startsWith('>')) {
                 currentAnswer += lines[i].substring(1,lines[i].length).trim() + '\n';
