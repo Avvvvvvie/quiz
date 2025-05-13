@@ -5,14 +5,14 @@
 button {
     cursor: pointer;
     padding: 0.5rem 1rem;
-    border: 1px #d0d0d0 solid;
+    border: none;
     border-radius: .5rem;
 }
 
 main {
-    display: flex;
     max-width: 15rem;
     font-family: monospace;
+    margin: 2rem auto 0;
 }
 
 ul, ol {
@@ -54,6 +54,11 @@ li {
 
 .question-answer {
     margin-bottom: 1rem;
+}
+
+.question-answer.hidden {
+    display: block;
+    visibility: hidden;
 }
 
 .hidden {
