@@ -106,6 +106,7 @@ function createQuiz(quiz) {
 
             let answer = renderMarkdown(question.answer);
             answer.className = 'question-answer';
+            answer.classList.add('hidden');
             questionsContainer.appendChild(answer);
 
             questionElements.push(questionElement);
@@ -122,7 +123,6 @@ function createQuiz(quiz) {
 
         let showAnswerButton = document.createElement('button');
         showAnswerButton.textContent = 'Show Answer';
-        answer.classList.add('hidden');
         buttons.appendChild(showAnswerButton);
 
         nextButton.addEventListener('click', () => {
