@@ -127,9 +127,15 @@ function createQuiz(quiz) {
             for(let questionElement of questionElements) {
                 if(questionElement.classList.contains('hidden')) {
                     questionElement.classList.add('hidden');
+                    
                     questionElement.nextElementSibling.classList.remove('hidden');
                     nextButton.classList.add('hidden');
-                    showAnswerButton.classList.remove('hidden');
+
+                    if(questionElement.nextElementSibling.classList.contains('done')) {
+
+                    } else {
+                        showAnswerButton.classList.remove('hidden');
+                    }
                     break;
                 }
             }
@@ -139,7 +145,8 @@ function createQuiz(quiz) {
         showAnswerButton.addEventListener('click', () => {
             for(let questionElement of questionsContainer.children) {
                 if(questionElement.classList.contains('hidden')) {
-                    questionElement.querySelector('.question-answer').classList.remove('hidden');
+                    let answer = questionElement.querySelector('.question-answer')
+                    answer.classList.remove('hidden');
                     nextButton.classList.remove('hidden');
                     showAnswerButton.classList.add('hidden');
                     break;
