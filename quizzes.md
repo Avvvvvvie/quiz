@@ -1,3 +1,3 @@
-/SNP/notes.md
-/SVEN1/notes.md
-/WING/notes.md
+SNP/notes.md
+SVEN1/notes.md
+WING/notes.md
