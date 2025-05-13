@@ -111,6 +111,7 @@ function createQuiz(quiz) {
                 let nextElement = questionElement.nextElementSibling;
                 nextElement.classList.remove('hidden');
             });
+            questionElement.appendChild(nextButton);
 
             let showAnswerButton = document.createElement('button');
             showAnswerButton.textContent = 'Show Answer';
@@ -119,8 +120,8 @@ function createQuiz(quiz) {
                 answer.classList.remove('hidden');
                 nextButton.classList.remove('hidden');
             });
-
             questionElement.appendChild(showAnswerButton);
+
             questionElements.push(questionElement);
         });
         questionElements[0].classList.remove('hidden');
