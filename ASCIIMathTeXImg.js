@@ -1066,7 +1066,7 @@ String.prototype.trim = function() {
     return this.replace(/^\s+|\s+$/g, "");
 };
 
-var assign = lodash.assign;
+var assign = _.assign;
 var defaults = {
     useKeyword: false
 }
