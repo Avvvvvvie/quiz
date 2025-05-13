@@ -84,34 +84,35 @@ function createQuizSelection(quizzes) {
 
 function createQuiz(quiz) {
     main.innerHTML = '';
-    questions = getQuiz(quiz);
-    let quizContainer = document.createElement('div');
-    quizContainer.className = 'quiz-container';
-    questions.forEach((question) => {
-        let questionElement = document.createElement('div');
-        questionElement.className = 'question';
-        quizContainer.appendChild(questionElement);
+    getQuiz(quiz, (questions) => {
+        let quizContainer = document.createElement('div');
+        quizContainer.className = 'quiz-container';
+        questions.forEach((question) => {
+            let questionElement = document.createElement('div');
+            questionElement.className = 'question';
+            quizContainer.appendChild(questionElement);
 
-        let title = renderMarkdown(question.question);
-        title.className = 'question-title';
-        questionElement.appendChild(title);
+            let title = renderMarkdown(question.question);
+            title.className = 'question-title';
+            questionElement.appendChild(title);
 
-        let answer = renderMarkdown(question.answer);
-        answer.className = 'question-answer';
-        questionElement.appendChild(answer);
+            let answer = renderMarkdown(question.answer);
+            answer.className = 'question-answer';
+            questionElement.appendChild(answer);
 
-        let showAnswerButton = document.createElement('button');
-        showAnswerButton.textContent = 'Show Answer';
-        showAnswerButton.addEventListener('click', () => {
-            answer.classList.toggle('hidden');
+            let showAnswerButton = document.createElement('button');
+            showAnswerButton.textContent = 'Show Answer';
+            showAnswerButton.addEventListener('click', () => {
+                answer.classList.toggle('hidden');
+            });
+            questionElement.appendChild(showAnswerButton);
         });
-        questionElement.appendChild(showAnswerButton);
-    });
-    main.appendChild(quizContainer);
-    let backButton = document.createElement('button');
-    backButton.textContent = 'Back';
-    backButton.addEventListener('click', () => {
-        createQuizSelection(quizzes);
+        main.appendChild(quizContainer);
+        let backButton = document.createElement('button');
+        backButton.textContent = 'Back';
+        backButton.addEventListener('click', () => {
+            createQuizSelection(quizzes);
+        });
     });
 }
 
