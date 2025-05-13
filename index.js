@@ -1,5 +1,5 @@
-function readFile(filePath, callback) {
-    fetch(window.location.href + filePath)
+function readFile(path, callback) {
+    fetch(window.location.href + path)
         .then((res) => res.text())
         .then((text) => {
             callback(text);
@@ -13,19 +13,19 @@ function getQuizzes(callback) {
     });
 }
 
-function getQuiz(quiz, callback) {
-    readFile(quiz, (text) => {
-        let questions = parseAnsweredQuiz(text);
+function getQuiz(path, callback, type = 'quiz') {
+    readFile(path, (text) => {
+        let questions = parseQuiz(text, type);
         callback(questions);
     });
 }
 
-function parseAnsweredQuiz(text) {
-    return parseQuiz(text, 'quiz');
+function getAnsweredQuiz(path) {
+    return getQuiz(path, 'quiz');
 }
 
-function parseUnansweredQuiz(text) {
-    return parseQuiz(text, 'toquiz');
+function getUnansweredQuiz(path) {
+    return getQuiz(path, 'toquiz');
 }
 
 function parseQuiz(text, type = 'quiz') {
@@ -85,7 +85,7 @@ function createQuizSelection(quizzes) {
 
 function createQuiz(quiz) {
     main.innerHTML = '';
-    getQuiz(quiz, (questions) => {
+    getAnsweredQuiz(quiz, (questions) => {
         let quizContainer = document.createElement('div');
         quizContainer.className = 'quiz-container';
         questionElements = [];
@@ -118,6 +118,7 @@ function createQuiz(quiz) {
             answer.classList.add('hidden');
             showAnswerButton.addEventListener('click', () => {
                 answer.classList.remove('hidden');
+                showAnswerButton.classList.add('hidden');
                 nextButton.classList.remove('hidden');
             });
             questionElement.appendChild(showAnswerButton);
