@@ -85,9 +85,18 @@ function createQuizSelection(quizzes) {
     main.appendChild(quizList);
 }
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 function createQuiz(quiz) {
     main.innerHTML = '';
     getAnsweredQuiz(quiz, (questions) => {
+        shuffleArray(questions);
+
         let quizContainer = document.createElement('div');
         quizContainer.className = 'quiz-container';
 

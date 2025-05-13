@@ -6,12 +6,8 @@
 > $$
 
 > [!info]- Wie sieht eine arithmetische Reihe aus?
-> $$
-> \begin{flalign*}
-> &c + (n-1) \cdot d&\\
-> &a_{n-1} + d&\\
-> \end{flalign*}
-> $$
+> $c + (n-1) \cdot d$
+> $a_{n-1} + d$
 
 > [!info]- Welche darstellungen von Reihen gibt es?
 > - implizite Darstellung: mit n-1
@@ -57,32 +53,16 @@
 > -sin(x)
 
 > [!info]- tan(x)' = ?
-> $$
-> \begin{flalign*}
-> &\frac{1}{\cos^2(x)}&\\
-> \end{flalign*}
-> $$
+> $\frac{1}{\cos^2(x)}$
 
 > [!info]- arcsin(x)' = ?
-> $$
-> \begin{flalign*}
-> &\frac{1}{\sqrt{ 1 - x^2 }}&\\
-> \end{flalign*}
-> $$
+> $\frac{1}{\sqrt{ 1 - x^2 }}$
 
 > [!info]- arccos(x)' = ?
-> $$
-> \begin{flalign*}
-> &-\frac{1}{\sqrt{ 1 - x^2 }}&\\
-> \end{flalign*}
-> $$
+> $-\frac{1}{\sqrt{ 1 - x^2 }}$
 
 > [!info]- arctan(x)' = ?
-> $$
-> \begin{flalign*}
-> &\frac{1}{1+x^2}&\\
-> \end{flalign*}
-> $$
+> $\frac{1}{1+x^2}$
 
 > [!info]- Welcher Grad hat x^3 + 2x?
 > Grad 3
