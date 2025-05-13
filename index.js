@@ -93,7 +93,6 @@ function createQuiz(quiz) {
         questionsContainer.classList.add('questions-container');
         quizContainer.appendChild(questionsContainer);
 
-        questionElements = [];
         questions.forEach((question) => {
             let questionElement = document.createElement('div');
             questionElement.classList.add('question');
@@ -109,7 +108,6 @@ function createQuiz(quiz) {
             questionElement.appendChild(answer);
 
             questionsContainer.appendChild(questionElement);
-            questionElements.push(questionElement);
         });
 
         let buttons = document.createElement('div');
@@ -139,7 +137,7 @@ function createQuiz(quiz) {
 
 
         showAnswerButton.addEventListener('click', () => {
-            for(let questionElement of questionElements) {
+            for(let questionElement of questionsContainer.children) {
                 if(questionElement.classList.contains('hidden')) {
                     questionElement.querySelector('.question-answer').classList.remove('hidden');
                     nextButton.classList.remove('hidden');
