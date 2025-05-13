@@ -27,7 +27,7 @@ THE SOFTWARE.
 //var AMTcgiloc = '';			//set to the URL of your LaTex renderer
 var noMathRender = false;
 
-ASCIIMath = (function() {
+var ASCIIMath = (function() {
 var config = {
   translateOnLoad: true,		  //true to autotranslate
   mathcolor: "",       	      // defaults to back, or specify any other color
