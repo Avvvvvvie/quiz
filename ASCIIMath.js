@@ -63,7 +63,7 @@ function ASCIIMath(md, o) {
     md.block.ruler.after("blockquote", "math_block", blockMathRule, {
         alt: ["paragraph", "reference", "blockquote", "list"],
     });
-    md.renderer.rules.math_block = md.renderer.rules.fence;
+    md.renderer.rules.math_block = md.renderer.rules.code_inline;
 }
 
 function createInlineMathRule({ delimiters, allowWhiteSpacePadding }) {
