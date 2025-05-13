@@ -115,9 +115,10 @@ function createQuiz(quiz) {
     });
 }
 
-let main = document.querySelector('main');
+let main;
 
 function init() {
+    main = document.querySelector('main');
     getQuizzes(createQuizSelection);
 }
 
