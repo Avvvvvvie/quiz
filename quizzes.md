@@ -4,8 +4,6 @@ FS2024/AN2/quiz.md
 HS2023/INCO/quiz.md
 HS2023/DM/quiz.md
 HS2023/AN1/quiz.md
-HS2024/HM1/quiz.md
-HS2024/GED/quiz.md
 HS2024/DB/quiz.md
 HS2024/ADS/quiz.md
 HM2/quiz.md
