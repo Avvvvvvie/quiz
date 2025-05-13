@@ -53,3 +53,7 @@ li {
 .question-answer {
 
 }
+
+.hidden {
+    display: none;
+}
