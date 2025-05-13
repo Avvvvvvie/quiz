@@ -7,7 +7,7 @@ function readFile(filePath, callback) {
 }
 
 function getQuizzes(callback) {
-    readFile('quizzes.md', (text) -> {
+    readFile('quizzes.md', (text) => {
         quizzes = text.split('\n');
         callback(quizzes);
     });
