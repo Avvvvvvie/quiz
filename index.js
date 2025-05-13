@@ -125,13 +125,22 @@ function createQuiz(quiz) {
 
             questionElements.push(questionElement);
         });
-        questionElements[0].classList.remove('hidden');
-        main.appendChild(quizContainer);
+
         let backButton = document.createElement('button');
         backButton.textContent = 'Back';
         backButton.addEventListener('click', () => {
             createQuizSelection(quizzes);
         });
+        quizContainer.appendChild(backButton);
+
+        let doneElement = document.createElement('div');
+        doneElement.className = 'done';
+        doneElement.textContent = 'Good job :)';
+        doneElement.classList.add('hidden');
+        quizContainer.appendChild(doneElement);
+
+        questionElements[0].classList.remove('hidden');
+        main.appendChild(quizContainer);
     });
 }
 
