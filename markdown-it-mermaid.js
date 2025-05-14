@@ -5,33 +5,10 @@ function mermaidChart(code) {
         mermaidCounter++;
         let thisCounter = mermaidCounter;
         mermaid.render("theGraph", code).then(function (result) {
-            observeVisiblilty = function(el) {
-                let observer = new MutationObserver((entries) => {
-                    let target = entries[0].target;
-
-                    // Act only when the element becomes visible
-                    if(target.classList.contains('visible')) {
-                        // Get the contents of the Mermaid element
-                        let html = el.textContent;
-
-                        // Generate a unique-ish ID so we don't clobber existing graphs
-                        // This is definitely quick and dirty and could be improved to
-                        // avoid collisions when many charts are used
-                        let id = 'graph-' + Math.floor(Math.random() * Math.floor(1000));
-
-                        // Actually render the chart
-                        el.innerHTML = result.svg;
-
-                        // Disconnect the observer, since the chart is now on the page.
-                        // There's no point in continuing to watch it
-                        observer.disconnect();
-                    }
-                });
-                observer.observe(el, {
-                    attributes: true
-                });
-            };
-            observeVisiblilty(document.getElementById(`mermaid${thisCounter}`));
+            element = document.getElementById(`mermaid${thisCounter}`);
+            respondToVisibility(element, (el) {
+                element.innerHTML = result.svg;
+            });
         });
         return `<div class="mermaid" id="mermaid${thisCounter}"></div>`;
     } catch (e) {
@@ -39,6 +16,19 @@ function mermaidChart(code) {
     }
 }
 
+function respondToVisibility(element, callback) {
+    var options = {
+        root: document.documentElement,
+    };
+
+    var observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            callback(entry.intersectionRatio > 0);
+        });
+    }, options);
+
+    observer.observe(element);
+}
 
 
 const markdownItMermaid = (md) => {
