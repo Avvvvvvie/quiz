@@ -1,13 +1,12 @@
-FS2024/PROG2/quiz.md
-FS2024/LA/quiz.md
-FS2024/AN2/quiz.md
 HS2023/INCO/quiz.md
 HS2023/DM/quiz.md
 HS2023/AN1/quiz.md
+FS2024/PROG2/quiz.md
+FS2024/LA/quiz.md
+FS2024/AN2/quiz.md
 HS2024/ADS/quiz.md
 HM2/quiz.md
 KT/quiz.md
 SNP/quiz.md
 SVEN1/quiz.md
 WING/quiz.md
-quiz.md
