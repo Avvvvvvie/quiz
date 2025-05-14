@@ -7,9 +7,9 @@ function mermaidChart(code) {
         mermaid.render("theGraph", code).then(function (result) {
             element = document.getElementById(`mermaid${thisCounter}`);
             element.innerHTML = result.svg;
-            respondToVisibility(element, () => {
+            /*respondToVisibility(element, () => {
                 element.innerHTML = result.svg;
-            });
+            });*/
         });
         return `<div class="mermaid" id="mermaid${thisCounter}"></div>`;
     } catch (e) {
