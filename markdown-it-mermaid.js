@@ -1,19 +1,10 @@
-const mermaidChart = (code) => {
+async const mermaidChart = (code) => {
     try {
-        return new Promise(resolve => {
-            mermaid.render('id1', code, (result) => {
-                resolve(`<div class="mermaid">${result}</div>`);
-            });
-        });
+        const { svg } = await mermaid.render("theGraph", code);
+        return `<div class="mermaid">${svg.innerHTML}</div>`;
     } catch ({ str, hash }) {
-        return new Promise(resolve => {
-            resolve(`<pre>${str}</pre>`);
-        });
+        return `<pre>${str}</pre>`;
     }
-}
-
-async function waitForIt(promise) {
-    return await promise;
 }
 
 const markdownItMermaid = (md) => {
@@ -46,11 +37,11 @@ const markdownItMermaid = (md) => {
         const token = tokens[idx]
         const code = token.content.trim()
         if (token.info === 'mermaid') {
-            return waitForIt(mermaidChart(code))
+            return mermaidChart(code);
         }
         const firstLine = code.split(/\n/)[0].trim()
         if (firstLine === 'gantt' || firstLine === 'sequenceDiagram' || firstLine.match(/^graph (?:TB|BT|RL|LR|TD);?$/)) {
-            return waitForIt(mermaidChart(code))
+            return mermaidChart(code);
         }
         return temp(tokens, idx, options, env, slf)
     }
