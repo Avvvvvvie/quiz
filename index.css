@@ -36,15 +36,9 @@ table {
     border-collapse: collapse;
     font-family: Tahoma, Geneva, sans-serif;
 }
-table td {
+table td, table th {
     padding: .8rem;
-}
-table thead th {
     font-weight: bold;
-    color: #636363;
-    border: 1px solid #cecece;
-}
-table tbody td {
     color: #636363;
     border: 1px solid #cecece;
 }
