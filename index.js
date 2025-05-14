@@ -150,8 +150,9 @@ function createQuiz(quiz) {
 
         function showNextQuestion() {
             if(questions.length === 0) {
-                title.innerHTML = "Good job :)";
+                title.innerHTML = "Done";
                 showAnswerButton.classList.add('hidden');
+                answer.innerHTML = "Good job :)";
                 return;
             }
             question = questions[questions.length - 1];
