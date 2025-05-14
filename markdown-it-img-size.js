@@ -2,7 +2,7 @@ const OBSIDIAN_IMAGE_SIZE_REGEXP = /^(.*?)\|\s*(\d+)\s*x\s*(\d+)\s*$/;
 
 const markdownItImgSize = (md) => {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const originalImageRender = md.renderer.rules.image!;
+    const originalImageRender = md.renderer.rules.image;
 
     md.renderer.rules.image = (tokens, index, options, env, self): string => {
         const token = tokens[index];
