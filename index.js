@@ -159,7 +159,7 @@ function createQuiz(questions, callback, callbackMessage) {
 
     main.appendChild(quizContainer);
 
-    function showNextQuestion() {
+    showNextQuestion = () => {
         if(questions.length === 0) {
             title.innerHTML = "### You are done";
             showAnswerButton.classList.add('hidden');
