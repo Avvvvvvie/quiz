@@ -27,8 +27,9 @@ function mermaidChart(code) {
                         observer.disconnect();
                     }
                 });
-
-                observer.observe(el, mermaidObserverOpts);
+                observer.observe(el, {
+                    attributes: true
+                };);
             };
             observeVisiblilty(document.getElementById(`mermaid${thisCounter}`));
         });
