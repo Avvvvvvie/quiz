@@ -137,9 +137,9 @@ function createQuiz(quiz) {
         main.appendChild(quizContainer);
 
         nextButton.addEventListener('click', () => {
-            showNextQuestion();
             showAnswerButton.classList.remove('hidden');
             nextButton.classList.add('hidden');
+            showNextQuestion();
         });
 
         showAnswerButton.addEventListener('click', () => {
@@ -149,16 +149,16 @@ function createQuiz(quiz) {
         });
 
         function showNextQuestion() {
+            if(questions.length === 0) {
+                title.innerHTML = "Good job :)";
+                nextButton.classList.add('hidden');
+                return;
+            }
             question = questions[0];
             questions.pop();
             answer.classList.add('hidden');
-            if(questions.length) {
-                title.innerHTML = renderMarkdown(question.title);
-                answer.innerHTML = renderMarkdown(question.answer);
-            } else {
-                title.innerHTML = "Good job :)";
-                nextButton.classList.add('hidden');
-            }
+            title.innerHTML = renderMarkdown(question.title);
+            answer.innerHTML = renderMarkdown(question.answer);
         }
         showNextQuestion();
     });
