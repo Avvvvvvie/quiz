@@ -154,7 +154,7 @@ function createQuiz(quiz) {
                 nextButton.classList.add('hidden');
                 return;
             }
-            question = questions[0];
+            question = questions[questions.length - 1];
             questions.pop();
             answer.classList.add('hidden');
             title.innerHTML = renderMarkdown(question.title);
