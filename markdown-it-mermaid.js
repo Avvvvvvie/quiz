@@ -20,9 +20,7 @@ function mermaidChart(code) {
                         let id = 'graph-' + Math.floor(Math.random() * Math.floor(1000));
 
                         // Actually render the chart
-                        mermaid.mermaidAPI.render(id, html, content => {
-                            el.innerHTML = result.svg;
-                        });
+                        el.innerHTML = result.svg;
 
                         // Disconnect the observer, since the chart is now on the page.
                         // There's no point in continuing to watch it
