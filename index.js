@@ -93,76 +93,98 @@ function shuffleArray(array) {
     }
 }
 
-function createQuiz(quiz) {
-    main.innerHTML = '';
-    getAnsweredQuiz(quiz, (questions) => {
-        shuffleArray(questions);
+function createQuiz(questions, callback, callbackMessage) {
+    shuffleArray(questions);
 
-        let quizContainer = document.createElement('div');
-        quizContainer.className = 'quiz-container';
+    let quizContainer = document.createElement('div');
+    quizContainer.className = 'quiz-container';
 
-        let questionElement = document.createElement('div');
-        questionElement.classList.add('question');
+    let questionElement = document.createElement('div');
+    questionElement.classList.add('question');
 
-        let title = document.createElement('div');
-        title.className = 'question-title';
-        questionElement.appendChild(title);
+    let title = document.createElement('div');
+    title.className = 'question-title';
+    questionElement.appendChild(title);
 
-        let answer = document.createElement('div');
-        answer.className = 'question-answer';
-        answer.classList.add('hidden');
-        questionElement.appendChild(answer);
+    let answer = document.createElement('div');
+    answer.className = 'question-answer';
+    answer.classList.add('hidden');
+    questionElement.appendChild(answer);
 
-        quizContainer.appendChild(questionElement);
+    quizContainer.appendChild(questionElement);
 
-        let buttons = document.createElement('div');
-        buttons.className = 'buttons';
-        quizContainer.appendChild(buttons);
+    let buttons = document.createElement('div');
+    buttons.className = 'buttons';
+    quizContainer.appendChild(buttons);
 
-        let nextButton = document.createElement('button');
-        nextButton.textContent = 'Next Question';
+    let nextButton = document.createElement('button');
+    nextButton.textContent = 'Next Question';
+    nextButton.classList.add('hidden');
+    buttons.appendChild(nextButton);
+
+    let showAnswerButton = document.createElement('button');
+    showAnswerButton.textContent = 'Show Answer';
+    buttons.appendChild(showAnswerButton);
+
+    let backButton = document.createElement('button');
+    backButton.textContent = 'Quit';
+    backButton.addEventListener('click', () => {
+        createQuizSelection(quizzes);
+    });
+    buttons.appendChild(backButton);
+
+    if(callbackMessage) {
+        let callbackButton = document.createElement('button');
+        callbackButton.textContent = callbackMessage;
+        callbackButton.classList.add('hidden');
+        callbackButton.addEventListener('click', callback);
+        buttons.appendChild(callbackButton);
+    }
+
+    main.appendChild(quizContainer);
+
+    nextButton.addEventListener('click', () => {
+        showAnswerButton.classList.remove('hidden');
         nextButton.classList.add('hidden');
-        buttons.appendChild(nextButton);
+        showNextQuestion();
+    });
 
-        let showAnswerButton = document.createElement('button');
-        showAnswerButton.textContent = 'Show Answer';
-        buttons.appendChild(showAnswerButton);
+    showAnswerButton.addEventListener('click', () => {
+        showAnswerButton.classList.add('hidden');
+        nextButton.classList.remove('hidden');
+        answer.classList.remove('hidden');
+    });
 
-        let backButton = document.createElement('button');
-        backButton.textContent = 'Quit';
-        backButton.addEventListener('click', () => {
-            createQuizSelection(quizzes);
-        });
-        buttons.appendChild(backButton);
-
-        main.appendChild(quizContainer);
-
-        nextButton.addEventListener('click', () => {
-            showAnswerButton.classList.remove('hidden');
-            nextButton.classList.add('hidden');
-            showNextQuestion();
-        });
-
-        showAnswerButton.addEventListener('click', () => {
+    function showNextQuestion() {
+        if(questions.length === 0) {
+            title.innerHTML = "### You are done";
+            showAnswerButton.classList.add('hidden');
+            answer.innerHTML = "Good job :)";
+            if(callbackMessage) {
+                callbackButton.classList.remove('hidden');
+            }
+            return;
+        }
+        question = questions[questions.length - 1];
+        questions.pop();
+        title.innerHTML = renderMarkdown(question.title);
+        if(question.answer) {
+            answer.classList.add('hidden');
             showAnswerButton.classList.add('hidden');
             nextButton.classList.remove('hidden');
-            answer.classList.remove('hidden');
-        });
-
-        function showNextQuestion() {
-            if(questions.length === 0) {
-                title.innerHTML = "### You are done";
-                showAnswerButton.classList.add('hidden');
-                answer.innerHTML = "Good job :)";
-                return;
-            }
-            question = questions[questions.length - 1];
-            questions.pop();
-            answer.classList.add('hidden');
-            title.innerHTML = renderMarkdown(question.title);
             answer.innerHTML = renderMarkdown(question.answer);
         }
-        showNextQuestion();
+    }
+    showNextQuestion();
+    return quizContainer;
+}
+
+function loadQuiz(quiz) {
+    main.innerHTML = '';
+    getAnsweredQuiz(quiz, (questions) => {
+        quizContainer = createQuiz(questions, () {
+            getUnansweredQuiz('quiz');
+        }, 'Coninue with unanswered questions');
     });
 }
 
