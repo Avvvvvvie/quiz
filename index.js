@@ -161,7 +161,7 @@ function createQuiz(questions, callback, callbackMessage) {
 
     showNextQuestion = () => {
         if(questions.length === 0) {
-            title.innerHTML = "### You are done";
+            title.innerHTML = renderMarkdown('### You are done');
             showAnswerButton.classList.add('hidden');
             answer.innerHTML = "Good job :)";
             if(callbackMessage) {
@@ -185,11 +185,15 @@ function createQuiz(questions, callback, callbackMessage) {
 
 function loadQuiz(quiz) {
     getAnsweredQuiz(quiz, (questions) => {
-        createQuiz(questions, () => {
-            getUnansweredQuiz('quiz', (questions) => {
+        getUnansweredQuiz('quiz', (unansweredQuestions) => {
+            if(unansweredQuestions.length) {
+                createQuiz(questions, () => {
+                    createQuiz(unansweredQuestions)
+                }, 'Continue with unanswered questions');
+            } else {
                 createQuiz(questions);
-            });
-        }, 'Coninue with unanswered questions');
+            }
+        });
     });
 }
 
