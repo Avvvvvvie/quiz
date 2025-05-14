@@ -6,7 +6,7 @@ function mermaidChart(code) {
             document.getElementById(`mermaid${mermaidCounter}`).innerHTML = svgCode;
         });
         return `<div class="mermaid" id="mermaid${mermaidCounter}"></div>`;
-    } catch () {
+    } catch (e) {
         return `<pre>${code}</pre>`;
     }
 }
