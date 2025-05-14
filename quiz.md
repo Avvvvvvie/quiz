@@ -3,6 +3,11 @@
 > `math 1 + 1 Int_a^b f(x)`
 > 
 > ```mermaid
+> ---
+> config:
+>  class:
+>   hideEmptyMembersBox: true
+> ---
 > classDiagram
 > 	A <-- B
 > ```
