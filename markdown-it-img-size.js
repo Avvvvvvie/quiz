@@ -4,7 +4,7 @@ const markdownItImgSize = (md) => {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const originalImageRender = md.renderer.rules.image;
 
-    md.renderer.rules.image = (tokens, index, options, env, self): string => {
+    md.renderer.rules.image = (tokens, index, options, env, self) => {
         const token = tokens[index];
 
         const content = token.children?.[0]?.content;
