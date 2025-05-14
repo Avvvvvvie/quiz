@@ -92,7 +92,7 @@
 > ![](assets/Pasted%20image%2020231224100941.png)
 
 > [!info]- Wie notiert man diverse Logikgatter?
-> ![[assets/Pasted image 20231224100925.png]]
+> ![](assets/Pasted%20image%2020231224100925.png)
 
 > [!info]- Wie werden üblicherweise negative Zahlen binär dargestellt?
 > Das 1. Bit rechnet man nicht + sondern -. Das 1. Bit hat den grössten Wert von allen Bits der Zahl, also sind alle Zahlen, die mit einer 1 anfangen negativ. Z.B. 1001 = -8 + 1 = -7
