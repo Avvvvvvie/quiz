@@ -7,7 +7,7 @@ var disableCheckboxes = true;
 var useLabelWrapper = false;
 var useLabelAfter = false;
 
-markDownItList = function(md) {
+markdownItList = function(md) {
     if (options) {
         disableCheckboxes =false;
         useLabelWrapper = true;
