@@ -23,7 +23,7 @@ Wenn es nicht det(2x2) gibt ist es dann nie invertierbar?
 
 Was sind die 6 wichtigen Eigenschaften des Kreuzprodukts?
 
-![[Pasted image 20240325090355.png]]
+![](_assets/Pasted%20image%2020240325090355.png)
 
 
 

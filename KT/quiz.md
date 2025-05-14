@@ -307,7 +307,7 @@ tracert nippon.jp
 > [!info]- Wie berechnet man die IP als Zahl?
 > A.B.C.D -> D * 0 + C * 256 + B * 256 * 256 + A * 256 * 256 * 256
 
-> [!info]- ![[Pasted image 20250514091633.png]]
+> [!info]- ![](_assets/Pasted%20image%2020250514091633.png)
 > a) 17.8.0.0, 17.8.255.255, 65'536
 > b) 255.255.224.0 /19, 11.7.191.255, 8'192
 > c) 255.255.192.0 /18, 144.3.128.0, 16384
@@ -323,7 +323,7 @@ tracert nippon.jp
 > - Wird nur am Rand genutzt
 > - Kleine Tabelle
 
-> [!info]- ![[Pasted image 20250514091658.png]]
+> [!info]- ![[_assets/Pasted image 20250514091658.png]]
 > a) Es wird nach gemäss dem 4. Eintrag der Routingtabelle von Router B an p0 weitergeleitet
 > b) Es wird gemäss Eintrag 5 in der Routingtabelle von Router B an p2 weitergeleitet.
 > c) Router C kann das IP Paket nicht weiterleiten, das IP-Paket erreicht den Empfänger nicht. Das Paket wird verworfen.
