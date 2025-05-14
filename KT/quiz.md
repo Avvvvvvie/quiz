@@ -307,7 +307,7 @@ tracert nippon.jp
 > [!info]- Wie berechnet man die IP als Zahl?
 > A.B.C.D -> D * 0 + C * 256 + B * 256 * 256 + A * 256 * 256 * 256
 
-> [!info]- [[6_internet_1.pdf#page=31&selection=94,27,94,68|Berechnen Sie die fehlenden Informationen]]
+> [!info]- ![[Pasted image 20250514091633.png]]
 > a) 17.8.0.0, 17.8.255.255, 65'536
 > b) 255.255.224.0 /19, 11.7.191.255, 8'192
 > c) 255.255.192.0 /18, 144.3.128.0, 16384
@@ -323,12 +323,12 @@ tracert nippon.jp
 > - Wird nur am Rand genutzt
 > - Kleine Tabelle
 
-> [!info]- [[6_internet_1.pdf#page=40&selection=128,7,131,6|Was geschieht mit dem IP- Paket?]]
+> [!info]- ![[Pasted image 20250514091658.png]]
 > a) Es wird nach gemäss dem 4. Eintrag der Routingtabelle von Router B an p0 weitergeleitet
 > b) Es wird gemäss Eintrag 5 in der Routingtabelle von Router B an p2 weitergeleitet.
 > c) Router C kann das IP Paket nicht weiterleiten, das IP-Paket erreicht den Empfänger nicht. Das Paket wird verworfen.
 
-> [!info]- [[6_internet_1.pdf#page=43&selection=15,0,15,52|Welche Werte können in einer Subnetzmaske vorkommen?]]
+> [!info]- ![[Pasted image 20250514091723.png]]
 > | Wert            | alternative | interfaces |
 > | --------------- | --- | ---------- |
 > | 255 (1111’1111) | /24 | 256 - 2    |
@@ -344,7 +344,7 @@ tracert nippon.jp
 > [!info]- Was ist Classful Routing?
 > Die ersten 4 Adress Bits werden genutzt, um die Klasse anzugeben. Die D Klasse ist für Multiclass-Adressen und die E Klasse reserviert für zukünftige Nutzung. Dies wird nicht mehr zur Vergabe von Blöcken benutzt. Die Klassen haben eine fixe Anzahl Maskenbits (8, 16, 24) Die Klassen haben einen präfixfreien Präfix.
 
-> [!info]- [[6_internet_1.pdf#page=45&selection=22,7,24,16|Können Sie die Klassen der Netze bestimmen?]]
+> [!info]- ![[Pasted image 20250514091746.png]]
 > Gelb: 30.0.x.x = Klasse B (/16) 
 > Grün: 133.0.x.x = Klasse B (/16)
 > Blau: 22.x.x.x = Klasse A (/8)
@@ -362,7 +362,7 @@ tracert nippon.jp
 > [!info]- Was ist Subnetting?
 > Hiermit wird ein grosses Netz in mehrere kleine aufgeteilt. ZB Um das Netz in 8 kleinere aufzuteilen, fügt man der Netzmaske 3 Einsen hinzu.
 
-> [!info]- [[6_internet_1.pdf#page=49&selection=74,0,74,41|Wie würde das fünfte Netz gekennzeichnet?]]
+> [!info]- ![[Pasted image 20250514091810.png]]
 >  160.85.128.0 / 255.255.224.0 oder 160.85.128.0 /19
 
 > [!info]- Was gibt es für spezielle IP-Adressen?
