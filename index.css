@@ -37,7 +37,7 @@ table {
     font-family: Tahoma, Geneva, sans-serif;
 }
 table td {
-    padding: 15px;
+    padding: .8rem;
 }
 table thead td {
     font-weight: bold;
@@ -52,9 +52,6 @@ table tbody td {
 }
 table tbody tr {
     background-color: #f9fafb;
-}
-table tbody tr:nth-child(odd) {
-    background-color: #ffffff;
 }
 
 /* other */

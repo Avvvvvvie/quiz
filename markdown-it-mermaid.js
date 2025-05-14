@@ -1,6 +1,6 @@
 const mermaidChart = (code) => {
     try {
-        mermaid.parse(code)
+        mermaid.render(code)
         return `<div class="mermaid">${code}</div>`
     } catch ({ str, hash }) {
         return `<pre>${str}</pre>`
