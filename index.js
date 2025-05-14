@@ -112,7 +112,7 @@ function createQuiz(quiz) {
         title.className = 'question-title';
         questionElement.appendChild(title);
 
-        let answer = renderMarkdown(question.answer);
+        let answer = document.createElement('div');
         answer.className = 'question-answer';
         answer.classList.add('hidden');
         questionElement.appendChild(answer);
