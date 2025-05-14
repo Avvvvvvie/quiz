@@ -23,6 +23,6 @@
 >
 > image
 > 
-> ![](_assets/Pasted%20image%2020250514095205.png)
+> ![](assets/Pasted%20image%2020250514095205.png)
 
 

@@ -23,11 +23,11 @@ Wenn es nicht det(2x2) gibt ist es dann nie invertierbar?
 
 Was sind die 6 wichtigen Eigenschaften des Kreuzprodukts?
 
-![](_assets/Pasted%20image%2020240325090355.png)
+![](assets/Pasted%20image%2020240325090355.png)
 
 
 
-![[Pasted image 20240415170116.png]]
+![](assets/Pasted%20image%2020240415170116.png)
 
 
 Gegeben sind die Menge M, die Operation $ast$ und $a, b, c in M$

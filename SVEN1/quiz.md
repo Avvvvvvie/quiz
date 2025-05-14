@@ -72,7 +72,7 @@ e. Wenn ein Code Smell entdeckt wird.
 > 	- Hilfe
 
 > [!info]- Wie sieht der UCD Process aus?
-> ![](_assets/Pasted%20image%2020250223160908.png)
+> ![](assets/Pasted%20image%2020250223160908.png)
 
 > [!info]- Ziel und Vorgehen für User & Domain Research
 > Ziel: Fachdomäne, Business der Firma und Benutzerkontext verstehen

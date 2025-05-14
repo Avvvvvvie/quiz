@@ -77,7 +77,7 @@ was sind deadlocks konditionen und lösungen
 
 io abstract cls why
 
-![](_assets/Pasted%20image%2020240422101740.png)
+![](assets/Pasted%20image%2020240422101740.png)
 
 mitte byte die anderen pro linie+utf
 why close io
