@@ -2,10 +2,12 @@ let mermaidCounter = 0;
 
 function mermaidChart(code) {
     try {
-        mermaid.render("theGraph", code).then(function (svgCode) {
-            document.getElementById(`mermaid${mermaidCounter}`).innerHTML = svgCode;
+        mermaidCounter++;
+        let thisCounter = mermaidCounter;
+        mermaid.render("theGraph", code).then(function (result) {
+            document.getElementById(`mermaid${thisCounter}`).innerHTML = result.svg;
         });
-        return `<div class="mermaid" id="mermaid${mermaidCounter}"></div>`;
+        return `<div class="mermaid" id="mermaid${thisCounter}"></div>`;
     } catch (e) {
         return `<pre>${code}</pre>`;
     }
