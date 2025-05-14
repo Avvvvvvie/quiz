@@ -54,7 +54,13 @@ table tbody tr {
     background-color: #f9fafb;
 }
 
-/* other */
+/* images */
+
+img {
+    max-width: 100%;
+}
+
+/* main */
 
 * {
     box-sizing: border-box;
