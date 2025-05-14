@@ -362,7 +362,7 @@ tracert nippon.jp
 > [!info]- Was ist Subnetting?
 > Hiermit wird ein grosses Netz in mehrere kleine aufgeteilt. ZB Um das Netz in 8 kleinere aufzuteilen, fügt man der Netzmaske 3 Einsen hinzu.
 
-> [!info]- ![](assets/Pasted%20image 20250514091810.png]]
+> [!info]- ![](assets/Pasted%20image%2020250514091810.png]]
 >  160.85.128.0 / 255.255.224.0 oder 160.85.128.0 /19
 
 > [!info]- Was gibt es für spezielle IP-Adressen?
