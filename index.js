@@ -145,6 +145,7 @@ function createQuiz(quiz) {
         showAnswerButton.addEventListener('click', () => {
             showAnswerButton.classList.add('hidden');
             nextButton.classList.remove('hidden');
+            answer.classList.remove('hidden');
         });
 
         function showNextQuestion() {
