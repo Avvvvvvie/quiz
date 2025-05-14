@@ -31,7 +31,7 @@ function parseQuiz(text) {
             inQuestion = true;
             currentTitle = lines[i].substring(10,lines[i].length).trim();
             if(currentTitle.startsWith('-')) {
-                currentTitle = title.substring(1, title.length).trim();
+                currentTitle = currentTitle.substring(1, title.length).trim();
             }
             currentTitle = "### " + currentTitle;
         } else if(inQuestion) {
@@ -47,7 +47,7 @@ function parseQuiz(text) {
             inQuestion = false;
             currentTitle = lines[i].substring(13,lines[i].length).trim();
             if(currentTitle.startsWith('-')) {
-                currentTitle = title.substring(1, title.length).trim();
+                currentTitle = currentTitle.substring(1, title.length).trim();
             }
             unansweredQuestions.push(new Question(lines[i].substring(13,lines[i].length).trim(), ''));
         }
