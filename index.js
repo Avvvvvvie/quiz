@@ -58,7 +58,8 @@ function renderMarkdown(text) {
     markdownItAsciimath(md, {});
     markdownItMermaid(md);
     markdownItImgSize(md);
-    markdownItList(md);
+    markdownItNesting(md);
+    markdownitCheckbox(md)
     return md.render(text);
 }
 
