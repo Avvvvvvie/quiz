@@ -54,13 +54,11 @@ function parseQuiz(text, type) {
 }
 
 function renderMarkdown(text) {
-    let container = document.createElement('div');
     md = markdownit();
     markdownItAsciimath(md, {});
     markdownItMermaid(md);
     markdownItImgSize(md);
-    container.innerHTML = md.render(text);
-    return container;
+    return md.render(text);
 }
 
 
@@ -106,22 +104,20 @@ function createQuiz(quiz) {
         questionsContainer.classList.add('questions-container');
         quizContainer.appendChild(questionsContainer);
 
-        questions.forEach((question) => {
-            let questionElement = document.createElement('div');
-            questionElement.classList.add('question');
-            questionElement.classList.add('hidden');
+        let questionElement = document.createElement('div');
+        questionElement.classList.add('question');
+        questionElement.classList.add('hidden');
 
-            let title = renderMarkdown(question.title);
-            title.className = 'question-title';
-            questionElement.appendChild(title);
+        let title = document.createElement('div');
+        title.className = 'question-title';
+        questionElement.appendChild(title);
 
-            let answer = renderMarkdown(question.answer);
-            answer.className = 'question-answer';
-            answer.classList.add('hidden');
-            questionElement.appendChild(answer);
+        let answer = renderMarkdown(question.answer);
+        answer.className = 'question-answer';
+        answer.classList.add('hidden');
+        questionElement.appendChild(answer);
 
-            questionsContainer.appendChild(questionElement);
-        });
+        questionsContainer.appendChild(questionElement);
 
         let buttons = document.createElement('div');
         buttons.className = 'buttons';
@@ -136,38 +132,6 @@ function createQuiz(quiz) {
         showAnswerButton.textContent = 'Show Answer';
         buttons.appendChild(showAnswerButton);
 
-        nextButton.addEventListener('click', () => {
-            for(let questionElement of questionsContainer.children) {
-                if(!questionElement.classList.contains('hidden')) {
-                    questionElement.classList.add('hidden');
-
-                    questionElement.nextElementSibling.classList.remove('hidden');
-                    nextButton.classList.add('hidden');
-
-                    if(questionElement.nextElementSibling.classList.contains('done')) {
-
-                    } else {
-                        showAnswerButton.classList.remove('hidden');
-                    }
-                    break;
-                }
-            }
-        });
-
-
-        showAnswerButton.addEventListener('click', () => {
-            for(let questionElement of questionsContainer.children) {
-                if(!questionElement.classList.contains('hidden')) {
-                    let answer = questionElement.querySelector('.question-answer')
-                    answer.classList.remove('hidden');
-                    nextButton.classList.remove('hidden');
-                    showAnswerButton.classList.add('hidden');
-                    break;
-                }
-            }
-        });
-
-
         let backButton = document.createElement('button');
         backButton.textContent = 'Back';
         backButton.addEventListener('click', () => {
@@ -175,14 +139,32 @@ function createQuiz(quiz) {
         });
         buttons.appendChild(backButton);
 
-        let doneElement = document.createElement('div');
-        doneElement.className = 'done';
-        doneElement.textContent = 'Good job :)';
-        doneElement.classList.add('hidden');
-        questionsContainer.appendChild(doneElement);
-
-        questionsContainer.children[0].classList.remove('hidden');
         main.appendChild(quizContainer);
+
+        nextButton.addEventListener('click', () => {
+            showNextQuestion();
+            showAnswerButton.classList.remove('hidden');
+            nextButton.classList.add('hidden');
+        });
+
+        showAnswerButton.addEventListener('click', () => {
+            showAnswerButton.classList.add('hidden');
+            nextButton.classList.remove('hidden');
+        });
+
+        function showNextQuestion() {
+            question = questions[0];
+            questions.pop();
+            answer.classList.add('hidden');
+            if(questions.length) {
+                title.innerHTML = renderMarkdown(question.title);
+                answer.innerHTML = renderMarkdown(question.answer);
+            } else {
+                title.innerHTML = "Good job :)";
+                nextButton.classList.add('hidden');
+            }
+        }
+        showNextQuestion();
     });
 }
 
