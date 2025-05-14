@@ -310,8 +310,6 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Information
 > - Gewinnermittlung
 
-> [!info] [[05_WING_Finanzen 1_Bilanz Erfolgsrechnung.pdf#page=18&selection=4,0,4,14|Welche Beträge gehören zu welchem Teil der Bilanz?]]
-
 > [!info]- Welche Elemente gehören in die Erfolgsrechnung?
 > - Aufwand
 > 	- Betriebsaufwand
@@ -335,8 +333,6 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > EBITDA = vor Abschreibungen
 > EBIT =  vor Amortisation
 > EBT = vor Steuern
-
-> [!info] [[05_WING_Finanzen 1_Bilanz Erfolgsrechnung.pdf#page=29&selection=4,0,4,23|Was ist die Gliederung der Erfolgsrechnung?]]
 
 > [!info]- Woher gibt es Geldfluss?
 > - Geschäftsbereich (Einnahmen)
