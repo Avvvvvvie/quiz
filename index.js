@@ -41,7 +41,7 @@ function parseQuiz(text, type) {
             currentTitle = "### " + currentTitle;
         } else if(inQuestion) {
             if(lines[i].startsWith('>')) {
-                currentAnswer += lines[i].substring(1,lines[i].length).trim() + '\n';
+                currentAnswer += lines[i].substring(1,lines[i].length) + '\n';
             } else {
                 inQuestion = false;
                 questions.push(new Question(currentTitle, currentAnswer));
