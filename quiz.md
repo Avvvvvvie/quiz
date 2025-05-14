@@ -41,12 +41,13 @@
 
 > [!info]- Test2
 > hhh
->  hhh
->   hhh
->    jjj
->     jjjj
->      jjjj
+> > hhh
+> > hhh
 >
+> 1. hhh
+> > 2. hhh
+> > 3. hhh
+> 
 > ```mermaid
 > ---
 > config:
@@ -56,13 +57,13 @@
 > classDiagram
 > 	A <-- B
 > ```
-> 1. First item
+> 2. First item
 >    1. Sub-item
 >        1. Another sub-item
-> 2. Second item
+> 3. Second item
 >    1. Sub-item
 >      2. Sub-sub-item
 >        1. Another sub-item
 >    3. Sub-sub-item
-> 3. Third item
+> 4. Third item
 
