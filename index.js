@@ -94,6 +94,7 @@ function shuffleArray(array) {
 }
 
 function createQuiz(questions, callback, callbackMessage) {
+    main.innerHTML = '';
     shuffleArray(questions);
 
     let quizContainer = document.createElement('div');
@@ -144,8 +145,6 @@ function createQuiz(questions, callback, callbackMessage) {
         });
     }
 
-    main.appendChild(quizContainer);
-
     nextButton.addEventListener('click', () => {
         showAnswerButton.classList.remove('hidden');
         nextButton.classList.add('hidden');
@@ -157,6 +156,8 @@ function createQuiz(questions, callback, callbackMessage) {
         nextButton.classList.remove('hidden');
         answer.classList.remove('hidden');
     });
+
+    main.appendChild(quizContainer);
 }
 
 function showNextQuestion() {
@@ -183,7 +184,6 @@ function showNextQuestion() {
 }
 
 function loadQuiz(quiz) {
-    main.innerHTML = '';
     getAnsweredQuiz(quiz, (questions) => {
         createQuiz(questions, () => {
             getUnansweredQuiz('quiz', (questions) => {
