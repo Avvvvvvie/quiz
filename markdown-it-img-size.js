@@ -26,7 +26,7 @@ const markdownItImgSize = (md) => {
 
                 token.content = alt;
                 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                token.children![0].content = alt;
+                token.children[0].content = alt;
                 if (widthValue) token.attrSet("width", width);
                 if (heightValue) token.attrSet("height", height);
             }
