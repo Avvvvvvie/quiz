@@ -158,29 +158,29 @@ function createQuiz(questions, callback, callbackMessage) {
     });
 
     main.appendChild(quizContainer);
-}
 
-function showNextQuestion() {
-    if(questions.length === 0) {
-        title.innerHTML = "### You are done";
-        showAnswerButton.classList.add('hidden');
-        answer.innerHTML = "Good job :)";
-        if(callbackMessage) {
-            callbackButton.classList.remove('hidden');
+    function showNextQuestion() {
+        if(questions.length === 0) {
+            title.innerHTML = "### You are done";
+            showAnswerButton.classList.add('hidden');
+            answer.innerHTML = "Good job :)";
+            if(callbackMessage) {
+                callbackButton.classList.remove('hidden');
+            }
+            return;
         }
-        return;
+        question = questions[questions.length - 1];
+        questions.pop();
+        title.innerHTML = renderMarkdown(question.title);
+        if(question.answer) {
+            answer.classList.add('hidden');
+            answer.innerHTML = renderMarkdown(question.answer);
+        } else {
+            showAnswerButton.classList.add('hidden');
+            nextButton.classList.remove('hidden');
+        }
+        showNextQuestion();
     }
-    question = questions[questions.length - 1];
-    questions.pop();
-    title.innerHTML = renderMarkdown(question.title);
-    if(question.answer) {
-        answer.classList.add('hidden');
-        answer.innerHTML = renderMarkdown(question.answer);
-    } else {
-        showAnswerButton.classList.add('hidden');
-        nextButton.classList.remove('hidden');
-    }
-    showNextQuestion();
 }
 
 function loadQuiz(quiz) {
