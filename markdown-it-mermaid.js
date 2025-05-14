@@ -1,6 +1,6 @@
 function mermaidChart(code) {
     try {
-        const { svg } = await mermaid.render("theGraph", code);
+        const { svg } = mermaid.render("theGraph", code);
         return `<div class="mermaid">${svg.innerHTML}</div>`;
     } catch ({ str, hash }) {
         return `<pre>Invalid syntax</pre>`;
