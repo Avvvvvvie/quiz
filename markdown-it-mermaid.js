@@ -29,7 +29,7 @@ function mermaidChart(code) {
                 });
                 observer.observe(el, {
                     attributes: true
-                };);
+                });
             };
             observeVisiblilty(document.getElementById(`mermaid${thisCounter}`));
         });
