@@ -58,6 +58,7 @@ function renderMarkdown(text) {
     md = markdownit();
     markdownItAsciimath(md, {});
     markdownItMermaid(md);
+    markdownItImgSize(md);
     container.innerHTML = md.render(text);
     return container;
 }
