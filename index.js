@@ -55,10 +55,10 @@ function parseQuiz(text, type) {
 
 function renderMarkdown(text) {
     md = markdownit();
+    markdownItIndent(md);
     markdownItAsciimath(md, {});
     markdownItMermaid(md);
     markdownItImgSize(md);
-    markdownItIndent(md);
     markdownitCheckbox(md)
     return md.render(text);
 }
