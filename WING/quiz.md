@@ -646,7 +646,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Soziale Kompetenz
 > - Führungsanspruch
 
-> [!info]- Was gehört zur Kompetenz?
+> [!info]- Was gibt es für 6 Kompetenzen?
 > - Fachkompetenz
 > - Sozialkompetenz
 > - Interkulturelle Kompetenz
