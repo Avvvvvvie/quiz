@@ -56,7 +56,8 @@ function parseQuiz(text, type) {
 function renderMarkdown(text) {
     let container = document.createElement('div');
     md = markdownit();
-    ASCIIMath(md, {});
+    markdownItAsciimath(md, {});
+    markdownItMermaid(md);
     container.innerHTML = md.render(text);
     return container;
 }
