@@ -1,22 +1,22 @@
 
-> [!info]- Beispiel Vor/Nachbedingung
+> [!info]- Nenne ein Beispiel für eine Vor- und Nachbedingung.
 > Teilweise mit Vor- und Nachbedingung nachweisbar
 > Beispiel: {x=1} x++ {x=2}
 > Beispiel: {x>=0} x = x + 1 {x>=1 und x1 > x0}
 
-> [!info]- Was ist ADT
+> [!info]- Was ist ADT?
 = Abstrakte Datentyp
 > Hat Schnittstelle und Implementation
 > In Java Interface und Klasse
 
-> [!info]- Was kann ein Stack
+> [!info]- Was kann ein Stack?
 > First in First out
 > Gut implementiert mit LinkedList
 > - push
 > - pop
 > - isEmpty
 
-> [!info]-  Was kann eine Liste
+> [!info]-  Was kann eine Liste?
 > - add (am ende oder pos)
 > - get
 > - remove

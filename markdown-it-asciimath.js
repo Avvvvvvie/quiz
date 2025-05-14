@@ -48,7 +48,7 @@ function markdownItAsciimath(md, o) {
         return defaultRender(tokens, idx, options, env, self);
     }
 
-    const inlineDelimiters = ["$", ["$`", "`$"],["$", "$"]];
+    const inlineDelimiters = ["$",["$", "$"]];
     const inlineDelimitersArray = fromDelimiterOption(inlineDelimiters);
     const inlineMathRule = createInlineMathRule({
         delimiters: inlineDelimitersArray,
