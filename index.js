@@ -13,29 +13,21 @@ function getQuizzes(callback) {
     });
 }
 
-function getQuiz(path, callback, type) {
+function getQuiz(path, callback) {
     readFile(path, (text) => {
-        let questions = parseQuiz(text, type);
-        callback(questions);
+        callback(parseQuiz(text, type));
     });
 }
 
-function getAnsweredQuiz(path, callback) {
-    return getQuiz(path, callback, 'info');
-}
-
-function getUnansweredQuiz(path, callback) {
-    return getQuiz(path, callback, 'question');
-}
-
-function parseQuiz(text, type) {
+function parseQuiz(text) {
     let lines = text.split('\n');
     let questions = [];
+    let unansweredQuestions = [];
     let inQuestion = false;
     let currentAnswer = '';
     let currentTitle = '';
     for(let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith('> [!' + type +']-')) {
+        if (lines[i].startsWith('> [!info]-')) {
             inQuestion = true;
             currentTitle = lines[i].substring(10,lines[i].length).trim();
             currentTitle = "### " + currentTitle;
@@ -48,6 +40,8 @@ function parseQuiz(text, type) {
                 currentAnswer = '';
                 currentTitle = '';
             }
+        } else if (lines[i].startsWith('> [!question]-')) {
+            unansweredQuestions.push(new Question(currentTitle, ''));
         }
     }
     if(inQuestion) {
@@ -55,7 +49,7 @@ function parseQuiz(text, type) {
         currentAnswer = '';
         currentTitle = '';
     }
-    return questions;
+    return [questions, unansweredQuestions];
 }
 
 function renderMarkdown(text) {
@@ -189,16 +183,14 @@ function createQuiz(questions, callback, callbackMessage) {
 }
 
 function loadQuiz(quiz) {
-    getAnsweredQuiz(quiz, (questions) => {
-        getUnansweredQuiz('quiz', (unansweredQuestions) => {
-            if(unansweredQuestions.length) {
-                createQuiz(questions, () => {
-                    createQuiz(unansweredQuestions)
-                }, 'Continue with unanswered questions');
-            } else {
-                createQuiz(questions);
-            }
-        });
+    getQuiz(quiz, ([questions, unansweredQuestions]) => {
+        if(unansweredQuestions.length) {
+            createQuiz(questions, () => {
+                createQuiz(unansweredQuestions)
+            }, 'Continue with unanswered questions');
+        } else {
+            createQuiz(questions);
+        }
     });
 }
 
