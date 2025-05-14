@@ -49,7 +49,7 @@ function parseQuiz(text) {
             if(currentTitle.startsWith('-')) {
                 currentTitle = currentTitle.substring(1, currentTitle.length).trim();
             }
-            unansweredQuestions.push(new Question(lines[i].substring(13,lines[i].length).trim(), ''));
+            unansweredQuestions.push(new Question(currentTitle, ''));
         }
     }
     if(inQuestion) {

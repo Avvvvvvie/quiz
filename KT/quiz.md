@@ -161,11 +161,11 @@ tracert nippon.jp
 > Collision Resolution: Wenn eine 1 und eine 0 gleichzeitig geschickt werden, wird nur die 0 genommen.
 > Collision Avoidance: Nach "Request to send" erwartet man "Clear to send" mit erwarteter Sendedauer. Ansonsten weiss man, dass es eine Kollision oder ein anderes Problem gab.
 
-> [!info]- Quellen von Zufall
+> [!info]- Was sind Quellen für Zufall
 > - MAC Adresse
 > - Tick (wird nach dem Aufbooten hochgezählt)
 
-> [!info]- Was ist Flow-Control?
+> [!info]- Auf welche 2 Arten kann man Flow-Control machen?
 > 1. **Explizite Start-Stop Signalisierung**: Damit kann der Empfänger dem Sender mitteilen, zu stoppen oder zu starten. Nötig, wenn der Empfänger eine langsame Verarbeitung hat und den weiteren Verkehr noch nicht speichern kann. Oder um die Überlastung des ganzen Netzwerk zu verhindern.
 > 2. **Implizit mit Stop & Wait - Protokoll**: Sender wartet auf Quittung • Empfänger verzögert seine Quittierung und stoppt damit die Übertragung.
 
@@ -199,7 +199,7 @@ tracert nippon.jp
 > [!question]- Welche Begriffe gibt es für verscheidene Teile des Ethernet Frames?
 
 > [!info]- Was ist die Filtering Database?
-> In der FIltering Database steht, welche Adresse hinter welchem Port ist. Der Switch erhält Frames mit Absender und Empfänger und sendet sie zu den Ports mit dem Empfänger. Wenn der Empfänger hinter dem Input-Ports ist, wird das Frame verworfen. Wenn der Port des Empfängers unbekannt ist, wird das Frame an alle Output-Ports gesendet.
+> In der Filtering Database steht, welche Adresse hinter welchem Port ist. Der Switch erhält Frames mit Absender und Empfänger und sendet sie zu den Ports mit dem Empfänger. Wenn der Empfänger hinter dem Input-Ports ist, wird das Frame verworfen. Wenn der Port des Empfängers unbekannt ist, wird das Frame an alle Output-Ports gesendet.
 
 > [!question]- Was ist ARP?
 
@@ -323,7 +323,7 @@ tracert nippon.jp
 > - Wird nur am Rand genutzt
 > - Kleine Tabelle
 
-> [!info]- ![[assets/Pasted image 20250514091658.png]]
+> [!info]- ![](assets/Pasted%20image%2020250514091658.png)
 > a) Es wird nach gemäss dem 4. Eintrag der Routingtabelle von Router B an p0 weitergeleitet
 > b) Es wird gemäss Eintrag 5 in der Routingtabelle von Router B an p2 weitergeleitet.
 > c) Router C kann das IP Paket nicht weiterleiten, das IP-Paket erreicht den Empfänger nicht. Das Paket wird verworfen.
