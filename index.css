@@ -36,6 +36,9 @@ table {
     border-collapse: collapse;
     font-family: Tahoma, Geneva, sans-serif;
 }
+table th {
+    font-weight: bold;
+}
 table td, table th {
     padding: .8rem;
     font-weight: bold;
