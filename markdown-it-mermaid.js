@@ -7,6 +7,11 @@ async function mermaidChart(code) {
     }
 }
 
+function waitForIt(code) {
+    result = mermaidChart(code);
+    return result;
+}
+
 const markdownItMermaid = (md) => {
     md.mermaid = mermaid
     mermaid.loadPreferences = (preferenceStore) => {
@@ -37,11 +42,11 @@ const markdownItMermaid = (md) => {
         const token = tokens[idx]
         const code = token.content.trim()
         if (token.info === 'mermaid') {
-            return mermaidChart(code);
+            return waitForIt(code);
         }
         const firstLine = code.split(/\n/)[0].trim()
         if (firstLine === 'gantt' || firstLine === 'sequenceDiagram' || firstLine.match(/^graph (?:TB|BT|RL|LR|TD);?$/)) {
-            return mermaidChart(code);
+            return waitForIt(code);
         }
         return temp(tokens, idx, options, env, slf)
     }
