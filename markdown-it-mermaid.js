@@ -32,7 +32,7 @@ function mermaidChart(code) {
 
                 observer.observe(el, mermaidObserverOpts);
             };
-            observeVisiblilty(document.getElementById(`mermaid${thisCounter}`))
+            observeVisiblilty(document.getElementById(`mermaid${thisCounter}`));
         });
         return `<div class="mermaid" id="mermaid${thisCounter}"></div>`;
     } catch (e) {
