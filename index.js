@@ -83,7 +83,7 @@ function createQuizSelection(quizzes) {
     title.innerHTML = "Quizzes";
     title.className = 'quiz-title';
     main.appendChild(title);
-    
+
     let quizList = document.createElement('ul');
     quizList.className = 'quiz-list';
     quizzes.forEach((quiz) => {
