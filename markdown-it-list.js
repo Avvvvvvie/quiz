@@ -17,7 +17,7 @@ markdownItList = function(md) {
     md.core.ruler.after('inline', 'github-task-lists', function(state) {
         var tokens = state.tokens;
         for (var i = 2; i < tokens.length; i++) {
-            if (isTodoItem(tokens, i)) {
+            if (isListItem(tokens, i)) {
                 todoify(tokens[i], state.Token);
                 attrSet(tokens[i-2], 'class', 'task-list-item' + (!disableCheckboxes ? ' enabled' : ''));
                 attrSet(tokens[parentToken(tokens, i-2)], 'class', 'contains-task-list');
@@ -47,11 +47,10 @@ function parentToken(tokens, index) {
     return -1;
 }
 
-function isTodoItem(tokens, index) {
+function isListItem(tokens, index) {
     return isInline(tokens[index]) &&
         isParagraph(tokens[index - 1]) &&
-        isListItem(tokens[index - 2]) &&
-        startsWithTodoMarkdown(tokens[index]);
+        isListItem(tokens[index - 2])
 }
 
 function todoify(token, TokenConstructor) {
