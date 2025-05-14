@@ -79,7 +79,7 @@ function createQuizSelection(quizzes) {
         quizItem.className = 'quiz-item';
         quizItem.textContent = quiz;
         quizItem.addEventListener('click', () => {
-            createQuiz(quiz);
+            loadQuiz(quiz);
         });
         quizList.appendChild(quizItem);
     });
