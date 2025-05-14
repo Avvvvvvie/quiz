@@ -151,7 +151,7 @@ function createQuiz(quiz) {
 
         function showNextQuestion() {
             if(questions.length === 0) {
-                title.innerHTML = "Done";
+                title.innerHTML = "### You are done";
                 showAnswerButton.classList.add('hidden');
                 answer.innerHTML = "Good job :)";
                 return;
