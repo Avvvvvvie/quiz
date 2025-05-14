@@ -1,9 +1,13 @@
+let mermaidCounter = 0;
+
 function mermaidChart(code) {
     try {
-        const { svg } = mermaid.render("theGraph", code);
-        return `<div class="mermaid">${svg.innerHTML}</div>`;
-    } catch ({ str, hash }) {
-        return `<pre>Invalid syntax</pre>`;
+        mermaid.render("theGraph", code).then(function (svgCode) {
+            document.getElementById(`mermaid${mermaidCounter}`).innerHTML = svgCode;
+        });
+        return `<div class="mermaid" id="mermaid${mermaidCounter}"></div>`;
+    } catch () {
+        return `<pre>${code}</pre>`;
     }
 }
 
