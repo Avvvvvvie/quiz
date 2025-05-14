@@ -139,6 +139,9 @@ function createQuiz(questions, callback, callbackMessage) {
         callbackButton.classList.add('hidden');
         callbackButton.addEventListener('click', callback);
         buttons.appendChild(callbackButton);
+        callbackButton.addEventListener('click', () => {
+            callback();
+        });
     }
 
     main.appendChild(quizContainer);
@@ -181,7 +184,7 @@ function showNextQuestion() {
 function loadQuiz(quiz) {
     main.innerHTML = '';
     getAnsweredQuiz(quiz, (questions) => {
-        createQuiz(questions, () {
+        createQuiz(questions, () => {
             getUnansweredQuiz('quiz', (questions) => {
                 createQuiz(questions);
             });
