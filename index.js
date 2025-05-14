@@ -179,8 +179,8 @@ function createQuiz(questions, callback, callbackMessage) {
             showAnswerButton.classList.add('hidden');
             nextButton.classList.remove('hidden');
         }
-        showNextQuestion();
     }
+    showNextQuestion();
 }
 
 function loadQuiz(quiz) {
