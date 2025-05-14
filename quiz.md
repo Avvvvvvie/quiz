@@ -26,9 +26,18 @@
 > 
 > list
 > - adfsdfs
-> 	- dfhf
+>     - dfhf
 > 	- hsdfj
 > - dfsfdsfd
 > - fdsdfsfds
 
-
+> [!info]- Test2
+> ```mermaid
+> ---
+> config:
+>  class:
+>   hideEmptyMembersBox: true
+> ---
+> classDiagram
+> 	A <-- B
+> ```

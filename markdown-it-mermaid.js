@@ -5,7 +5,34 @@ function mermaidChart(code) {
         mermaidCounter++;
         let thisCounter = mermaidCounter;
         mermaid.render("theGraph", code).then(function (result) {
-            document.getElementById(`mermaid${thisCounter}`).innerHTML = result.svg;
+            observeVisiblilty = function(el) {
+                let observer = new MutationObserver((entries) => {
+                    let target = entries[0].target;
+
+                    // Act only when the element becomes visible
+                    if(target.classList.contains('visible')) {
+                        // Get the contents of the Mermaid element
+                        let html = el.textContent;
+
+                        // Generate a unique-ish ID so we don't clobber existing graphs
+                        // This is definitely quick and dirty and could be improved to
+                        // avoid collisions when many charts are used
+                        let id = 'graph-' + Math.floor(Math.random() * Math.floor(1000));
+
+                        // Actually render the chart
+                        mermaid.mermaidAPI.render(id, html, content => {
+                            el.innerHTML = result.svg;
+                        });
+
+                        // Disconnect the observer, since the chart is now on the page.
+                        // There's no point in continuing to watch it
+                        observer.disconnect();
+                    }
+                });
+
+                observer.observe(el, mermaidObserverOpts);
+            };
+            observeVisiblilty(document.getElementById(`mermaid${thisCounter}`))
         });
         return `<div class="mermaid" id="mermaid${thisCounter}"></div>`;
     } catch (e) {
