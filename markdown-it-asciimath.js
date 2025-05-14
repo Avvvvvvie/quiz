@@ -34,6 +34,7 @@ function markdownItAsciimath(md, o) {
 
     md.renderer.rules.code_inline = function(tokens, idx, options, env, self) {
         var token = tokens[idx];
+        if(token.markup != "$") return defaultRender(tokens, idx, options, env, self);
 
         if(!useKeyword) {
             return renderInline(token.content.trim(), false);
