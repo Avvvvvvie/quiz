@@ -133,7 +133,7 @@ function createQuiz(questions, callback, callbackMessage) {
     });
     buttons.appendChild(backButton);
 
-    if(callbackMessage) {
+    if (callbackMessage) {
         let callbackButton = document.createElement('button');
         callbackButton.textContent = callbackMessage;
         callbackButton.classList.add('hidden');
@@ -157,6 +157,7 @@ function createQuiz(questions, callback, callbackMessage) {
         nextButton.classList.remove('hidden');
         answer.classList.remove('hidden');
     });
+}
 
 function showNextQuestion() {
     if(questions.length === 0) {
