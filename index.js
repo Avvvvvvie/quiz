@@ -100,13 +100,8 @@ function createQuiz(quiz) {
         let quizContainer = document.createElement('div');
         quizContainer.className = 'quiz-container';
 
-        questionsContainer = document.createElement('div');
-        questionsContainer.classList.add('questions-container');
-        quizContainer.appendChild(questionsContainer);
-
         let questionElement = document.createElement('div');
         questionElement.classList.add('question');
-        questionElement.classList.add('hidden');
 
         let title = document.createElement('div');
         title.className = 'question-title';
@@ -117,7 +112,7 @@ function createQuiz(quiz) {
         answer.classList.add('hidden');
         questionElement.appendChild(answer);
 
-        questionsContainer.appendChild(questionElement);
+        quizContainer.appendChild(questionElement);
 
         let buttons = document.createElement('div');
         buttons.className = 'buttons';
