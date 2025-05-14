@@ -1,4 +1,4 @@
-async function mermaidChart = (code) => {
+async function mermaidChart(code) => {
     try {
         const { svg } = await mermaid.render("theGraph", code);
         return `<div class="mermaid">${svg.innerHTML}</div>`;
