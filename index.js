@@ -169,6 +169,7 @@ function createQuiz(questions, callback, callbackMessage) {
             title.innerHTML = renderMarkdown('### You are done');
             showAnswerButton.classList.add('hidden');
             answer.innerHTML = "Good job :)";
+            answer.classList.remove('hidden');
             if(callbackMessage) {
                 callbackButton.classList.remove('hidden');
             }
