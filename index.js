@@ -40,8 +40,12 @@ function parseQuiz(text) {
                 currentAnswer = '';
                 currentTitle = '';
             }
-        } else if (lines[i].startsWith('> [!question]-')) {
-            unansweredQuestions.push(new Question(lines[i].substring(10,lines[i].length).trim(), ''));
+        } else if (lines[i].startsWith('> [!question]')) {
+            let title = lines[i].substring(13,lines[i].length).trim();
+            if(title.startsWith('-')) {
+                title = title.substring(1, title.length).trim();
+            }
+            unansweredQuestions.push(new Question(lines[i].substring(13,lines[i].length).trim(), ''));
         }
     }
     if(inQuestion) {
