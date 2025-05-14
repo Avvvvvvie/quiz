@@ -155,35 +155,36 @@ function createQuiz(questions, callback, callbackMessage) {
         answer.classList.remove('hidden');
     });
 
-    function showNextQuestion() {
-        if(questions.length === 0) {
-            title.innerHTML = "### You are done";
-            showAnswerButton.classList.add('hidden');
-            answer.innerHTML = "Good job :)";
-            if(callbackMessage) {
-                callbackButton.classList.remove('hidden');
-            }
-            return;
+function showNextQuestion() {
+    if(questions.length === 0) {
+        title.innerHTML = "### You are done";
+        showAnswerButton.classList.add('hidden');
+        answer.innerHTML = "Good job :)";
+        if(callbackMessage) {
+            callbackButton.classList.remove('hidden');
         }
-        question = questions[questions.length - 1];
-        questions.pop();
-        title.innerHTML = renderMarkdown(question.title);
-        if(question.answer) {
-            answer.classList.add('hidden');
-            showAnswerButton.classList.add('hidden');
-            nextButton.classList.remove('hidden');
-            answer.innerHTML = renderMarkdown(question.answer);
-        }
+        return;
+    }
+    question = questions[questions.length - 1];
+    questions.pop();
+    title.innerHTML = renderMarkdown(question.title);
+    if(question.answer) {
+        answer.classList.add('hidden');
+        answer.innerHTML = renderMarkdown(question.answer);
+    } else {
+        showAnswerButton.classList.add('hidden');
+        nextButton.classList.remove('hidden');
     }
     showNextQuestion();
-    return quizContainer;
 }
 
 function loadQuiz(quiz) {
     main.innerHTML = '';
     getAnsweredQuiz(quiz, (questions) => {
-        quizContainer = createQuiz(questions, () {
-            getUnansweredQuiz('quiz');
+        createQuiz(questions, () {
+            getUnansweredQuiz('quiz', (questions) => {
+                createQuiz(questions);
+            });
         }, 'Coninue with unanswered questions');
     });
 }
