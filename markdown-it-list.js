@@ -7,7 +7,7 @@ var disableCheckboxes = true;
 var useLabelWrapper = false;
 var useLabelAfter = false;
 
-markdownItList = function(md) {
+markdownItNesting = function(md) {
     if (options) {
         disableCheckboxes =false;
         useLabelWrapper = true;
@@ -17,10 +17,8 @@ markdownItList = function(md) {
     md.core.ruler.after('inline', 'github-task-lists', function(state) {
         var tokens = state.tokens;
         for (var i = 2; i < tokens.length; i++) {
-            if (isListItem(tokens, i)) {
-                todoify(tokens[i], state.Token);
-                attrSet(tokens[i-2], 'class', 'task-list-item' + (!disableCheckboxes ? ' enabled' : ''));
-                attrSet(tokens[parentToken(tokens, i-2)], 'class', 'contains-task-list');
+            if(tokens[i].nesting > 0) {
+                nestify(tokens[i], state.Token);
             }
         }
     });
@@ -53,12 +51,12 @@ function isListItem(tokens, index) {
         isListItem(tokens[index - 2])
 }
 
-function todoify(token, TokenConstructor) {
-    token.children.unshift(makeCheckbox(token, TokenConstructor));
+function nestify(token, TokenConstructor) {
+    token.children.unshift(makeIndent(token, TokenConstructor));
     token.children[1].content = token.children[1].content.slice(3);
     token.content = token.content.slice(3);
 
-    if (useLabelWrapper) {
+    /*if (useLabelWrapper) {
         if (useLabelAfter) {
             token.children.pop();
 
@@ -70,18 +68,13 @@ function todoify(token, TokenConstructor) {
             token.children.unshift(beginLabel(TokenConstructor));
             token.children.push(endLabel(TokenConstructor));
         }
-    }
+    }*/
 }
 
-function makeCheckbox(token, TokenConstructor) {
-    var checkbox = new TokenConstructor('html_inline', '', 0);
-    var disabledAttr = disableCheckboxes ? ' disabled="" ' : '';
-    if (token.content.indexOf('[ ] ') === 0) {
-        checkbox.content = '<input class="task-list-item-checkbox"' + disabledAttr + 'type="checkbox">';
-    } else if (token.content.indexOf('[x] ') === 0 || token.content.indexOf('[X] ') === 0) {
-        checkbox.content = '<input class="task-list-item-checkbox" checked=""' + disabledAttr + 'type="checkbox">';
-    }
-    return checkbox;
+function makeIndent(token, TokenConstructor) {
+    var indent = new TokenConstructor('html_inline', '', 0);
+    indent.content = '<span class="indent"></span>';
+    return indent;
 }
 
 // these next two functions are kind of hacky; probably should really be a
