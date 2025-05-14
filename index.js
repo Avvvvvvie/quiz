@@ -140,9 +140,6 @@ function createQuiz(questions, callback, callbackMessage) {
         callbackButton.classList.add('hidden');
         callbackButton.addEventListener('click', callback);
         buttons.appendChild(callbackButton);
-        callbackButton.addEventListener('click', () => {
-            callback();
-        });
     }
 
     nextButton.addEventListener('click', () => {
