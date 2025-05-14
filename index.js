@@ -54,8 +54,7 @@ function parseQuiz(text, type) {
 }
 
 function renderMarkdown(text) {
-    md = markdownit();
-    markdownItIndent(md);
+    md = markdownit('commonmark');
     markdownItAsciimath(md, {});
     markdownItMermaid(md);
     markdownItImgSize(md);
