@@ -151,7 +151,7 @@ function createQuiz(quiz) {
         function showNextQuestion() {
             if(questions.length === 0) {
                 title.innerHTML = "Good job :)";
-                nextButton.classList.add('hidden');
+                showAnswerButton.classList.add('hidden');
                 return;
             }
             question = questions[questions.length - 1];
