@@ -129,7 +129,7 @@ function createQuiz(quiz) {
         buttons.appendChild(showAnswerButton);
 
         let backButton = document.createElement('button');
-        backButton.textContent = 'Back';
+        backButton.textContent = 'Quit';
         backButton.addEventListener('click', () => {
             createQuizSelection(quizzes);
         });
