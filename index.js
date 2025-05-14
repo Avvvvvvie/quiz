@@ -15,7 +15,7 @@ function getQuizzes(callback) {
 
 function getQuiz(path, callback) {
     readFile(path, (text) => {
-        callback(parseQuiz(text, type));
+        callback(parseQuiz(text));
     });
 }
 
