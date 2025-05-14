@@ -50,6 +50,11 @@ function parseQuiz(text, type) {
             }
         }
     }
+    if(inQuestion) {
+        questions.push(new Question(currentTitle, currentAnswer));
+        currentAnswer = '';
+        currentTitle = '';
+    }
     return questions;
 }
 
