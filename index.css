@@ -52,7 +52,13 @@ img {
     max-width: 100%;
 }
 
-    /* main */
+/* checkbox */
+
+.task-list-item {
+    list-style: none;
+}
+
+/* main */
 
 * {
     box-sizing: border-box;

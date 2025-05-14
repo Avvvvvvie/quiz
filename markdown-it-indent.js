@@ -1,4 +1,4 @@
-function markdownItIndent(md) {
+function markdownitIndent(md) {
 
     function processIndent(tokens, idx) {
         const token = tokens[idx];

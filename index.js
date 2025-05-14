@@ -54,7 +54,7 @@ function parseQuiz(text, type) {
 }
 
 function renderMarkdown(text) {
-    md = markdownit('commonmark');
+    md = markdownit();
     markdownItAsciimath(md, {});
     markdownItMermaid(md);
     markdownItImgSize(md);
@@ -160,6 +160,7 @@ function createQuiz(quiz) {
             questions.pop();
             answer.classList.add('hidden');
             title.innerHTML = renderMarkdown(question.title);
+            console.log(question.answer);
             answer.innerHTML = renderMarkdown(question.answer);
         }
         showNextQuestion();
@@ -174,3 +175,20 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+function test() {
+    document.getElementById('quiz').innerHTML = renderMarkdown("# Test\n1. a\n    1. a\n2. a");
+}
+
+function test2() {
+    md = markdownit();
+    md.use(markdownitIndent);
+    markdownItAsciimath(md, {});
+    markdownItMermaid(md);
+    markdownItImgSize(md);
+    markdownitCheckbox(md)
+    md.core.ruler.before('normalize', 'test', function(state) {
+        console.log(state);
+    });
+    document.getElementById('quiz').innerHTML = renderMarkdown("# Test\n- [ ] a\n    - [ ] a\n- [ ] a");
+}
