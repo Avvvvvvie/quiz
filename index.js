@@ -41,7 +41,7 @@ function parseQuiz(text) {
                 currentTitle = '';
             }
         } else if (lines[i].startsWith('> [!question]-')) {
-            unansweredQuestions.push(new Question(currentTitle, ''));
+            unansweredQuestions.push(new Question(lines[i].substring(10,lines[i].length).trim(), ''));
         }
     }
     if(inQuestion) {
