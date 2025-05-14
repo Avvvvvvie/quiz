@@ -11,7 +11,7 @@ markdownItNesting = function(md) {
     md.core.ruler.after('inline', 'github-task-lists', function(state) {
         var tokens = state.tokens;
         for (var i = 2; i < tokens.length; i++) {
-            if(tokens[i].nesting > 0) {
+            if(tokens[i].nesting > 0 && isListItem(tokens, i)) {
                 nestify(tokens[i], state.Token);
             }
         }
