@@ -381,16 +381,16 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 
 > **Grad 3** $("flüssige Mittel" + "Forderungen" + Vorräte) / "kurzfristiges Fremdkapital" * 100 = "Umlaufvermögen" / "kurzfristiges Fremdkapital" = 100..200$
 
-> [!info]- Was gibt es für Kennzahlen zur Sicherheit
+> [!info]- Was gibt es für Kennzahlen zur Sicherheit?
 > **Eigenkapitalquote** $"Eigenkapital" / "Gesamtkapital" * 100 > 30\%$
 > 
 > **Fremdkapitalquote** $"Fremdkapital" / "Gesamtkapital" * 100 < 70\%$
 > 
 > **Verschuldungsgrad** $"Fremdkapital" / "Eigenkapital" * 100 < 230\%$
 > 
-> **Anlagedeckungsgrad 1** $"Eigenkapital" / "Anlagevermögen" * 100 = 90\%..120\%$
+> **Anlagedeckungsgrad 1** $"Eigenkapital" / "Anlagevermoegen" * 100 = 90\%..120\%$
 > 
-> **Anlagedeckungsgrad 2** $"Eigenkapital" + "langfr. Fremdkapital" / "Anlagevermögen" * 100 = 120\%..160\%$
+> **Anlagedeckungsgrad 2** $"Eigenkapital" + "langfr. Fremdkapital" / "Anlagevermoegen" * 100 = 120\%..160\%$
 
 > [!info]- Was gibt es für Kennzahlen zur Rentabilität
 > **Eigenkapitalrendite** $"Gewinn" / "Eigenkapital" * 100 >= 8\%$
