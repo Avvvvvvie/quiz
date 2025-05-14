@@ -6,7 +6,7 @@ function mermaidChart(code) {
         let thisCounter = mermaidCounter;
         mermaid.render("theGraph", code).then(function (result) {
             element = document.getElementById(`mermaid${thisCounter}`);
-            respondToVisibility(element, {
+            respondToVisibility(element, () => {
                 element.innerHTML = result.svg;
             });
         });
