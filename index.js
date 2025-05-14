@@ -132,9 +132,10 @@ function createQuiz(questions, callback, callbackMessage) {
         createQuizSelection(quizzes);
     });
     buttons.appendChild(backButton);
+    let callbackButton;
 
     if (callbackMessage) {
-        let callbackButton = document.createElement('button');
+        callbackButton = document.createElement('button');
         callbackButton.textContent = callbackMessage;
         callbackButton.classList.add('hidden');
         callbackButton.addEventListener('click', callback);
