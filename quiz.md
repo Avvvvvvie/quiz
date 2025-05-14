@@ -21,8 +21,14 @@
 > | 4 | 5 | 6    |
 > | 7 | 8 | 9    |
 >
-> image
-> 
+> image 100px
 > ![|100x0](assets/Pasted%20image%2020250514095205.png)
+> 
+> list
+> - adfsdfs
+> 	- dfhf
+> 	- hsdfj
+> - dfsfdsfd
+> - fdsdfsfds
 
 
