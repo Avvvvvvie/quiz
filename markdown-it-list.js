@@ -7,11 +7,11 @@ var disableCheckboxes = true;
 var useLabelWrapper = false;
 var useLabelAfter = false;
 
-markDownItList = function(md, options) {
+markDownItList = function(md) {
     if (options) {
-        disableCheckboxes = !options.enabled;
-        useLabelWrapper = !!options.label;
-        useLabelAfter = !!options.labelAfter;
+        disableCheckboxes =false;
+        useLabelWrapper = true;
+        useLabelAfter = true;
     }
 
     md.core.ruler.after('inline', 'github-task-lists', function(state) {
