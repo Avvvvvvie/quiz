@@ -182,6 +182,7 @@ function createQuiz(questions, callback, callbackMessage) {
             showAnswerButton.classList.add('hidden');
             answer.innerHTML = "Good job :)";
             answer.classList.remove('hidden');
+            progress.classList.add('hidden');
             if(callbackMessage) {
                 callbackButton.classList.remove('hidden');
             }
