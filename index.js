@@ -145,8 +145,12 @@ function createQuiz(questions, callback, callbackMessage) {
         createQuizSelection(quizzes);
     });
     buttons.appendChild(backButton);
-    let callbackButton;
 
+    let progress = document.createElement('div');
+    progress.className = 'progress';
+    quizContainer.appendChild(progress);
+
+    let callbackButton;
     if (callbackMessage) {
         callbackButton = document.createElement('button');
         callbackButton.textContent = callbackMessage;
@@ -169,8 +173,11 @@ function createQuiz(questions, callback, callbackMessage) {
 
     main.appendChild(quizContainer);
 
+    let currentQuestion = -1;
+
     showNextQuestion = () => {
-        if(questions.length === 0) {
+        currentQuestion++;
+        if(currentQuestion === questions.length) {
             title.innerHTML = renderMarkdown('### You are done');
             showAnswerButton.classList.add('hidden');
             answer.innerHTML = "Good job :)";
@@ -180,8 +187,7 @@ function createQuiz(questions, callback, callbackMessage) {
             }
             return;
         }
-        question = questions[questions.length - 1];
-        questions.pop();
+        question = questions[currentQuestion];
         title.innerHTML = renderMarkdown(question.title);
         if(question.answer) {
             answer.classList.add('hidden');
@@ -190,6 +196,7 @@ function createQuiz(questions, callback, callbackMessage) {
             showAnswerButton.classList.add('hidden');
             nextButton.classList.remove('hidden');
         }
+        progress.innerHTML = `${currentQuestion} / ${questions.length}`;
     }
     showNextQuestion();
 }

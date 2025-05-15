@@ -52,7 +52,7 @@ Wieso ist in einem Vektorraum der Polynome von Grad <= 3 das neutralelement 0 + 
 > (4) Kommuattivgesetz
 > 
 > Ausserdem:
-> ![|500](Pasted%20image%2020240418180214.png)
+> ![|500](assets/Pasted%20image%2020240418180214.png)
 
 > [!info]- Wann ist eine Teilmenge eines Vektorraums ein Unterraum?
 > (1) Für beliebige Elemente a, b in U ist a + b in U.

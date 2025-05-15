@@ -3,7 +3,7 @@ tracert nippon.jp
 
 
 > [!info]- Was ist der Unterschied von hard und soft real time?
-> Bei soft real time Übertragung ist es nicht schlimm, wenn die Daten nicht erfolgreich übertragen werden konnten, wie z.B. bei einem Anruf. Bei der Bremse eines Zuges wäre es schlimm, wenn die Bremse nicht innerhalb eines gewissen Zeitraums reagiert.
+> Bei soft real time Übertragung ist es nicht schlimm, wenn die Daten nicht erfolgreich übertragen werden konnten, wie z.B. bei einem Anruf. Bei der Bremse eines Zuges wäre es schlimm, wenn die Bremse nicht innerhalb eines gewissen Zeitraums reagiert. Die Übertragung vom Bremsknopf zur Bremse muss also eine hard real time Übertragung sein.
 
 > [!info]- Was sind die 7 Schichten des OSI-Modells?
 > 1. Application Layer
@@ -33,16 +33,26 @@ tracert nippon.jp
 > - Eine Schicht N bietet einen Dienst and die Schicht N+1 und bezieht den Dienst N-1
 > - Die Schicht N kommuniziert *logisch* (nicht physisch) mit anderen Instanzen in dieser Schicht über ein Protokoll.
 
-> [!question]- Gerätebeispiele für jede Schicht
+> [!info]- Gib ein Beispiel für einen zuverlässigen und einen unzuverlässigen Dienst.
+> Zuverlässig: File Transfer
+> Unzuverlässig: Telefonie
+
+> [!info]- Gib ein Gerätebeispiel für jede Schicht.
+> - Application: Webbrowser
+> - Transport: Firewall, NAT
+> - Network: Router
+> - Data Link: Bridge, Switch
+> - Physical: Hub, Repeater
+> - Media: Kabel, Light Pulses
 
 > [!info]- Was ist der Unterschied von einem Interface, einem Dienst, einem Protokoll und einem SAP?
-> Die Daten werden mit dem SAP der höchter Schicht übergeben, ein Dienst ist zwischen zwei tieferen Schichten. Das Interface sind die konkreten Funktionen des Dienstes. Das Protokoll regelt die Kommunikation innerhalb einer Schicht zwischen zwei Instanzen der Schicht.
+> Die Daten werden mit dem SAP der höchsten Schicht übergeben, ein Dienst ist zwischen zwei tieferen Schichten. Das Interface sind die konkreten Funktionen des Dienstes. Das Protokoll regelt die Kommunikation innerhalb einer Schicht zwischen zwei Instanzen der Schicht.
 
 > [!info]- Was macht das Physical Layer?
-> Die Daten werden auf physikalische Signale codiert. Das Kabel ist *formal* nicht Teil dieses Layers.
+> Die Daten werden auf physikalische Signale codiert und als Bit-Strom übertragen. Das Kabel ist *formal* nicht Teil dieses Layers.
 
 > [!info]- Was macht das Data Link Layer?
-> - Frames werden erkannt (0x7E)
+> - Frames werden erkannt und gebildet (0x7E)
 > - Fehler werden erkannt und korrigiert
 > - Flow Control gegen Überlastung
 > 
@@ -53,43 +63,151 @@ tracert nippon.jp
 > [!info]- Was macht das Network Layer?
 > Es vermittelt Leitungen oder Pakete über unterschiedliche Kommunikationsstrecken an ein Ziel über Knoten. Ein Port verbindet einen Knoten zum nächsten.
 
-> [!question]- Was sind die Unterschiede von Leitungsvermittlung und Paketvermittlung?
+> [!info]- Zwischen welchen Schichten ist das Socket Interface?
+> Zwischen den Transportschichten und den Anwendungsschichten, beziehungsweise zwischen der Transportschicht und der Kommunikationsschicht.
 
-> [!question]- Was macht das Transport-Layer?
+> [!info]- Was sind die Unterschiede von Leitungsvermittlung und Paketvermittlung?
+> Paketvermittlung:
+> - Senden an beliebige Knoten
+> - Reihenfolge der Pakete bleibt nicht erhalten
+> - Keine Ressourcen nötig für Verbindung
+> 
+> Leitungsvermittlung: 
+> - Vor dem Senden von Daten muss eine Leitung aufgebaut werden
+> - Reihenfolge der Daten bleibt erhalten
+> - Ermöglicht Quality of Service
+> - Weiterleitungsentscheid ist effizienter
 
-> [!question]- TCP VS UDP
+> [!info]- Was macht das Transport-Layer?
+> Das Transport Layer schickt Pakete mit verschiedenen Protokollen.
+> - User Data Protocol (UDP): verbindungsloser, unzuverlässiger Dienst im Internet
+> - Transmission Control Protocol (TCP): verbindungsorientierter, zuverlässiger Dienst im Internet
 
-> [!question]- Was machen die 3 Anwendungslayer?
+> [!info]- Wie unterscheiden sich ein verbindungsorientierter und ein verbindungsloser Dienst?
+> Verbindungsorientiert:
+> - 3 Kommunikationsphasen zum Verbindungs auf-/abbau und zum Datenaustausch
+> - Es können Optionen ausgehandelt werden
+> - Die Reihenfolge der Daten bleibt erhalten
+>
+> Verbindungslos:
+> - Die Reihenfolge bleibt nicht erhalten
+> - Zustandslos
+> - Sehr viel weniger aufwändig umzusetzen
 
-> [!question]- Wie berechnet man die Ausbreitungsgeschwindigkeit?
+> [!info]- Was macht das Application Layer (Anwendungs- / Verarbeitungsschicht)?
+> - Bindeglied zur eigentlichen Anwendung, bestimmt die Protokolle der verschiedenen Anwendungen
+> - z.B. File Transfer, E-Mail, WWW, Namensauflösung (DNS) etc.
 
-> [!question]- Wie berechnet man die Signaldämpfung in Dezibel?
+> [!info]- Was macht das Presentation Layer (Darstellungsschicht)?
+> - Umwandlung der Darstellung von Daten
+> - Konvertierung von ASCII, ISO und Unicode
+> - Konvertierung zwischen verschiedenen Arten der Zahlendarstellung
 
-> [!question]- Was ist RTT?
+> [!info]- Was macht das Session Layer (Sitzungsschicht)?
+> - Auf- und Abbau einer Session
+> - Wird die Transportverbindung unterbrochen, so kann der Session Layer eine neue Verbindung aufsetzen, ohne dass die höheren Schichten etwas merken
 
-> [!question]- Wie berechnet man die SNR?
+> [!info]- Wie sieht das OSI Modell in der Realität wirklich aus?
+> Gewisse Protokolle des OSI MOddels sind zu teuer/inefizient/komplex. Ausserdem gibt es heute noch weitere Themen wie Sicherheit.
+> - Application, Session und Session Layer -> Eine Anwendungschicht mit vielen Protokollen
+> - Transport Layer -> TCP und UDP
+> - Network Layer -> IP
+> - Data Link und Physical Layer -> Network Access, hat keine Protokolle
 
-> [!question]- Was sind 5 Kabelarten und was sind ihre Vorteile?
+> [!info]- In welcher Grössenordnung breiten sich SIgnale in einem Übertragungsmedium im Vakuum aus?
+> ~ 200'000'000 m/s
 
-> [!question]- Was sind 3 Ursachen von Signalstörungen?
+> [!info]- Ein CAT7-Kabel hat bei der Frequenz 10MHz eine Dämpfung von 5dB pro 100m. Wie hoch ist die Dämpfung nach 500m?
+> 25dB
 
-> [!question]- Wie sieht das ISO Bezeichungsschema für Kabel aus?
+> [!info]- Wie beeinflusst die Bandbreite (Hz) die Datenrate und die Dämpfung?
+> Je grösser die Bandbreite, desto höhere Datenraten (bit/s). Höhere Bandbreite heisst aber auch mehr Dämpfung (je nach Kabel anders).
 
-> [!question]- Wieso sind TP anfälliger auf Störungen?
+> [!info]- Wie berechnet man die Ausbreitungsgeschwindigkeit?
+> $c_"Material" = c_0 / "Brechungsindex"$
 
-> [!question]- Welche 3 Vorgehen gibt es, um Storungen auszuheben?
+> [!info]- Wie berechnet man die Signaldämpfung in Dezibel?
+> $A = 10 * log (P_1 / P_2) = 20 * log (U_1 / U_2)$
 
-> [!question]- Was gibt es für Glasfasertypen und was sind ihre Unterschiede?
+> [!info]- Was ist die SNR?
+> SNR = Signal-Noise Ratio = $10 * log (P_"Signal" / P_"Störung") dB$
 
-> [!question]- Wie werden TP Kabel in Kategorien eingeteilt?
+> [!info]- Was sind 4 Kabelarten und was sind ihre Vorteile?
+> - Koaxialkabel
+> 	- Gut für hochfrequente Signale
+> 	- Unempfindlich gegenüber elektromagnetischen Störungen
+> 	- Mechanisch heikel im Umgang
+> - Paarsymmetrische Kabel (Twisted Pair)
+> 	- Häufg benutzt
+> 	- Gut für breitbandige Datenübertragung
+> 	- Anfälliger auf Störungen
+> 	- Kann geschirmt sein für weniger Störung
+> - Twinaxial-Kabel
+> 	- 2 Koxialkabel in einem
+> 	- Bessere Schirmung
+> 	- Einsatz bei hohen Datenraten
+> - Glasfaserkabel
+> 	- Hohe Bandbreite -> grosse Datenraten
+> 	- Geringe Dämpfung -> grosse Übertragungsstrecken
+> 	- Resistent gegen elektromagnetische Einflüsse
 
-> [!question]- Was bedeutet Insertion Loss?
+> [!info]- Was sind 3 Ursachen von Signalstörungen?
+> - Übersprechen zwischen den Leitungen
+> - Rauschen des Empfängers
+> - Einstreuungen durch andere Geräte / Anlagen (Motoren etc.)
 
-> [!question]- Was ist Cross-Talk?
+> [!info]- Wie sieht das ISO Bezeichungsschema für Twisted Pair Kabel aus?
+> xx/yTP
+>
+> xx = Gesamtschirmung
+> - U = ungeschirmt
+> - F = Folienschirm
+> - S = Geflechtschirm
+> - SF = Beides
+> 
+> y = Adapterpaarschirmung
+> - U = ungeschirmt
+> - F = Folienschirm
+> - S = Geflechtschirm
 
-> [!question]- Wie funktioniert ein Glasfaserkabel?
+> [!info]- Welche 3 Vorgehen gibt es, um Störungen auszuheben?
+> - Zusäztliches Komplementäres Signal minimiert Störungen. Der Empfänger subtrahiert die beiden Signale.
+> - Elektrisch leitender Schirm leitet kapazitive Störung ab (Der Schirm muss gut geerdet sein)
+> - Verdrillte Aderpaare hebt induktive Störungen auf
 
-> [!question]- Was ist die Moden-Dispersion?
+> [!info]- Was gibt es für Glasfasertypen und was sind ihre Unterschiede?
+> - Multimode: dick, billig -> Signalverschmierung und Moden-Dispersion
+> - Gradientenfasern: weniger Moden-Dispersion
+> - Singlemode: dünn, teuer -> keine Moden-Dispersion
+
+> [!info]- Wie werden TP Kabel in Kategorien eingeteilt?
+> Cat 1-4: Billigkabel für analoge Sprachübertragung
+> 
+> Cat 5: Frequenzen bis 100 MHz; z.B. für 100 Mb/s oder 1 Gb/s Ethernet bis 100 m
+> 
+> Cat 6: 250 MHz, 1 Gb/s Ethernet und 10 Gb/s Ethernet (bis 55 m)
+> 
+> Cat 7: 600 MHz, z.B. für 10 Gb/s Ethernet (bis 100 m)
+> 
+> etc.
+
+> [!info]- Was bedeutet Insertion Loss?
+> So bezeichent man die Signaldämpfung auf Englisch.
+
+> [!info]- Was ist Cross-Talk?
+> Bei Leitungen, die parallel geführt werden, kann es ein Übersprechen geben. Das führt zu einer Verschlechterung der SNR. Bei hohen Frequenzen genügen schon sehr kurze Strecken.
+
+> [!info]- Wie funktioniert ein Glasfaserkabel?
+> Im Zentrum ist ein Glas mit hoher optischer Dichte. Aussen ist ein Mantelglas mit geringerer Dichte. Lichtstrahlen breiten sich innen aus, werden aber vom Mantelglas reflektiert (Totalreflexion). So breiten sich die Lichtwellen nur entlang des Kabels aus.
+
+> [!info]- Was sind die Grundlagen der Totalreflexion?
+> Eine Welle im Material A ändert beim Übergang in ein weniger Dichtes Material B den Winkel. Die Totalreflexion tritt ein wennn der Austrittswinkel $beta$ > 90°. 90° wäre genau entlang der Grenze der Materialien. Der Winkel kann folgendermassen berechnet werden:
+> 
+> $beta = sin^-1(sin(alpha) n_A / n_B)$
+
+> [!info]- Was ist die Moden-Dispersion?
+> Moden = Die verscheidenen Ausbreitungswege der Lichtstrahlen im Glas nimmt.
+> Moden-Dispersion = Es gibt viele verscheidene Wellen (weil es viel Platz im Glas gibt)
 
 > [!info]- Wie funktioniert die asynchrone Übertragung mit Framing?
 > - Stehen keine Daten zur Übertragung an, so wird nichts gesendet (Ruhezustand)
@@ -101,8 +219,36 @@ tracert nippon.jp
 > - Frames werden durch ein Start-Flag und ein End-Flag begrenzt
 > - Flag ist meist 01111110 / Ox7E
 
+> [!info]- Was sind parallele und serielle Übertragung?
+> Parallele Übertragung: mehrere Bits gleichzeitig über mehrere Leitungen
+> 
+> Serielle Übertragung (dominierend): einzelne Bits zeitlich gestaffelt
+
+> [!info]- Was sind synchrone und asynchrone Übertragung?
+> Bei der synchronen Pbertragung gibt es einen Takt, zu welchem immer je ein Bit übertragen wird. Dieser Takt kann in einer separaten Taktleitung oder in die Daten codiert sein.
+> 
+> Bei asynchroner Übertragung gibt es ein Start Bit, auf welches immer n Daten-Bits folgen. Diese n Bits werden in umgekehrter Reihenfolge gesendet. Am Ende folgt noch ein Stop-Bit. Der Empfänger tastet das Start und Stop Bit öfter ab, und tastet danach die n Bits im Takt ab. 
+
+> [!info]- Du empfängst seriell die Bits 0100111001 (ohne parity). Welcher Wert wird Übertragen? Was würdest du mit parity empfangen?
+> Wert: 00111001
+> 
+> Übertragung mit Parity: 010011100==0==1
+
 > [!info]- Was ist Bitstopfen?
-> Nach 5 Bits fügt man eine 0 ein in allen Daten. So entsteht das flag nicht, welches 6 Einsen nacheinander hat.
+> Nach 5 Bits fügt man eine 0 ein in allen Daten. So entsteht das Flag nicht, welches 6 Einsen nacheinander ist.
+
+> [!info]- Bei einer seriellen Übertragung werden immer 8 Bit zusammen geschickt. Wie sehr darf sich der Takt des Empfänger höchstens von dem des Senders Unterscheiden?
+> Es müssen 9.5T des Senders abgetastet werden. Beim Stop-Bit darf man nicht mehr als 0.5T abweichen. Der Takt des Empfängers darf also nicht um mehr als 0.5/9.5T abweichen.
+
+ > [!info]- Wieso sollen Leitungen gleichspannungsfrei sein?
+ > Um Sender und Empfänger mit Übertragern (Signaltransformatoren, Magnetics) galvanisch trennen zu können. (Man kann aber auch einfach Glasfaser benutzen)
+
+> [!info]- Wie wird Gleichspannungsfreiheit erzielt?
+> - Bei AMI wird jedes zweite +1 auf -1 codiert.
+> - Bei der PAM3 Kanalcodierung werden 4 Bits auf 3 Ternäre Symbole codiert (-,0,+)
+
+> [!info]- Was ist Taktrückgewinnung?
+> Wenn der Takt in die übertragenen Daten codiert wird, kann es sein, dass der Takt verloren geht. Bevor der Takt des Empfängers zu stark abweicht, wird also der Takt korrigiert anhand der Empfangenen Daten. Z.B. Wenn die Flanke des Empfangenen Bits nur ganz wenig abweicht von der Clock, dann wird die Clock korrigiert.
 
 > [!info]- Was ist der Unterschied von BER, Bitfehlerrate, FER und RER?
 > - BER: Anteil fehlerhafter Bis
@@ -116,8 +262,6 @@ tracert nippon.jp
 > [!info]- Was sind Vor und Nachteile langer Frames?
 > - Höhere Fehlerwahrscheinlichkeit.
 > - Grösserer Anteil an Nutzdaten.
-
-> [!question]- Wie berechnet man die Restfehlerwahrscheinlichkeit?
 
 > [!info]- Was ist die Hammingdistanz?
 > Die Hamming-Distanz ist die minimale Anzahl Bits, in denen sich zwei beliebige gültige Codewörter eines Codes unterscheiden
