@@ -196,7 +196,7 @@ function createQuiz(questions, callback, callbackMessage) {
             showAnswerButton.classList.add('hidden');
             nextButton.classList.remove('hidden');
         }
-        progress.innerHTML = `${currentQuestion} / ${questions.length}`;
+        progress.innerHTML = `${currentQuestion + 1} / ${questions.length}`;
     }
     showNextQuestion();
 }

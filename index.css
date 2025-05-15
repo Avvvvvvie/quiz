@@ -149,6 +149,11 @@ li {
     margin: 0.5rem;
 }
 
+
+.progress {
+    margin: 1rem;
+}
+
 .done {
     margin: 2rem 0;
 }
