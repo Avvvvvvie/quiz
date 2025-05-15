@@ -3,19 +3,19 @@
 > ¬(A ∧ B) ⇔ ¬A ∨ ¬B ¬(A ∨ B) ⇔ ¬A ∧ ¬B
 
 > [!info]- A ∧ (B ∨ C) ist mit dem Distributivgesetz auch...?
-(A ∧ B) ∨ (A ∧ C)
+> (A ∧ B) ∨ (A ∧ C)
 
 > [!info]- Was besagt das Prinzip der Kontraposition?
-A ⇒ B ist äquivalent zu ¬B ⇒ ¬A
+> A ⇒ B ist äquivalent zu ¬B ⇒ ¬A
 
 > [!info]- Welche zwei "grundlegende" Quantoren gibt es?
-∀: Allquantor und ∃: Existenzquantor
+> ∀: Allquantor und ∃: Existenzquantor
 
 > [!info]- Was ist eine echte Teilmenge?
-Eine echte Teilmenge der Menge M ist eine Teilmenge, die nicht gleich die Menge M selbst ist.
+> Eine echte Teilmenge der Menge M ist eine Teilmenge, die nicht gleich die Menge M selbst ist.
 
 > [!info]- Wie sieht das zeichen für "... ist eine echte Teilmenge" aus?
-⊊
+> ⊊
 
 > [!info]+ Was sind die 4 Quantorenregeln?
 >

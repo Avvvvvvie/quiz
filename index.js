@@ -29,15 +29,26 @@ function parseQuiz(text) {
     for(let i = 0; i < lines.length; i++) {
         if (lines[i].startsWith('> [!info]')) {
             inQuestion = true;
-            currentTitle = lines[i].substring(10,lines[i].length).trim();
+            currentTitle = lines[i].substring(9,lines[i].length).trim();
             if(currentTitle.startsWith('-')) {
                 currentTitle = currentTitle.substring(1, currentTitle.length).trim();
             }
             currentTitle = "### " + currentTitle;
         } else if(inQuestion) {
             if(lines[i].startsWith('>')) {
-                currentAnswer += lines[i].substring(1,lines[i].length) + '\n';
+                lineText += lines[i].substring(1,lines[i].length) + '\n';
+                if(lineText.startsWith(" ")) {
+                    lineText = lineText.substring(1, lineText.length);
+                }
+                currentAnswer += lineText;
             } else {
+                if(currentAnswer.length === 0) {
+                    lineText += lines[i].substring(1,lines[i].length) + '\n';
+                    if(lineText.startsWith(" ")) {
+                        lineText = lineText.substring(1, lineText.length);
+                    }
+                    currentAnswer += lineText;
+                }
                 inQuestion = false;
                 questions.push(new Question(currentTitle, currentAnswer));
                 currentAnswer = '';
@@ -139,6 +150,15 @@ function createQuiz(questions, callback, callbackMessage) {
     showAnswerButton.textContent = 'Show Answer';
     buttons.appendChild(showAnswerButton);
 
+    let callbackButton;
+    if (callbackMessage) {
+        callbackButton = document.createElement('button');
+        callbackButton.textContent = callbackMessage;
+        callbackButton.classList.add('hidden');
+        callbackButton.addEventListener('click', callback);
+        buttons.appendChild(callbackButton);
+    }
+
     let backButton = document.createElement('button');
     backButton.textContent = 'Quit';
     backButton.addEventListener('click', () => {
@@ -149,15 +169,6 @@ function createQuiz(questions, callback, callbackMessage) {
     let progress = document.createElement('div');
     progress.className = 'progress';
     quizContainer.appendChild(progress);
-
-    let callbackButton;
-    if (callbackMessage) {
-        callbackButton = document.createElement('button');
-        callbackButton.textContent = callbackMessage;
-        callbackButton.classList.add('hidden');
-        callbackButton.addEventListener('click', callback);
-        buttons.appendChild(callbackButton);
-    }
 
     nextButton.addEventListener('click', () => {
         showAnswerButton.classList.remove('hidden');
