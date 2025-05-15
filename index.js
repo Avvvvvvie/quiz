@@ -30,7 +30,7 @@ function parseQuiz(text) {
         if (lines[i].startsWith('> [!info]')) {
             inQuestion = true;
             currentTitle = lines[i].substring(9,lines[i].length).trim();
-            if(currentTitle.startsWith('-')) {
+            if(currentTitle.startsWith('-') || currentTitle.startsWith('+')) {
                 currentTitle = currentTitle.substring(1, currentTitle.length).trim();
             }
             currentTitle = "### " + currentTitle;
@@ -57,13 +57,20 @@ function parseQuiz(text) {
         } else if (lines[i].startsWith('> [!question]')) {
             inQuestion = false;
             currentTitle = lines[i].substring(13,lines[i].length).trim();
-            if(currentTitle.startsWith('-')) {
+            if(currentTitle.startsWith('-') || currentTitle.startsWith('+')) {
                 currentTitle = currentTitle.substring(1, currentTitle.length).trim();
             }
             unansweredQuestions.push(new Question(currentTitle, ''));
         }
     }
     if(inQuestion) {
+        if(currentAnswer.length === 0) {
+            lineText += lines[i].substring(1,lines[i].length) + '\n';
+            if(lineText.startsWith(" ")) {
+                lineText = lineText.substring(1, lineText.length);
+            }
+            currentAnswer += lineText;
+        }
         questions.push(new Question(currentTitle, currentAnswer));
         currentAnswer = '';
         currentTitle = '';

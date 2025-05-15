@@ -17,31 +17,13 @@
 > [!info]- Wie sieht das zeichen für "... ist eine echte Teilmenge" aus?
 > ⊊
 
-> [!info]+ Was sind die 4 Quantorenregeln?
->
-> > [!info]- a) Vertauschungsregel für unbeschränkte Quantoren
-> > ∀x A(x) ⇔ ¬∃x ¬A(x) 
-> 
-> > [!info]- b) Vertauschungsregel für beschränkte Quantoren
-> > ∀x ∈ K A(x) ⇔ ¬∃x ∈ K ¬A(x) 
->
-> > [!info]- c) Beschränkter und unbeschränkter Allquantor
-> > ∀x ∈ K A(x) ⇔ ∀x(x ∈ K ⇒ A(x))
->
-> > [!info]- d) Beschränkter und unbeschränkter Existenzquantor
-> > ∃x ∈ K A(x) ⇔ ∃x(x ∈ K ∧ A(x))
-> > 
+> [!info]- Was sind die 4 Quantorenregeln?
+> 1. Vertauschungsregel für unbeschränkte Quantoren: ∀x A(x) ⇔ ¬∃x ¬A(x) 
+> 2. Vertauschungsregel für beschränkte Quantoren: ∀x ∈ K A(x) ⇔ ¬∃x ∈ K ¬A(x) 
+> 3. Beschränkter und unbeschränkter Allquantor: ∀x ∈ K A(x) ⇔ ∀x(x ∈ K ⇒ A(x))
+> 4. Beschränkter und unbeschränkter Existenzquantor: ∃x ∈ K A(x) ⇔ ∃x(x ∈ K ∧ A(x))
 
-> [!question]+ Es seien P (x) ein einstelliges und Q(y, z) ein zweistelliges Prädikat. Formalisieren Sie: 
-> a) Es gibt genau ein x mit P (x). 
-> 
-> b) Es gibt mindestens zwei Dinge mit der Eigenschaft P . 
-> 
-> c) Es gibt höchstens ein x mit P (x). 
-> 
-> d) Wenn P (x) und P (y) gilt, dann gilt stets auch Q(x, y). 
-> 
-> e) Für kein x gilt Q(x, x)
+> [!question]- Es seien P (x) ein einstelliges und Q(y, z) ein zweistelliges Prädikat. Formalisieren Sie: (a) Es gibt genau ein x mit P (x). (b) Es gibt mindestens zwei Dinge mit der Eigenschaft P . (c) Es gibt höchstens ein x mit P (x). (d) Wenn P (x) und P (y) gilt, dann gilt stets auch Q(x, y). (e) Für kein x gilt Q(x, x)
 
 > [!info]- Was gibt es für Beweistechniken?
 > Implikation, Widerspruch, Gegenbeispiel, Kontraposition (¬B ⇒ ¬A), bei Äquivalenz: man muss sowohl A⇒B als auch B⇒A beweisen.
