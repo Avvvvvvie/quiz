@@ -36,14 +36,14 @@ function parseQuiz(text) {
             currentTitle = "### " + currentTitle;
         } else if(inQuestion) {
             if(lines[i].startsWith('>')) {
-                lineText += lines[i].substring(1,lines[i].length) + '\n';
+                let lineText = lines[i].substring(1,lines[i].length) + '\n';
                 if(lineText.startsWith(" ")) {
                     lineText = lineText.substring(1, lineText.length);
                 }
                 currentAnswer += lineText;
             } else {
                 if(currentAnswer.length === 0) {
-                    lineText += lines[i].substring(1,lines[i].length) + '\n';
+                    let lineText += lines[i].substring(1,lines[i].length) + '\n';
                     if(lineText.startsWith(" ")) {
                         lineText = lineText.substring(1, lineText.length);
                     }
@@ -65,7 +65,7 @@ function parseQuiz(text) {
     }
     if(inQuestion) {
         if(currentAnswer.length === 0) {
-            lineText += lines[i].substring(1,lines[i].length) + '\n';
+            let lineText = lines[i].substring(1,lines[i].length) + '\n';
             if(lineText.startsWith(" ")) {
                 lineText = lineText.substring(1, lineText.length);
             }

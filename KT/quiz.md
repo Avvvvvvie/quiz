@@ -250,6 +250,14 @@ tracert nippon.jp
 > [!info]- Was ist Taktrückgewinnung?
 > Wenn der Takt in die übertragenen Daten codiert wird, kann es sein, dass der Takt verloren geht. Bevor der Takt des Empfängers zu stark abweicht, wird also der Takt korrigiert anhand der Empfangenen Daten. Z.B. Wenn die Flanke des Empfangenen Bits nur ganz wenig abweicht von der Clock, dann wird die Clock korrigiert.
 
+− 1'500 Bytes = 12'000 Bit; 
+100ppm Differenz zwischen Sender und Empfänger = 100 * 10-6 = 1 * 10-4 
+− Pro Bit entsteht so ein Fehler von 10-4 Bit-Zeiten TBit. 
+− 1’500 Bytes sind 12’000 = 1.2 * 104 Bit 
+− Die Abweichung ist somit 1.2 * 104 Bit * 10-4 TBit / Bit = 1.2 Tbit 
+− Eine fehlerfreie Abtastung ist nicht mehr möglich (ohne weitere Massnahmen)
+
+
 > [!info]- Was ist der Unterschied von BER, Bitfehlerrate, FER und RER?
 > - BER: Anteil fehlerhafter Bis
 > - Bitfehlerrate: Bitfehler pro Zeit
@@ -304,10 +312,6 @@ tracert nippon.jp
 > Collision Detection: Es wird abgebrochen.
 > Collision Resolution: Wenn eine 1 und eine 0 gleichzeitig geschickt werden, wird nur die 0 genommen.
 > Collision Avoidance: Nach "Request to send" erwartet man "Clear to send" mit erwarteter Sendedauer. Ansonsten weiss man, dass es eine Kollision oder ein anderes Problem gab.
-
-> [!info]- Was sind Quellen für Zufall
-> - MAC Adresse
-> - Tick (wird nach dem Aufbooten hochgezählt)
 
 > [!info]- Auf welche 2 Arten kann man Flow-Control machen?
 > 1. **Explizite Start-Stop Signalisierung**: Damit kann der Empfänger dem Sender mitteilen, zu stoppen oder zu starten. Nötig, wenn der Empfänger eine langsame Verarbeitung hat und den weiteren Verkehr noch nicht speichern kann. Oder um die Überlastung des ganzen Netzwerk zu verhindern.
