@@ -43,7 +43,7 @@ function parseQuiz(text) {
                 currentAnswer += lineText;
             } else {
                 if(currentAnswer.length === 0) {
-                    let lineText += lines[i].substring(1,lines[i].length) + '\n';
+                    let lineText = lines[i].substring(1,lines[i].length) + '\n';
                     if(lineText.startsWith(" ")) {
                         lineText = lineText.substring(1, lineText.length);
                     }
