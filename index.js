@@ -29,25 +29,13 @@ function parseQuiz(text) {
     for(let i = 0; i < lines.length; i++) {
         if (lines[i].startsWith('> [!info]')) {
             inQuestion = true;
-            currentTitle = lines[i].substring(9,lines[i].length).trim();
-            if(currentTitle.startsWith('-') || currentTitle.startsWith('+')) {
-                currentTitle = currentTitle.substring(1, currentTitle.length).trim();
-            }
-            currentTitle = "### " + currentTitle;
+            currentTitle = getAnsweredTitle(lines[i]);
         } else if(inQuestion) {
             if(lines[i].startsWith('>')) {
-                let lineText = lines[i].substring(1,lines[i].length) + '\n';
-                if(lineText.startsWith(" ")) {
-                    lineText = lineText.substring(1, lineText.length);
-                }
-                currentAnswer += lineText;
+                currentAnswer += getAnswerLine(lines[i]);
             } else {
                 if(currentAnswer.length === 0) {
-                    let lineText = lines[i].substring(1,lines[i].length) + '\n';
-                    if(lineText.startsWith(" ")) {
-                        lineText = lineText.substring(1, lineText.length);
-                    }
-                    currentAnswer += lineText;
+                    currentAnswer += getAnswerLine(lines[i]);
                 }
                 inQuestion = false;
                 questions.push(new Question(currentTitle, currentAnswer));
@@ -56,11 +44,10 @@ function parseQuiz(text) {
             }
         } else if (lines[i].startsWith('> [!question]')) {
             inQuestion = false;
-            currentTitle = lines[i].substring(13,lines[i].length).trim();
-            if(currentTitle.startsWith('-') || currentTitle.startsWith('+')) {
-                currentTitle = currentTitle.substring(1, currentTitle.length).trim();
-            }
+            currentTitle = getUnansweredTitle(lines[i]);
             unansweredQuestions.push(new Question(currentTitle, ''));
+            currentAnswer = '';
+            currentTitle = '';
         }
     }
     if(inQuestion) {
@@ -76,6 +63,30 @@ function parseQuiz(text) {
         currentTitle = '';
     }
     return [questions, unansweredQuestions];
+}
+
+function getUnansweredTitle(line) {
+    line.substring(13,line.length).trim();
+    if(line.startsWith('-') || line.startsWith('+')) {
+        line = line.substring(1, line.length).trim();
+    }
+    return "### " + line;
+}
+
+function getAnsweredTitle(line) {
+    line.substring(9,line.length).trim();
+    if(line.startsWith('-') || line.startsWith('+')) {
+        line = line.substring(1, line.length).trim();
+    }
+    return "### " + line;
+}
+
+function getAnswerLine(line) {
+    let lineText = line.substring(1,line.length) + '\n';
+    if(lineText.startsWith(" ")) {
+        lineText = lineText.substring(1, lineText.length);
+    }
+    return lineText;
 }
 
 function renderMarkdown(text) {
