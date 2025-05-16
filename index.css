@@ -125,10 +125,12 @@ li {
 
 .question-title {
     margin-bottom: 1rem;
+    word-break: break-word;
 }
 
 .question-answer {
     margin-bottom: 3rem;
+    word-break: break-word;
 }
 
 .question-answer.hidden {

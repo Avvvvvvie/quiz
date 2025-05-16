@@ -66,17 +66,23 @@ function parseQuiz(text) {
 }
 
 function getUnansweredTitle(line) {
-    line.substring(13,line.length).trim();
+    line = line.substring(13,line.length).trim();
     if(line.startsWith('-') || line.startsWith('+')) {
         line = line.substring(1, line.length).trim();
+    }
+    if(line.startsWith(" ")) {
+        line = line.substring(1, line.length);
     }
     return "### " + line;
 }
 
 function getAnsweredTitle(line) {
-    line.substring(9,line.length).trim();
+    line = line.substring(9,line.length).trim();
     if(line.startsWith('-') || line.startsWith('+')) {
         line = line.substring(1, line.length).trim();
+    }
+    if(line.startsWith(" ")) {
+        line = line.substring(1, line.length);
     }
     return "### " + line;
 }
