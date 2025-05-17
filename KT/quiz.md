@@ -35,6 +35,7 @@ tracert nippon.jp
 
 > [!info]- Gib ein Beispiel für einen zuverlässigen und einen unzuverlässigen Dienst.
 > Zuverlässig: File Transfer
+> 
 > Unzuverlässig: Telefonie
 
 > [!info]- Gib ein Gerätebeispiel für jede Schicht.
@@ -114,7 +115,7 @@ tracert nippon.jp
 > - Network Layer -> IP
 > - Data Link und Physical Layer -> Network Access, hat keine Protokolle
 
-> [!info]- In welcher Grössenordnung breiten sich SIgnale in einem Übertragungsmedium im Vakuum aus?
+> [!info]- In welcher Grössenordnung breiten sich Signale in einem Übertragungsmedium im Vakuum aus?
 > ~ 200'000'000 m/s
 
 > [!info]- Ein CAT7-Kabel hat bei der Frequenz 10MHz eine Dämpfung von 5dB pro 100m. Wie hoch ist die Dämpfung nach 500m?
@@ -195,7 +196,7 @@ tracert nippon.jp
 > So bezeichent man die Signaldämpfung auf Englisch.
 
 > [!info]- Was ist Cross-Talk?
-> Bei Leitungen, die parallel geführt werden, kann es ein Übersprechen geben. Das führt zu einer Verschlechterung der SNR. Bei hohen Frequenzen genügen schon sehr kurze Strecken.
+> Bei Leitungen, die parallel geführt werden, kann es ein Übersprechen geben. Das führt zu einer Verschlechterung der SNR. Bei hohen Frequenzen genügen schon sehr kurze Strecken. Höhere Frequenz = Mehr Cross-Talk
 
 > [!info]- Wie funktioniert ein Glasfaserkabel?
 > Im Zentrum ist ein Glas mit hoher optischer Dichte. Aussen ist ein Mantelglas mit geringerer Dichte. Lichtstrahlen breiten sich innen aus, werden aber vom Mantelglas reflektiert (Totalreflexion). So breiten sich die Lichtwellen nur entlang des Kabels aus.
@@ -207,6 +208,7 @@ tracert nippon.jp
 
 > [!info]- Was ist die Moden-Dispersion?
 > Moden = Die verscheidenen Ausbreitungswege der Lichtstrahlen im Glas nimmt.
+> 
 > Moden-Dispersion = Es gibt viele verscheidene Wellen (weil es viel Platz im Glas gibt)
 
 > [!info]- Wie funktioniert die asynchrone Übertragung mit Framing?
@@ -235,7 +237,7 @@ tracert nippon.jp
 > Übertragung mit Parity: 010011100==0==1
 
 > [!info]- Was ist Bitstopfen?
-> Nach 5 Bits fügt man eine 0 ein in allen Daten. So entsteht das Flag nicht, welches 6 Einsen nacheinander ist.
+> Nach 5 Bits fügt man eine 0 ein in allen Daten. So entsteht das Flag nicht 01111110 nicht. (Dieses Flag wird bei synchronen Frameübertragung zwischen den Frames geschickt)
 
 > [!info]- Bei einer seriellen Übertragung werden immer 8 Bit zusammen geschickt. Wie sehr darf sich der Takt des Empfänger höchstens von dem des Senders Unterscheiden?
 > Es müssen 9.5T des Senders abgetastet werden. Beim Stop-Bit darf man nicht mehr als 0.5T abweichen. Der Takt des Empfängers darf also nicht um mehr als 0.5/9.5T abweichen.
@@ -250,13 +252,46 @@ tracert nippon.jp
 > [!info]- Was ist Taktrückgewinnung?
 > Wenn der Takt in die übertragenen Daten codiert wird, kann es sein, dass der Takt verloren geht. Bevor der Takt des Empfängers zu stark abweicht, wird also der Takt korrigiert anhand der Empfangenen Daten. Z.B. Wenn die Flanke des Empfangenen Bits nur ganz wenig abweicht von der Clock, dann wird die Clock korrigiert.
 
-− 1'500 Bytes = 12'000 Bit; 
-100ppm Differenz zwischen Sender und Empfänger = 100 * 10-6 = 1 * 10-4 
-− Pro Bit entsteht so ein Fehler von 10-4 Bit-Zeiten TBit. 
-− 1’500 Bytes sind 12’000 = 1.2 * 104 Bit 
-− Die Abweichung ist somit 1.2 * 104 Bit * 10-4 TBit / Bit = 1.2 Tbit 
-− Eine fehlerfreie Abtastung ist nicht mehr möglich (ohne weitere Massnahmen)
+> [!question] ![](assets/Pasted%20image%2020250516091912.png)
 
+> [!info]- Wann ist die Bitrate nominell gleich der Symbolrate?
+> Wenn der Informationsgehalt eines Symbols ein Bit ist. In diesem Fall ist $ld(N) = 1$, was bedeutet, dass jedes Bit ein Symbol ist.
+
+> [!info]- Was bedeutet $ld(N)$?
+> Es ist der Informationsgehalt in Bit (pro Symbol). Wenn es insgesamt N=4 Symble gibt, ist der Informationsgehalt 2 Bit.
+
+> [!info]- Was ist die Baudrate?
+> Leitungs-Symbole pro Sekunde. Wenn in 1ms 1 Symbol geschickt wurde, dann ist die Baudrate 1kBaud.
+
+> [!info]- Es gibt 4 Symbole, die je in 1 ms geschickt werden können. Was betragen die Baudrate, die Bitrate und die Bits/Symbol?
+> Baudrate: $f_s$ = $1 kBaud
+> 
+> Bitrate: $R$ = 2 kBits/s
+> 
+> Bits/Symbol: 2
+
+> [!info]- Was ist die maximale Symbolrate und wie ermittelt man sie?
+> $f_s = 2 * "Bandbreite"$
+
+> [!info]- Wie berechnet man die maximale Bit-Rate?
+> $R = 2B * ld(M)$ 
+> 
+> M = $1 + A/(Delta V)$ = Unterscheidbare Signalzustände pro Symbole
+
+> [!info]- Wie berechnet man die Kanalkapazität?
+> $C_s = B * ld(1 + S/N)$
+> 
+> $S/N$ = Signal to Noise Ratio
+
+> [!info]- Wie unterscheiden sich synchrone und asynchrone Übertragung?
+> Asynchron:
+> - Stehen keine Daten zur Übertragung an, so wird nichts gesendet (Ruhezustand)
+> - Der Beginn eines Frames wird mit einem Start-Bit angezeigt; mit der Frame-Grenze ist auch die Byte-Grenze gegeben
+> 
+> Synchron:
+> - Frames werden ohne Unterbruch gesendet
+> - Stehen keine Daten an, werden Flags gesendet
+> - Flag häufig 01111110
 
 > [!info]- Was ist der Unterschied von BER, Bitfehlerrate, FER und RER?
 > - BER: Anteil fehlerhafter Bis
@@ -264,20 +299,37 @@ tracert nippon.jp
 > - FER: Anteil fehlerhafter Frames
 > - RER: Anteil unentdeckter fehlerhafter Bits
 
-> [!info]- Wie berechnet man die FER?
+> [!info]- Wie berechnet man die FER (Anteil fehlerhafter Frames)?
 > $1 - (1 - p_e)^N$, wobei N die Anzahl Bits in einem Frame ist. Annäherung: $N * p_e$ für $p_e << 1$
 
 > [!info]- Was sind Vor und Nachteile langer Frames?
-> - Höhere Fehlerwahrscheinlichkeit.
-> - Grösserer Anteil an Nutzdaten.
+> Kleinere Frames = tiefere Fehlerwahrscheinlichkeit.
+> 
+> Grössere Frames = Grösserer Anteil an Nutzdaten insgesamt. Datenverlust bei einem Fehler ist grösser.
+> 
+> Deshalb wird das Optimum in der Mitte genommen für möglichst hoher Nettobitrate und möglichst tiefe BER.
 
 > [!info]- Was ist die Hammingdistanz?
-> Die Hamming-Distanz ist die minimale Anzahl Bits, in denen sich zwei beliebige gültige Codewörter eines Codes unterscheiden
+> Die Hamming-Distanz ist die minimale Anzahl Bits, in denen sich zwei beliebige gültige Codewörter eines Codes unterscheiden.
 
 > [!info]- Was ist Backward und Forward Error Correction?
-> - Backward: Fehler geht verloren, wird erneut geschickt. Nachteil: Warten auf Quittung und auf Timeout
-> - Forward: Am wahrscheinlichste Nachricht wird geschätzt.
+> Backward: Wenn die Nachricht Fehlerhaft ist, wird erneut geschickt. Nachteil: Warten auf Quittung und auf Timeout
+> 
+> Forward: Der Empfänger versucht, den Fehler zu korrigieren.
 
+> [!info]- Wie wird die Restfehlerwahrscheinlichkeit berechnet?
+> Für die Wahrscheinlichkeit, dass maximal F Fehler bei einer Übertragung von N= Bits auftreten, bilden wir die Summe aller Fälle mit 0..N Fehlern:
+> 
+> $P_(<=F,N) = Sigma_(t=0)^F (N;t) * epsi^t * (1 - epsi)^(N - t)$
+
+> [!info]- Wie wird die Wahrscheinlichkeit für fehlerhafte Frames berechnet?
+> $P_"Fehler,Frame" ~= N * p_e$
+
+> [!info]- Was bedeutet eine Hamming-Distanz von 1?
+> - Jedes Codewort ist gültig
+> - Jeder Fehler führt zu einem gültigen Codewort
+> - Es ist keine Fehlererkennung möglich
+ 
 > [!info]- Wie viele Fehler können bei einer Hammingdistanz von 5 erkannt werden?
 > 2 kann man korrigieren, 4 detektieren.
 
@@ -287,38 +339,73 @@ tracert nippon.jp
 > [!info]- Was ist das Leader-Follower Verfahren?
 > Mehrere Systeme verwenden dasselbe Verfahren. Der Zentrale Knoten koordiniert den Zugriff.
 
-> [!info]- Was sind Vor- und Nachteile des Leader-Follower Verfahren?
+> [!info]- Was ist das Leader-Follower Verfahren und dessen Vor- und Nachteile?
+> Der Zugriff auf das gemeinsame Kommunikationsmedium wird vom Leader gesteuert.
+> 
 > Vorteil: Keine Konflikte
+> 
 > Nachteil: Ausfall des Leaders
 
 > [!info]- Was ist das Token Verfahren?
 > - Die Sendeberechtigung wird in einer festgelegten Reihenfolge weitergereicht
 > - Knoten senden nur, wenn sie ein Token halten
-> - Variation: Jeder fügt seine Daten in ein Frame. Am Ende wird alles wieder zurück zum 1. Knoten geschickt.
+> - Variation: Es wird ein Frame weitergereicht, in welches jeder nacheinander seine Daten einfügt. Am Ende wird alles wieder zurück zum 1. Knoten geschickt.
 
 > [!info]- Was sind Vor- und Nachteile des Token Verfahren?
 > Vorteil: Deterministisch (man weiss, wann man dran kommt)
+> 
 > Nachteil: Aufwändig (Startup, Token Verlust, etc.)
 
 > [!info]- Was sind Vor- und Nachteile von zeitgesteuertem Zugriff?
-> Vorteil: Optimierung möglich (nach Auslastung, Durchsatz, «Reisezeit» etc.)
-> Nachteile: Planung und genaue Zeit in allen Knotepunkten erforderlich und Konflikte mit unplanbarem Verkehr (SBB Cargo)
+> Vorteil: Optimierung möglich (nach Auslastung, Durchsatz, Reisezeit etc.)
+> 
+> Nachteile: Planung und genaue Zeit in allen Knotepunkten erforderlich und Konflikte mit unplanbarem Verkehr
 
 > [!info]- Wie kann man einen neuen Token-Halter definieren, wenn das Token verloren geht?
 > Alle fangen an Tokens zu generieren, welche ihre MAC-Adreese beinhält. Das tiefste Token gewinnt.
 
 > [!info]- Was ist Carrier Sense Multiple Access?
 > Ein Knoten schaut, ob das Medium frei ist. Wenn nicht, wartet er, sonst schickt er. Falls es doch eine Kollision gibt:
+> 
 > Collision Detection: Es wird abgebrochen.
+> 
 > Collision Resolution: Wenn eine 1 und eine 0 gleichzeitig geschickt werden, wird nur die 0 genommen.
+> 
 > Collision Avoidance: Nach "Request to send" erwartet man "Clear to send" mit erwarteter Sendedauer. Ansonsten weiss man, dass es eine Kollision oder ein anderes Problem gab.
+
+> [!info]- Was ist das Hidden Node Problem?
+> Bei WLAN kann ein Sender in der Reichweite des Empfängers, aber nicht in der Reichweite eines anderen Senders sein. Deshalb kann ein Sender alleine keine Kollisionen vermeiden. Deshalb wird bei WLAN immer auf ACK gewartet nach dem Senden. Wenn es kein ACK gibt, wird erneut gesendet.
 
 > [!info]- Auf welche 2 Arten kann man Flow-Control machen?
 > 1. **Explizite Start-Stop Signalisierung**: Damit kann der Empfänger dem Sender mitteilen, zu stoppen oder zu starten. Nötig, wenn der Empfänger eine langsame Verarbeitung hat und den weiteren Verkehr noch nicht speichern kann. Oder um die Überlastung des ganzen Netzwerk zu verhindern.
-> 2. **Implizit mit Stop & Wait - Protokoll**: Sender wartet auf Quittung • Empfänger verzögert seine Quittierung und stoppt damit die Übertragung.
+> 2. **Implizit mit Stop & Wait - Protokoll**: Sender wartet auf Quittung. Empfänger verzögert seine Quittierung und stoppt damit die Übertragung.
 
-> [!info]- Was ist Hysterese?
-> Wenn man direkt über der Limite stoppt und direkt unter der Limite wieder startet, so dass man schon wieder über der Limite ist und deshalb die ganze Zeit starten und stoppen muss.
+> [!info]- Was zeichnet die Bus-Topologie aus?
+> - Alle Stationen
+> 	- sind passiv angeschlossen
+> 	- horchen Leitung permanent ab
+> 	- werden aktiv, wenn sie etwas senden wollen
+> - Es gibt keine festgelegte Ausbreitungsrichtung
+> - Der Empfänger erkennt anhand einer Adresse, ob die Daten für ihn relevant sind
+
+> [!info]- Was zeichnet die Linien-Topologie aus?
+> - Punkt-zu-Punkt Verbindungen zwischen benachbarten Knoten
+> - Alle Stationen müssen
+> 	- Daten empfangen
+> 	- Daten regenerieren
+> 	- falls nötig weiterleiten
+> - Der Ausfall einer Station führt zur Segmentierung des LAN in zwei Teile
+
+> [!info]- Was muss man bei der Ring-Topologie beachten?
+> Man benötigt ein Verfahren zur Verhinderung von "endlosem Kreisverkehr".
+
+> [!info]- Was sind die Vor- und Nachteile eines Netzes mit vermaschter Topologie?
+> Vorteil: Ausfall einer oder eventuell auch mehrerer Stationen oder Verbindungen kann toleriert werden.
+> 
+> Nachteil: Zusätzliche Kosten und Aufwand, um mehrfache Lieferung von Daten zu verhindern .
+
+> [!info]- Wie werden Geräte im LAN adressiert?
+> Durch die fixe MAC Adresse des Interfaces des Geräts.
 
 > [!info]- Was gibt es für LAN Topologien?
 > - Bus: Alle Stationen sind passiv angeschlossen, horchen die Leitung permanent ab und werden aktiv, wenn sie etwas senden wollen. Es gibt keine feste Richtung
@@ -337,19 +424,61 @@ tracert nippon.jp
 
 > [!info]- Wie ist die MAC-Adresse aufgebaut?
 > Erste 3 Bytes: Hersteller
+> 
 > Andere 3: Laufnummer
+> 
 > Letzte 2 Bits des ersten Byte: 0/1 für individual/group address und universally/locally administered address
 
-> [!question]- Wie sieht das Ethernet Package aus?
+> [!info]- Wie sieht das Ethernet Packet aus?
+> 7 Byte Preamble und 1 Byte SFD
+> 
+> Dieses kommt vor dem Ethernet Frame
 
-> [!question]- Wie sieht das Ethernet Frame aus?
+> [!info]- Wie sieht das Ethernet Frame aus?
+> Ohne die Daten sind es 18 Byte
+> - 6 Byte Destination Address
+> - 6 Byte Source Address
+> - 2 Byte Length/Type
+> - 46 - 1500 Byte Daten
+> - 4 Byte Frame Check Sequence
+> - (12 Byte Interframe Gap)
 
-> [!question]- Welche Begriffe gibt es für verscheidene Teile des Ethernet Frames?
+> [!info]- Welche Kategorisierungen gibt es für verscheidene Teile des Ethernet Frames?
+> Frame Packet: Preamble und SFD
+> 
+> Ethernet Frame Size: Alles ausser Frame Packet und Interframe Gap
+> 
+> MAC Overhead: Ethernet Frame Size ohne Daten
+> 
+> Sendedauer: Alles ausser Interframe Gap
+> 
+> Dauer der Leitungsbelegung: Mit Interframe Gap
+
+> [!info]- Du erhälst folgenes Ethernet Frame: 0101010 10101010 10101010 10101010 10101010 10101010 10101010 10101011 00010000 00000000 01011010 11100011 10011111 10000110... Wie lauten der Empfänger?
+> Präambel 7x 10101010
+  SFD 10101011
+> Destination Address 00001000 00000000 01011010 11000111 11111001 01100001
+
+> [!info]- Deine MAC-Adresse ist 08-00-5A-C7-F9-61. Woran erkennst du deinen Hersteller?
+> 08-00-5A
+
+> [!info]- Deine MAC-Adresse ist 04-0A-E0–13–14-26. Was kannst du aus dem ersten Byte (04) herauslesen?
+> 04 = 00000100
+> 
+> Aus dem zweitletzten Bit dieses Bytes kann man herauslesen: 0 = universally administrated address
+> 
+> Aus dem letzten Bit kann man herauslesen: 0 = individual address
 
 > [!info]- Was ist die Filtering Database?
 > In der Filtering Database steht, welche Adresse hinter welchem Port ist. Der Switch erhält Frames mit Absender und Empfänger und sendet sie zu den Ports mit dem Empfänger. Wenn der Empfänger hinter dem Input-Ports ist, wird das Frame verworfen. Wenn der Port des Empfängers unbekannt ist, wird das Frame an alle Output-Ports gesendet.
 
-> [!question]- Was ist ARP?
+> [!info]- Was machen Repeater / Hubs?
+> - Verstärken ankommende Signale auf einem Port und leiteen sie "in bester Qualität" weiter
+> - Keine Fehlererkennung
+
+> [!info]- Was macht ein Switch?
+> - Prüft die Checksum von Frames
+> - Merkt sich Sender und schickt Pakete an diesen Sender zum richtigen Port
 
 > [!info]- Was ist ein unknown unicast frame?
 > Dieses Frame ist nicht in der Filtering Database und wird deshalb an alle Output-Ports geschickt. Allerdings hat das Frame nur einen Empfänger.
@@ -359,20 +488,42 @@ tracert nippon.jp
 > - Alte Einträge werden gelöscht, wenn kein Verkehr vom Absender mehr beobachtet wird (5-10min)
 
 > [!info]- Was ist die Switch-Matrix oder die Switch-Fabric?
-> Die Weiterleitungen zwischen allen Input- und Output-Ports. Wenn zwei Einträge gleichzeitig kommen (aus verscheidenen Input-Ports zum gleichen Output-Port), gibt es eine Queue
+> Die Weiterleitungen zwischen allen Input- und Output-Ports. Wenn zwei Einträge gleichzeitig kommen (aus verscheidenen Input-Ports zum gleichen Output-Port), gibt es eine Queue.
 
 > [!info]- Wie berechnet man die Gesamtübertragunszeit?
 > $"Latenz" = t_"frame" + t_"transfer"$
-> $t_"transfer" = d / (200000"km"/s)$
+> 
+> $t_"transfer" = "Distanz" / (200000"km"/s)$
 
 > [!info]- Wie sind die Verzögerungen von Repeater und Switch im Vergleich?
 > Der Repeater kann schon mit dem Weitersenden beginnen, bevor das gesamte Frame eingelesen wurde. Der Switch speichert das Frame zuerst ab um es dann zu verarbeiten.
 
-> [!question]- Was sind die Schritte des Spanning Tree Algorithmus?
+> [!info]- Was sind die Schritte des Spanning Tree Algorithmus?
+> 1. Initialisierung
+> 	- Alle Ports für Nutzdaten blockiert
+> 	- Annahme: "Ich bin Root"
+> 	- Austausch BPDUs (Bridge Protocol Data Units) mit Nachbarn
+> 	- Die tiefste Adresse wird Root
+> 2. Aufbau des Spanning Tree
+> 	- Aufdatieren der Info zu Root (kleinste ID) und Pfadkosten zu dieser
+> 	- Austausch aufdatierter BPDUs bis Konvergenz
+> 	- Die kürzesten Wege werden gewählt
+> 	- Wenn es zwei Wege gibt, dann gewinnt der Weg, bei dem der nächste Knoten die tiefere Adresse hat.
+> 3. Setzen der Port Roles
+> 	- Freigeben für Nutzdaten von Root-Ports (diese führen zum Root) und Designated-Ports (diese führen vom Root weg)
+> 	- Alle anderen Ports bleiben blockiert (Discarding)
 
-> [!question]- Wie funktioniert VLAN?
+> [!info]- Welche Informationen enthält eien Bridge Protocol Data Unit?
+> - Root-ID (aus lokaler Sicht): 8 Byte
+> - Root-Cost (aus lokaler Sicht): 2 Byte
+> - Bridge-ID ("Ich"): 8 Byte
+> - Port-ID (Sende-Port): 2 Byte
 
-> [!question]- Wie priorisieren gewisse Switches Frames?
+> [!info]- Wie funktioniert VLAN?
+> Mit VLAN können mehrere LANS auf der selben Hardware sein. Wenn ein Frame das Netz betritt, fügt ein Switch einen Tag in das Frame ein. Dieser Tag markiert, zu welchem der VLANs dieses Frame gehört. Bevor das Frame das Netz verlässt, wird der Tag wieder entfernt. Der Tag wird vor dem Type/Length Feld eingefügt. Er besteht aus 2 Bytes 0x8100 = getagged und 2 Bytes VLAN-ID.
+
+> [!info]- Wie priorisieren gewisse Switches Frames?
+> Es ist möglich, Frames zu priorisieren, indem ein PCP Wert gesetzt wird. Dieser Wert befindet sich im VLAN-Tag am Anfang der VLAN-ID. Der Wert ist eine Zahl von 0-7, wobei 7 am wichtigsten ist. Jede Prio hat dann eine eigene Queue im Switch. Zum Beispiel kann man so Voice&Video höher priorisieren.
 
 > [!info]- Was gibt es für Architekturen beim Switch?
 > - **Store-and-Forward**: Frame wird komplett empfangen und dann weitergeleitet
@@ -388,39 +539,65 @@ tracert nippon.jp
 > - **Tap / Probe**, der überall dazwischengehängt werden kann.
 > - **Port-Mirroring** leitet Daten zusätzlich auf einen anderen Port um
 
-> [!question]- Wie sieht das Ethernet Bezeichnungs-Schema aus?
+> [!info]- Wie sieht das Ethernet Bezeichnungs-Schema aus?
+> Bitrate + BASE oder BROAD + Codierung
+> 
+> Codierungen Z.B:
+> - T, TX, T1: Twisted Pair
+> - SR, DR, LR: optisch
+> - C: Twinax
+> - K: Backplane
 
-> [!question]- Was sind typische Topologie von Twisted-Pair-Ethernet?
+> [!info]- Was sind typische Topologie von Twisted-Pair-Ethernet?
+> - Stern-Topologie mit mehreren Stationen an einem Ethernet Switch
+> - Mehrere Switches erweitern Topologie zu einem Baum
+> - Allenfalls vermascht für Redundanz
+> - Maximale Segmentlänge 100m
 
-> [!question]- Wie wird die effektiv verwendete Konfiguration zwischen den Stationen vereinbart?
+> [!info]- Wie wird die effektiv verwendete Konfiguration zwischen zwei Ethernet Stationen vereinbart?
 > Man nimmt das schlechtere, also alles was beide können.
 
-> [!info]- Wie kommunizieren Ethernet Anschlüssen?
-> Über ein Protokoll wird kommuniziert. 10000 = Message Type Ethernet Und die weiteren Bits stehen je für was der Anschluss kann. Mit Fast Link Pulses wird die Clock angegeben. Zwischen zwei Pulsen ist ein Bit Information. Bei einem Normal Link Pulse werden viele Fast Link Pulses mit Infos gesendet. Manche Anschlüsse können nur Normal Link Pulses senden.
+> [!info]- Wie kommunizieren Ethernet Anschlüsse?
+> Es werden folgende Informationen gessendet: 10000 = Message Type Ethernet und die weiteren Bits stehen je für was der Anschluss kann. Mit Fast Link Pulses wird die Clock angegeben. Zwischen zwei Pulsen ist ein Bit Information. Pro Normal Link Pulse können viele Fast Link Pulses mit Infos gesendet. Manche Anschlüsse können aber nur Normal Link Pulses senden.
 
-> [!info]- Warum setzt man nicht gerne Cross-Over-Kabel ein?
+> [!question]- Warum setzt man nicht gerne Cross-Over-Kabel ein?
 > Für eine Kabelstrecke aus mehreren Teilstrecken braucht es gerade UND X-over Kabel
 
 > [!info]- Welche Aspekte sind bei einer Vervielfachung der Datenrate zu beachten?
 > 1. Baudrate / Signalfrequenz
 > 	- Höhere Datenrate bedeutet auch höhere Baudrate bzw. Bandbreite
 > 	- Dämpfung nimmt mit steigender Signalfrequenz zu
-> 	- Übersprechen (Crosstalk) nimmt mit steigender Frequenz zu!
-> 1. Kompatibilität und Unterstützung von Systemen mit heterogenen Datenraten
+> 	- Übersprechen (Crosstalk) nimmt mit steigender Frequenz zu
+> 2. Kompatibilität und Unterstützung von Systemen mit heterogenen Datenraten
 > 	- Möglichst keine Konfiguration
 > 	- Systemrelevante Parameter beibehalten
 
-> [!question]- Wieso möchte man einen ununterbrochenen Bitstrom?
+> [!info]- Was wird hier gesendet? ![](assets/Pasted%20image%2020250517105150.png)
+> Es werden Fast Link Pulses gesendet. Zwischen den Clock Pulsen steht folgende Information:
+> 
+> 10000 = Message Type Ethernet
+> 
+> 11110000001 = Was kann die Station und was nicht
 
-> [!question]- Wie erreicht die 100Base-TX Leitungscodierung einen ununterbrochenen Bitstrom?
+> [!info]- Wieso möchte man einen ununterbrochenen Bitstrom?
+> Um Taktrückgewinnng zu ermöglichen.
 
-> [!question]- Was ist Bitstuffing?
+> [!info]- Wie erreicht die 100Base-TX Leitungscodierung einen ununterbrochenen Bitstrom?
+> - 4 Bits werden zu 5 Bits Codiert
+> - Start-of-Stream Delimiter (J/K) ersetzt erstes Byte der Preamble
+> - End-of-Stream Delimiter (T/R) folgt nach dem Frame
+> - Idle (I) füllt die Leitung ununterbrochen zwischen Frames
 
 > [!question]- Was kann 10BASE-T?
 
 > [!question]- Was ist neu bei 100BASE-TX?
+> - NRZI-Codierung
 
 > [!question]- Was ist neu bei 1000BASE-T?
+> - 4 Paar CAT5
+
+> [!question]- Wie unterscheiden sich 100BASE-TX und 1000BASE-T
+> 100BASE-TX hat 2 SMF Kabel, 1000BASE-T hat 4 CAT5 Kabel
 
 > [!question]- Was macht der Vollduplex Betrieb mittels Gabelschaltung?
 
