@@ -713,9 +713,12 @@ tracert nippon.jp
 > 
 > Rot: 192.0.0.x = Klasse C (/24)
 
+> [!info]- Was ist das Problem von Classful Routing?
+> Die A Klasse ist zu gross, die C Klasse ist zu klein für Unternehmen. Es gibt aber nicht genug B Klassen Netze. Eine Klasseneinteilung an sich ist unflexibel.
+
 > [!info]- Was ist CIDR?
 > Classless Inter-Domain Routing führt folgendes ein:
-> - Abschaffung der Klassen
+> - Abschaffung der Netzklassen
 > - Flexible Verwendung von Netzmasken beliebiger Länge
 > - Aufteilung grosser Netze in kleinere Subnetze, Zusammenfassen mehrerer kleiner Netze zu einem gemeinsamen grösseren Netz
 
@@ -748,36 +751,43 @@ tracert nippon.jp
 > [!info]- Für was benutzt man Multicast-Adressen?
 > ZB Streaming / Fernsehen wie Bluewin TV. Da der gleiche Content and viele Nutzer nicht individuell geschickt werden muss.
 
-> [!info]- Wie sieht das IPv4-Header Format aus?
+> [!info]- Wie sieht ein IP Paket aus?
+> Insgesamt 20 Bytes:
+> 
 > - **Version (4 Bits)**: 4 oder 6
 > - **Internet Header Length (IHL) (4 Bits)**: Maximale Länge = Länge * 4
-> - **Differentiated Services (DS) (8 Bits)**: Erlaubt Priorisierung, Delay, Jitter von IP-Datenpaketen. Der Wert ist eine Qualitätsklasse. 
-> - **Total Length (16 Bits)**
-> - **Time to Live (TTL) (8 Bits)**: Dekrementierender Hop-Counter
-> - **Protocol (8 Bits)**: ZB 1 ICMP, 6 TCP, 17 UDP
-> - **Header Checksum (16 Bits)**: Schützt nur den IP-Header selbst, In jedem Router neu berechnet, wegen TTL etc.
-> - **Source Address (32 Bits)**
-> - **Destination Address (32 Bits)**
-> - **Options / Padding (variabel)**
-> - **Identification Number, Flags, Fragment Offset**
-> 	- Identification Number (16 Bits)
+> - **Differentiated Services (DS) (1 Byte)**: Erlaubt Priorisierung, Delay, Jitter von IP-Datenpaketen. Der Wert ist eine Qualitätsklasse. 
+> - **Total Length (2 Bytes)**
+> - **Time to Live (TTL) (1 Byte)**: Dekrementierender Hop-Counter
+> - **Protocol (1 Byte)**: ZB 1 ICMP, 6 TCP, 17 UDP
+> - **Header Checksum (2 Bytes)**: Schützt nur den IP-Header selbst, In jedem Router neu berechnet, wegen TTL etc.
+> - **Source Address (4 Bytes)**
+> - **Destination Address (4 Bytes)**
+> - **Options / Padding (variabel)**: muss immer ein vielfaches von 4 sein
+> 	- Identification Number (2 Bytes)
 > 	- Flags (3 Bits): 1 = Do/Dont Fragment, 2 = Last/More Fragments
 > 	- Fragment Offset (13 Bits): Gibt an, wo in einem fragmentierten IP-Paket ein Fragment hingehört
 
-> [!question]- Wie funktioniert Ethernet-Encapsulation?
-> - Das IP-Paket wird direkt im Nutzdatenteil des Frames übertragen
-> - Das Type Feld des Ethernet Frames erhält den Wert 0800 (hex)
-> - Die MTU ist damit 1500 Bytes
+> [!info]- Was ist der Nutzen von IP-Fragmentierung?
+> Der Sender teilt die Nutzdaten auf mehrere Frames auf um die Maximum Transfer Unit (MTU) des Netzes nicht zu überschreiten. Diese Aufgabe wird vom Sender getan um Router zu entlasten. Die Daten werden auch erst beim Empfänger reassembliert, weil die Pakete verscheidene Routen nehmen könnten.
+
+> [!info]- Was ist die MTU eines IP-Pakets in einem Ethernet Frame?
+> 1500 Bytes
+
+> [!info]- Wie funktioniert Ethernet-Encapsulation?
+> - Das IP-Paket wird direkt im Nutzdatenteil des Ethernet Frames übertragen
+> - Das Type Feld des Ethernet Frames enthält den Wert 0800 (hex)
+> - Die MTU ist damit 1500 Bytes. Ohne Optionen können dann 1500 - 20 Bytes Daten übertragen werden.
 
 > [!info]- Wie funktioniert ARP?
 > ARP = Address Resolution Protocol
+> 
 > - Für das Senden von Daten an einen durch seine IP-Adresse identifizierten Knoten im lokalen Netz wird dessen Hardwareadresse benötigt.
-> - Ist diese nicht bekannt, werden alle Knoten im Netz per Broadcast angefragt.
-> - Der Knoten mit der angefragten IP-Adresse kennt seine eigene Hardwareadresse und sendet sie an den fragenden Knoten zurück.
-> - Es gibt die ARP-Request "Who has 1.2.3.4" und die ARP-Response "1.2.3.4 is at 55.66.77.88.99.11" (IP zu MAC)
-> - Die ARP-Tabelle speichert bekannte IP-MAC Kombinationen für eine gewisse Zeit
+> - Ist diese nicht bekannt, werden alle Knoten im Netz per Broadcast angefragt: "Who has 1.2.3.4"
+> - Der Knoten mit der angefragten IP-Adresse kennt seine eigene Hardwareadresse und sendet sie an den fragenden Knoten zurück: "1.2.3.4 is at 55.66.77.88.99.11".
+> - Die erhaltene IP-MAC Kombinationem wird in der ARP-Tabelle für eine gewisse Zeit gespeichert.
 
-> [!info]- Wie wird ARP sonst noch verwendet?
+> [!info]- Für was wird ARP verwendet, neben dem Ermitteln von Adressen?
 > - Erkennung von Adresskonflikten:
 > 	- Nach einer Adresszuweisung (manuell oder per DHCP) wird ein ARP-Request an die eigene IP- Adresse gerichtet, um zu prüfen, ob kein anderer Host im LAN die Adresse verwendet
 > 	- Falls eine Antwort kommt, liegt ein Adresskonflikt vor
@@ -785,10 +795,21 @@ tracert nippon.jp
 > 	- Linux Systeme senden in diesem Fall einen ARP-Request als Unicast
 > 	- Reduziert Broadcast-Last im Netz
 
-> [!question]- Was ist ICMP?
-> Internet Control Message Protocol. Hilfsprotokoll
+> [!info]- Was passiert bei der Übertragung eines IP Paketes mit Encapsulation?
+> Beim betreten eines neuen Netzes wird das Paket in ein neues Ethernet Frame gesteckt. Der Empfänger des Frames wird mit einer ARP Request herausgefunden. Der Empfänger ist der Port zum nächsten Netz oder vom schlussendlichen Empfänger.
 
-> [!question]- Was gibt es für IMCP Meldungstypen?
+> [!info]- Was ist ICMP?
+> Internet Control Message Protocol. Dieses Protokoll wird genutzt um  Fehlermeldungen oder Informationen auf dem Internet Layer auszutauschen. Die ICMP Meldungen werden in IP Paketen gekapselt
+
+> [!info]- Was gibt es für gebräuchliche IMCP Meldungstypen?
+> 0 Echo Reply
+> 
+> 3 Destination Unreachable
+> 
+> 8 Echo
+> 
+> 11 Time Exceeded
+
 
 > [!question]- Wie funktioniert TCP?
 > - Flow Control
