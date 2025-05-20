@@ -6,13 +6,19 @@ tracert nippon.jp
 > Bei soft real time Übertragung ist es nicht schlimm, wenn die Daten nicht erfolgreich übertragen werden konnten, wie z.B. bei einem Anruf. Bei der Bremse eines Zuges wäre es schlimm, wenn die Bremse nicht innerhalb eines gewissen Zeitraums reagiert. Die Übertragung vom Bremsknopf zur Bremse muss also eine hard real time Übertragung sein.
 
 > [!info]- Was sind die 7 Schichten des OSI-Modells?
-> 1. Application Layer
-> 2. Presentation Layer
-> 3. Session Layer
-> 4. Transport Layer
-> 5. Network Layer
-> 6. Data Link Layer
-> 7. Physical Layer
+> (7) Application Layer
+> 
+> (6) Presentation Layer
+> 
+> (5) Session Layer
+> 
+> (4) Transport Layer
+> 
+> (3) Network Layer
+> 
+> (2) Data Link Layer
+> 
+> (1) Physical Layer
 
 > [!info]- Zu welchem Layer gehören TCP und UDP?
 > Transport Layer
@@ -45,6 +51,9 @@ tracert nippon.jp
 > - Data Link: Bridge, Switch
 > - Physical: Hub, Repeater
 > - Media: Kabel, Light Pulses
+
+> [!info]- Auf welchem Layer arbeitet der Repeater?
+> Auf Layer 1, dem Physical Layer
 
 > [!info]- Was ist der Unterschied von einem Interface, einem Dienst, einem Protokoll und einem SAP?
 > Die Daten werden mit dem SAP der höchsten Schicht übergeben, ein Dienst ist zwischen zwei tieferen Schichten. Das Interface sind die konkreten Funktionen des Dienstes. Das Protokoll regelt die Kommunikation innerhalb einer Schicht zwischen zwei Instanzen der Schicht.
@@ -264,7 +273,7 @@ tracert nippon.jp
 > Leitungs-Symbole pro Sekunde. Wenn in 1ms 1 Symbol geschickt wurde, dann ist die Baudrate 1kBaud.
 
 > [!info]- Es gibt 4 Symbole, die je in 1 ms geschickt werden können. Was betragen die Baudrate, die Bitrate und die Bits/Symbol?
-> Baudrate: $f_s$ = $1 kBaud
+> Baudrate: $f_s$ = 1 kBaud
 > 
 > Bitrate: $R$ = 2 kBits/s
 > 
@@ -444,7 +453,7 @@ tracert nippon.jp
 > - (12 Byte Interframe Gap)
 
 > [!info]- Welche Kategorisierungen gibt es für verscheidene Teile des Ethernet Frames?
-> Frame Packet: Preamble und SFD
+> Frame Packet: Preamble und SFD + Ethernet Frame
 > 
 > Ethernet Frame Size: Alles ausser Frame Packet und Interframe Gap
 > 
@@ -479,6 +488,9 @@ tracert nippon.jp
 > [!info]- Was macht ein Switch?
 > - Prüft die Checksum von Frames
 > - Merkt sich Sender und schickt Pakete an diesen Sender zum richtigen Port
+
+> [!info]- Auf welchem Layer arbeitet der Switch?
+> Auf Layer 2, dem Data Link Layer
 
 > [!info]- Was ist ein unknown unicast frame?
 > Dieses Frame ist nicht in der Filtering Database und wird deshalb an alle Output-Ports geschickt. Allerdings hat das Frame nur einen Empfänger.
@@ -557,8 +569,8 @@ tracert nippon.jp
 > [!info]- Wie wird die effektiv verwendete Konfiguration zwischen zwei Ethernet Stationen vereinbart?
 > Man nimmt das schlechtere, also alles was beide können.
 
-> [!info]- Wie kommunizieren Ethernet Anschlüsse?
-> Es werden folgende Informationen gessendet: 10000 = Message Type Ethernet und die weiteren Bits stehen je für was der Anschluss kann. Mit Fast Link Pulses wird die Clock angegeben. Zwischen zwei Pulsen ist ein Bit Information. Pro Normal Link Pulse können viele Fast Link Pulses mit Infos gesendet. Manche Anschlüsse können aber nur Normal Link Pulses senden.
+> [!info]- Wie kommunizieren Ethernet Anschlüsse untereinander was sie können?
+> Es werden folgende Informationen bei der Autonegation gesendet: 10000 = Message Type Ethernet und die weiteren Bits stehen je für was der Anschluss kann. Mit Fast Link Pulses wird die Clock angegeben. Zwischen zwei Pulsen ist ein Bit Information. Pro Normal Link Pulse können viele Fast Link Pulses mit Infos gesendet. Manche Anschlüsse können aber nur Normal Link Pulses senden.
 
 > [!question]- Warum setzt man nicht gerne Cross-Over-Kabel ein?
 > Für eine Kabelstrecke aus mehreren Teilstrecken braucht es gerade UND X-over Kabel
@@ -588,25 +600,39 @@ tracert nippon.jp
 > - End-of-Stream Delimiter (T/R) folgt nach dem Frame
 > - Idle (I) füllt die Leitung ununterbrochen zwischen Frames
 
-> [!question]- Was kann 10BASE-T?
+> [!info]- Was ist bei 1000BASE-T anders als bei 100BASE-TX? 
+> - 4 statt 2 Aderpaare, diese werden alle gleichzeitig in beide Richtungen verwendet
+> - 5-wertiger Leitungscode
+> - "Next Page" Mechanismen bei FLPs
 
-> [!question]- Was ist neu bei 100BASE-TX?
-> - NRZI-Codierung
+> [!info]- Wie wird die Kompatibilität von Ethernet-Technologien aufrechterhalten?
+> - Beibehaltung von Frame Format und Schnittstelle zwischen PHY und MAC
+> - Autonegotiation mittels FLP bursts / NLP
 
-> [!question]- Was ist neu bei 1000BASE-T?
-> - 4 Paar CAT5
+> [!info]- Was bedeutet PHY und MAC?
+> PHY = Ethernet Packet (beinhaltet Ethernet Frame)
+> 
+> MAC = Ethernet Frame
 
-> [!question]- Wie unterscheiden sich 100BASE-TX und 1000BASE-T
-> 100BASE-TX hat 2 SMF Kabel, 1000BASE-T hat 4 CAT5 Kabel
+> [!info]- Was macht der Vollduplex Betrieb mittels Gabelschaltung?
+> Es ermöglicht, dass gleichzeitig in beide Richtungen gesendet werden kann.
 
-> [!question]- Was macht der Vollduplex Betrieb mittels Gabelschaltung?
+> [!info]- Was ist neu bei 10GBASE-T?
+> - 16-wertiger Leitungscode
+> - Forward Error Correction, Scrambling
+> - neue Kabelkategorien CAT 6 bis 8
 
-> [!question]- Was ist neu bei 10GBASE-T?
+> [!info]- Wie gross ist die Netzlast auf dem Port-Mirror, wenn Knoten A und B je mit 51% der nominellen Bitrate des Links Daten austauschen? Was ist die Konsequenz?
+> Der Mirror-Port wird überlastet, dadurch werden Pakete verworfen. Von den 102%, die in den Mirror-Port sollen, geht 2% verloren.
 
-> [!question]- Wie gross ist die Netzlast auf dem Port-Mirror, wenn Knoten A und B je mit 51% der nominellen Bitrate des Links Daten austauschen? Was ist die Konsequenz?
-> Von den 102% geht 2% verloren und können nicht gemirrored werden.
+> [!info]- Was ist das Grundprinzip von Internetworking?
+> Die Netzwerkschicht verbindet verschiedene Netze und verbirgt die Besonderheiten der einzelnen Netze. Konkret werden die Netze durch Router verbunden.
 
-> [!question]- Was ist das Grundprinzip von Internetworking?
+> [!info]- Was sind die vier Grundsätze des Internets?
+> 1. Jedes Netzwerk soll für sich selbst funktionsfähig sein und für den Anschluss ans Internet soll keine netzinterne Anpassung nötig sein
+> 2. Die Kommunikation basiert auf best effort: Schafft es ein Paket nicht bis zum Ziel, so soll es (falls notwendig) nach kurzer Zeit von der Quelle nochmals übertragen werden
+> 3. Die Verbindung der Netze erfolgt durch Black Boxes (später als Router bezeichnet). In diesen Black Boxes soll über die einzelnen Paketflüsse keine Information gesammelt werden.Dadurch können sie einfach gehalten werden und sich rasch von irgendwelchen Fehlerzuständen erholen
+> 4. Es soll keine zentrale Funktionssteuerung benötigt werden
 
 > [!info]- Was ist der Aufbau von IP-Adressen?
 > Es gibt 4 Bytes. Der erste Teil ist die Netzadresse, der 2. Teil die Interfaceadresse (früher Host). Die Subnetzmaske bestimmt die Grenze. (Alle Bits, welche in der Maske eine 1 haben gehören zur Netzadresse)
@@ -617,41 +643,50 @@ tracert nippon.jp
 > Forwarding ist die Weiterleitung von Daten aufgrund der Routingtabelle und Routing ist das Aufbauen dieser Tabellen, statisch oder dynamisch. Die Routingtabelle enthält Netzadresse und Subnetzmaske und über welches Interface diese verfügbar sind. Routing ist sozusagen der Austausch von Routeninformationen.
 
 > [!info]- Was ist ein Gateway?
-> Dies ist der alte Name von Router. Neu ist es etwas, das alle OSI Schichten umfasst. ZB Mail oder Fax Gateway
+> Gateway ist der alte Name für Router. Neu nennt man etwas, das alle OSI Schichten umfasst Gateway. ZB Mail oder Fax Gateway
 
 > [!info]- Was macht ein Router?
-> Der Router verbindet verschiedene Netze und versteht dafür also viele Protokolle. Für ein Netz ist der Router einfach ein Knoten es Netzes. Ein Router kann Netze verbinden, ZB LAN->Internet, Netze segmentieren um die Broadcast Domain zu limitieren oder Netze mit einer Firewall voneinander schützen. Die Router versuchen, Pakete möglichst optimal weiterzuleiten. Man kann die Topologie in kleinen Fällen konfigurieren oder in grossen Fällen ermitteln lassen.
+> Der Router verbindet verschiedene Netze und versteht dafür viele Protokolle. Für ein Netz ist der Router einfach ein Knoten es Netzes. Ein Router kann 1. Netze verbinden, ZB LAN und Internet, 2. Netze segmentieren um die Broadcast Domain zu limitieren oder 3. Netze mit einer Firewall voneinander schützen. Die Router versuchen, Pakete möglichst optimal weiterzuleiten. Man kann die Topologie in kleinen Fällen konfigurieren oder in grossen Fällen ermitteln lassen.
 
-> [!info]- Was gibt es für Routing Protokolle?
-> - Interior Gateway Protocols IGP
+> [!info]- Auf welchem Layer arbeitet der Router?
+> Auf Layer 3, dem Network Layer.
+
+> [!info]- Was gibt es für Routing Protokoll Arten?
+> - Interior Gateway Protocols (IGP)
 > - Exterior Gateway Protocols (EGP)
 
 > [!info]- Was ist ein Host?
-> Ein Host ist ein Empfänger von TCP/IP. Jeder Host hat mindestens eine Adresse. Multi-Homed Hosts haben mehrere IP-Adressen. Die IP-Adresse identifiziert das Host-Interface.
-
-> [!info]- Wie berechnet man die IP als Zahl?
-> A.B.C.D -> D * 0 + C * 256 + B * 256 * 256 + A * 256 * 256 * 256
+> Ein Host ist ein Empfänger oder ein Sender von TCP/IP. Jeder Host hat mindestens eine Adresse. Multi-Homed Hosts haben mehrere IP-Adressen. Die IP-Adresse identifiziert das Host-Interface.
 
 > [!info]- ![](assets/Pasted%20image%2020250514091633.png)
-> a) 17.8.0.0, 17.8.255.255, 65'536
-> b) 255.255.224.0 /19, 11.7.191.255, 8'192
-> c) 255.255.192.0 /18, 144.3.128.0, 16384
-> d) 255.255.255.248 /29, 31.4.2.160, 31.4.2.167 
+> (a) --, --, 17.8.0.0, 17.8.255.255, 65'536
+> 
+> (b) --, 255.255.224.0 /19, --, 11.7.191.255, 8'192
+> 
+> (c) --, 255.255.192.0 /18, 144.3.128.0, --, 16384
+> 
+> (d) --, 255.255.255.248 /29, 31.4.2.160, 31.4.2.167 , --
 
 > [!info]- Was ist der Unterschied von flachem und hierarchischem Routing?
 > Flaches Routing
 > - Router kennt jedes Ziel
 > - Redundanz da Ziele mehrmals gespeichert
 > - Grosse Tabelle
+> 
 > Hierarchisches Routing
 > - Router kennt direkt angeschlossene Netze und einen weiteren Router
 > - Wird nur am Rand genutzt
 > - Kleine Tabelle
 
+> [!info]- Was wird in der Routingtabelle gespeichert?
+> Netzadresse, Netzmaske, Port, Gateway
+
 > [!info]- ![](assets/Pasted%20image%2020250514091658.png)
-> a) Es wird nach gemäss dem 4. Eintrag der Routingtabelle von Router B an p0 weitergeleitet
-> b) Es wird gemäss Eintrag 5 in der Routingtabelle von Router B an p2 weitergeleitet.
-> c) Router C kann das IP Paket nicht weiterleiten, das IP-Paket erreicht den Empfänger nicht. Das Paket wird verworfen.
+> (a) Es wird nach gemäss dem 4. Eintrag der Routingtabelle von Router B an p0 weitergeleitet.
+> 
+> (b) Es wird gemäss Eintrag 5 in der Routingtabelle von Router B an p2 weitergeleitet.
+> 
+> (c) Router C kann das IP Paket nicht weiterleiten, das IP-Paket erreicht den Empfänger nicht. Das Paket wird verworfen.
 
 > [!info]- ![](assets/Pasted%20image%2020250514091723.png)
 > | Wert            | alternative | interfaces |
@@ -671,12 +706,15 @@ tracert nippon.jp
 
 > [!info]- ![](assets/Pasted%20image%2020250514091746.png)
 > Gelb: 30.0.x.x = Klasse B (/16) 
+> 
 > Grün: 133.0.x.x = Klasse B (/16)
+> 
 > Blau: 22.x.x.x = Klasse A (/8)
+> 
 > Rot: 192.0.0.x = Klasse C (/24)
 
 > [!info]- Was ist CIDR?
-> Classless Inter-Domain Routing
+> Classless Inter-Domain Routing führt folgendes ein:
 > - Abschaffung der Klassen
 > - Flexible Verwendung von Netzmasken beliebiger Länge
 > - Aufteilung grosser Netze in kleinere Subnetze, Zusammenfassen mehrerer kleiner Netze zu einem gemeinsamen grösseren Netz
@@ -687,7 +725,7 @@ tracert nippon.jp
 > [!info]- Was ist Subnetting?
 > Hiermit wird ein grosses Netz in mehrere kleine aufgeteilt. ZB Um das Netz in 8 kleinere aufzuteilen, fügt man der Netzmaske 3 Einsen hinzu.
 
-> [!info]- ![](assets/Pasted%20image%2020250514091810.png]]
+> [!info]- ![](assets/Pasted%20image%2020250514091810.png)
 >  160.85.128.0 / 255.255.224.0 oder 160.85.128.0 /19
 
 > [!info]- Was gibt es für spezielle IP-Adressen?
