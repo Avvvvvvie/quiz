@@ -483,17 +483,16 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 	- Liquide Anlagen sind weniger rentabel
 
 > [!info]- Was gibt es für Kennzahlen zur Liquidität?
-> Liquiditätsgrade:
+> Liquiditätsgrade mit Richtwerten:
 > 
-> **Grad 1** $"flüssige Mittel" / "kurzfristiges Fremdkapital" * 100 < 20$
+> ###### Grad 1
+> $"flüssige Mittel" / "kurzfristiges Fremdkapital" * 100 > 20$
 > 
-> ---
+> ###### Grad 2
+>  $("flüssige Mittel" + "Forderungen") / "kurzfristiges Fremdkapital" * 100 ~~ 100$
 > 
-> **Grad 2** $("flüssige Mittel" + "Forderungen") / "kurzfristiges Fremdkapital" * 100 = 100$
-> 
-> ---
-> 
-> **Grad 3** $("flüssige Mittel" + "Forderungen" + Vorräte) / "kurzfristiges Fremdkapital" * 100 = "Umlaufvermögen" / "kurzfristiges Fremdkapital" = 100..200$
+> ###### Grad 3
+> $("flüssige Mittel" + "Forderungen" + "Vorräte") / "kurzfristiges Fremdkapital" * 100 = "Umlaufvermögen" / "kurzfristiges Fremdkapital" ~~ 100..200$
 
 > [!info]- Was gibt es für Kennzahlen zur Sicherheit?
 > **Eigenkapitalquote** $"Eigenkapital" / "Gesamtkapital" * 100 > 30\%$
@@ -502,9 +501,9 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 
 > **Verschuldungsgrad** $"Fremdkapital" / "Eigenkapital" * 100 < 230\%$
 > 
-> **Anlagedeckungsgrad 1** $"Eigenkapital" / "Anlagevermoegen" * 100 = 90\%..120\%$
+> **Anlagedeckungsgrad 1** $"Eigenkapital" / "Anlagevermoegen" * 100 ~~ 90\%..120\%$
 > 
-> **Anlagedeckungsgrad 2** $"Eigenkapital" + "langfr. Fremdkapital" / "Anlagevermoegen" * 100 = 120\%..160\%$
+> **Anlagedeckungsgrad 2** $"Eigenkapital" + "langfr. Fremdkapital" / "Anlagevermoegen" * 100 ~~ 120\%..160\%$
 
 > [!info]- Was gibt es für Kennzahlen zur Rentabilität
 > **Eigenkapitalrendite** $"Gewinn" / "Eigenkapital" * 100 >= 8\%$
