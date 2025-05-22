@@ -9,14 +9,14 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 
 
 > [!info]- Was gibt es für Handlungsebenen des Managements?
-> 1. Normatives Management
-> 2. Strategisches Management
-> 3. Operatives Management
+> 1. **Normatives Management**: Aufbau unternehmerischer Legitimations- und Verständigungspotentiale
+> 2. **Strategisches Management**: Aufbau nachhaltiger Wettbewerbsvorteile
+> 3. **Operatives Management**: Gewährleistung effizienter Abläufe und Problemlösungs- routinen
 
 > [!info]- Was ist das Optimumsprinzip?
 > Es besteht aus 2 Prinzipen:
-> 1. Minimumprinzip: Mit möglichst wenig Ressourcen ein Ziel erreichen
-> 2. Maximumsprinzip: Möglichst viel erreichen mit Ressourcen
+> 4. Minimumprinzip: Mit möglichst wenig Ressourcen ein Ziel erreichen
+> 5. Maximumsprinzip: Möglichst viel erreichen mit Ressourcen
 
 > [!info]- Was gibt es für Gütereinteilungen?
 > - Freie Güter -> Luft
@@ -38,15 +38,19 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > Die Firma ist im rechtlichen Sinn der Name des Unternehmens, unter dem die Geschäftige getätigt werden.
 
 > [!info]- Wie sieht der Unternehmenskreislauf aus?
-> 1. Beschaffung -> Gpter
-> 2. Produktion mit Kostenrechnung -> Produkt
-> 3. Absatz -> Geld
-> 4. Finanzierung mit Finanzbuchhaltung -> Geld für Beschaffung
+> 1. -> Beschaffung -> Güter
+> 2. -> Produktion mit Kostenrechnung -> Produkt
+> 3. -> Absatz -> Geld
+> 4. -> Finanzierung mit Finanzbuchhaltung -> Geld für Beschaffung ->
+> 
+> ![](assets/Pasted%20image%2020250522120303.png)
 
 > [!info]- Was ist die Dreifache-Unternehmensverantwortung?
-> 1. Ökologisch
-> 2. Ökonomisch
-> 3. Sozial
+> 6. Ökologisch
+> 7. Ökonomisch
+> 8. Sozial
+> 
+> ![](assets/Pasted%20image%2020250522120228.png)
 
 > [!info]- Wie sieht das St. Galler Management Modell aus?
 > Anspruchsgruppen:
@@ -57,23 +61,28 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Mitarbeitende
 > - Kunden
 > - Kapitalgeber
+> 
 > Umweltsphären:
 > - Gesellschaft
 > - Natur
 > - Technologie
 > - Wirtschaft
+> 
 > Interaktionsthemen:
 > - Ressourcen
 > - Normen und Werte
 > - Anliegen und Interessen
+> 
 > Prozesse:
 > - Managementprozesse
 > - Geschäftsprozesse
 > - Unterstützungsprozesse (Interne Dienstleistungen)
+> 
 > Ordungsmomente:
 > - Strategie
 > - Strukturen
 > - Kultur
+> 
 > Entwicklungsmodi
 > - Erneuerung
 > - Optimierung
@@ -87,11 +96,14 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 
 > [!question]- Welche Umweltfaktoren sind Chancen oder Gefahren?
 
-> [!question]- Was ist der Stakeholder Ansatz?
+> [!info]- Was ist der Stakeholder Ansatz?
+> Anspruchsgruppen (= Stakeholder) bezeichnen alle Gruppen und Individuen, die in einer Form von der Tätigkeit der Unternehmen betroffen sind. Die wichtigsten sind idr. Kunden, Lieferantem und Mitarbeiter.
 
-> [!question]- Was ist Shareholder-Value?
+> [!info]- Was ist Shareholder-Value?
+> Es ist der Wert eines Unternehmens aus Sicht seiner Shareholder. (Wird gemessen mit dem Kurs der Aktien)
 
-> [!question]- Was sind die Merkmale einer Strategie?
+> [!info]- Was sind die Merkmale einer Strategie?
+> weitsichtig, langfristig, kontinuierlich, zielgerichtet, nachhaltig, abgrenzbar
 
 > [!info]- Was ist das 5-Kräfte-Modell von Porter?
 > Gefahren durch folgende 5 Kräfte werden untersucht:
@@ -102,7 +114,16 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - RIvalität mit Konkurrenz
 
 > [!info]- Wie funktioniert die SWOT-Analyse?
-> In der Inwelt gibt es Stärken und Schwächen. In der Umwelt gibt es Chancen und Gefahren. Diese sollen alle identifiziert werden. (Englisch: Strengths, Weaknesses, Opportunities und Threats) Zu den 4 Kombinationen von Intern+Extern können anschliessend SWOT-Strategieansätze identifiziert werden.
+> In der Inwelt (im Unternehmen) gibt es Stärken und Schwächen. In der Umwelt (unabhängig vom Unternehmen) gibt es Chancen und Gefahren. Diese sollen alle identifiziert werden, sowie die Kombinationen. (Englisch: Strengths, Weaknesses, Opportunities und Threats) 
+> ```mermaid
+> quadrantChart
+> 	y-axis "Schwächen" --> "Stärken"
+> 	x-axis "Chancen" --> "Risiken"
+> 	quadrant-1 Ausbauen
+> 	quadrant-2 Absichern
+> 	quadrant-3 Aufholen
+> 	quadrant-4 Vermeiden
+> ```
 
 > [!info]- Wie funktioniert die PESTEL-Analyse?
 > Es wird der Einfluss folgender Umweltfaktoren untersucht.
@@ -112,6 +133,14 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Technological
 > - Environmental
 > - Legal
+
+> [!info]- Wie funktioniert das Fünf Kräfte Modell?
+> Es werden folgende 5 Aspekte untersucht:
+> - Verhandlungsstärke der Lieferanten
+> - Verhandlungsstärke der Kunden
+> - Bedrohung durch Markteintritt von neuen Konkurrenten
+> - Bedrohung durch Ersatzprodukte
+> - Rivalität mit bestehender Konkurrenz
 
 > [!info]- Was gibt es für Wachstums- und Wettbewerbsstrategien?
 > 4 Branchenwettbewerbsstrategien
@@ -135,6 +164,19 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 3. Umsetzung
 > 4. Messung
 
+> [!info]- Was beinhaltet ein Unternehmensleitbild?
+> Identität:
+> - Wer sind wir?
+> - Was ist der Sinn und/oder Zweck unserer Existenz?
+>
+> Ziel:
+> - Wirtschaftlichen Zweck
+> - Produkte/ Dienstleistungen
+> 
+> Verhaltensgrundsätze:
+> - Wie verhalten wir uns gegenüber Anspruchsgruppen?
+> - Was sind unsere Grundsätze?
+
 > [!info]- Was braucht es für die Entwicklung einer Unternehmensstrategie
 > - Unternehmensleitbild
 > - Unternehmensanalyse
@@ -144,9 +186,11 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Differenzierung, um Kunden zu gewinnen
 > - Wirtschaftlichkeit, um preislich erfolg zu haben
 
-> [!info]- Was sind die 4 Branchen- wettbewerbsstrategien?
+> [!info]- Was sind die 4 Branchen-Wettbewerbsstrategien?
 > ```mermaid
 > quadrantChart
+> 	y-axis "segmentspezifisch" --> "branchenweit"
+> 	x-axis "Kosten" --> "Leistung"
 > 	quadrant-1 "Differenzierung"
 > 	quadrant-2 "Kostenführerschaft"
 > 	quadrant-3 "Kostenfokus"
@@ -156,6 +200,8 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > [!info]- Was sind die 4 Produkt-Markt-Strategien?
 > ```mermaid
 > quadrantChart
+> 	x-axis "Gegenwärtige Märkte" --> "Neue Märkte"
+> 	y-axis "Neue Produkte" --> "Gegenwärtige Produkte"
 > 	quadrant-1 Marktentwicklung
 > 	quadrant-2 Marktdurchdringung
 > 	quadrant-3 Produktentwicklung
@@ -165,6 +211,8 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > [!info]- Was sind die 4 Strategien zu den 3 Strossrichtungen?
 > ```mermaid
 > quadrantChart
+> 	x-axis "Gegenwärtige Märkte" --> "Neue Märkte"
+> 	y-axis "Neue Produkte" --> "Gegenwärtige Produkte"
 > 	quadrant-1 Entwicklungsstrategie
 > 	quadrant-2 Bewahrungsstrategie
 > 	quadrant-3 Entwicklungsstrategie
@@ -214,35 +262,95 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > [!info]- Was ist die Break-Even-Analyse?
 > Es wird berechnet, wie viel man verkufen muss, um Gewinn zu machen. Es werden fixe Kosten und variable Kosten (steigen bei mehr Verkauf) berücksichgt. Dadurch erhält man die Gesamtkosten. Der Erlös hängt vom Preis ab. Der Break-Even-Point gibt es ab einer bestimmten Menge.
 
-> [!question]-  Was gibt es für Preispolitische Massnahmen?
+> [!info]-  Was gibt es für Preispolitische Massnahmen?
+> - Zeitliche Preisdifferenzierung: Tag- und Nachttarif beim Telefonieren, billigere Hotelzimmer in der Nebensaison, Normal- und Ausverkaufspreise
+> - Räumliche Preisdifferenzierung: In- und Auslandpreise (z.B. Medikamente)
+> - Preisdifferenzierung nach Käuferschichten: Studententarife, Verbilligung für Aktionäre
+> - Preisdifferenzierung nach Abnahmemenge: Mengenrabatte, Treueprämien, Bundling etc.
+> - Skimming
+> - Penetration
+> - Gratis-Angebot / Freemium
+> - Beachtung psychologischer Effekte: 19.50 statt 20
 
-> [!question]- Was ist die Skimmingstrategie?
+> [!info]- Was ist die Skimmingstrategie?
 > Man fängt mit einem hohen Preis an und wird billiger.
 
-> [!question]- Was ist die Penetrationstrategie?
+> [!info]- Was ist die Penetrationstrategie?
 > Man fängt mit einem billigen Preis an und wird teurer.
 
-> [!question]- Was sind Beispiele für (un-)elastische Preise?
+> [!info]- Wann ist eine Nachfrage preiselastisch?
+> Wenn die Nachfrage mit steigendem Preis sinkt.
 
-> [!question]- Was gibt es für interne Distributionsorgane?
+> [!info]- Wann ist eine Nachfrage invers?
+> Wenn die Nachfrage mit steigendem Preis steigt.
 
-> [!question]- Was gibt es für externe Distributionsorgane?
+> [!info]- Was sind Beispiele für (un-)elastische Preise?
+> Elastisch: Freizeitprodukte, Luxusgüter, Marken mit vielen Alternativen
+> Unelastisch: Grundnahrungsmittel, Medikamente
 
-> [!question]- Direkter VS indirekter Absatz
-> - Direkt: Internet, eigene Filialen
-> - Indirekt: Grosshändler, Einzelhändler
+> [!info]- Was gibt es für interne Distributionsorgane?
+> - Mitglieder der Geschäftsleitung (persönlicher Kontakt zu Grosskunden)
+> - Verkäufer (besuchen Kunden)
+> - Verkaufsniederlassung (Kundenberatung)
 
-> [!info]- Vor- und Nachteile direkter Vertrieb
+> [!info]- Was gibt es für externe Distributionsorgane?
+> - Handelsvertreter (verkauft für jemanden anderen aber besitz die Ware nie selbst, so keine Risiken)
+> - Makler (sucht Käufer und Verkäufer gegen Provision)
+> - Einzelhandel
+> - Grosshandel
+
+> [!info]- Direkter VS indirekter Absatz
+> Direkt: Direkter Verkauf von Produzent zu Konsument. ZB. durch Internet, eigene Filialen
+> 
+> Indirekt: Verkauf über Grosshändler, Einzelhändler
+
+> [!info]- Was sind die Vor- und Nachteile eines direkten Vertriebs?
 > - Höhere Marge bei direktem Vertrieb
 > - Neue und innovative Produkte benötigen Know-How
 > - Viele Kunden, häufiger Bedarf, grosses Gebiet benötigt indirekter Vertrieb
 
 > [!info]- Instrumente für Kommunikation
 > - Werbung
-> - Public Relations
-> - Sponsoring
+> - Public Relations (Spenden, Berichte, Besichtigung, Kontakte...)
+> - Sponsoring (Sport, Wissenschaft, Kunst, Umwelt, Medien...)
+> - Verkaufsförderung (Prämien, Gewinnspiele, Warenproben...)
+> - Persönlicher Verkauf
+> - Produkt Placement
 
-> [!question]- Was gibt es für Werbungsbotschaften
+> [!info]- Wann soll man einen indirekten und wann einen direkten Absatz haben?
+> Direkt bei: Verderblichen, unstandardisierten, wertvollen, neuen erklärungsbedürftigen Produkten
+> 
+> Indirekt bei: Sehr vielen Kunden, häufigem Bedarf oder einem grossen Einzugsgebiet.
+
+> [!info]- Was gibt es für Werbungsbotschaften?
+> 1. Lifestyle-Technik: Betont den Lebensstil, der zum Produkt passt
+> 2. Slice-of-Life-Technik: Zeigt zufriedene Kunden in Alltagsituationen
+> 3. Dreamworld-Technik: Nutzt die Träume und Fantasien des Käufers
+> 4. Stimmungs- und Gefühlsbilder: Schafft bestimmte Stimmung, die im Bewusstsein des Käufers mit dem Produkt assoziiert wird
+> 5. Persönlichkeit als Symbolfigur: Produkt-Personifizierung
+> 6. Technische Kompetenz: Häufig bei erklärungsbedürftigen Produkten (Informationswerbung)
+> 7. Wissenschaftlicher Nachweis: Der Lieblingsstil der Waschmittel- und Konsumgüterwerbung
+> 8. Testimonial-Werbung: Produkte-Präsentation durch sympathische Persönlichkeit, die über ihre positiven Erlebnisse berichtet
+
+> [!info]- Was sind die Vor- und Nachteile von Influencern?
+> Vorteile:
+> - Reichweite
+> - Authentische Erfahrungsberichte
+> - Werbeausgaben vergleichsweise gering
+> - Zielgruppen spezifisch, effizient (bspw. im vergleich zu TV Werbung)
+> 
+> Nachteile:
+> - Kontrollverlust über Werbebotschaft
+> - Influencer sind keine Produkt- experten
+> - Glaubwürdigkeitsverlust bei zu viel Werbung (wenn bsp. 5 Influencer dasselbe Produkt gleichsam vermarkten: zu offensichtlich, dass ein Unternehmen dahinter steckt, schadet Authentizität der Botschaft)
+
+> [!info]- Wie unterscheiden sich Marketing und PR in ihren Zielen?
+> Die Ziele vom Marketing: Umsatz, Marktanteile, Deckungsbeiträge etc.
+> 
+> Die Ziele vom PR: Image, Vertrauen, Reputation, Wissen, Akzeptanz
+
+> [!info]- Was ist der harmonische Marketing-Mix?
+> Wenn ein Produkt ZB teuer ist und von hoher Qualität, dann ist es besser, wenn es auch nur in exklusiven SHops verkauft wird. Andersrum wenn ein Produkt sehr Billig ist, ist es komisch, wenn es nur exklusiv verfügbar ist. Es muss also alles abgestimmt sein: Die Qualität des Produkts, der Preis, der Vertrieb und die Promotion.
 
 > [!question]- Was gibt es für Vermarktungsobjekte
 
@@ -279,7 +387,11 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Informationsfunktione
 > - Werbemittelfunktion
 
-> [!question]- Wieso ist Markenwert wichtig?
+> [!info]- Wieso ist der Markenwert eines Unternehmens wichtig?
+> Der Markenwert ist sozusagen ein immaterielles Vermögen und Teil des Unternehmenswerts. Bei der Übernahme oder Fusion des Unternehmens, ist es entscheidend, einen guten Markenwert zu haben. 
+
+> [!info]- Was ist das Ziel von Customer Relationship Management?
+> Kundengewinnung + Kundenbindung durch Kundenzufriedenheit und langfristige Kundenbeziehung
 
 > [!info]- Formen der Markenführung
 > - Einzelproduktmarken/Monomarken (Jedes Produkt hat einenen Markenname)
@@ -289,20 +401,28 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 
 > [!info]- Was heisst AIDA?
 > Attention Interest Desire Action
+> 
 > Dies steht für die 4 Elemente in einer Werbung. Die Werbung soll Aufmerksamkeit, Interesse und einen Kaufwunsch erwecken. Und sie soll eine Handlung auslösen, also den Kauf des Produkts.
+
+> [!info]- Wie kann man das Kundenpotential ausbauen?
+> - Wiederkäufe erhöhen: ZB. Noch bessere Modelle anbieten
+> - Folgekäufe erhöhen: Nötiges zubehör zum Produkt verkaufen
+> - Zusatzkäufe erhöhen: Andere Produkte in derselben Abteilung anbieten
 
 > [!info]- Unterschied einfache und doppelte Buchhaltung
 > - Einfach: Eingaben und Ausgaben
 > - Doppelt: Eingabe von XY zu Kasse. Ausgabe von Kasse für XY.
 
-> [!info]- Wie sehen Bilanz und Erfolgrechnung aus?
+> [!info]- Wie sieht eine Bilanz aus?
 > Bilanz / Aktive:
 > - Umlaufvermögen: Bargeld, Lager
 > - Anlagevermögen: Anlagen, Maschinen
+> 
 > Passive: Schulden
 > - kurzfristiges Fremdkapital: Vorauszahlungen
 > - langfristiges Fremdkapital: Kredite
 > - Eigenkapital: Grundkapital, Reserven, vergangener Gewinn
+> 
 > Da der Gewinn dabei ist, haben beide dasselbe Total
 
 > [!info]- Was sind die Funktionen der Bilanz?
@@ -321,22 +441,17 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 	- Betriebsfremder Ertrag
 > 	- Ausserordentlicher Ertrag
 
-> [!info]- Was gibt es für Gewinne?
-> - Warenaufwand bzw. Herstellkosten
-> - Übriger liquiditätswirksamer Aufwand
-> - Abschreibungen (depreciation)
-> - Amortisationen (amortization)
-> - Steuern (taxes)
-> - Reingewinn (net income NI / EAT)
-> Verkaufserlöse = plus, rest eher minus
-> Bruttogewinn = nach Warenaufwand
-> EBITDA = vor Abschreibungen
-> EBIT =  vor Amortisation
-> EBT = vor Steuern
+> [!info]- Wie berechnet man verschiedene Gewinngrössen?
+> Man rechnet die Verkaufserlöse minus folgendem:
+> - Warenaufwand bzw. Herstellkosten: Bruttogewinn
+> - Übriger liquiditätswirksamer Aufwand: EBITDA
+> - Abschreibungen + Amortisationen: EBIT
+> - Finanzaufwand: EBT
+> - Steuern: Reingewinn (net income NI / EAT)
 
 > [!info]- Woher gibt es Geldfluss?
 > - Geschäftsbereich (Einnahmen)
-> 	Bsp Zahlungen an Kunden, Lieferanten, Personal, Aufwand
+> 	Bsp Zahlungen von/an Kunden, Lieferanten, Personal, Aufwand
 > - Investitionsbereich (Einnahmen & Ausgaben)
 > 	Bsp Kauf Liegenschaft, Verkauf Fahrzeug
 > - Finanzierungsbereich (Ausgaben)
@@ -372,8 +487,11 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 
 > **Grad 1** $"flüssige Mittel" / "kurzfristiges Fremdkapital" * 100 < 20$
 > 
+> ---
 > 
 > **Grad 2** $("flüssige Mittel" + "Forderungen") / "kurzfristiges Fremdkapital" * 100 = 100$
+> 
+> ---
 > 
 > **Grad 3** $("flüssige Mittel" + "Forderungen" + Vorräte) / "kurzfristiges Fremdkapital" * 100 = "Umlaufvermögen" / "kurzfristiges Fremdkapital" = 100..200$
 

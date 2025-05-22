@@ -751,10 +751,9 @@ tracert nippon.jp
 > [!info]- Für was benutzt man Multicast-Adressen?
 > ZB Streaming / Fernsehen wie Bluewin TV. Da der gleiche Content and viele Nutzer nicht individuell geschickt werden muss.
 
-> [!info]- Wie sieht ein IP Paket aus?
+> [!info]- Wie sieht ein IPv4 Paket aus?
 > Insgesamt 20 Bytes:
-> 
-> - **Version (4 Bits)**: 4 oder 6
+> - **Version (4 Bits)**: 4
 > - **Internet Header Length (IHL) (4 Bits)**: Maximale Länge = Länge * 4
 > - **Differentiated Services (DS) (1 Byte)**: Erlaubt Priorisierung, Delay, Jitter von IP-Datenpaketen. Der Wert ist eine Qualitätsklasse. 
 > - **Total Length (2 Bytes)**
@@ -801,6 +800,12 @@ tracert nippon.jp
 > [!info]- Was ist ICMP?
 > Internet Control Message Protocol. Dieses Protokoll wird genutzt um  Fehlermeldungen oder Informationen auf dem Internet Layer auszutauschen. Die ICMP Meldungen werden in IP Paketen gekapselt
 
+> [!info]- Wie sieht ein ICMP Header aus?
+> - 1 Byte Type
+> - 1 Byte Code
+> - 2 Bytes Checksum
+> - Weitere Bytes abhängig vom Code
+
 > [!info]- Was gibt es für gebräuchliche IMCP Meldungstypen?
 > 0 Echo Reply
 > 
@@ -810,31 +815,48 @@ tracert nippon.jp
 > 
 > 11 Time Exceeded
 
+> [!info]- Ein Router kennt keinen Weg und sendet diese Destination Unreachable Message zurück: 4500 0038 8038 0000 fd01 5bc0 a055 821e a055 1f03 0301 4bf7 0000 0000 4500 0028 8b10 0000 0711 a8a4 a055 1f03 a055 1d63 8b0d 829d 0014 a348. Wie erkennen Sie, dass es sich um eine ICMP Message handelt? Wie erkennen Sie den ICMP Typ?
+> Protocol: 01 (Octet 10)
+> 
+> Type: 03 (Octet 21)
+> 
+> Original Data (Octet 29 ff)
 
-> [!question]- Wie funktioniert TCP?
-> - Flow Control
-> 	- Verbindungsaufbau
-> 		- Initialisierung von Sequenznummern
-> 		- Aushandlen von Optionen
-> 		- Initialisierung und Reservatiuon von Ressourcen
-> 	- Nachrichtentausch (gleichzeitig möglich)
-> 		- Sequence Numbers identifizieren jedes Byte des gesendeten Nutzdatenstroms
-> 		- Acknowledge Numbers identifizieren bisher korrekt empfangene Bytes (der Gegenrichtung)
-> 		- Flags steuern Verbindungsauf- und -abbau, signalisieren Gültigkeit von Informationen im Header und besondere Situationen. Beispiele: 
-> 			- SYN/FIN: Verbindungsauf- und -abbau
-> 			- ACK: Acknowledge Number im empfangenen Segment ist gültig
-> 			- PSH: Daten sollen schnellstmöglich an Applikation weitergegeben werden
-> 	- Verbindungsabbau
-> 		- Sicherstellen des geordneten Austausches bis zum Ende
-> 		- Freigabe der allozierten Ressourcen
-> - Congestion Control
-> - Error Control
-v
-> [!question]- Wie funktioniert UDP?
-> - 2 Bytes Source Port
-> - 2 Bytes Destination Port
-> - 2 Bytes Message Length
-> - 2 Bytes Checksum
+> [!info]- Ein Host 160.85.31.3 versucht, das folgende Paket an Host 160.85.29.99 zu senden: 4500 0028 8b10 0000 0711 a8a4 a055 1f03 a055 1d63 8b0d 829d 0014 a348 030a 0000 7504 1137 407c 0800. Erkennen Sie in diesem Paket die IP Adressen von Sender und Destination?
+> Sender: a055 1f03
+> 
+> Destination a055 1d63 (Octets 13 – 20)
+
+> [!info]- Wie funktioniert Traceroute?
+> Traceroute erlaubt, den Weg zu einem beliebigen Host (oder einem fehlerhaft konfigurierten Router auf diesem Weg) zu finden. Dafür werden UDP Datagramme an eine hohe Destination Portnummer geschickt. Jedes Mal wird die TTL um 1 erhöht. Da der Zielport nicht erreichbar ist, kommt eine Destination Unreachable Nachricht zurück, jedes Mal vom nächsten Router.
+
+> [!info]- Wie sieht ein IPv6 Paket aus bzw. wie unterscheidet es sich von IPv4?
+> Insgesamt 40 Bytes statt 20:
+> - Version: 0.5 Byte
+> - Traffic Class:  1 Byte
+> - Flow Label: 2.5 Bytes
+> - Nutzdatenlänge: 2 Bytes
+> - Next Header: 1 Byte
+> - Hop Limit: 1 Byte
+> - Source Address: 16 Bytes
+> - Destination Address: 16 Bytes
+
+> [!info]- Was sind IPv6 Extension Headers?
+> - IPv6 verwendet einen minimalen Basic IPv6-Header und verfrachtet alle optionalen Erweiterungen in Extension Headers
+> - Extension Headers werden nur bei Bedarf hinzugefügt
+> - Extension Headers werden durch das "Next Header"-Feld deklariert. Dabei gibt jeder Extension Header den Typ des Next Headers und die eigene Länge an
+
+> [!info]- Warum darf in einer IPv6 Adresse :: nur einmal verwendet werden?
+> Weil sonst nicht eindeutig definiert ist, wie viele Nullen / Doppel-Bytes pro :: damit ersetzt wurden.
+
+> [!info]- Wie lange ist eine IPv6 Adresse?
+> IPv6 Adressen haben eine Länge von 16 Byte bzw. 128 Bit
+
+> [!info]- Die IPv6 Adresse 1023::1736:3:88a0:0 wurde in verkürzter Notation geschrieben. Wie lautet die volle Adresse?
+> 1023:0000:0000:0000:1736:0003:88a0:0000
+
+> [!info]- Wie werden IPv6 Adressen in der Praxis aufgeteilt?
+> 001 + 45 Bits Global Routing Index + 16 Bits Subnet ID + 64 Bits Interface ID
 
 > [!info]- Welche Protokolle benutzen UDP?
 > DNS, Time (NTP), DHCP
@@ -842,43 +864,139 @@ v
 > [!info]- Welche Protokolle benutzen TCP?
 > HTTP, Email(SMTP, POP/IMAP)
 
-> [!question]- Wie sehen IPv6 Adressen aus?
+> [!info]- Was ist NDP?
+> NDP ist das Address Resolution Protocol für IPv6. Anders als bei ARP werden
+> - Statt Broadcast nur einige Knoten per Multicast angefragt.
+> - Die IPv6-MAC Kombination wird in der "Neighbor Cache" abgespeichert.
 
-> [!question]- Was ist NDP?
+> [!info]- Wie sieht ein UDP Header aus?
+> Insgesamt  8 Bytes:
+> - 2 Bytes UDP Source Port
+> - 2 Bytes UDP Destination Port
+> - 2 Bytes UDP Message Length
+> - 2 Bytes Checksum
 
-> [!question]- Wie erkennt TCP verlorene Nachrichten?
-> - **Stop & Wait**: Es wird die gesamte Round-Trip-Time lang gewartet.
-> - **Sliding Window Protokoll**: Es wird mitgeteilt, wie viel Platz im Empfangsbuffer ist (Window=xyz). Solange noch Platz ist, wird geschickt. Wenn der Empfänger aus dem Buffer gelesen hat, schickt er ein Paket mit der neuen Window Grösse.
+> [!info]- Wie sieht ein TCP Header aus?
+> Insgesamt 20 Bytes ohne Optionen/Padding:
+> - 2 Bytes TCP Source Port
+> - 2 Bytes TCP Destination Port
+> - 4 Bytes Sequence number
+> - 4 Bytes Acknowledgement Number
+> - 4 Bits Header Length (Faktor 4 Bytes)
+> - 4 Bits unused
+> - 2 Bits ECN Flags
+> - 6 Bits Control Bits (URG,ACK,PSH,RST,SYN,FIN)
+> - 2 Bytes Window (Verfügbarer Puffer)
+> - 2 Bytes Checksum
+> - 2 Bytes Urgent Pointer: Falls URG, gibt Position von Urgent Data an
+> - 4n Bytes Options/Padding
 
-> [!question]- Wie kann TCP den Datenfluss kontrollieren?
+> [!info]- Was sind die Eigenschaften von TCP aus der Sicht einer Anwendung?
+> - **Verbindungsorientierte Übertragung**: Zuerst wird eine Verbindung zwischen Client- und Serveranwendung aufgebaut
+> - **Zuverlässiger Verbindungsaufbau**: Bevor eine TCP-Verbindung steht, muss dies von beiden Endpunkten aktiv bestätigt werden
+> - **Hohe Zuverlässigkeit**: Die Daten kommen ohne Datenverlust und in der richtigen Reihenfolge auf der anderen Seite an
+> - **Vollduplexübertragung**: Gleichzeitige, voneinander unabhängige, Übertragung in beiden Richtungen möglich
+> - **Stream-Schnittstelle**: Die Anwendung sendet/empfängt eine unstrukturierte Byte-Folge
+> - **Graceful Termination** (Verbindungsabbau): TCP gewährt die Zustellung aller Daten auch beim Verbindungsabbau
+> - **Punkt-zu-Punkt Kommunikation**: Zwei Applikationen tauschen Daten aus. Konzepte wie Multicast oder Broadcast existieren nicht.
 
-> [!question]- Wie wird das Netz von Überlastung geschützt bei TCP?
-> - Slow Start: Nicht direkt viele Pakete Schicken. Die Senderate wird mit der Zeit exponentiell erhöht bis zu einer Schwelle, dann linear erhöht. Wenn ein Problem auftritt wird die Senderate wieder zurückgesetzt und die Schwelle gesenkt.
-> - Congestion Window
+> [!info]- Was sind die Aufgaben von TCP?
+> - Flow Control
+> 	- Verbindungsaufbau
+> 	- Nachrichtentausch (gleichzeitig möglich)
+> 	- Verbindungsabbau
+> - Congestion Control
+> - Error Control
 
-> [!question]- Wie wählt man eine TCP-Puffergrösse?
-> Bandwidth-Delay-Product = RTT * Bandbreite
-> Bandbreite = Window Size / RTT
-> Minimum Window Size = BPD / 8
+> [!info]- Was nützt bei TCP der Verbindungsabbau?
+> - Sicherstellen des geordneten Austausches bis zum Ende
+> - Freigabe der allozierten Ressourcen
 
-> [!question]- Wie wird das Timeout gewählt bei TCP?
+> [!info]- Wie läuft der Verbindungsaufbau von TCP ab?
+> 1. Der Server "horcht" (LISTEN) auf einer bestimmten Port Nummer
+> 2. Der Client sendet SYN=1, ACK=0 und zufälliger initialer Sequenznummer SEQ=a (Bsp. 15'000)
+> 3. Server bestätigt Sequenznummer mit ACK=a+1 (15'001), SYN=1 und wählt zufällige initiale Sequenznummer SEQ=b (Bsp. 42'300)
+> 4. Client bestätigt b mit ACK=b+1 (42'301) und SEQ=a+1
+> 5. Wenn nun vom Client bei SEQ=15001 1000 Bytes Daten gesendet werden, sendet der Server ACK=16001
 
-> [!info]- [[08_transportlayer.pdf#page=31&selection=31,0,31,21|Übung Datenaustausch]]
-> 1. +u+1 Sequenznummer
-> 2. +v+1 Acknowledge, Nummer
+> [!info]- Wie läuft der Verbindungsabbau von TCP ab?
+> 1. A sendet FIN
+> 2. B sendet ACK=ack+1 um FIN zu bestätigen
+> 3. Der Verbindungszustand wird als Half-Closed bezeichnet, B könnte also immer noch Daten schicken.
+> 4. B sendet auch FIN
+> 5. A sendet ACK=ack+1 um FIN zu bestätigen
 
-> [!question]- Wie sieht das TCP Zustandsdiagramm aus?
+> [!info]- Wie erkennt TCP verlorene Nachrichten?
+> - **Stop & Wait**: Es wird die gesamte Round-Trip-Time lang gewartet und noch kein nächstes Paket gesendet. Wenn kein ACK kommt, wird es erneut gesendet. Erst wenn ein ACK kommt, werden die nächsten Daten gesendet.
+> - **Sliding Window Protokoll**: Es wird mitgeteilt, wie viel Platz im Empfangsbuffer ist (Window=xyz). Solange noch Platz ist, werden die nächsten Daten geschickt. Wenn der Empfänger aus dem Buffer gelesen hat, schickt er ein Paket mit der neuen Window Grösse.
 
-> [!question]- Was ist ein Socket-Interface?
+> [!info]- Was ist RTT?
+> RTT = Round Trip Time = Zeit eines Pakets um zum Empfänger und wieder zurück zu reisen. Diese wird von TCP gemessen, um das Retransmission Time-Out zu berechnen.
 
-> [!question]- Wie erkennt man dass der Port geschlossen ist?
-> Es kommt zurück: Connection failed. In der Antwort ist ein Flag gesetzt, das daruaf hinweist, dass der Port geschlossen ist.
+> [!info]- Was ist das Bandwidth-Delay-Product?
+> BPD = RTT (s) * Bandbreite (bps)
+> 
+> Damin kann man das minimal benötigte TCP Fenster berechen:
+> 
+> BPD / 8
 
-> [!question]- Wie funktioniert DNS?
+> [!info]- Wie schützt TCP den Empfänger von Überlastung?
+> Mit dem Sliding Window Algorithmus und Advertized Window: Der EMpfänger sendet, wie viel Platz er hat und es darf nur so viel gesendet werden. Wenn das WIndow voll ist und der Empfänger z.B. 1000 Bytes daraus liest, dann schickt er eine Nachricht, dass nun wieder 1000 Bytes frei sind.
 
-> [!question]- Wie funktioniert Port-basiertes NAT?
+> [!info]- Wie wird das Netz von Überlastung geschützt bei TCP?
+> - **Slow Start**: Es werden nicht sofort viele Pakete gechcikt. Die Senderate wird mit der Zeit exponentiell erhöht bis zu einer Schwelle, dann wird nur noch linear erhöht. Wenn ein Problem auftritt, wird die Senderate wieder auf 0 zurückgesetzt und die Schwelle gesenkt. Nun wird wieder exponentiell bis zu der neuen Schwelle erhöht etc.
+> - **Congestion Window**: Ein Überlastfenster limitiert zusätzlich die Grösse des Sendefensters. Dies ist eine lokale Variable
 
-> [!question]- Welches Problem löst NAT?
+> [!info]- Was machen die einzelnen Flags von TCP?
+> - URG Urgent-Pointer: Zeigt Position von wichtigen Daten
+> - ACK Acknowledgement Number: Bestätigt empfangene Bytes
+> - PSH Push: Empfänger soll Daten sofort ohne buffern an die Applikation weiterleiten z.B. bei interaktiven Anwendungen (SSH) od. der letzten TCP-Nachricht eines Web-Requests
+> - RST Reset: Verbindung rücksetzen oder um einen geschlossenen Port zu signalisieren
+> - SYN Synchronize: Verbindung aufbauen
+> - FIN Verbindung abbauen
 
-> [!question]- Wie funktioniert DHCP? Wieso hat es so viele ACKS etc?
+> [!info]- Wie wird das Retransmission Timeout gewählt bei TCP?
+> Es wird berechnet basierent auf allen gemessenen Round Trip Times.
 
+> [!info]- Wie funktioniert DNS?
+> Das DNS ist eine verteilte, hierarchische Verzeichnisstruktur (Baum). Es wird verteilt vertrieben. Ein Name Server ist meist für eine Zone verantwortlich = Ein Teil des Baumes. Es gibt mindestens zwei Name Server pro Zone. Eine Unterzone kann an einen weiteres Nameserver delegiert werden. Mit einem DNS Lookup kann man die IP eines Domain Namens herausfinden. Mit dem Reverse DNS Lookup kann man das umgekehrte herausfinden.
+
+> [!info]- Welche klassischen Top Level Domains gibt es?
+>  - Generische, weltweite Domains (gTLD): com, edu, net, org, int
+>  - Generische Domains in den USA: gov, mil
+>  - Landesspezifische Domains (country code TLD, ccTLD): ch, li, de, us, uk
+>  - thematische und markenspezifische TLDs: coop, info, museum
+
+> [!info]- Wie funktioniert Port-basiertes NAT?
+> Alle Hosts im privaten Netz 192.168.0.0/8 verwenden 192.168.0.1 als Default-Gateway.
+> 
+> NAPT-Gateway-Funktion:
+> - Er ersetzt im IP-Header der ausgehenden Pakete die lokale Source-Adresse 192.168.0.10 durch die globale Gateway- Adresse 160.85.17.11
+> - Er ersetzt im Transport-Layer-Header der ausgehenden Pakete das Source-Port 56777 durch eine eindeutige / freie Port- Nummer.
+> - Er legt die Verbindungsinformation dynamisch in einer Verbindungstabelle ab.
+> - Er sucht bei eingehenden Paketen die Verbindung in der Tabelle und setzt die ursprüngliche IP-Adresse/Port wieder ein
+
+> [!info]- Welches Problem löst NAT?
+> Das Ausgehen von IPv4 Adressen. Mit NAT haben nämlich alle Hosts in einem privaten Netz die selbe Adresse.
+
+> [!info]- Was ist DHCP?
+> Das Dynamic Host Configuration Protocol wird für die dynamische Zuweisung von IP-Adressen verwendet. Jedes Gerät kann so eine IP-Adresse erhalten, indem es mit DHCP-Servern kommuniziert.
+
+> [!info]- Wie läuft das Konfigurieren der IP eines Clients ab mit DHCP?
+> 1. Ein Client sucht einen DHCP-Server mittels Broadcast (DHCP discover)
+> 2. Ein oder mehrere DHCP-Server antworten (DHCP offer)
+> 3. Der Client wählt einen Server und fordert eine Auswahl der angebotenen Parameter an (DHCP request)
+> 4. Der Server bestätigt (DHCP acknowledge) mit einer Message, welche die endgültigen Parameter enthält
+> 5. Vor Ablauf der Lease Time erneuert der Client mittels Unicast die Adresse
+
+> [!info]- Wie sieht ein DHCP Paket aus?
+> Insgesamt 20 Bytes:
+> - 1 Byte Operation
+> - 1 Byte Hardware Type
+> - 1 Byte Hardware Length
+> - 1 Byte Hop Count
+> - 4 Bytes Transaction Identification
+> - 2 Bytes Seconds (seit Start des Clients)
+> - 2 Bytes unused
+> - 4 Bytes Client IP Address (vom Client gesetzt für Renew ö.Ä.)
+> - 4 Bytes Your Client IP Address (vom Server gesetzt in Antwort)

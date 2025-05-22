@@ -113,4 +113,4 @@ $|f(x) - P_n(x)| <= |(x-x_0)...(x-x_n)| / ((x + 1)!) * max_(z epsilon [x_0,x_n])
 
 ... woche 13
 
-Was ist stabile DIfferenzialgleichung?
+Was ist stabile Differenzialgleichung?
