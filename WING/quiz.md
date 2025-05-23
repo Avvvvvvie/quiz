@@ -523,9 +523,10 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Kostenstellen = Wo fallen Kosten an?
 > - Kostenträger = Wofür fallen kosten an?
 > 
-> Kostenrechnung:
-> - Direkte Hauptkosten -> Kostenträger
-> - Indirekte Gemeinkosten -> Hilfskostenstellen -> Hauptkostenstellen -> Kostenträger
+> Die Einzelkosten (ZB. Material) werden den Kostenträger direkt zugewiesen. Die Allgemeinkosten (ZB. Personal, Lager) werden durch die Kostenstellenrechnung den Kostenstellen zugewiesen. Die Kostenstellen werden dann durch die Kostenträgerrechnung auf die Kostenträger verteilt. Am Ende sieht man, welcher Kostenträger mehr Einnahmen macht und sich sozusagen lohnt. Aber das heisst nicht immer, dass man ein Produkt, welches sich nicht lohnt herausnehmen soll.
+> 
+> Beispiel:
+> ![](assets/Pasted%20image%2020250522182812.png)
 
 > [!info]- Was sind die Aufgaben der Kostenrechnung?
 > - Ermittlung von Selbstkosten
@@ -534,7 +535,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Vorgabe von Sollkosten
 > - Überwachung von Erfolg, Wirtschaftlichkeit, Planung
 
-> [!info]- Was gibt es für Sachliche Abgrenzungen?
+> [!info]- Was gibt es für sachliche Abgrenzungen?
 > - Kalkulatorische Zinsen
 > - Kalkulatorischer Unternehmerlohn
 > - Kalkulatorische Miete
@@ -547,16 +548,35 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 >  - Ermittlung von Zuschlagssätzen für die Kostenträgerrechnung
 >  - Ermittlung von Soll-Ist-Abweichungen zur Wirtschaftlichkeitskontrolle
 
-> [!question]- Wie benutzt man Zuschlagssätze?
+> [!info]- Was sind Zuschlagssätze?
+> In der Betriebskostenrechnung kann man beim Verteilen der Kostenstellen auf die Kostenträger je den Zuschlagssatz berechnen. Dies ist das Verhältnis der Gesamtkosten der einzelnen Kostenstelle zu den Gesamtkosten der Kostenträger.
+
+> [!info]- Was gibt es für Zuschlagssätze?
+> ###### Grundformel Zuschlagssatz
 > $"Endstellenkosten der Hauptkostenstelle" / "Bezugsgrösse der Hauptkostenstelle" * 100$
-> Materialgemeinkostenzuschlagssatz = ..
-> Fertigungsgemeinkostenzuschlagssatz
-> Verwaltungskostenzuschlagssatz
-> Vertriebsgemeinkostenzuschlagssatz
+> 
+> ###### Materialgemeinkostenzuschlagssatz
+> $"Materialgemeinkosten" / "Materialeinzelkosten" * 100$
+> 
+> ###### Fertigungsgemeinkostenzuschlagssatz
+> $"Fertigungsgemeinkosten" / "Fertigungseinzelkosten" * 100$
+> 
+> ###### Verwaltungskostenzuschlagssatz
+> $"Verwaltungskosten" / "Herstellkosten" * 100$
+> 
+> ###### Vertriebsgemeinkostenzuschlagssatz
+> $"Vertriebsgemeinkosten" / "Herstellkosten" * 100$
 
-> [!question]- Wie funktioniert die Teilkostenrechnung?
+> [!info]- Wie funktioniert die Teilkostenrechnung?
+> Aus der Teilkostenrechnung resultiert kein Gewinn oder Verlust, sondern ein Deckungsbeitrag. Es wird einfach berechnet, wieviel Geld man verlangen muss oder vieviel man Verkaufen muss (etc.), um die Kosten zu decken.
 
-> [!question]- Wie berechnet man einen Ladenpreis im Industriebetrieb?
+> [!info]- Wie berechnet man einen Ladenpreis im Industriebetrieb?
+> 1. Es werden die Zuschlagssätze berechnet.
+> 2. Die Zuschlagssätze werden auf die Einzelkosten für Material und Löhen angewendet. 
+> 3. Material + Lohnkosten = Herstellkosten
+> 4. Dazu kommt der Zuschlag der Verwaltungskosten
+> 5. + x% Reingewinn
+> 6. (+ Mwst.)
 
 > [!info]- Aus welchen Teilen besteht die Gesamt-Kalkulation im Handlesbetrieb?
 > - Einkaufskalkulation
@@ -588,35 +608,25 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > +Rabatt
 > = Bruttokreditverkaufspreis
 
-> [!question]- Was gibt es für Abschnitte in der Wertschöpfungskette?
+> [!info]- Was gibt es für Beschaffungsobjekte?
+> - Rohstoffe (Hauptbestandteile des Produkts)
+> - Hilfsstoffe (Nebenbestandteile des Produkts)
+> - Betriebsstoffe (Werden bei der Herstellung verbraucht)
+> - Montageteile (Vorproduzierte Komponenten)
+> - Handelswaren (werden unverändert weiterverkauft)
 
-> [!question]- Was gibt es für Wertschöpfungsarchitekturen?
+> [!info]- Was ist PPS?
+> Produktionsplanung und –steuerung
 
-> [!question]- Was ist ein Produktionsprogramm?
-
-> [!question]- Was sind Vor- und Nachteile vom selbständigen Herstellen?
-
-> [!question]- Was ist PPS?
-
-> [!question]- Was ist die Durchlaufszeit?
-
-> [!question]- Was ist Vor- und Rückwärtsterminierung?
-
-> [!question]- Was gibt es für Fertigungstypen?
-
-> [!question]- Was gibt es für Fertigungsverfahren?
-
-> [!question]- Was gibt es für Kennzahlen zur Produktion?
-
-> [!question]- Wie berechnet man den Umsatz?
+> [!info]- Wie berechnet man den Umsatz?
 > Nettoerlös * anzahl verkaufte Produkte
 
-> [!question]- Was ist die Stückliste
-
-> [!question]- Was gibt es für Kunden- und Geschäftsprozesse?
-
-> [!question]- Welche Bereiche gibt es in der Materialwirtschft?
+> [!info]- Welche Bereiche gibt es in der Materialwirtschft?
+> - Beschaffungslogistik: Bedarf & Beschaffungsmarktforschung
 > - Produktionslogistik: Verbrauchsermittlung unf Produktionsplanung
+> - Lagerlogistik: Wo & Wie lagern, Wie wird der Bestand ermittelt?
+> - Absatzlogistik
+> - Entsorgungslogistik
 
 > [!info]- Was gibt es für Beschaffungprozesse?
 > 1. Ermittlung Materialbedarf für Produktion
@@ -633,7 +643,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Just in Sequence: Zum richtigen Zeitpunkt in der richtigen Reihenfolge mit der richtigen Menge
 > Bei Restaurant ist es nicht kritisch, wenn ein Kunde zu viel kommt. Beim Auto ist es kritisch, wenn ein Teil des Autos nicht geliefert werden kann. Es kommt darauf an, ob man die Ware erst hat, wenn man das Produkt spezifiziert hat. Und Lager kostet.
 
-> [!info]- Was ist Insourcing und desser Vor- und Nachteile?
+> [!info]- Was ist Insourcing und dessen Vor- und Nachteile?
 > Verlagerung von zuvor im Markt bezogenen Leistungen in die eigene Wertschöpfung. Man hat zusätzliche Fixkosten, aber muss keinen zusätzlichen Preis zahlen.
 > Vorteile von Insourcing: 
 > - Reduktion von Lieferzeiten
@@ -648,16 +658,15 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Minimierung der Lagerkosten
 > - Ausweichmöglichkeit bei Kapazitätsengpässen
 
-> [!question]- Was sind die Kostentreiber vom Lager?
-
-> [!question]- Was ist das magische Dreieck der Materialwirtschaft
+> [!info]- Was ist das magische Dreieck der Materialwirtschaft
 > - Kapitalbundung und Lagerunterhalt
 > - Beschaffungskosten
 > - Lieferbereitschaft
+> 
 >  Lieferbereitschaft soll möglichst hoch sein. Beschaffungskosten sollen möglichst tief sein. Kapitalbindung soll so tief wie möglich gehalten sein.
 
 > [!info]- Wie funktioniert die ABC Analyse?
-> A Güter sind sehr wertvoll, C Güter sind nicht wertvoll. Als Faustregel hat man 80% Güter, die 20% des Wertes ausmachen.
+> A Güter sind sehr wertvoll, C Güter sind nicht wertvoll. Als Faustregel hat man 80% Güter, die 20% des Wertes ausmachen. Die Planungs- und Organisationsarbeiten sollen sich auf die A-Güter konzentrieren. (Man kann aber auch die voluminösen Güter verringern)
 > 
 > | Klasse | Wert    | Menge   |
 > | ------ | ------- | ------- |
@@ -666,16 +675,14 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > | C      | 5%-10%  | 40%-50% |
 
 > [!info]- Wie funktioniert die XYZ-Analyse?
-> X-Güter haben regelmässigen Bedarf, Y schwankenden und Z unregelmässigen Bedarf. Dies ist wichtig für die Lagerorganisation.
+> X-Güter haben regelmässigen Bedarf, Y schwankenden und Z unregelmässigen Bedarf. Dies ist wichtig für die Lagerorganisation. Häufig genutzte Güter sollten besser erreichbar sein.
 
-> [!info]- Was gibt es für Lager?
+> [!info]- Was gibt es für Lagerorganisationen?
 > - Eingangslager: Vor der Produktion, versorgen Produktion mit nötigen Materialien.
-> - Zwischenlager: Parallel zur Produktion.
-> - Fertigwarenlager: Fertigprodukte und Handelswaren.
+> - Zwischenlager: Parallel zur Produktion
+> - Fertigwarenlager: Fertigprodukte und Handelswaren
 
-> [!question]- Was gibt es für Lagerorganisation?
-
-> [!question]- Was gibt es für Lagerfunktionen?
+> [!info]- Was gibt es für Lagerfunktionen?
 > - Zeitüberbrückung (Als Puffer oder um möglichst schnell zu liefern)
 > - Sicherung (Um Schwankungen ausgleichen)
 > - Spekulation (Um die Ware beim besten Preis zu kaufen)
@@ -684,19 +691,34 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 
 > [!info]- Welche Kosten fallen im Lager an?
 > - Lagerunterhalt: Mietkosten, Energiekosten, Versicherung des Lagerguts, Instandhaltung, Kosten des Bestandesrisikos (z.B. Diebstahl, Feuer)
-> - Kapitalbindung: Entgangene Zinsen alternativer Anlagemöglichkeiten (==Opportunitätskosten==)
+> - Kapitalbindung: Entgangene Zinsen alternativer Anlagemöglichkeiten (Opportunitätskosten)
 
-> [!question]- Was gibt es für Kennzahlen zur Lagerhaltung?
+> [!info]- Was gibt es für Kennzahlen zur Lagerhaltung?
+> ###### Durchschnittlicher Lagerbestand
+> $("Anfangsbestand" + "Endbestand") / 2$
+> 
+> ###### Lagerumschlagshäufigkeit
+> $"Jahresverbrauch" / "Durchschn. Lagerbestand"$
+> 
+> ###### Durchschnittliche Lagerdauer
+> $360 / "Lagerumschlagshäufigkeit"$
 
-> [!info]- In welchem Instrument sind Ertrag und Aufwände?
-> Erfolgsrechnung
+> [!info]- In welcher Rechnung nimmt man die Erträge und Aufwände?
+> In der Erfolgsrechnung.
 
-> [!question]- Was sind die 4 wesentlichen Aufgaben des Personalmanagements?
-> - **Personalplanung**: IST- und SOLL-Analyse gibt Bedarf an Mitarbeitern. Es gibt Abgänge (Fluktuation), Zugänge, Neubedarf, Ersatz, Zusatz
-> - **Personalgewinnung**: Werbung, Auswahl, Eintsellung, Einführung
-> - **Personalbeurteilung, -honorierung, -entwicklung**
-> - **Personalentwicklung**
-> - **Personalfreistellung**
+> [!info]- Was sind die 6 wesentlichen Aufgaben des Personalmanagements?
+> - Personalplanung
+> - Personalgewinnung
+> - Personalbeurteilung, -honorierung, -entwicklung
+> - Personalfreistellung
+
+> [!info]- Was macht die Personalplanung?
+> Durch IST- und SOLL-Analyse wird der Bedarf an Mitarbeitern ermittewlt. Es gibt Abgänge (Fluktuation), Zugänge, Neubedarf, Ersatz- und Zusatzpersonal
+
+> [!info]- Was macht die Personalgewinnung?
+> Werbung, Auswahl, Einstellung, Einführung
+> 
+> Interne Personalgewinnung: Verlängerung Vertrag, Beförderung etc.
 
 > [!info]- Was gibt es für Stellen?
 > - Linienstelle
@@ -713,14 +735,17 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Nur Idealvorstellung
 
 > [!info]- Welche Möglichkeiten der Personalgewinnung gibt es?
+> Intern:
 > - Überstungen / Mehrarbeit
 > - Verlängerung der Arbeitszeit
 > - Urlaubsverschiebung
 > - Flexible Arbeitszeitmodelle
 > - Qualifizierung
 > - Versetzung
-> - Interne STellenausschreibung
+> - Interne Stellenausschreibung
 > - Personalentwicklung
+> 
+> Extern:
 > - Regionae Arbeitsvermittlungszentren
 > - Blindbewerbung
 > - Personaldienstleistung
@@ -791,11 +816,26 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Zusammengesetzte Lohnformen
 > 	- Prämienlohn
 
-> [!question]- Was ist die Humankapitaltheorie?
+> [!info]- Was ist die Humankapitaltheorie?
+> Es gibt einen Zielkonflikt bei der Mitarbeiterentwicklung: Die Firmen investieren in die Ausbildung, aber Mitarbeiter können danach einfach so judihui weggehen. Je Firmenspezifischer die Ausbildung, desto eher sollte die Firma für die Ausbildung zahlen. Aber die Firma könnte auch mehr bezahlen für ihr Image. Damit macht sie ihre MA aber für andere FIrmen attraktiv.
 
-> [!question]- Was gibt es für monetäre Anreize?
+> [!info]- Was gibt es für monetäre Anreize zu Arbeiten?
+> - Lohn
+> - Erfolgsbeteiligung
+> - Betriebliche Sozialleistungen
+> - Betriebliches Vorschlagswesen
 
-> [!question]- Was sind mögliche Ursachen für Personalfreistellungsmassnahmen (Feuerung)?
+> [!info]- Was gibt es für nicht-monetäre Anreize zu Arbeiten?
+> - Ausbildungsmöglichkeiten
+> - Aufstiegsmöglichkeiten
+> - Gruppenmitgliedschaft
+> - Betriebsklima
+> - Führungsstil
+> - Arbeitszeit- und Pausenreglung
+> - Arbeitsinhalt
+> - Arbeitsplatzgestaltung
+
+> [!info]- Was sind mögliche Ursachen für Personalfreistellungsmassnahmen (Feuerung)?
 > Die meisten Massnahmen lassen sich auf eine oder mehrere der folgenden Hauptursachen zurückführen:
 > - Absatz- und Produktionsrückgang als Folge der gesamtwirtschaftlichen Entwicklung
 > - Strukturelle Veränderungen
@@ -805,32 +845,126 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Reorganisation
 > - Mechanisierung und Automation
 
-> [!question]- Was ist das Konzept der Investitionsrechnung?
+> [!info]- Was ist das Konzept der Investitionsrechnung?
+> Ein Unternehmen tätigt eine Investition nur, wenn diese lohnenswert ist. Bei mehreren Investitionsmöglichkeiten soll die beste ausgewählt werden, damit das beschränkte und kostenpflichtige Kapital optimal eingesetzt wird.
+> 
+> Deshalb wird die Investitionsrechnung gemacht. Es werden die Erstinvestitionen gegenüber den späteren Erträgen abgewägt.
 
-> [!question]- Was ist die Net Present Value Methode?
+> [!info]- Aus welchen Gründen investiert man?
+> - **Normativer Grund**: Basierend auf Unternehmensphilosophie, ZB. Anlage zur Nutzung von Abwärme, Windrad, Solaranlage, ökologisches Firmengebäude
+> - **Strategischer Grund**: Bessere/Neuere Technologie, Qualifizierteres Personal etc. oder bisher gekauftes Produkt neu selbst herstellen
 
-> [!question]- Was sind die Grenzen der Investitionsrechnung?
-
-> [!question]- Was gibt es für praktische Beispiele zur Inevstitionsrechnung?
-> Unsicherheiten der langfristigen Betrachtung
-
-> [!question]- Was ist die Definition einer Investition?
+> [!info]- Was ist die Definition einer Investition?
 > Eine Zahlungsreihe, die mit einer sicheren Einzahlung beginnt und mit späteren unsicheren Einnahmen folgt.
 
-> [!question]- Wie funktioniert die Kostenvergleichsmethode?
-> Man vergleicht zwischen zwei Anlagen:
-> Jährliche Betriebskosten + Materialkosten = Variable Kosten
-> Kalkulatorische Abschreibung und Zinsen = Fixe Kosten
+> [!info]- Wie funktioniert die Kostenvergleichsmethode?
+> Man vergleicht zwischen zwei potentiellen Anlagen:
+> 
+> Je die Jährliche Betriebskosten + Materialkosten = Variable Kosten
+> 
+> Je die Kalkulatorische Abschreibung und Zinsen = Fixe Kosten
 
-> [!question]- Wie funktioniert die Gewinnvergleichsmethode?
-> Man vergleicht zwischen zwei Anlagen:
-> Jährlicher Nettoerlös - Variable Kosten - Fixkosten
+> [!info]- Wie funktioniert die Gewinnvergleichsmethode?
+> Man vergleicht zwischen zwei potentiellen Anlagen:
+> 
+> Jährlicher Nettoerlös - Variable Kosten - Fixkosten = Jährlicher Gewinn
 
-> [!question]- Wie funktioniert der Rentabilitätsvergleich?
+> [!info]- Wie funktioniert der Rentabilitätsvergleich?
+> Diese Methode ist sinnvoll, wenn unterschiedliche Kapitaleinsätze für die Investition notwendig sind.
+> 
 > Rentabilität = (Reingewinn + Zinsen) / eingesetztes Kapital * 100
 
-> [!question]- Wie funktioniert die Payback-Frist?
+> [!info]- Wie funktioniert die Payback-Frist?
+> Es wird die Amortisation = Payback-Frist berechnet. Dafür gibt es 2 Methoden.
+> 
+> **Kumulationsrechnung**: Die Einzahlungsüberschüsse werden addiert, bis die Summe der kumulierten Werte dem ursprünglichen Investitionsbetrag entspricht. Dies bietet sich an, wenn die Gewinne pro Periode nicht konstant sind oder die Abschreibungen nicht linear berechnet sind.
+> 
+> **Durchschnittsmethode**: $"Kapitaleinsatz" / "Jährlicher Cashflow"$
 
-> [!question]- Wie funktioniert die dynamische Investitionsrechnung?
+> [!info]- Wie funktioniert die Kapitalwertmethode?
+> Es wird mit einer Abzinsung i und einer Zeit n gerechnet. Pro Anlage wird damit berechnet: 
+> 
+> $-"Anschaffungskosten" + "Liquidationserlös"$$+ ("Erwartete Erlöse pro Jahr" - "Wartungskosten pro Jahr")$$* Sum_k=1^n 1/(1+i)^k$$= "Kapitalwert$
+>
+> Wenn die Erlöse/Kosten pro Jahr unterscheidlich sind, müssen sie einzeln mit den Zinsen multipliziert werden.
 
-> [!question]- Wie funktioniert die Kapitalwertmethode?
+> [!info]- Was ist das Ziel der Produktionslogistik?
+> Ziel ist, den Produktionsprozess art- und mengenmässig, räumlich und zeitlich abgestimmt mit den benötigten Produktionsfaktoren zu versorgen.
+
+> [!info]- Was gibt es für Wertschöpfungsarchitekturen?
+> Komplettanbieter: Macht alles in der Wertschöpfungskette
+> 
+> Spezialanbieter: Macht wenige Dinge in der Wertschöpfungskette
+> 
+> Lösungsanbieter: Koordiniert andere, einzelne Anbieter in der Wertschöpfungskette
+
+> [!info]- Was ist ein Produktionsprogramm?
+> Es bestimmt Art, Menge und Zeitpunkt der zu produzierenden Produkte in einem Unternehmen. Die Breite des Programmes ist die Anzahl der von einem Unternehmen hergestellten Produktarten. Idealerweise, für ein Gewinnmaximum, sind alle Ressourcen Optimal ausgelastet durch das Programm.
+
+> [!info]- Was sind die Konsequenzen von Unterbeschäftigung und Überbeschäftigung?
+> Unterbeschäftigung => hohe Kosten
+> 
+> Überbeschäftigung => Burnouts bei Menschen
+
+> [!info]- Wie entscheidet man sich für Make oder Buy?
+> (1) Break-Even Analyse: Ab welcher Menge lohnt es sich, selbst herzustellen? Es gibt zwar einen zusätzlichen fixen Herstellungspreis, aber einen viel tieferen variablen Preis.
+> 
+> (2) Weitere Vor- und Nachteile abwägen:
+> 
+> Vorteile Buy
+> - Konzentration auf Kerngeschäft
+> - Zugang zu Know-how (vom Zulieferer)
+> - Freisetzung von Kapazitäten und Finanzmitteln
+> - Bessere Steuerbarkeit der Kosten
+> - Variable statt fixe Kosten
+> - Standardisierung und klar definierte Leistungen
+> 
+> Nachteile Buy
+> - Abhängigkeit
+> - Risiko schlechte Leistung des Outsourcing-Partners
+> - Langfristiger Verlust von Know-how
+> - Sensible Daten, Geheimhaltung
+> - Schwer rückgängig zu machen
+> - Transaktions- und Umsetzungskosten
+> - Kommunikationsintensiv (Informationsdefiziten)
+
+> [!info]- Was ist die Durchlaufzeit?
+> Es ist die Zeitspanne zwischen dem Beginn des ersten und dem Ende des letzten Arbeitsvorgangs. Durchlaufzeit = Durchführungszeit + Übergangszeit(=Liege+Transportzeit)
+
+> [!info]- Was sind Vorwärts- und Rückwärtsterminierung?
+> Vorwärts: Man berechnet den frühsten Endtermin nach dem Auftragseingang. Danach fügt man noch etwas Reservezeit ein. Vorteil: Wenig Zeitdruck, Terminsicherheit. Nachteil: Längere Liegezeit
+> 
+> Rückwärts: Man berechnet den spätesten Starttermin, um am Kundentemin fertig zu sein. Vorteil: Wenig Liegezeit. Nachteil: Hoher Zeitdruck und hohes Risiko.
+
+> [!info]- Was gibt es für Fertigungstypen?
+> - Einmalfertigung: ZB Schiff
+> - Einzel und Kleinserienfertigung: ZB Werkzeigmaschine
+> - Serienfertigung: ZB Auto
+> - Massenfertigung: ZB Schraube
+
+> [!info]- Was ist der Unterscheid von Serienfertigung und Massenfertigung?
+> Serienfertigung:
+> - hoher Vorbereitungsaufwand
+> - grosse Auflagestücke
+> 
+> Massenfertigung:
+> - verläuft über längere Zeit gleichmässig
+> - Hochspezialisierung möglich
+
+> [!info]- Was gibt es für Fertigungsverfahren?
+> - Werkstattprinzip: Ähnlicher Verfahren in selbem Raum
+> - Fliessprinzip: Starre Verkettung der Fertigungsfolgen
+> - Gruppenfertigung: Ähnliche Objekte in selben Raum
+
+> [!info]- Was gibt es für Kennzahlen zur Produktion?
+> ###### Rentabilität
+> $("Ertrag" - "Aufwand") / "Kapitaleinsatz" = "Gewinn" / "Kapitaleinsatz"$
+> 
+> ###### Produktivität
+> $"Ausbringungmenge" / "Faktoreinsatzmenge"$
+> 
+> ###### Wirtschaftlichkeit
+> $"Ertag" / "Aufwand"$
+> 
+> ###### Fehlerquote
+> $"Fehlerhafte Produkte" / "Total hergestellte Produkte"$
