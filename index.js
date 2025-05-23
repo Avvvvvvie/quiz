@@ -114,23 +114,32 @@ class Question {
 
 function createQuizSelection(quizzes) {
     main.innerHTML = '';
-    let title = document.createElement('h3');
-    title.innerHTML = "Quizzes";
-    title.className = 'quiz-title';
-    main.appendChild(title);
 
-    let quizList = document.createElement('ul');
-    quizList.className = 'quiz-list';
-    quizzes.forEach((quiz) => {
-        let quizItem = document.createElement('li');
-        quizItem.className = 'quiz-item';
-        quizItem.textContent = quiz;
-        quizItem.addEventListener('click', () => {
-            loadQuiz(quiz);
+    let infoText = readFile('readme.md', (text) => {
+        let title1 = document.createElement('h3');
+        title1.innerHTML = "Info";
+        main.appendChild(title1);
+
+        let info = document.createElement('div');
+        info.innerHTML = renderMarkdown(text);
+
+        let title2 = document.createElement('h3');
+        title2.innerHTML = "Quizzes";
+        main.appendChild(title2);
+
+        let quizList = document.createElement('ul');
+        quizList.className = 'quiz-list';
+        quizzes.forEach((quiz) => {
+            let quizItem = document.createElement('li');
+            quizItem.className = 'quiz-item';
+            quizItem.textContent = quiz;
+            quizItem.addEventListener('click', () => {
+                loadQuiz(quiz);
+            });
+            quizList.appendChild(quizItem);
         });
-        quizList.appendChild(quizItem);
-    });
-    main.appendChild(quizList);
+        main.appendChild(quizList);
+    }
 }
 
 function shuffleArray(array) {
