@@ -10,7 +10,11 @@
 
 > [!info]- Wie sieht die explizite vs. die implizite Darstellung einer Funktion aus?
 > Implizit: y = x...
+> 
 > Explizit: ... = 0
+
+> [!info]- Was macht man bei der Partiellen Ableitung?
+> Man leitet nach der einen Variable ab, um die Steigung in diese Richtung zu erhalten / in die Richtung der Achse der Variable.
 
 > [!info]- Wie sieht eine Jakobi-Matrix aus?
 > $Df = ((del f_1) / (del x_1),...,(del f_1) / (del x_n);...,...,...;(del f_m) / (del x_1),...,(del f_m) / (del x_n))$
@@ -27,14 +31,15 @@
 > [!info]- Was gibt $(del f) / (del x) (f(x)) / (g(x))$
 > $(f'(x) * g(x) - f(x) * g'(x)) / (g(x)^2)$
 
-> [!info]- Newtonverfahren in 1D
+> [!info]- Wie lautet die Formel zum Newtonverfahren in 1D?
 > $x_(k+1) = x_k - (f(x_k)) / (f'(x_k))$
 
-> [!info]- Multivariates Newtonverfahren
+> [!info]- Wie geht man beim multivariaten Newtonverfahren vor?
 > 1. $Df^-1(vec x^((k))) * vec delta = -vec f(vec x^((k)))$ nach $vec delta$ auflösen.
 > 2. $vec x^((k+1)) = vec x^((k)) + vec delta$
 
-> [!question]- Was ist der Unterschied zwischen einem Ausgleichsproblem und einem Interpolationsproblem?
+> [!info]- Was ist der Unterschied zwischen einem Ausgleichsproblem und einem Interpolationsproblem?
+> Die Interpolation ist ein Spezialfall der linearen Ausgleichsrechnung, bei dem zu einer Menge von vorgegebenen Punkten eine Funktion gesucht wird, die exakt (und nicht nur näherungsweise) durch diese Punkte verläuft.
 
 > [!info]- Was ist eine lineare Ausgleichsrechnung?
 > Eine Ausgleichsrechnung mit nur linearen Parameter. Das heisst, es sind nur koeffizienten gesucht. 
@@ -45,22 +50,34 @@
 > [!info]- Wie sieht die Vandermonde Matrix aus?
 > $(1,x_0,...,x_n;...,...,...,...;1,x_n,...,x_n^n)(a_0;...;a_n) = (y_0;...;y_n)$
 
-> [!question]- Wie lautet die Lagrange-Interpolationsformel?
-> Es gibt n+1 Lagrangepolynome bei n+1 Datenpunkten:
-> $l_i(x) = Pi_(j=0)^n (x - x_j) / (x_i - x_j)$ wobei $i != j$
-> Diese sind 1 in ihrer Stützstelle $x_i$ und 0 in den anderen Stützstellen.
-> Dadurch kann man ein Interpolationspolynom vom Grad n bauen:
+> [!info]- Wie lautet die Lagrange-Interpolationsformel?
+> Es gibt bei n+1 Datenpunkten ein Polynom von Grad n:
+> 
 > $P_(n-1)(x) = Sigma_(i=0)^n  l_i(x) * y_i$
+> 
+> $l_i$ sind die n+1 Lagrangepolynome:
+> 
+> $l_i(x) = Pi_(j=0)^n (x - x_j) / (x_i - x_j)$ wobei $i != j$
+> 
+> Diese ergeben alle 1 in ihrer Stützstelle $x_i$ und 0 in den anderen Stützstellen.
+> 
 
-> [!question]-  Was ist die Formel zur Fehlerabschätzung einer Polynominterpolation im Punkt x?
-$|f(x) - P_n(x)| <= |(x-x_0)...(x-x_n)| / ((x + 1)!) * max_(z epsilon [x_0,x_n]) |f^((n+1))(z)|$ wobei $x_0 ... x_n$ Stützpunkte sind.
+> [!info]-  Was ist die Formel zur Fehlerabschätzung einer Polynominterpolation im Punkt x?
+$|f(x) - P_n(x)| <= |(x-x_0)...(x-x_n)| / ((n + 1)!) * max_(z epsilon [x_0,x_n]) |f^((n+1))(z)|$ wobei $x_0 ... x_n$ Stützpunkte sind.
 
-> [!info]- Wie viele Punkte braucht es für ein Polynom von Grad 2?
+> [!info]- Wie viele Stützpunkte braucht es um ein Polynom von Grad 2 zu Interpolieren?
 > 3
 
-> [!question]- Wie berechnet man die Spline-Interpolation
+> [!info]- Wie berechnet man die Spline-Interpolation
+> Man berechent $Ac = z$ wobei
+> 
+> $A = (2(h_0 + h_1), h1,,;h_1,2(h_1 + h_2), h_2,...;,...,...,h_(n-2);,,h_(n-2),2(h(n-2) + h_(n-1)))$
+> 
+> und $c = (c_1;...;c_(n-1))$
+> 
+> und $z = (3(y_2 - y_1) / h_1 - 3(y_1 - y_0) / h_0;...;3(y_n - y_(n-1)) / h_(n-1) - 3(y_(n-1) - y_(n-2)) / h_(n-2))$
 
-> [!info]- Wieviele Gleichunen bei n Datenpunkten
+> [!info]- Wieviele Gleichunen braucht man bei n Datenpunkten
 > - (n-1) * 2 für Interpolation (2 pro intervall)
 > - (n-2) für 1.Ableitung
 > - (n-2) für 2.Ableitung
