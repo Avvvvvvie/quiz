@@ -658,7 +658,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Minimierung der Lagerkosten
 > - Ausweichmöglichkeit bei Kapazitätsengpässen
 
-> [!info]- Was ist das magische Dreieck der Materialwirtschaft
+> [!info]- Was ist das magische Dreieck der Materialwirtschaft?
 > - Kapitalbundung und Lagerunterhalt
 > - Beschaffungskosten
 > - Lieferbereitschaft
