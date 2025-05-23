@@ -181,7 +181,8 @@ li {
 
 
 .progress {
-    margin: 1rem;
+    margin: 0 0 0 auto;
+    align-content: center;
 }
 
 .done {

@@ -147,17 +147,13 @@ function createQuiz(questions, callback, callbackMessage) {
     let quizContainer = document.createElement('div');
     quizContainer.className = 'quiz-container';
 
-    let progress = document.createElement('div');
-    progress.className = 'progress';
-    quizContainer.appendChild(progress);
+    let buttons = document.createElement('div');
+    buttons.className = 'buttons';
+    quizContainer.appendChild(buttons);
 
     let title = document.createElement('div');
     title.className = 'question-title';
     quizContainer.appendChild(title);
-
-    let buttons = document.createElement('div');
-    buttons.className = 'buttons';
-    quizContainer.appendChild(buttons);
 
     let answer = document.createElement('div');
     answer.className = 'question-answer';
@@ -200,6 +196,10 @@ function createQuiz(questions, callback, callbackMessage) {
         nextButton.classList.remove('hidden');
         answer.classList.remove('hidden');
     });
+
+    let progress = document.createElement('div');
+    progress.className = 'progress';
+    buttons.appendChild(progress);
 
     main.appendChild(quizContainer);
 
