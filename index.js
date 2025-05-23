@@ -170,11 +170,11 @@ function createQuiz(questions, callback, callbackMessage) {
     quizContainer.appendChild(buttons);
 
     let showAnswerButton = document.createElement('button');
-    showAnswerButton.textContent = 'Antwort';
+    showAnswerButton.textContent = 'Show Answer';
     buttons.appendChild(showAnswerButton);
 
     let nextButton = document.createElement('button');
-    nextButton.textContent = 'Weiter';
+    nextButton.textContent = 'Next';
     nextButton.classList.add('hidden');
     buttons.appendChild(nextButton);
 
@@ -188,7 +188,7 @@ function createQuiz(questions, callback, callbackMessage) {
     }
 
     let backButton = document.createElement('button');
-    backButton.textContent = 'Beenden';
+    backButton.textContent = 'Quit';
     backButton.addEventListener('click', () => {
         createQuizSelection(quizzes);
     });
@@ -217,9 +217,9 @@ function createQuiz(questions, callback, callbackMessage) {
     showNextQuestion = () => {
         currentQuestion++;
         if(currentQuestion === questions.length) {
-            title.innerHTML = renderMarkdown('### Du bist fertig');
+            title.innerHTML = renderMarkdown('### You are done');
             showAnswerButton.classList.add('hidden');
-            answer.innerHTML = "Super :)";
+            answer.innerHTML = "Good job :)";
             answer.classList.remove('hidden');
             progress.classList.add('hidden');
             if(callbackMessage) {
@@ -237,7 +237,7 @@ function createQuiz(questions, callback, callbackMessage) {
             nextButton.classList.remove('hidden');
         }
         if(currentQuestion === questions.length - 1) {
-            nextButton.innerHTML = 'Fertig';
+            nextButton.innerHTML = 'Finish';
         }
         progress.innerHTML = `${currentQuestion + 1} / ${questions.length}`;
     }
@@ -249,7 +249,7 @@ function loadQuiz(quiz) {
         if(unansweredQuestions.length) {
             createQuiz(questions, () => {
                 createQuiz(unansweredQuestions)
-            }, 'Weiter mit unbeantworteten Fragen');
+            }, 'Continue with unanswered questions');
         } else {
             createQuiz(questions);
         }
