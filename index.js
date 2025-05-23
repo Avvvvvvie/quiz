@@ -115,7 +115,7 @@ class Question {
 function createQuizSelection(quizzes) {
     main.innerHTML = '';
 
-    let infoText = readFile('readme.md', (text) => {
+    readFile('readme.md', (text) => {
         let title1 = document.createElement('h3');
         title1.innerHTML = "Info";
         main.appendChild(title1);
