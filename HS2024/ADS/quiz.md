@@ -670,12 +670,11 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Was ist der Aufwand der Suche in 2 sortierten Arrays und wie geht man bei der Implementierung vor?
 > Aufwand: O(n)
-> 
+> ```
 > solange a[i] nicht b[j]
-> 
 > wenn a[i] < b[i] i++
-> 
 > wenn a[i] > b[i] j++
+> ```
 
 > [!info]- Was ist Hashing?
 > Grosse Menge wird auf kleinere Abgebildet
