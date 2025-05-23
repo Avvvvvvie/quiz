@@ -309,7 +309,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > - Neue und innovative Produkte benötigen Know-How
 > - Viele Kunden, häufiger Bedarf, grosses Gebiet benötigt indirekter Vertrieb
 
-> [!info]- Instrumente für Kommunikation
+> [!info]- Was gibt es für Instrumente zur Kommunikation?
 > - Werbung
 > - Public Relations (Spenden, Berichte, Besichtigung, Kontakte...)
 > - Sponsoring (Sport, Wissenschaft, Kunst, Umwelt, Medien...)
