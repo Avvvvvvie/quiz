@@ -69,25 +69,46 @@ $|f(x) - P_n(x)| <= |(x-x_0)...(x-x_n)| / ((n + 1)!) * max_(z epsilon [x_0,x_n])
 > 3
 
 > [!info]- Wie berechnet man die Spline-Interpolation
-> Man berechent $Ac = z$ wobei
+> Man löst ein Gleichungssystem bestehend aus folgenden Gleichungen:
 > 
-> $A = (2(h_0 + h_1), h1,,;h_1,2(h_1 + h_2), h_2,...;,...,...,h_(n-2);,,h_(n-2),2(h(n-2) + h_(n-1)))$
+> Interpolation der Stützpunkte:
 > 
-> und $c = (c_1;...;c_(n-1))$
+> ${:S_0(x_0) = y_0;...;S_n(x_n) = y_n:}$
 > 
-> und $z = (3(y_2 - y_1) / h_1 - 3(y_1 - y_0) / h_0;...;3(y_n - y_(n-1)) / h_(n-1) - 3(y_(n-1) - y_(n-2)) / h_(n-2))$
+> Stetiger Übergang:
+> 
+> ${:S_0(x_1) = S_1(x_1);...;S_0(x_1) = S_1(x_1):}$
+> 
+> Erste Ableitung an der Übergängen:
+> 
+> ${:S'_0(x_1) = S'_1(x_1);...;S'_(n-2)(x_(n-1)) = S'_(n-1)(x_(n-1)):}$
+> 
+> Zweite Ableitung:
+> 
+> ${:S''_0(x_1) = S''_1(x_1);...;S''_(n-2)(x_(n-1)) = S''_(n-1)(x_(n-1)):}$
+> 
+> Dann nimmt man noch zwei weitere Gleichungen je nach Spline.
 
-> [!info]- Wieviele Gleichunen braucht man bei n Datenpunkten
+> [!info]- Wieviele Gleichungen braucht man bei n Datenpunkten bei einer Spline-Interpolation?
 > - (n-1) * 2 für Interpolation (2 pro intervall)
 > - (n-2) für 1.Ableitung
 > - (n-2) für 2.Ableitung
 > - 2 weitere
 
-> [!question]- Wie sehen die Bedingungen aus für natürliche Splines?
+> [!info]- Wie sehen die Bedingungen aus für natürliche Splines?
+> $S''_0(x_0) = 0$
+> 
+> $S''_2(x_3) = 0$
 
-> [!question]- Wie sehen die Bedingungen aus für periodische Splines?
+> [!info]- Wie sehen die Bedingungen aus für periodische Splines?
+> $S'_0(x_0) = S'_2(x_3)$
+> 
+> $S''_0(x_0) = S''_2(x_3)$
 
-> [!question]- Wie sehen die Bedingungen aus für not-a-knot Splines?
+> [!info]- Wie sehen die Bedingungen aus für not-a-knot Splines?
+> $S'''_0(x_1) = S'''_1(x_1)$
+> 
+> $S'''_1(x_2) = S'''_2(x_2)$
 
 > [!info]- Wie löst man ein lineares Ausgleichssystem?
 > Gegeben sind n Wertpaare und m Basisfunktionen. Zu lösen ist $A^T A vec lambda = A^T vec y$, wobei $A = (f_1(x_1),...,f_m(x_1);...,...,...;f_1(x_n),...,f_m(x_n))$
