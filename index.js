@@ -139,7 +139,7 @@ function createQuizSelection(quizzes) {
             quizList.appendChild(quizItem);
         });
         main.appendChild(quizList);
-    }
+    });
 }
 
 function shuffleArray(array) {

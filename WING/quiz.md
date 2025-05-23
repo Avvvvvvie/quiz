@@ -575,7 +575,7 @@ dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nic
 > 2. Die Zuschlagssätze werden auf die Einzelkosten für Material und Löhen angewendet. 
 > 3. Material + Lohnkosten = Herstellkosten
 > 4. Dazu kommt der Zuschlag der Verwaltungskosten
-> 5. + x% Reingewinn
+> 5. plus x% Reingewinn
 > 6. (+ Mwst.)
 
 > [!info]- Aus welchen Teilen besteht die Gesamt-Kalkulation im Handlesbetrieb?
