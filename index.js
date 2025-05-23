@@ -155,25 +155,23 @@ function createQuiz(questions, callback, callbackMessage) {
     title.className = 'question-title';
     quizContainer.appendChild(title);
 
-    let showAnswerButton = document.createElement('button');
-    showAnswerButton.textContent = 'Show Answer';
-    buttons.appendChild(showAnswerButton);
+    let buttons = document.createElement('div');
+    buttons.className = 'buttons';
+    quizContainer.appendChild(buttons);
 
     let answer = document.createElement('div');
     answer.className = 'question-answer';
     answer.classList.add('hidden');
     quizContainer.appendChild(answer);
 
-    let buttons = document.createElement('div');
-    buttons.className = 'buttons';
-    quizContainer.appendChild(buttons);
+    let showAnswerButton = document.createElement('button');
+    showAnswerButton.textContent = 'Show Answer';
+    buttons.appendChild(showAnswerButton);
 
     let nextButton = document.createElement('button');
     nextButton.textContent = 'Next Question';
     nextButton.classList.add('hidden');
     buttons.appendChild(nextButton);
-
-
 
     let callbackButton;
     if (callbackMessage) {
