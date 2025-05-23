@@ -122,6 +122,7 @@ function createQuizSelection(quizzes) {
 
         let info = document.createElement('div');
         info.innerHTML = renderMarkdown(text);
+        main.appendChild(info);
 
         let title2 = document.createElement('h3');
         title2.innerHTML = "Quizzes";

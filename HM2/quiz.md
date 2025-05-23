@@ -153,6 +153,6 @@ $|f(x) - P_n(x)| <= |(x-x_0)...(x-x_n)| / ((n + 1)!) * max_(z epsilon [x_0,x_n])
 
 > [!question]- Wie funktioniert die Romberg Extrapolation?
 
-... woche 13
+... fragen zu woche 13/14 ...
 
 Was ist stabile Differenzialgleichung?
