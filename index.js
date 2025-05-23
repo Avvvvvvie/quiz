@@ -147,19 +147,22 @@ function createQuiz(questions, callback, callbackMessage) {
     let quizContainer = document.createElement('div');
     quizContainer.className = 'quiz-container';
 
-    let questionElement = document.createElement('div');
-    questionElement.classList.add('question');
+    let progress = document.createElement('div');
+    progress.className = 'progress';
+    quizContainer.appendChild(progress);
 
     let title = document.createElement('div');
     title.className = 'question-title';
-    questionElement.appendChild(title);
+    quizContainer.appendChild(title);
+
+    let showAnswerButton = document.createElement('button');
+    showAnswerButton.textContent = 'Show Answer';
+    buttons.appendChild(showAnswerButton);
 
     let answer = document.createElement('div');
     answer.className = 'question-answer';
     answer.classList.add('hidden');
-    questionElement.appendChild(answer);
-
-    quizContainer.appendChild(questionElement);
+    quizContainer.appendChild(answer);
 
     let buttons = document.createElement('div');
     buttons.className = 'buttons';
@@ -170,9 +173,7 @@ function createQuiz(questions, callback, callbackMessage) {
     nextButton.classList.add('hidden');
     buttons.appendChild(nextButton);
 
-    let showAnswerButton = document.createElement('button');
-    showAnswerButton.textContent = 'Show Answer';
-    buttons.appendChild(showAnswerButton);
+
 
     let callbackButton;
     if (callbackMessage) {
@@ -189,10 +190,6 @@ function createQuiz(questions, callback, callbackMessage) {
         createQuizSelection(quizzes);
     });
     buttons.appendChild(backButton);
-
-    let progress = document.createElement('div');
-    progress.className = 'progress';
-    quizContainer.appendChild(progress);
 
     nextButton.addEventListener('click', () => {
         showAnswerButton.classList.remove('hidden');
