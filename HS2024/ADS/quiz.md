@@ -1,17 +1,20 @@
 
 > [!info]- Nenne ein Beispiel für eine Vor- und Nachbedingung.
-> Teilweise mit Vor- und Nachbedingung nachweisbar
 > Beispiel: {x=1} x++ {x=2}
+> 
 > Beispiel: {x>=0} x = x + 1 {x>=1 und x1 > x0}
 
 > [!info]- Was ist ADT?
-= Abstrakte Datentyp
+> = Abstrakte Datentyp
+> 
 > Hat Schnittstelle und Implementation
-> In Java Interface und Klasse
+> 
+> In Java: Interface und Klasse
 
 > [!info]- Was kann ein Stack?
 > First in First out
-> Gut implementiert mit LinkedList
+> 
+> Gut implementiert mit LinkedList:
 > - push
 > - pop
 > - isEmpty
@@ -33,10 +36,12 @@
 
 > [!info]-  Was ist der Unterschied zwischen einer Queue und einem Stack?
 > Queue: First in First out
+> 
 > Stack: First in Last out
 
 > [!info]-  Wie funktioniert die ArrayQueue
 > von outIndex bis inIndex
+> 
 > wenn bei array.size dann wraparound
 
 > [!info]- Was hat die Klasse Iterator für Methoden?
@@ -52,6 +57,7 @@
 
 > [!info]-  Wann benutzt man ArrayList, wann List?
 > arraylist -> oft zugreifen
+> 
 > list -> oft verändern
 
 > [!info]-  Wie entfernt man ein Element der LinkedList
@@ -59,39 +65,50 @@
 
 > [!info]-  Wie fügt man eine Element zu LinkedList hinzu?
 > newnode.next = listnode1.next
+> 
 > listnode1.next = newnode
 
 > [!info]-  Laufzeit Einfügen an der ersten/i-ten Position in einer einfach verketteten Liste?
 > O(1) und O(n)
 
 > [!info]-  Was ist das Prinzip der Doppelt verketteten Liste?
-> Hat head und Tail
-> add? remove?
+> Hat head und Tail. Jeder Knoten zeigt auf den vorherigen und den nächsten.
 
 > [!info]-  Wie sieht der Code von Add aus bei einer doppelt verketteten Liste
 > newNode.next = current;
+> 
 > newNode.prev = current.prev;
+> 
 > current.prev.next = newNode;
+> 
 > current.prev = newNode;
 
 > [!info]-  Wie funktioniert die Zirkulär verkettete Liste?
 > Wenn leer: Head zeigt zwei mal auf Head (Dummy Anfangsknoten)
+> 
 > Braucht nur Head zu speichern und kein Tail
 
 > [!info]-  Wie funktioniert die Sortierte Liste?
 > Insert fügt das ELement an richtiger Stelle ein:
+> 
 > while (p.next.data < n.data) p = p.next;
+> 
 > z.B. PriorityQueue (mit int priority)
+> 
 > Benutzt Comparable Interface
 
-> [!info]- Welche resultate kann es bei x.compareTo(y) geben?
+> [!info]- Welche Resultate kann es bei x.compareTo(y) geben?
 > x < y -> negativ
+> 
 > x = y -> 0
+> 
 > x > y -> positiv
 
 > [!info]- Was ist der Unterschied von einem Array und einer Liste?
 > Array: get() effizient
+> 
 > Liste: add, remove, etc effizient
+> 
 > (ArrayList ist schlussendlich Array, aber die Anzahl der Elemente ist variabel)
 
 > [!info]- Welche Methoden besitzt Collections?
@@ -121,6 +138,7 @@
 
 > [!info]- Wie sieht ein Generic Wildcard aus?
 > Upper Bounded: `List<? extends Figure>` (Gut als Rückgabewert)
+> 
 > Lower Bounded: `List<? super RoundedRectangle>` (Kann auch RoundedRectangle sein)
 
 > [!info]-  Wieso verwendet man Bounded?
@@ -134,6 +152,7 @@
 
 > [!info]- Gib ein Code Beispiel für die Nutzung der Klasse Predicate?
 > predicate = x -> x > 1
+> 
 > predicate.test(5)
 
 > [!info]- Was ist der Ablauf beim Nutzen von Streams?
@@ -163,10 +182,12 @@
 
 > [!info]- Was ist die Definition von Rekursion?
 > Ein Algorithmus/Datenstruktur heisst rekursiv definiert, wenn er/sie sich selbst als Teil enthält oder mit Hilfe von sich selbst definiert ist.
+> 
 > Es gibt immer einen Basisfall/Verankerung und einen Induktionsschritt.
 
 > [!info]- Wie ist einer Liste rekursiv definiert?
 > Liste = leer
+> 
 > Liste = ListNode (Liste)?
 
 > [!info]- Wie sieht der Code für traverse() einer Liste rekursiv aus?
@@ -182,17 +203,26 @@
 
 > [!info]- Was ist der Unterschied von direkter und indirekter Rekursion?
 > Direkt: p() enthält p()
+> 
 > Indirekt: p() enthält q(), q() enthält p()
 
 > [!info]- Was bedeutet endrekursiv?
 > Programme, bei denen der rekursive Aufruf die letzte Aktion im Else-Zweig bzw. allgemeinen Fall ist werden endrekursiv bezeichnet. 
+> 
 > `if n = 1 return 1 else return p(n-1)`
+>
 > Nicht Endrekursiv:
+> 
 > `return n + p(n-1)`
+> 
 > Kann aber umgwandelt werden:
+> 
 > `return p(n-1, n)`
+> 
 > Endrekursive Programme lassen sich einfach in iterative Form überführen und umgekehrt.
+> 
 > `while n > 0 res = res * n; n--`
+> 
 > Jedes Rekursives Programm kann in ein Nicht-Rekursives umgeschrieben werden, indem man das Stack selbst macht.
 
 > [!info]- Nennen Sie ein Beispiel rekursiver Programmierung aus der Vorlesung.
@@ -238,8 +268,11 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Laufzeit folgendes Codes: `for i = 1..n; for j = 1..i for k = 1..j`
 > for 1..n -> n
+> 
 > for 1..i -> (n+1)/2
+> 
 > for 1..j -> (((n+1)/2)+1)/2
+> 
 > -> O(n^3)
 
 > [!info]- Laufzeit folgendes Codes: `for i = 1..n; binarySearch(i in F)`
@@ -250,6 +283,7 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Was ist der Unterschied zwischen Average und Worst Case Laufzeit?
 > Average: Wie lange es im Durchschnitt benötigt, wenn man zufällige Werte übergibt bzw alle möglichen Werte.
+> 
 > Worst Case: Wie lange es höchstens geht.
 
 > [!info]- Falls immer f(x) < g(x) ist, ist dann f = O(g)?
@@ -260,7 +294,9 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Was ist die Komplexität von Turm von Hanoi und wie könnte der Code aussehen?
 > Komplexität: 2^n weil je n: 1 + 2(n-1)
+> 
 > Rekursionstiefe: n
+> 
 > Pseudocode
 > ```
 > void hanoi (int n, char from, char to, char help) {
@@ -290,12 +326,16 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Wie ist ein Binärer Baum rekursiv definiert?
 > Baum = leer
+> 
 > Baum = Knoten (Baum Baum)
 
 > [!info]- Welche Traversierungsarten bei Bäumen kennen Sie?
 > Preorder: n, A, B
+> 
 > Inorder: A, n, B
+> 
 > Postorder: A, B, n
+> 
 > Levelorder: n, A, B für jedes Tiefenlevel
 
 > [!info]- Pre-/In-/Postorder Implementation mit Rekursion
@@ -331,7 +371,9 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Gegeben sei ein Baum, bei dem die inneren Knoten Operationen sind wie + - * / und die Blaetter Zahlen. Was erhalten Sie bei Inorder,Preorder Postorder?
 > Inorder: a + b
+> 
 > Preorder: + a b
+> 
 > Postorder: a b +
 
 > [!info]- Fügen Sie die Zahlen 10, 1, 9, 2, 8, 3, 7, 4 der Reihe nach in einen binaeren Suchbaum ein. Was erkennen Sie? 
@@ -345,6 +387,7 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Wie hoch ist ein binaerer Baum mit n Elementen?
 > mindestens log2(n + 1)
+> 
 > höchstens n
 
 > [!info]- Wie viele Knoten kann ein Baum der Höhe k haben?
@@ -413,6 +456,7 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- In welchem Fall gibt es welche AVL Rotation?
 > Einzelrotation: Wenn L tiefer: L wird oben, obenlinks = Lrechts
+> 
 > Doppelrotation: Wenn mitte links tiefer->LR
 
 > [!info]- Ein AVL-Baum sei durch Einfügen eines Elements aus der Balance geraten. Wie kann man erkennen, ob eine einfache oder eine doppelte Rotation gebraucht wird, um die Balance wiederherzustellen?
@@ -455,8 +499,11 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Was ist eine Adjazenzmatrix
 > Booleanmatrix NxN von allen Kombinationen der N Knoten. True = Kante existiert. Gewichtet -> integer statt boolean
+> 
 > Gut: zugriffszeit effizient
+> 
 > Schlecht: platzineffizient O(n^2). Für ungerichtete Graphen symmetrisch = Platzverschwendung
+> 
 > Platz für Adjazenzliste = O(n+m)
 
 > [!info]- Wie sieht der Code für Breitensuche aus?
@@ -513,7 +560,8 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 > Allgemein: Es gibt eine endlihe Anzahl Knoten und Kanten. Eine Kante verbindet zwei Knoten. Ungerichtet: Für jede Kante (1, 2) gibt es die Kante (2, 1). D.h. alle Knotenrelationen sind symmetrisch. Gewichtet = Es gibt zusätzlich eine Funktion Kante -> Zahl
 
 > [!info]- Was ist ein Spannbaum?
-> enthält alle Knoten
+> Ein Spannbaum enthält alle Knoten einer Menge.
+> 
 > Prim-Jarnik: Min Spanning Tree -> Summe der Kanten haben die kleinste mögliche Gewichtung
 
 > [!info]- Was ist ein Gieriger Algorithmus?
@@ -552,7 +600,9 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Traveling Salesman Problem: Was ist das Problem und was ist die Laufzeit?
 > Kürzester Weg für alle Routen
+> 
 > Alle Kombinationen: O(n!)
+> 
 > Algorithmen: O(a^n)
 
 > [!info]- Was ist Backtracking?
@@ -575,23 +625,27 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Wie löst man das Springerproblem?
 > Springer soll alle Felder besuchen
+> 
 > Rekursiv: Man versucht einen Zug (Es gibt 8 Möglichkeiten pro Rekursionsaufruf). Wenn es ein gültiger Zug ist, markiert man das Feld als besucht und ruft die Funktion rekursiv auf. Wenn man in der Rekursion nxn Züge gezählt hat, ist das Ganze erfolgreich. Wenn der Zug ungültig ist, gibt man false zurück und setzt die position als unbesucht.
 
 > [!info]- Wie löst man das 8 Damenproblem?
 > 8 Damen müssen auf dem Schachfeld positioniert werden ohne sich schlagen zu können.
+> 
 > Ein Schachfeld ist 8 Hoch, also versucht man für jede y position eine gültige x position auszuwählen.
+> 
 > Rekursiv:
+> 
 > In der Rekursion zählt man, wieviele schon platziert wurden.
 > Man iteriert die 8 x positionen. Wenn sie gültig ist, ruft man die Funktion rekursiv auf. Wenn 8 platziert wurden, gibt man true zurück. Wenn die position ungüktig ist, false und man gibt das Feld frei.
 
 > [!info]- Wie löst man das Rucksackproblem?
 > Es gibt K Gegenstände mit Wert und Volumen. Der Rucksack hat die Grösse M. Der Wert im Rucksack soll maximiert werden.
+> 
 > Aufwand: O(2^n)
+> 
 > Rekursiv:
-> Man testet zuerst rekursiv ohne den Gegenstand k
-> Dann fügt man den gegenstand hinzu (falls es geht)
-> Wenn es ein neues Maximum ist, speichert man das als Maximum.
-> Dann testet man rekursiv weiter mit dem Gegenstand k
+> 
+> Man testet zuerst rekursiv ohne den Gegenstand k. Dann fügt man den gegenstand hinzu (falls es geht). Wenn es ein neues Maximum ist, speichert man das als Maximum. Dann testet man rekursiv weiter mit dem Gegenstand k.
 
 > [!info]- Was ist erschöpfende Suche?
 > = alle Möglichkeiten werden ausprobiert
@@ -616,18 +670,25 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Was ist der Aufwand der Suche in 2 sortierten Arrays und wie geht man bei der Implementierung vor?
 > Aufwand: O(n)
+> 
 > solange a[i] nicht b[j]
+> 
 > wenn a[i] < b[i] i++
+> 
 > wenn a[i] > b[i] j++
 
 > [!info]- Was ist Hashing?
 > Grosse Menge wird auf kleinere Abgebildet
+> 
 > ZB X modulo tableSize
+> 
 > Kollision muss aufgelöst werden
 
 > [!info]-  Was muss man in Java beachten wenn man selber hashen möchte?
 > Immer equals, compareTo und hashCode zusammen überschreiben
+> 
 > Weil derselbe hashCode -> equals=true
+> 
 > Mit Primzahlen arbeiten: obj.a + 13 * obj.b
 
 > [!info]- Wann gibt es viele Kollisionen?
@@ -662,6 +723,7 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Wie unterscheiden sich Bruteforce und KMP?
 > O(n * m) VS O(n + m)
+> 
 > KMP konstruiert Automat, damit man nur vorwärt lesen muss, also keinen Zeiger zurücksetzen muss. (Wenn x zum ersten mal vorkommt und danach nicht passt kann man die vorherigen für diese Stelle überspringen)
 
 > [!info]- Welche Schritte braucht es für Map Reduce?
@@ -688,11 +750,13 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Was ist die Trigram Suche?
 > Index für jedes Wort in 3 Buchstaben Gruppen
+> 
 > Ist schnell weil man den Index im Vorhinein aufbaut.
 
 > [!info]- Was ist die Phonetische Suche?
 > Jede Gruppe von Buchstaben (die ähnlich tönen) hat Zahl
-> Manche werden ignoriert je nach Sparache anders
+> 
+> Manche werden ignoriert je nach Sprache anders
 
 > [!info]- Was ist Insertion Sort?
 > Man nimmt nacheinander die Elemente auf und sortiert sie ein. 0-(k-1) sortiert. k wird einsortiert.
@@ -702,7 +766,9 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Was ist Bubble Sort?
 > Man tauscht benachbarte Elemente so lange, bis sie sortiert sind. (Man tauscht die höheren nach oben / die tieferen nach unten)
+> 
 > `if a[i] > a[i+1] swap (a, i, i+1)`
+> 
 > Wenn man in einer Iteration nicht mehr swappen musste, kann man abbrechen.
 
 > [!info]- Was ist Quicksort?
@@ -714,6 +780,7 @@ Wie die Zeit, welche ein Algorithmus höchstens benötigt, sich verändert, in A
 
 > [!info]- Wie funktioniert externes Sortieren?
 > Wenn es keinen Platz im internen Speicher hat:
+> 
 > Man teilt die Menge auf und sortiert sie separat. Dann fügt man sie zusammen. Man fügt die Teile zusammen indem man zwei sortierte Blöcke sequenziel immer die 1. beiden dann die 2. beiden vergleicht. Dies muss man wiederholen bis vollständig sortiert.
 
 > [!info]- Wann ist ein Sortieralgorithmus stabil?

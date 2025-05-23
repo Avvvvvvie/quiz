@@ -62,7 +62,7 @@ Wieso ist in einem Vektorraum der Polynome von Grad <= 3 das neutralelement 0 + 
 > Deshalb muss auch das Neutralelement im Unterraum existieren. (weil $0 * a = e$).
 
 > [!info]- Ist ${vec 0}$ ein Unterraum von einem Vektorraum V?
-> Ja: 0 + 0 = 0, lambda mal 0 = 0
+> Ja: $0 + 0 = 0$, $lambda * 0 = 0$
 
 > [!info]- Wann ist eine Matrix ein Vektorraum?
 > Auch hier muss gelten:

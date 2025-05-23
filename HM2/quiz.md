@@ -1,3 +1,7 @@
+
+> [!info]- Was ist eine Skalarwertige Funktion?
+> Eine Funktion, die einen Skalar, also eine Zahl als resultat hat.
+
 > [!info]- Was bedeutet multivariat?
 > Es bedeutet, dass eine Funktion mehrere Variablen hat.
 

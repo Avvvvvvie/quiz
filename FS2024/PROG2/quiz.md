@@ -20,53 +20,57 @@
 > [!info]- Was ist der Program Counter?
 > Dieser zeigt auf die Stelle, wo das Programm im Code ist.
 
-Was passiert wenn man ein objekt als referenz einer methode in einem stack weiter gibt
+> [!question]- Was passiert wenn man ein objekt als referenz einer methode in einem stack weiter gibt
 stack->referenz heep->objekt
 
-Auf was hat der Thread alles Zugriff?
+> [!question]- Auf was hat der Thread alles Zugriff?
 
-Wie läuft der Life-Cycle eines Threads ab?
+> [!question]- Wie läuft der Life-Cycle eines Threads ab?
 
-Was machen yield, sleep, suspend, resume, interrupt, resume, stop, join?
+> [!question]- Was machen yield, sleep, suspend, resume, interrupt, resume, stop, join?
 
-Was kann ein Thread für einen Staus haben?
-new, runnable...
+> [!question]- Was kann ein Thread für einen Staus haben?
+> new, runnable...
 
-Wie soll man einen Thread beenden?
-doContinue auf false setzen + interrupt aufrufen um gleich an das ende der run funktion zu gelangen.
+> [!question]- Wie soll man einen Thread beenden?
+> doContinue auf false setzen + interrupt aufrufen um gleich an das ende der run funktion zu gelangen.
 
-Wie kann man einen ExecutorService benutzen?
+> [!question]- Wie kann man einen ExecutorService benutzen?
 
-Wieso würde ein Thread vom Executor Service sterben?
+> [!question]- Wieso würde ein Thread vom Executor Service sterben?
 
-Wie funktioniert ein Thread Pool?
-(je nach dem x threads pro core am besten zb pro virtueller core 1, vlt weniger wenn man noch anderes macht gerade. io => mehr ok, weil die warten vorallem. da ist speicher die grenze eher)
+> [!question]- Wie funktioniert ein Thread Pool?
+> (je nach dem x threads pro core am besten zb pro virtueller core 1, vlt weniger wenn man noch anderes macht gerade. io => mehr ok, weil die warten vorallem. da ist speicher die grenze eher)
 
-Wann benutzt man am Besten welchen Typ von Thread-Pool?
-- SingleThreadExecutor
-- Fixed
-- Cached: passt anzahl dynamisch an abhängig von tasks, maximum (cached, weil threads behalten wird für eine gewisse zeit)
+> [!question]- Wann benutzt man am Besten welchen Typ von Thread-Pool?
+> - SingleThreadExecutor
+> - Fixed
+> - Cached: passt anzahl dynamisch an abhängig von tasks, maximum (cached, weil threads behalten wird für eine gewisse zeit)
 
-Was wenn scheduler mit x threads nicht genug threads?
-Was gibt es für nested Klassen un dwas sind die unterschiede?
-static nested
-inner >
-	member: definition einfach innerhalb, hat zugriff auf (instatanz-)variablen&methoden in äusserer klasse
-	local: in methode, zugriff auf lokale variablen
-	anonymous: keinen namen, nur 1 instanz
+> [!question]- Was wenn scheduler mit x threads nicht genug threads?
 
-2 gründe für nested class: kontext, sie gehört dazu. oder man will sie nur in der klasse nutzen
+> [!question]-  Was gibt es für nested Klassen und was sind die Unterschiede?
+> static nested
+> inner >
+> 	member: definition einfach innerhalb, hat zugriff auf > (instatanz-)variablen&methoden in äusserer klasse
+> 	local: in methode, zugriff auf lokale variablen
+> 	anonymous: keinen namen, nur 1 instanz
 
-Wie ist eine JavaFX Applikation strukturiert?
+> [!question]- Wieso benutzt man nested Klassen?
+> 2 gründe für nested class: kontext, sie gehört dazu. oder man will sie nur in der klasse nutzen
 
-Welche Container nutzt man fpr was?
+> [!question]- Wie ist eine JavaFX Applikation strukturiert?
 
-Event handlch
+> [!question]- Welche javaFX-Container nutzt man für was?
+
+> [!question]- Was ist Event handling?
 
 platform agnosticg = unabhängig von plattform
-javafk nicht immer plattformagnostisch => andere teile / packages werden heruntergeladen
 
-`<?extends class xy` vs xy
+> [!question]- Wieso ist JavaFX nicht immer plattformagnostisch?
+> javafk nicht immer plattformagnostisch => andere teile / packages werden heruntergeladen
+
+> [!question]-  Was bedeutet `<?extends class xy`?
 
 
 observer changed wnn neues objekt aber equals?
@@ -80,7 +84,10 @@ io abstract cls why
 ![](assets/Pasted%20image%2020240422101740.png)
 
 mitte byte die anderen pro linie+utf
-why close io
+
+> [!question]-  Wieso muss man ein io am Ende schliessen?
+
+
 decorator pattern adds responsibilit yto obj
 printf ist deko
 append to file with random acc f
@@ -96,8 +103,7 @@ dann wird instanz anonymer klasse erstellt (mit dem ->)
 was kann lambda spezzielles?
 man kann den ausdruck einer variable zuweisen und funktionen übergeben
 
-Wie funktioniert Optional?
-
+> [!question]- Was macht die Klasse Optional?
 
 > [!info]- Wann benutzt man ein Optional und wann eine Exception?
 > Optional
@@ -126,17 +132,17 @@ Wie funktioniert Optional?
 > [!info]- Was ist eine pure Funktion?
 > Sie hat keine Nebeneffekte = nichts wird anderswo verändert, man verwendet nur die gegebenen Variablen. Soll man vermeiden wenn nicht nötig. Aber natürlich gewollt wenn man z.B etwas in der Konsole ausgibt oder in eine Datenbank schreibt. Aber nicht wenn man einfach ein Resultat abspeichert wenn man es zurückgeben könnte.
 
-Wie sieht der Lebenszyklus einer Stream-Pipeline aus?
-source -> source  operation -> (intermediate operations) -> terminal operation -> result
+> [!question]- Wie sieht der Lebenszyklus einer Stream-Pipeline aus?
+> source -> source  operation -> (intermediate operations) -> terminal operation -> result
 
-Was sind die Vorteile der Streams & der terminalen Operationen?
-- Paralelle Ausführung
-- Unnötige Operationen eliminieren
-- Operationen mergen
-- Lazy evaluation = stream wird erst bearbeitet, wenn benötigt. Nur die, die benötigt sind werden weiterverarbeitet.
+> [!info]- Was sind die Vorteile der Streams & der terminalen Operationen?
+> - Paralelle Ausführung
+> - Unnötige Operationen eliminieren
+> - Operationen mergen
+> - Lazy evaluation = stream wird erst bearbeitet, wenn benötigt. Nur die, die benötigt sind werden weiterverarbeitet.
 
-Warum braucht man einen accumulator und einer combiner bei stream.reduce?
-Wenn man einen parallelen Stream hat muss man die einzelnen Zwischenresultate noch kombinieren.
+> [!info]- Warum braucht man einen accumulator und einer combiner bei stream.reduce?
+> Wenn man einen parallelen Stream hat muss man die einzelnen Zwischenresultate jedes Threads wieder kombinieren können.
 
-MVC
-Model kann nie direkt auf UI zugreifen sondern nur indirekt durch events. view registriert sich und macht dann selber
+> [!question]- Was ist der Grundsatz von MVC?
+> Model kann nie direkt auf UI zugreifen sondern nur indirekt durch events. view registriert sich und macht dann selber

@@ -1,10 +1,12 @@
 
 > [!info]- Wie sieht eine geometrische Reihe aus?
 > $c ** q^(n-1)$
+> 
 > $a_(n-1) q$
 
 > [!info]- Wie sieht eine arithmetische Reihe aus?
 > $c + (n-1) \cdot d$
+> 
 > $a_{n-1} + d$
 
 > [!info]- Welche darstellungen von Reihen gibt es?
@@ -14,6 +16,7 @@
 
 > [!info]- Wie berechnet man Sn einer Reihe mit a1 und q?
 > Arithmetisch: $S_n = a_1 \cdot n + \frac{n \cdot (n - 1)}{2} \cdot d = \frac{a_{1} + a_{n}}{2} \cdot d$
+> 
 > Geometrisch: $S_n = a_{1} \cdot \frac{q^n - 1}{q - 1}$
 
 > [!info]- Wie lautet die Produkteregel beim Ableiten?
@@ -32,7 +35,7 @@
 > f(-x) = -f(x)
 
 > [!info]- a^x = e^?
-> (e^ln(a))^x
+> $(e^(ln(a)))^x$
 
 > [!info]- sin(x)' = ?
 > cos(x)

@@ -1,6 +1,8 @@
 
 > [!info]- Was sind die beiden Regeln von De Morgan?
-> ¬(A ∧ B) ⇔ ¬A ∨ ¬B ¬(A ∨ B) ⇔ ¬A ∧ ¬B
+> ¬(A ∧ B) ⇔ ¬A ∨ ¬B
+> 
+> ¬(A ∨ B) ⇔ ¬A ∧ ¬B
 
 > [!info]- A ∧ (B ∨ C) ist mit dem Distributivgesetz auch...?
 > (A ∧ B) ∨ (A ∧ C)
@@ -39,22 +41,30 @@
 
 > [!info]- Was bedeutet transitiv?
 > Wenn für alle x, y, z ∈ X
+> 
 > xRy ∧ yRz ⇒ xRz
+> 
 > gilt.
 
 > [!info]- Was bedeutet symmetrisch?
 > Wenn für alle x, y ∈ X
+> 
 > xRy ⇒ yRx
+> 
 > gilt.
 
 > [!info]- Was bedeutet antisymmetrisch?
 > wenn für alle x, y ∈ X
+> 
 > xRy ∧ yRx ⇒ x = y
+> 
 > gilt.
 
 > [!info]- Was bedeutet reflexiv?
 > wenn für alle x ∈ X
+> 
 > xRx
+> 
 > gilt.
 
 > [!info]- Welche Eigenschaften hat eine Äquivalenzklasse?
@@ -118,6 +128,7 @@
 
 > [!info]- Wie sieht die NNF aus?
 > kein → und kein !(...) kommen vor
+> 
 > (alle Negationen kommen in Literalen vor)
 
 > [!info]- Was bedeutet das Zeichen ≡?
@@ -137,6 +148,7 @@
 
 > [!info]- Was ist die Disjunktmenge?
 > Zwei Mengen X und Y heissen disjunkt, falls sie keine gemeinsamen Elemente haben, d.h. falls X ∩ Y = ∅ gilt.
+> 
 > Wir sagen eine Menge {Xi | i ∈ I} von Mengen bestehe aus paarweise disjunkten Mengen, wenn folgendes gilt: ∀i, j ∈ I (i /= j ⇒ Xi ∩ Xj = ∅).
 
 > [!info]- Wie sieht X \ Y in der prädikativen Schreibweise aus?
@@ -144,7 +156,9 @@
 
 > [!info]- Wie sehen verschiedene Operationen mit der leeren Menge aus: Potenzmenge, kartesisches Produkt, Schnittmenge?
 > P(∅) = {∅}
+> 
 > ∅ x A = ∅
+> 
 > ∅ ∩ A = ∅
 
 > [!info]- Was ist ein DAG?
@@ -159,7 +173,7 @@
 > [!info]- Was ist N+?
 > Die kleinste transitive Relation, die N enthält.
 
-> [!info]- Was gibt es so für ggT-Rechenregeln?
+> [!info]- Was gibt es so für ggT-Rechenregeln? (Die in diesem Fach vorkamen)
 > - ggt(a,b + ac) = ggt(a,b)
 > - ggt(n,m) = ggt(m,m-n) wenn m > n
 
