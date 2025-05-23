@@ -139,6 +139,7 @@ li {
 
 .quiz-list {
     margin: 0 -1rem;
+    padding: 0;
 }
 
 .quiz-item {
