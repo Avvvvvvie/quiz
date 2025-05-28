@@ -131,6 +131,7 @@ $S = (b - a) / 6 (f(a) + 4f((a+b)/2)+f(b))$
 
 ### Wie nutzt man die Quadraturformeln?
 Unsummiert: a und b sind der zu integrierende Bereich.
+
 Summiert: Der Bereich wird in n gleich grosse Abschnitte der Länge $h = (b - a) / n$ unterteilt. $x_i = a + i * h$
 
 ### Wie lautet die summierte Trapezregel?
@@ -150,6 +151,7 @@ Bei R&T ist dies exakt für Polynom vom Grad 1, S für Polynom vom Grad 3. /24 m
 
 ### Wie benutzt man die Gaussformeln?
 Für jedes n gibt es eine Formel, die für diese Anzahl Stützstellen optimal ist.
+
 $n = 1: (b-a) f((b+a)/2)$
 
 $n = 2: (b - a)/2 [f(-1/sqrt(3) * (b-a)/2 + (b+a)/2)+f(1/sqrt(3) * (b-1)/2 + (b+a)/2)]$
