@@ -27,72 +27,30 @@ function parseQuiz(text) {
     let currentAnswer = '';
     let currentTitle = '';
     for(let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith('> [!info]')) {
-            inQuestion = true;
-            currentTitle = getAnsweredTitle(lines[i]);
-        } else if(inQuestion) {
-            if(lines[i].startsWith('>')) {
-                currentAnswer += getAnswerLine(lines[i]);
-            } else {
-                if(currentAnswer.length === 0) {
-                    currentAnswer += getAnswerLine(lines[i]);
+        if (lines[i].startsWith('### ')) {
+            if(inQuestion) {
+                if(currentAnswer.trim() === '') {
+                    unansweredQuestions.push(new Question(currentTitle, currentAnswer));
+                } else {
+                    questions.push(new Question(currentTitle, currentAnswer));
                 }
-                inQuestion = false;
-                questions.push(new Question(currentTitle, currentAnswer));
                 currentAnswer = '';
                 currentTitle = '';
             }
-        } else if (lines[i].startsWith('> [!question]')) {
-            inQuestion = false;
-            currentTitle = getUnansweredTitle(lines[i]);
-            unansweredQuestions.push(new Question(currentTitle, ''));
-            currentAnswer = '';
-            currentTitle = '';
+            inQuestion = true;
+            currentTitle = lines[i];
+        } else if(inQuestion) {
+            currentAnswer += line + '\n';
         }
     }
     if(inQuestion) {
-        if(currentAnswer.length === 0) {
-            let lineText = lines[i].substring(1,lines[i].length) + '\n';
-            if(lineText.startsWith(" ")) {
-                lineText = lineText.substring(1, lineText.length);
-            }
-            currentAnswer += lineText;
+        if(currentAnswer.trim() === '') {
+            unansweredQuestions.push(new Question(currentTitle, currentAnswer));
+        } else {
+            questions.push(new Question(currentTitle, currentAnswer));
         }
-        questions.push(new Question(currentTitle, currentAnswer));
-        currentAnswer = '';
-        currentTitle = '';
     }
     return [questions, unansweredQuestions];
-}
-
-function getUnansweredTitle(line) {
-    line = line.substring(13,line.length).trim();
-    if(line.startsWith('-') || line.startsWith('+')) {
-        line = line.substring(1, line.length).trim();
-    }
-    if(line.startsWith(" ")) {
-        line = line.substring(1, line.length);
-    }
-    return "### " + line;
-}
-
-function getAnsweredTitle(line) {
-    line = line.substring(9,line.length).trim();
-    if(line.startsWith('-') || line.startsWith('+')) {
-        line = line.substring(1, line.length).trim();
-    }
-    if(line.startsWith(" ")) {
-        line = line.substring(1, line.length);
-    }
-    return "### " + line;
-}
-
-function getAnswerLine(line) {
-    let lineText = line.substring(1,line.length) + '\n';
-    if(lineText.startsWith(" ")) {
-        lineText = lineText.substring(1, lineText.length);
-    }
-    return lineText;
 }
 
 function renderMarkdown(text) {
