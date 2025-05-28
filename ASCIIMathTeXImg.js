@@ -757,7 +757,7 @@ var ASCIIMath = (function() {
 //    if (AMnestingDepth > 0) AMnestingDepth--;
             var len = newFrag.length;
 
-            if(newFrag.indexOf('{')>=0 && newFrag.indexOf('}')>=0 && newFrag.indexOf(';')>0 && newFrag.indexOf('\\left')<0) {
+            if(newFrag.indexOf('{')>=0 && newFrag.indexOf('}')>=0 && newFrag.indexOf(';')>0) {
                 let reee = '';
                 let rows = newFrag.split(';');
                 for (let row of rows) {
