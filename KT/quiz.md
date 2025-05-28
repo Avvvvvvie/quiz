@@ -730,7 +730,7 @@ Hiermit können kleine Netze zusammengefügt werden. Z.B. 4 C Klassen Netze 198.
 ### Was ist Subnetting?
 Hiermit wird ein grosses Netz in mehrere kleine aufgeteilt. ZB Um das Netz in 8 kleinere aufzuteilen, fügt man der Netzmaske 3 Einsen hinzu.
 
-### ![](assets/Pasted%20image%2020250514091810.png)
+### ![image](assets/Pasted%20image%2020250514091810.png)
  160.85.128.0 / 255.255.224.0 oder 160.85.128.0 /19
 
 ### Was gibt es für spezielle IP-Adressen?
