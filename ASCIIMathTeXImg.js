@@ -757,7 +757,7 @@ var ASCIIMath = (function() {
 //    if (AMnestingDepth > 0) AMnestingDepth--;
             var len = newFrag.length;
 
-            if(newFrag.indexOf('{')>=0 && newFrag.indexOf('}')>=0 && newFrag.indexOf(';')>0) {
+            if(newFrag.indexOf('{')>=0 && newFrag.indexOf('}')>=0 && newFrag.indexOf(';')>0 && newFrag.indexOf('\\left')<0) {
                 let reee = '';
                 let rows = newFrag.split(';');
                 for (let row of rows) {
@@ -779,7 +779,7 @@ var ASCIIMath = (function() {
             }
 
 
-            if (len>2 && newFrag.charAt(0)=='{' && newFrag.indexOf(',')>0) { //could be matrix (total rewrite from .js)
+            if (len>2 && newFrag.charAt(0)=='{' && (newFrag.indexOf(',')>0 || newFrag.indexOf(';')>0)) { //could be matrix (total rewrite from .js)
                 var right = newFrag.charAt(len - 2);
                 if (right==')' || right==']') {
                     var left = newFrag.charAt(6);
@@ -798,7 +798,7 @@ var ASCIIMath = (function() {
                             if (newFrag.charAt(i)==left) mxnestingd++;
                             if (newFrag.charAt(i)==right) {
                                 mxnestingd--;
-                                if (mxnestingd==0 && newFrag.charAt(i+2)==',' && newFrag.charAt(i+3)=='{') {
+                                if (mxnestingd==0 && (newFrag.charAt(i+2)==',' || newFrag.charAt(i+2)==';') && newFrag.charAt(i+3)=='{') {
                                     pos.push(i+2);
                                     lastsubposstart = i+2;
                                     subpos[lastsubposstart] = [i+2];
