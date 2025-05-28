@@ -30,7 +30,7 @@ function parseQuiz(text) {
         if (lines[i].startsWith('### ')) {
             if(inQuestion) {
                 if(currentAnswer.trim() === '') {
-                    unansweredQuestions.push(new Question(currentTitle, currentAnswer));
+                    unansweredQuestions.push(new Question(currentTitle, ''));
                 } else {
                     questions.push(new Question(currentTitle, currentAnswer));
                 }
