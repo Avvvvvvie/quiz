@@ -756,6 +756,29 @@ var ASCIIMath = (function() {
         if (symbol.ttype == RIGHTBRACKET || symbol.ttype == LEFTRIGHT) {
 //    if (AMnestingDepth > 0) AMnestingDepth--;
             var len = newFrag.length;
+
+            if(newFrag.indexOf('{')>=0 && newFrag.indexOf('}')>=0 && newFrag.indexOf(';')>0) {
+                let reee = '';
+                let rows = newFrag.split(';');
+                for (let row of rows) {
+                    reee += '{\\left(';
+                    let items = row.split(',');
+                    for(let item of items) {
+                        reee = reee + item + ',';
+                    }
+                    if(items) {
+                        reee = reee.slice(0, -1)
+                    }
+                    reee += '\\right)},'
+                }
+                if(rows) {
+                    reee = reee.slice(0, -1)
+                }
+                newFrag = reee;
+                len = newFrag.length;
+            }
+
+
             if (len>2 && newFrag.charAt(0)=='{' && newFrag.indexOf(',')>0) { //could be matrix (total rewrite from .js)
                 var right = newFrag.charAt(len - 2);
                 if (right==')' || right==']') {
