@@ -465,7 +465,9 @@ Dauer der Leitungsbelegung: Mit Interframe Gap
 
 ### Du erhälst folgenes Ethernet Frame: 0101010 10101010 10101010 10101010 10101010 10101010 10101010 10101011 00010000 00000000 01011010 11100011 10011111 10000110... Wie lauten der Empfänger?
 Präambel 7x 10101010
-  SFD 10101011
+
+SFD 10101011
+
 Destination Address 00001000 00000000 01011010 11000111 11111001 01100001
 
 ### Deine MAC-Adresse ist 08-00-5A-C7-F9-61. Woran erkennst du deinen Hersteller?
