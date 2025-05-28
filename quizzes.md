@@ -10,4 +10,4 @@ KT/quiz.md
 SNP/quiz.md
 SVEN1/quiz.md
 WING/quiz.md
-test.md
+quiz.md
