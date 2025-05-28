@@ -24,7 +24,11 @@ Beispiel soft link bbb referenziert aaa: `ln -s aaa bbb`
 Der soft link hat eine neue ino, und man hat alle berechtigungen darauf. Wenn aaa gelöscht dann referenziert bbb auf nichts, weil über namen referenziert wird. dann kann man bbb nicht mehr öffnen. wenn aaa wieder erzeugt wird dann geht es wieder.
 
 ### Wie funktionieren Pfade?
-~ benutzer heimverzeichis
+~ = benutzer heimverzeichis
+
+./ = momentaner ordner
+
+../ = ein ordner weiter oben
 
 ### Was gibt es für spezielle files?
 - character devices
