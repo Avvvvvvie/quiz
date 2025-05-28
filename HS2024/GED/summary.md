@@ -1,5 +1,4 @@
 ###### Einheiten
-[[GED_2024_Lect_3_Schaltungen_rev0_lucs.pdf#page=2]]
 
 T -> G -> M -> k -> 1 -> m -> $mu$ -> n -> p -> f
 
@@ -127,8 +126,8 @@ Kapazität C [Farad]
 $C = Q / U_C$
 $C = epsi_0 * epsi_r * A / d$
 
-![[Pasted image 20250123104348.png|100]]
-![[Pasted image 20250123104421.png|150]]
+![|100x0](assets/Pasted%20image%2020250123104348.png)
+![|150x0](assets/Pasted%20image%2020250123104421.png)
 Strom durch den Kondensator
 $I = Q / (Delta t)$
 
@@ -141,10 +140,10 @@ Die Zeitkonstante wird erreicht bei **37%** des Ursprungswertes des Stroms. Die 
 $tau = R * C$
 
 **Hochpassfilter**
-![[Pasted image 20241027115943.png|500]]
+![|500x0](assets/Pasted%20image%2020241027115943.png)
 
 **Tiefpassfilter**
-![[Pasted image 20241027120156.png|500]]
+![|500x0](assets/Pasted%20image%2020241027120156.png)
 Tiefpassfilter -> begrenzt hohe frequenz. x < fg -> Uout unter 70.7% U0 weil je höher desto tiefer
 Hochpassfilter -> begrenzt tiefe Frequenz
 
@@ -174,7 +173,7 @@ $tau = L / R$
 I steigt zu 63%
 
 ### LC-Schwingkreis
-![[Pasted image 20241027120838.png|300]]
+![|300x0](assets/Pasted%20image%2020241027120838.png)
 $f = 1 / (2pi sqrt(LC))$
 
 ### Gedämpfter Schwingkreis / LCR-Schwingkreis
@@ -205,9 +204,9 @@ $sin(0) = 0$
 1Hz -> T = 1
 2Hz -> T = 0.5
 
-![[Pasted image 20241027140706.png|400]]
+![|400x0](assets/Pasted%20image%2020241027140706.png)
 ###### Phasenverschiebung
-![[Pasted image 20250123101403.png|300]]
+![|300x0](assets/Pasted%20image%2020250123101403.png)
 
 ### Halbleiter
 Dotiert wird auf Silizium.
@@ -227,7 +226,7 @@ Ein positiver Strom kann nur in P->N Richtung fliessen.
 P-Transistor : Strom fliesst, wenn kein Strom beim Gate fliesst.
 N-Transistor : Strom fliesst, wenn ein Strom beim Gate fliesst. (Spannung von Gate zu Source muss Grenzwert erreichen)
 
-![[Pasted image 20241027141537.png|200]]
+![|200x0](assets/Pasted%20image%2020241027141537.png)
 
 Der Strom kann auch nur in eine Richtung fliessen (von Source zu Drain), wie bei einem Halbleiter.
 
@@ -244,25 +243,25 @@ NOR  : =0
 XOR  : =1
 XNOR : =0 || =2
 
-![[Pasted image 20241229143711.png]]
+![](assets/Pasted%20image%2020241229143711.png)
 ###### NOR
-![[Pasted image 20250123094142.png|200]]
+![|200x0](assets/assets/Pasted%20image%2020250123094142.png)
 ###### NAND
-![[Pasted image 20250123094211.png|200]]
+![|200](assets/Pasted%20image%2020250123094211.png)
 ###### OR
-![[Pasted image 20250123094257.png|200]]
+![|200x0](assets/Pasted%20image%2020250123094257.png)
 
 
 
 **1 Bit Halbaddierer**
-![[Pasted image 20241028164820.png|300]]
+![|300x0](assets/Pasted%20image%2020241028164820.png)
 
 **1 Bit Volladdierer**
-![[Pasted image 20241028164854.png|300]]
+![|300x0](assets/Pasted%20image%2020241028164854.png)
 
 1 Bit Volladdierer mit Carrier vom letzten Volladdierer
 4 Bit Volladdierer verbindet 4 von diesen.
-![[Pasted image 20241028165004.png|400]]
+![|400x0](assets/Pasted%20image%2020241028165004.png)
 
 ### Flipflops
 
@@ -294,7 +293,7 @@ XNOR : =0 || =2
 
 **Asynchronzähler**
 
-![[Pasted image 20241028164657.png|400]]
+![|400x0](assets/Pasted%20image%2020241028164657.png)
 
 ### Sensoren
 
@@ -417,8 +416,8 @@ $mu_0 * I = int_y vec B d y$
 ###### Nicht stationärer Fall
 Ein zeitlich veränderlicher Fluss eines E-Feldes führt zu einem B-Feld. Ein zeitlich veränderlicher Fluss eines B-Feldes führt zu einem E-Feld.
 
-![[Pasted image 20241231150326.png|200]]
-![[Pasted image 20241231150352.png|200]]
+![|200x0](assets/Pasted%20image%2020241231150326.png)
+![|200x0](assets/Pasted%20image%2020241231150352.png)
 Fläche $S = Lvt -> U_ind = -BLv$
 ###### Magnetfeld im Abstand r
 $B = (mu_0 I) / (2 pi r)$
@@ -429,7 +428,7 @@ $B = mu_r mu_0 N / l I$
 $mu_0 = 1.2567 * 10^−6$
 $mu_r$ = Permeabilitätszahl der Spulenfüllung
 
-![[Pasted image 20241231144500.png|400]]
+![|400x0](assets/Pasted%20image%2020241231144500.png)
 
 ###### Induktionsgesetz
 Die zeitliche Änderung des Flusses eines Magnetfeldes durch eine Schlaufe induziert in dieser Schlaufe eine Induktionsspannung / Nennspannung / Effektivspannung U
@@ -471,7 +470,7 @@ Der Brechungsindex n eines Mediums gibt an, um welchen Faktor sich Licht im Medi
 
 $c_0 = n_"Meduim" * c_"Medium"$
 
-![[Pasted image 20241231151816.png|250]]
+![|250x0](assets/Pasted%20image%2020241231151816.png)
 
 ###### Lichtbrechung
 Das Licht wird im optisch dichteren Material zum Lot hin gebrochen
@@ -480,13 +479,13 @@ Das Licht wird im optisch dichteren Material zum Lot hin gebrochen
 Snellius-Gesetz
 $(sin(alpha)) / (sin(beta)) = c_1 / c_2 = (c_0 / n_1) / (c_0 / n_2) = n_2 / n_1$
 
-![[Pasted image 20250123104517.png|200]]
+![|200x0](assets/Pasted%20image%2020250123104517.png)
 
-![[Pasted image 20241231152053.png|200]]
+![|200x0](assets/Pasted%20image%2020241231152053.png)
 
 ###### Totalreflexion
 Wenn $n_2 > n_1$ und $sin(beta) > n_1 / n_2$ dann kann das Licht nicht in das Medium 1 heraustreten.
-![[Pasted image 20241231170517.png|230]]
+![|230x0](assets/Pasted%20image%2020241231170517.png)
 
 ###### Intensität (Kugelwellen)
 

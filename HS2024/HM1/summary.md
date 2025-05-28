@@ -135,9 +135,9 @@ $(1,2,3) * (1;2;3) = (1, 2, 3;2, 4, 6;3,6,9)$
 	$Rx = Q^T b$
 
 ###### Vektornorm
-![[Pasted image 20250110154846.png|300]]
+![|300x0](Pasted%20image%2020250110154846.png)
 ###### Matrixnorm
-![[Pasted image 20250110154931.png|300]]
+![|300x0](Pasted%20image%2020250110154931.png)
 
 ###### Abschätzung fehlerbehafteter Vektor
 
@@ -161,7 +161,7 @@ Einsetzen $O(n^2)$
 
 
 ###### Jakobi-Verfahren / Gesamtschrittverfahren
-![[Pasted image 20250110161729.png|100]]
+![|100x0](Pasted%20image%2020250110161729.png)
 $A = L + D + R$
 $x^(k+1) = -D^-1 (L + R) x^k + D^-1 b$
 
@@ -212,7 +212,7 @@ $3 + 2j = sqrt(3^2 + 2^2) * e^(j * tan(2/3))$
 
 $varphi = pi - arctan(y / x)$
 
-![[Pasted image 20250110165905.png|300]]
+![300x0](Pasted%20image%2020250110165905.png|300)
 
 ###### Eigenvektor
 Wenn gilt $Ax = lambda x$ dann ist $x$ ein Eigenvektor.
@@ -225,7 +225,7 @@ Eigenwerte von $A = (a,b;c,d)$:
 $p(lambda) = det(A - lambda I_n) = (a - lambda)(d - lambda) - b c$
 
 $det B_(3x3) =$
-![[Pasted image 20250110193458.png|300]]
+![|300x0](Pasted%20image%2020250110193458.png)
 
 Eigenvektor zu Eigenwert $lambda$ von $A$:
 $vec x = (A - lambda I_n | vec 0)$ 
@@ -252,7 +252,7 @@ ZB $A = (**,**,**;**,**,**;0,0,1)$ dann gibt es 1 reellen Eigenwert 1. Und 2 Kom
 = Grösster Eigenwert
 
 Berechenbar durch Vektoriteration / von-Mises-Iteration:
-![[Pasted image 20250110195429.png|150]]
+![|150x0](Pasted%20image%2020250110195429.png)
 ###### Mitternachtsformel
 $(-B +- sqrt(B^2 - 4AC)) / (2A)$
 

@@ -32,10 +32,10 @@ Sonst $R_q = x_(|~n*q~|)$
 0.5-Quantil = 2. Quantil, Medianwert, Zentralwert, $x_"med"$
 
 Quantile aus CDF: $(a+b)/2$
-![[Pasted image 20250104112959.png|400]]
+![|400x0](assets/Pasted%20image%2020250104112959.png)
 $R_q = (b-a) / (F(a) - F(b)) * (q - F(a-1)) + a$ 
 $q = F(a-1) + (R_q * (F(a) - F(a-1))) / (b-a)$
-![[Pasted image 20240923134042.png|350]]
+![|350x0](assets/Pasted%20image%2020240923134042.png)
 ###### Boxplot
 Box: 1., 2. und 3. Quantil
 Whisker: Maximal 1.5 x Interquartilsabstand entwernt von Q1/Q3
@@ -97,13 +97,13 @@ $(n;k) = n!/((n-k)!*k!)$
 
 $(n;0) = 1$
 
-![[Pasted image 20250104122443.png|500]]
+![|500x0](assets/Pasted%20image%2020250104122443.png)
 1 Nummerncode
 2 Platzierung Wettkampf
 3 x objekte aus y schalen
 4 x zahlen im lotto ziehen
 
-![[Pasted image 20250104123025.png|350]]
+![|350](assets/Pasted%20image%2020250104123025.png)
 
 
 ### Elementare Wahrscheinlichkeit
@@ -134,7 +134,7 @@ $V(X + Y) = V(X) + V(Y)$
 ZB P(X&A) = 2/10. P(X) = 1/2. P(A) = 6/10. nein.
 
 ### Verteilungen
-![[Pasted image 20250104132639.png|500]]
+![|500x0](assets/Pasted%20image%2020250104132639.png)
 E(Z) = 2E(X) + E(Y), z = 2x+y
 V(Z) = 4V(X) + V(Y)
 ###### Hypergeometrische Verteilung
@@ -195,18 +195,18 @@ Annäherung der Poissonverteilung: $mu = lambda$ und $sigma^2 = lambda$
 
 
 ### Methode der kleinsten Quadrate
-![[Pasted image 20250104222804.png|500]]
+![|500x0](assets/Pasted%20image%2020250104222804.png)
 (in y richtung)
 ###### Nichtlineares Verhalten
 Statt mit den originalen Werten kann z.B. mit dem Logarithmus der Werte gerechnet werden:
-![[Pasted image 20250105130155.png|350]]
+![|350x0](assets/Pasted%20image%2020250105130155.png)
 
 ###### Residuenplot
 $epsilon_i = y_i - hat y_i$
 $hat y_i = g(x_i) = mx_i + d$
 
 ###### Bestimmtheitsmass
-![[Pasted image 20250105130119.png|500]]
+![|500x0](assets/Pasted%20image%2020250105130119.png)
 R^2 % der Gesamtvarianz in den y-Daten kann durch die Regressionsgerade erklärt werden
 ###### Mehrere Variablen
 
