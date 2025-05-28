@@ -12,43 +12,45 @@ function provided by the kernel
 
 prozesse...
 
-was ist inode
+### Was bedeutet inode?
 
-was macht reguläre files aus
+### Was macht reguläre files aus?
 
-was bedeutet everything is a file für unix
+### Was bedeutet everything is a file für unix?
 
-wie funktionieren links (hard und soft)
-ln -s aaa bbb
-soft hat neue ino, alle berechtigungen auf neue, wenn aaa gelöscht dann referenziert bbb auf nichts, weil über namen referenziert wird. dann kann man bbb nicht mer öffnen. wenn aaa wieder erzeugt wird dann geht es wieder
+### Wie funktionieren links (hard und soft)
+Beispiel soft link bbb referenziert aaa: `ln -s aaa bbb`
 
-wie funktionieren pfade
+Der soft link hat eine neue ino, und man hat alle berechtigungen darauf. Wenn aaa gelöscht dann referenziert bbb auf nichts, weil über namen referenziert wird. dann kann man bbb nicht mehr öffnen. wenn aaa wieder erzeugt wird dann geht es wieder.
+
+### Wie funktionieren Pfade?
 ~ benutzer heimverzeichis
 
-was gibt es für spezielle files
-character devices
-block devices
-named pipes
-sockets
-kann auch virtuelles file sein
-/dev -hier sind alle devices
-tty -terminals für ein programm
-sda -festplatten
-null -input verschwindet
-etc
+### Was gibt es für spezielle files?
+- character devices
+- block devices
+- named pipes
+- sockets
+- kann auch virtuelles file sein
+- /dev -hier sind alle devices
+- tty -terminals für ein programm
+- sda -festplatten
+- null -input verschwindet
+- etc
 
-wie funktioniert mounting
+### Wie funktioniert Mounting?
 
-was sind streams
+### Was sind Streams?
 
-was ist ein file descriptor
+### Was ist ein file descriptor?
 
-wie kann man buffern und warum
+### Wie kann man buffern und warum?
 
-was ist blocking oder non blocking i/o
-blocking io = programm wartet auf io input, nichts anderes passiert im programm währenddessen
+### Was ist blocking oder non blocking i/o
+blocking io = programm wartet auf io input, nichts anderes passiert im programm währenddessen.
 
-was ist ein seekable file
+nonblocking = programm fährt weiter, während input gegeben werden kann
+### Was ist ein seekable file?
 ### Wie sieht das Schichtenmodell aus?
 1. Kernel
 2. Übergang: System Calls
