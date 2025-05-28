@@ -40,7 +40,7 @@ function parseQuiz(text) {
             inQuestion = true;
             currentTitle = lines[i];
         } else if(inQuestion) {
-            currentAnswer += line + '\n';
+            currentAnswer += lines[i] + '\n';
         }
     }
     if(inQuestion) {
