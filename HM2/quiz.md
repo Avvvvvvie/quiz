@@ -50,50 +50,60 @@ Eine Ausgleichsrechnung mit nur linearen Parameter. Das heisst, es sind nur koef
 ### Was ist ein überbestimmtes Gleichungssystem?
 Ein Gleichungssystem, welches viel mehr Daten hat als der Grad des Polynoms.
 
-### Wie sieht die Vandermonde Matrix aus?
-$(1,x_0,...,x_n;...,...,...,...;1,x_n,...,x_n^n)(a_0;...;a_n) = (y_0;...;y_n)$
+### Wie interpoliert man mit der Vandermonde Matrix?
+Vandermonde Matrix ist Teil des Gleichungssystems, welches gelöst werden muss:
 
-### Wie lautet die Lagrange-Interpolationsformel?
-Es gibt bei n+1 Datenpunkten ein Polynom von Grad n:
+$(1,x_0,...,x_0^n;...,...,...,...;1,x_n,...,x_n^n)(a_0;...;a_n) = (y_0;...;y_n)$
 
-$P_(n-1)(x) = Sigma_(i=0)^n  l_i(x) * y_i$
+Mit der Lösung dieses Gleichungssystem kann man das Interpolationspolynom vom Grad n-1 (bei n Stützpunkten) berechnen:
+
+$P_n(x) = a_0 + a_1 x + a_2 x^2 + ... + a_n x^n$
+
+### Wie interpoliert man mit der Lagrange-Interpolationsformel?
+Man berechnet bei n+1 Datenpunkten ein Polynom von Grad <= n:
+
+$P_(n)(x) = Sigma_(i=0)^n  l_i(x) * y_i$
 
 $l_i$ sind die n+1 Lagrangepolynome:
 
 $l_i(x) = Pi_(j=0)^n (x - x_j) / (x_i - x_j)$ wobei $i != j$
 
-Diese ergeben alle 1 in ihrer Stützstelle $x_i$ und 0 in den anderen Stützstellen.
+Diese Lagrangepolynome ergeben alle 1 in ihrer Stützstelle $x_i$ und 0 in den anderen Stützstellen.
 
-
-###  Was ist die Formel zur Fehlerabschätzung einer Polynominterpolation im Punkt x?
+### Was ist die Formel zur Fehlerabschätzung einer Polynominterpolation im Punkt x?
 $|f(x) - P_n(x)| <= |(x-x_0)...(x-x_n)| / ((n + 1)!) * max_(z epsilon [x_0,x_n]) |f^((n+1))(z)|$ wobei $x_0 ... x_n$ Stützpunkte sind.
 
-### Wie viele Stützpunkte braucht es um ein Polynom von Grad 2 zu Interpolieren?
+### Wie viele Stützpunkte braucht es, um ein Polynom von Grad 2 mit Polynominterpolation zu Interpolieren?
 3
 
-### Wie berechnet man die Spline-Interpolation
-Man löst ein Gleichungssystem bestehend aus folgenden Gleichungen:
+### Wie berechnet man die Spline-Interpolation?
+
+Bei n+1 Stützpunkten gibt es n Polynome
+Für diese Polynome löst man folgende Gelichungen:
 
 Interpolation der Stützpunkte:
 
 ${:S_0(x_0) = y_0;...;S_n(x_n) = y_n:}$
 
-Stetiger Übergang:
+Stetiger Übergang):
 
-${:S_0(x_1) = S_1(x_1);...;S_0(x_1) = S_1(x_1):}$
+${:S_0(x_1) = S_1(x_1);...;S_(n-1)(x_(n-1)) = S_n(x_(n-1)):}$
 
 Erste Ableitung an der Übergängen:
 
-${:S'_0(x_1) = S'_1(x_1);...;S'_(n-2)(x_(n-1)) = S'_(n-1)(x_(n-1)):}$
+${:S'_0(x_1) = S'_1(x_1);...;S'_(n-1)(x_n) = S'_n(x_n):}$
 
 Zweite Ableitung:
 
-${:S''_0(x_1) = S''_1(x_1);...;S''_(n-2)(x_(n-1)) = S''_(n-1)(x_(n-1)):}$
+${:S''_0(x_1) = S''_1(x_1);...;S''_(n-1)(x_n) = S''_n(x_n):}$
 
-Dann nimmt man noch zwei weitere Gleichungen je nach Spline.
+Dann nimmt man noch zwei weitere Gleichungen je nach Spline Typ.
+
+Die Lösung des Gleichungssystems gibt den Lösungsvektor $(a_0,...,a_n,b_0,...,b_n,...)^T$ für die Polynome $S_i(x) = a_i + b_i (x - x_i) + c_i (x - x_i)^2 ...$
 
 ### Wieviele Gleichungen braucht man bei n Datenpunkten bei einer Spline-Interpolation?
-- (n-1) * 2 für Interpolation (2 pro intervall)
+- n für Interpolation (2 pro intervall)
+- (n-2) für den Stetigen Übergang
 - (n-2) für 1.Ableitung
 - (n-2) für 2.Ableitung
 - 2 weitere
