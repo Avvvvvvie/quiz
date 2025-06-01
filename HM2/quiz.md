@@ -165,9 +165,7 @@ $R = (b - a) * f((b+a)/2)$
 $S = (b - a) / 6 (f(a) + 4f((a+b)/2)+f(b))$
 
 ### Wie nutzt man die Quadraturformeln?
-Unsummiert: a und b sind der zu integrierende Bereich.
-
-Summiert: Der Bereich wird in n gleich grosse Abschnitte der Länge $h = (b - a) / n$ unterteilt. $x_i = a + i * h$
+Mit den Quadraturformeln kann man numerisch integrieren. Mit den unsummierten Formeln integriert man einen Bereich von a bis b. Bei den summierten Formeln wird der Bereich in n gleich grosse Abschnitte der Länge $h = (b - a) / n$ unterteilt. $x_i = a + i * h$ ist der Anfang jedes Abschnittes.
 
 ### Wie lautet die summierte Trapezregel?
 $T = h * ((f(a) + f(b))/2 * f(x_1) + ... + f(x_n))$
@@ -185,7 +183,7 @@ $|int_a^b f(x)dx - Sf(h)| <= h^4/2880 (b - a) * max |f^((4))(x)|$
 Bei R&T ist dies exakt für Polynom vom Grad 1, S für Polynom vom Grad 3. /24 macht R doppelt so gut wie /12 T
 
 ### Wie benutzt man die Gaussformeln?
-Für jedes n gibt es eine Formel, die für diese Anzahl Stützstellen optimal ist.
+Mit den Gaussformeln kann man numerisch integrieren. Für jedes n gibt es eine Formel, die für diese Anzahl Stützstellen optimal ist.
 
 $n = 1: (b-a) f((b+a)/2)$
 
@@ -194,5 +192,10 @@ $n = 2: (b - a)/2 [f(-1/sqrt(3) * (b-a)/2 + (b+a)/2)+f(1/sqrt(3) * (b-1)/2 + (b+
 $n = 3: (b-1)/2 [5/9 * f(-sqrt(0.6)*(b-a)/2+(b+a)/2) + 9/8 * f((b+a)/2)]$ $+ (b-a)/2 * [5/9 * f(sqrt(0.6) * (b-a)/2 + (b+a)/2)]$
 
 ### Wie funktioniert die Romberg Extrapolation?
+Als erstes berechnet man T00 = Tf(h), T10 = Tf(h/2), T20 = Tf(h/3), ...
+
+Anschliessend kann man immer zwei Elemente vereinen mit der Formel $T_(n,m+1) = (4 T_(n+1,m) - T_(n, m)) / (4^m - 1)$ . Am Ende bleibt nur ein Element übrig. Je grösser n desto genauer ist das Resultat.
+
+Formel für T01 = Simpsonregel
 
 ### Was ist stabile Differenzialgleichung?

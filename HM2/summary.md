@@ -190,3 +190,16 @@ $|int_a^b f(x)dx - Tf(h)| <= h^2/12 (b - a) * max |f''(x)|$
 $|int_a^b f(x)dx - Sf(h)| <= h^4/2880 (b - a) * max |f^((4))(x)|$
 
 Bei R&T ist dies exakt für Polynom vom Grad 1, S für Polynom vom Grad 3. /24 macht R doppelt so gut wie /12 T
+
+### Gauss Formeln
+$n = 1: (b-a) f((b+a)/2)$
+
+$n = 2: (b - a)/2 [f(-1/sqrt(3) * (b-a)/2 + (b+a)/2)+f(1/sqrt(3) * (b-1)/2 + (b+a)/2)]$
+
+$n = 3: (b-1)/2 [5/9 * f(-sqrt(0.6)*(b-a)/2+(b+a)/2) + 9/8 * f((b+a)/2)]$ $+ (b-a)/2 * [5/9 * f(sqrt(0.6) * (b-a)/2 + (b+a)/2)]$
+
+### Romberg-Extrapolation
+
+$T_(n,0) = (b - a) / 2^n * ((f(a) + f(b)) / 2 + Sigma_(i=1)^(n-1) f(a + i * (b - a) / 2^n))$ 
+
+$T_(n,m) = (4^k * T_(n+1,m-1) - T_(n, m-1)) / (4^m - 1)$
