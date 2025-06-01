@@ -50,7 +50,7 @@ Der soft link hat eine neue ino, und man hat alle berechtigungen darauf. Wenn aa
 
 ### Wie kann man buffern und warum?
 
-### Was ist blocking oder non blocking i/o
+### Was ist blocking oder non blocking i/o?
 blocking io = programm wartet auf io input, nichts anderes passiert im programm währenddessen.
 
 nonblocking = programm fährt weiter, während input gegeben werden kann
@@ -66,9 +66,9 @@ nonblocking = programm fährt weiter, während input gegeben werden kann
 - Bus Interface
 
 ### Was sind die aufgaben der Memory?
-Memory Zellen werden über Systembus-Adressen angesprochen
-Entgegennehmen von Daten zur Speicherung
-Liefern von gespeicherten Daten 
+- Memory Zellen werden über Systembus-Adressen angesprochen
+- Entgegennehmen von Daten zur Speicherung
+- Liefern von gespeicherten Daten 
 
 ### Was sind die Aufgaben vom i/o?
 - Anbindung des zentralen Computersystems and die Aussenwelt
@@ -89,7 +89,9 @@ Liefern von gespeicherten Daten
 
 ### Was ist der Unterscheid von einem Prozess und einem Task?
 Task: Aufgabe, die von der CPU bearbeiutet wird
+
 Ein Prozess ist ein Task und ein Programm in Ausführung
+
 Thread: Separater Kontrollfluss/Stack in einem Prozess
 
 ### Auf welche Weisen kann man quasi multitasken?
