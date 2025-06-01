@@ -11,12 +11,12 @@ d. Am Schluss jeder Iteration.
 e. Wenn ein Code Smell entdeckt wird.
 
 
-### Pro und Kontra von 3 Vorgehensmodellen
+### Was sind die Pro und Kontra von den 3 Vorgehensmodellen zum Umsetzen eines Projektes?
 - Code and Fix: schnell und simpel aber schlecht planbar und wartbar
 - Wasserfallmodell: gut planbar aber schlechtes Risikomanagement
 - Iterativ-inkrementellflexibel, gutes Risikomanagement aber Kunde muss involviert sein und weniger planbar
 
-### Schritte im Angewendetem iterativ-inkrementeller Softwareentwicklungsprozess
+### Was sind die Schritt des Angewendeten iterativ-inkrementellen Softwareentwicklungsprozesses?
 0. Erstes Planen
 1. Planen
 2. Anforderungsanalyse
