@@ -34,7 +34,6 @@ button::-moz-focus-inner {
 
 table {
     border-collapse: collapse;
-    font-family: Tahoma, Geneva, sans-serif;
 }
 table th {
     font-weight: bold;
@@ -66,7 +65,6 @@ img {
 
 * {
     box-sizing: border-box;
-    font-family: monospace;
 }
 
 pre {
@@ -88,8 +86,9 @@ main {
     width: 40rem;
     max-width: calc(100% - 2rem);
     margin: 2rem auto;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.5;
+    font-family: Geneva, Courier, monospace;
 }
 
 @media (max-width: 600px) {
