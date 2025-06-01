@@ -123,12 +123,37 @@ $S'''_0(x_1) = S'''_1(x_1)$
 
 $S'''_1(x_2) = S'''_2(x_2)$
 
+### Was ist eine Ausgleichsfunktion?
+Eine Ausgleichsfunktion ist im Sinne der kleinsten Fehlerquadrate optimal, das Fehlerfunktional $||y - f(x)||_2^2$ ist minimal.
+
 ### Wie löst man ein lineares Ausgleichssystem?
-Gegeben sind n Wertpaare und m Basisfunktionen. Zu lösen ist $A^T A vec lambda = A^T vec y$, wobei $A = (f_1(x_1),...,f_m(x_1);...,...,...;f_1(x_n),...,f_m(x_n))$
+Gegeben sind n Wertpaare und m Basisfunktionen. Zu lösen ist $A^T A vec lambda = A^T vec y$, mit $A = (f_0(x_0),...,f_m(x_0);...,...,...;f_0(x_n),...,f_m(x_n))$ und $f(x) = lambda_0 * f_0(x) + ... + lambda_m + f_m(x)$
 
-### Wie löst man das lineare Ausgleichssystem mit QR-Zerlegung?
+### WIe berechnet man den Fehler einer linearen Ausgleichsfunkion?
+$||y - f(x)||_2^2$ bzw $||y - A vec lambda||_2^2$
 
-### Wie löst man das lineare Ausgleichssystem mit dem Gauss-Newton Verfahren?
+### Eine Funktion soll mit dem Ansatz $f(x) = ax + b$ linear ausgeglichen werden. Wie würde das zu lösende Gleichungssystem aussehen?
+$f_0 = x$, $f_1 = 1 -> f(x) = a * f_0 + b * f_1$
+
+$A = (f_0(x_0), f_1(x_0);f_0(x_1), f_1(x_1);...,...)$
+
+$A^T A = (x_0, x_1,...; 1, 1, ...)(x_0, 1; x_1, 1; ...,...) = (Sigma x_i^2, Sigma x_i; Sigma x_i, Sigma 1)  = A^T vec y$
+
+### Wie löst man ein lineares Ausgleichssystem mit QR-Zerlegung?
+lineares Ausgleichssystem: $A^T A vec lambda = A^T vec y$
+
+-> QR: $R vec lambda = Q^T vec y$
+
+$A = QR$ und $R$ = obere Dreiecksmatrix (Q, R = np.linalg.qr(A))
+
+### Wie löst man ein allgemeines Ausgleichssystem mit dem Gauss-Newton Verfahren?
+$g(lambda) = (y_0 - f(x_0);...;y_n - f(x_n))$
+
+$Dg(lambda^((0))) = ((del g_0) / (del lambda_0),...,(del g_0) / (del lambda_n);...,...,...;(del g_m) / (del lambda_0),...,(del g_m) / (del lambda_n))$
+
+$Dg(lambda^((n)))^T Dg(lambda^((n))) vec delta = (-Dg(lambda^((n))))^T g(lambda^((n)))$
+
+$lambda^((n+1)) = lambda^((n)) + vec delta$
 
 ### Wie lautet die Trapezregel?
 $T = (b - a) * (f(a) + f(b)) / 2$

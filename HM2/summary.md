@@ -123,3 +123,70 @@ $z = (3 (y_2 - y_1) / h_1 - 3 (y_1 - y_0) / h_0; 3 (y_3 - y_2) / h_2 - 3 (y_2 - 
 $b_i = (y_(i+1) - y_i) / h_i - h_i / 3 (c_(i+1) + 2 c_i)$
 
 $d_i = 1/(3 h_i) (c_(i+1) - c_i)$
+
+
+### Lineares Ausgleichssystem
+
+$A^T A vec lambda = A^T vec y$
+
+$f(x) = lambda_0 * f_0(x) + ... + lambda_m + f_m(x)$
+
+$A = (f_0(x_0),...,f_m(x_0);...,...,...;f_0(x_n),...,f_m(x_n))$
+
+Fehlerfunktional:
+
+$||y - f(x)||_2^2$ bzw $||y - A vec lambda||_2^2$
+
+### Allgemeines Ausgleichsproblem
+
+Von Hand:
+
+$g(lambda) = (y_0 - f(x_0);...;y_n - f(x_n))$
+
+$E(f) = g(lambda)^2$
+
+$E(f) -> "min" => (del E(f)) / (del lambda_i) = 0$
+
+Mit Jakobi-Matrix / Newton Verfahren:
+
+$g(lambda) = (y_0 - f(x_0);...;y_n - f(x_n))$
+
+$Dg(lambda^((0))) = ((del g_0) / (del lambda_0),...,(del g_0) / (del lambda_n);...,...,...;(del g_m) / (del lambda_0),...,(del g_m) / (del lambda_n))$
+
+$Dg(lambda^((n)))^T Dg(lambda^((n))) vec delta = (-Dg(lambda^((n))))^T g(lambda^((n)))$
+
+$lambda^((n+1)) = lambda^((n)) + vec delta$
+
+QR: $R delta = -Q^T g(lambda^((0)))$
+
+### Numerisches Integrieren Quadraturformeln
+
+Rechteck:
+
+$Rf = (b - a) * f((b+a)/2)$
+
+$Rf(h) = h * Sigma_(i=0)^(n-1) f(x_i + h/2)$
+
+Trapez:
+
+$T(f) = (b - a) * (f(a) + f(b)) / 2$
+
+$Tf(h) = h * ((f(a) + f(b))/2 * Sigma_(i=1)^(n-1) f(x_i))$
+
+Simpson:
+
+$Sf = (b - a) / 6 (f(a) + 4f((a+b)/2)+f(b))$
+
+$Sf(h) = h/3 (1/2 f(a) + Sigma_(i=1)^(n-1) f(x_i) + 2 Sigma_(i=1)^n f((x_(i-1) + x_i)/2) + 1/2 f(b))$
+
+Summiert: Der Bereich wird in n gleich grosse Abschnitte der Länge $h = (b - a) / n$ unterteilt. $x_i = a + i * h$
+
+### Fehlerabschätzung Quadraturformeln
+
+$|int_a^b f(x)dx - Rf(h)| <= h^2/24 (b - a) * max |f''(x)|$
+
+$|int_a^b f(x)dx - Tf(h)| <= h^2/12 (b - a) * max |f''(x)|$
+
+$|int_a^b f(x)dx - Sf(h)| <= h^4/2880 (b - a) * max |f^((4))(x)|$
+
+Bei R&T ist dies exakt für Polynom vom Grad 1, S für Polynom vom Grad 3. /24 macht R doppelt so gut wie /12 T
