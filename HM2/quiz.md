@@ -240,4 +240,18 @@ $k_2 = f(x_k + h * 1/2, y_k + h * (1/2 * k_1 + 0 * k_2)$
 
 $y_(k+1) = y_k + h * (0 * k_1 + 1 * k_2)$
 
+### Wie führt man eine DGL n-ter Ordnung auf eine DGL 1. Ordnung zurück?
+
+Man löst nach der höchsten Ableitung auf, z.B:
+
+$z_4 = x''' = 2 x'' + 3 x'$
+
+Die anderen Ableitungen werden zu Hilfsfunktionen. $z_1 = x$, $z_2 = x'$ etc. Die Ableitungen dieser Funktionen werden eingesetzt.
+
+$x''' = 2 z_2' + 3 z_1'$
+
+Schlussendlich kann man ein Gleichungssystem aufstellen für die Ableitungen aller Hilfsfunktionen.
+
+$(z_1';z_2';z_3') = (z_2;z_3;2 z_2' + 3 z_1')$
+
 ### Was ist stabile Differenzialgleichung?
