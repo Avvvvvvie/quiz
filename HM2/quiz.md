@@ -246,12 +246,18 @@ Man löst nach der höchsten Ableitung auf, z.B:
 
 $z_4 = x''' = 2 x'' + 3 x'$
 
-Die anderen Ableitungen werden zu Hilfsfunktionen. $z_1 = x$, $z_2 = x'$ etc. Die Ableitungen dieser Funktionen werden eingesetzt.
+Die anderen Ableitungen werden zu Hilfsfunktionen. $z_1 = x$, $z_2 = x'$ etc. und diese einsetzen.
 
-$x''' = 2 z_2' + 3 z_1'$
+$x''' = 2 z_3 + 3 z_2$
 
 Schlussendlich kann man ein Gleichungssystem aufstellen für die Ableitungen aller Hilfsfunktionen.
 
-$(z_1';z_2';z_3') = (z_2;z_3;2 z_2' + 3 z_1')$
+$(z_1';z_2';z_3') = (z_2;z_3;2 z_3 + 3 z_2)$
+
+Wenn es linear ist, kann man es als lineares Gleichungssystem lösen.
+
+### Wie löst man eine DGL mit mehreren Gleichungen?
+
+Bei den Verfahren, die wir durchgenommen haben, benutzt man für y, y0 und die ks einfach einen Vektor. Jede Zeile des Vektors ist eine Ableitung.
 
 ### Was ist stabile Differenzialgleichung?
