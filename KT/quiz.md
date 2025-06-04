@@ -455,7 +455,7 @@ Ohne die Daten sind es 18 Byte
 ### Welche Kategorisierungen gibt es für verscheidene Teile des Ethernet Frames?
 Frame Packet: Preamble und SFD + Ethernet Frame
 
-Ethernet Frame Size: Alles ausser Frame Packet und Interframe Gap
+Ethernet Frame Size: Alles ausser Preamble,  SFD und Interframe Gap
 
 MAC Overhead: Ethernet Frame Size ohne Daten
 
