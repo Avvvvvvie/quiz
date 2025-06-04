@@ -12,9 +12,9 @@ Es bedeutet, dass eine Funktion mehrere Variablen hat.
 Eine Skalarwertige Funktion gibt einen Skalar zurück und eine Vektorwertge Funktion gibt einen Vektor zurück.
 
 ### Wie sieht die explizite vs. die implizite Darstellung einer Funktion aus?
-Implizit: y = x...
+Explizit: y = x...
 
-Explizit: ... = 0
+Implizit: ... = 0
 
 ### Was macht man bei der Partiellen Ableitung?
 Man leitet nach der einen Variable ab, um die Steigung in diese Richtung zu erhalten / in die Richtung der Achse der Variable.

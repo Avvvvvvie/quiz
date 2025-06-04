@@ -527,7 +527,7 @@ Der Repeater kann schon mit dem Weitersenden beginnen, bevor das gesamte Frame e
 	- Freigeben für Nutzdaten von Root-Ports (diese führen zum Root) und Designated-Ports (diese führen vom Root weg)
 	- Alle anderen Ports bleiben blockiert (Discarding)
 
-### Welche Informationen enthält eien Bridge Protocol Data Unit?
+### Welche Informationen enthält eine Bridge Protocol Data Unit?
 - Root-ID (aus lokaler Sicht): 8 Byte
 - Root-Cost (aus lokaler Sicht): 2 Byte
 - Bridge-ID ("Ich"): 8 Byte
@@ -943,7 +943,7 @@ Damin kann man das minimal benötigte TCP Fenster berechen:
 BPD / 8
 
 ### Wie schützt TCP den Empfänger von Überlastung?
-Mit dem Sliding Window Algorithmus und Advertized Window: Der EMpfänger sendet, wie viel Platz er hat und es darf nur so viel gesendet werden. Wenn das WIndow voll ist und der Empfänger z.B. 1000 Bytes daraus liest, dann schickt er eine Nachricht, dass nun wieder 1000 Bytes frei sind.
+Mit dem Sliding Window Algorithmus und Advertized Window: Der Empfänger sendet, wie viel Platz er hat und es darf nur so viel gesendet werden. Wenn das Window voll ist und der Empfänger z.B. 1000 Bytes daraus liest, dann schickt er eine Nachricht, dass nun wieder 1000 Bytes frei sind.
 
 ### Wie wird das Netz von Überlastung geschützt bei TCP?
 - **Slow Start**: Es werden nicht sofort viele Pakete gechcikt. Die Senderate wird mit der Zeit exponentiell erhöht bis zu einer Schwelle, dann wird nur noch linear erhöht. Wenn ein Problem auftritt, wird die Senderate wieder auf 0 zurückgesetzt und die Schwelle gesenkt. Nun wird wieder exponentiell bis zu der neuen Schwelle erhöht etc.
