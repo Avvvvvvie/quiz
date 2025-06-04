@@ -203,3 +203,78 @@ $n = 3: (b-1)/2 [5/9 * f(-sqrt(0.6)*(b-a)/2+(b+a)/2) + 9/8 * f((b+a)/2)]$ $+ (b-
 $T_(n,0) = (b - a) / 2^n * ((f(a) + f(b)) / 2 + Sigma_(i=1)^(n-1) f(a + i * (b - a) / 2^n))$ 
 
 $T_(n,m) = (4^k * T_(n+1,m-1) - T_(n, m-1)) / (4^m - 1)$
+
+### DGL Separierung der Variablen
+
+$dy / dx = x^2  y$
+
+$dx * x^2 = dy / y$
+
+$int x^2 dx = int 1 / y dy$
+
+### Klassisches Euler-Verfahren
+
+$dy / dx = f(x, y(x))$ mit $y(x_0) = y_0$
+
+
+$x_(i+1) = x_i + h$
+
+$y_(i+1) = y_i + h * f(x_i, y_i)$
+
+### Mittelpunktverfahren
+
+$k_1 = f(x_k, y_k)$
+
+$k_2 = f(x_k + h/2, y_k + h/2 k_1)$
+
+$x_(k+1) = x_k + h$
+
+$y_(k+1) = y_k + h * k_2$
+
+### Modifiziertes Euler-Verfahren
+
+$k_1 = f(x_k, y_k)$
+
+$k_2 = f(x_k + h, y_k + h * k_1)$
+
+$x_(k+1) = x_i + h$
+
+$y_(k+1) = y_i + h/2 (k_1 + k_2)$
+
+### Fehlerordnung
+
+kleines h: gösserer Rundungsfehler, kleinerer Diskretisierungsfehler
+
+Lokaler Fehler der Ordnung p = $|y(x_(i+1)) - y_(i+1)| <= C * h^(p+1)$
+
+Globaler Fehler der Ordnung p = $|y(x_(x_n)) - y_n| <= C * h^p$
+
+Euler-Verfahren: Lokal = $h^2 / 2 y''(z)$ Global = $h/2 max |y''(x)| * tilde C$ -> P = 1
+
+Mittelpunkt und Modifiziert: P = 2
+
+### Klassisches vierstufiges Runge-Kutta-Verfahren
+
+$k_1 = f(x_k, y_k)$
+
+$k_2 = f(x_k + h/2, y_k + h/2 k_1)$
+
+$k_3 = f(x_k + h/2, y_k + h/2 k_2)$
+
+$k_4 = f(x_k + h, y_k + h k_3)$
+
+$x_(k+1) = x_i + h$
+
+$y_(k+1) = y_k + h/6 (k_1 + 2 k_2 + 2 k_3 + k_4)$
+
+### Allgemeines s-stufiges Runge-Kutta-Verfahren
+
+$k_1 = f(x_k, y_k)$
+
+$k_2 = f(x_k + c_2 * h, y_k + h * (a_(21) * k_1))$
+
+$k_3 = f(x_k + c_3 * h, y_k + h * (a_(31) * k_1 + a_(32) * k_2))$
+
+$...$
+
+$y_(k+1) = y_k + h * (b_1 k_1 + b_2 k_2 ...)$

@@ -198,4 +198,46 @@ Anschliessend kann man immer zwei Elemente vereinen mit der Formel $T_(n,m+1) = 
 
 Formel für T01 = Simpsonregel
 
+### Wie geht man vor beim Separieren der Variablen einer DGL?
+$dy / dx = x^2  y$
+
+$dx * x^2 = dy / y$
+
+$int x^2 dx = int 1 / y dy$
+
+### Was bedeutet es, eine Konzistenzordnung und Konvergenzordung von p zu haben?
+Lokaler Fehler / Konzistenzordnung p = $|y(x_(i+1)) - y_(i+1)| <= C * h^(p+1)$ 
+
+Globaler Fehler / Konvergenzordung p = $|y(x_(x_n)) - y_n| <= C * h^p$
+
+### Welche Fehlerordungen haben das Euler Verfahren, das modifiierte Euler-Verfahren und das Mittelpunktverfahren?
+
+Euler-Verfahren: P = 1
+
+Mittelpunkt und Modifiziert: P = 2
+
+### Was spricht beim Mittelpunktverfahren für eine grosse oder kleine Schrittweite h?
+
+kleines h: kleinerer Diskretisierungsfehler
+
+grosses h: kleinerer Rundungsfehler
+
+### ![|250x0](assets/Pasted%20image%2020250603113620.png)
+
+Dies ist die kurznotation für ein s-stufiges Runge-Kutta-Verfahren.
+
+Linke Seite: $c1 - c_s$ = Skalar von h von k1 bis ks
+
+Unten: $b_1 - b_s$ = Kombination von allen k für die Berechnung der Steigung
+
+Mitte: $a_(2,1) - a_(s, s-1)$ = Kombination von vorherigen k in nächstem k
+
+In diesem Fall ist es das Mittelpunktverfahren:
+
+$k_1 = f(x_k + h * 0, y_k + h * (0 * k_1))$
+
+$k_2 = f(x_k + h * 1/2, y_k + h * (1/2 * k_1 + 0 * k_2)$
+
+$y_(k+1) = y_k + h * (0 * k_1 + 1 * k_2)$
+
 ### Was ist stabile Differenzialgleichung?

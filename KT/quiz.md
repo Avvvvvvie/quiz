@@ -216,9 +216,9 @@ Eine Welle im Material A ändert beim Übergang in ein weniger Dichtes Material 
 $beta = sin^-1(sin(alpha) n_A / n_B)$
 
 ### Was ist die Moden-Dispersion?
-Moden = Die verscheidenen Ausbreitungswege der Lichtstrahlen im Glas nimmt.
+Moden = Die verscheidenen Ausbreitungswege der Lichtstrahlen im Glas.
 
-Moden-Dispersion = Es gibt viele verscheidene Wellen (weil es viel Platz im Glas gibt)
+Moden-Dispersion = Es gibt viele verscheidene Wellen (weil es viel Platz im Glas hat)
 
 ### Wie funktioniert die asynchrone Übertragung mit Framing?
 - Stehen keine Daten zur Übertragung an, so wird nichts gesendet (Ruhezustand)
