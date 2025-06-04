@@ -244,7 +244,7 @@ $y_(k+1) = y_k + h * (0 * k_1 + 1 * k_2)$
 
 Man löst nach der höchsten Ableitung auf, z.B:
 
-$z_4 = x''' = 2 x'' + 3 x'$
+$x''' = 2 x'' + 3 x'$
 
 Die anderen Ableitungen werden zu Hilfsfunktionen. $z_1 = x$, $z_2 = x'$ etc. und diese einsetzen.
 
