@@ -74,7 +74,7 @@ nonblocking = programm fährt weiter, während input gegeben werden kann
 - Datenverarbeitung (Data Path -Register, ALU)
 - Bus Interface
 
-### Was sind die aufgaben der Memory?
+### Was sind die Aufgaben der Memory?
 - Memory Zellen werden über Systembus-Adressen angesprochen
 - Entgegennehmen von Daten zur Speicherung
 - Liefern von gespeicherten Daten 
