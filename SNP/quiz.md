@@ -12,16 +12,25 @@ function provided by the kernel
 
 prozesse...
 
-### Was bedeutet inode?
+Beispiel soft link bbb referenziert aaa: `ln -s aaa bbb`
+
+Der soft link hat eine neue ino, und man hat alle berechtigungen darauf. Wenn aaa gelöscht dann referenziert bbb auf nichts, weil über namen referenziert wird. dann kann man bbb nicht mehr öffnen. wenn aaa wieder erzeugt wird dann geht es wieder.
+
+### Was ist inode?
 
 ### Was macht reguläre files aus?
 
 ### Was bedeutet everything is a file für unix?
 
 ### Wie funktionieren links (hard und soft)
-Beispiel soft link bbb referenziert aaa: `ln -s aaa bbb`
+Hard link:
+- Verweist direkt auf denselben inode.
+- Beide Dateinamen sind gleichwertig (es gibt keine "Originaldatei" mehr)
+- Wenn du eine der Dateien löschst, bleibt die andere bestehen, solange noch mindestens ein Hard Link existiert.
 
-Der soft link hat eine neue ino, und man hat alle berechtigungen darauf. Wenn aaa gelöscht dann referenziert bbb auf nichts, weil über namen referenziert wird. dann kann man bbb nicht mehr öffnen. wenn aaa wieder erzeugt wird dann geht es wieder.
+Soft link:
+- Verweist auf Pfad der Datei
+- Wenn die Zieldatei gelöscht wurde, zeigt der Link ins leere
 
 ### Wie funktionieren Pfade?
 ~ = benutzer heimverzeichis
