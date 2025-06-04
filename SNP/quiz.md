@@ -22,7 +22,7 @@ Der soft link hat eine neue ino, und man hat alle berechtigungen darauf. Wenn aa
 
 ### Was bedeutet everything is a file für unix?
 
-### Wie funktionieren links (hard und soft)
+### Wie funktionieren Links (hard und soft)?
 Hard link:
 - Verweist direkt auf denselben inode.
 - Beide Dateinamen sind gleichwertig (es gibt keine "Originaldatei" mehr)
