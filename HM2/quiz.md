@@ -258,6 +258,6 @@ Wenn es linear ist, kann man es als lineares Gleichungssystem lösen.
 
 ### Wie löst man eine DGL mit mehreren Gleichungen?
 
-Bei den Verfahren, die wir durchgenommen haben, benutzt man für y, y0 und die ks einfach einen Vektor. Jede Zeile des Vektors ist eine Ableitung.
+Bei den im Unterricht behandelten Verfahren benutzt man für y, y0 und alle k einen Vektor. Jede Zeile des Vektors ist eine der Ableitungen (ersten Grades).
 
 ### Was ist stabile Differenzialgleichung?

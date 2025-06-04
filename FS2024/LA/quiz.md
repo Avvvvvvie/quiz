@@ -27,7 +27,7 @@ Weil man z.B ein solches Polynom ovn einem anderes addieren kann, so, dass ein P
 (4) Kommuattivgesetz
 
 Ausserdem:
-![|500](assets/Pasted%20image%2020240418180214.png)
+![|400x0](assets/Pasted%20image%2020240418180214.png)
 
 ### Wann ist eine Teilmenge eines Vektorraums ein Unterraum?
 (1) Für beliebige Elemente a, b in U ist a + b in U.

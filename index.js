@@ -1,20 +1,55 @@
+let url = 'https://avvvvvvie.github.io/quiz/';
+let blob = 'https://github.com/Avvvvvvie/quiz/blob/main/'
+
+function fetchHeader(url, wch) {
+    try {
+        var req=new XMLHttpRequest();
+        req.open("HEAD", url, false);
+        req.send(null);
+        if(req.status== 200){
+            return req.getResponseHeader(wch);
+        }
+        else return false;
+    } catch(er) {
+        return er.message;
+    }
+}
+
 function readFile(path, callback) {
-    fetch(window.location.href + encodeURI(path))
+    fetch(path)
         .then((res) => res.text())
         .then((text) => {
             callback(text);
         });
 }
 
+class Quiz {
+    constructor(name) {
+        this.name = name
+        this.path = absoluteURI(name);
+    }
+}
+
+function absoluteURI(path) {
+    return url + encodeURI(path);
+}
+
+function blobURI(path) {
+    return url + encodeURI(path);
+}
+
 function getQuizzes(callback) {
-    readFile('quizzes.md', (text) => {
-        quizzes = text.split('\n');
+    readFile(absoluteURI('quizzes.md'), (text) => {
+        quizzes = [];
+        for(quiz of text.split('\n')) {
+            quizzes.push(new Quiz(quiz.trim()));
+        }
         callback(quizzes);
     });
 }
 
-function getQuiz(path, callback) {
-    readFile(path, (text) => {
+function getQuiz(quiz, callback) {
+    readFile(quiz.path, (text) => {
         callback(parseQuiz(text));
     });
 }
@@ -73,7 +108,7 @@ class Question {
 function createQuizSelection(quizzes) {
     main.innerHTML = '';
 
-    readFile('README.md', (text) => {
+    readFile(absoluteURI('README.md'), (text) => {
         let title1 = document.createElement('h3');
         title1.innerHTML = "Info";
         main.appendChild(title1);
@@ -92,7 +127,7 @@ function createQuizSelection(quizzes) {
         quizzes.forEach((quiz) => {
             let quizItem = document.createElement('li');
             quizItem.className = 'quiz-item';
-            quizItem.textContent = quiz;
+            quizItem.textContent = quiz.name;
             quizItem.addEventListener('click', () => {
                 loadQuiz(quiz);
             });
