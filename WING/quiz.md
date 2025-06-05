@@ -50,7 +50,7 @@ Die Firma ist im rechtlichen Sinn der Name des Unternehmens, unter dem die Gesch
 2. Ökonomisch
 3. Sozial
 
-![](assets/Pasted%20image%2020250522120228.png)
+![|500x0](assets/Pasted%20image%2020250522120228.png)
 
 ### Wie sieht das St. Galler Management Modell aus?
 Anspruchsgruppen:
