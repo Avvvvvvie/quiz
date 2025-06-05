@@ -289,3 +289,22 @@ $(z_1';z_2';z_3') = (z_2;z_3;2 z_3 + 3 z_2 + 5)$
 
 $A = (0,1,0;0,0,1;0,3,2)$, $b = (0;0;5)$
 
+### Stabilität
+
+Gegeben: $f'$ ist monoton sinkend
+
+Verfahren (hier Euler): $y_(i+1) = y + h * f'(y_i)$
+
+Da monoton sinkend, gilt: $y_i > y_i + h * f'(y_i)$
+
+($**$) Zwischenergebnis: $... < 1$ ($y_i$ wurde auf die gleiche Seite getan)
+
+Ergebnis: $h < ...$
+
+### Stailitätsintervall:
+
+Wenn $y' = -alpha y$ als $y_(i+1) = g(h alpha) * y_i$ geschrieben werden kann, dann ist das Verfahren für alle Alpha stabil, wo $|g(x)| < 1$ gilt. Diese Stabilitätsfunktion berechnet man bei ($**$)
+
+Eulerverfahren: 1 + x
+
+s-stufiges Runge Kutta: Polynom von Grad s

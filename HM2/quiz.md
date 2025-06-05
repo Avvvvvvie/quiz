@@ -260,4 +260,3 @@ Wenn es linear ist, kann man es als lineares Gleichungssystem lösen.
 
 Bei den im Unterricht behandelten Verfahren benutzt man für y, y0 und alle k einen Vektor. Jede Zeile des Vektors ist eine der Ableitungen (ersten Grades).
 
-### Was ist stabile Differenzialgleichung?
