@@ -323,11 +323,21 @@ $360 / "Lagerumschlagshäufigkeit"$
 ### Kapitalwertmethode
 Es wird mit einer Abzinsung i und einer Zeit n gerechnet. Pro Anlage wird damit berechnet: 
 
-$-"Anschaffungskosten" + "Liquidationserlös"$$+ ("Erwartete Erlöse pro Jahr" - "Wartungskosten pro Jahr")$$* Sum_k=1^n 1/(1+i)^k$$= "Kapitalwert$
+$-"Anschaffungskosten" + "Liquidationserlös" * 1/(1+i)^n$$+ ("Erwartete Erlöse pro Jahr" - "Wartungskosten pro Jahr")$$* Sigma_(k=1)^n 1/(1+i)^k$$= "Kapitalwert$
 
-Wenn die Erlöse/Kosten pro Jahr unterscheidlich sind, müssen sie einzeln mit den Zinsen multipliziert werden.
+Wenn die Erlöse/Kosten pro Jahr unterscheidlich sind, müssen sie einzeln mit den Zinsen multipliziert werden. Bei den Anschaffungskosten ist i=1
 
-### Durchschnittsmethode
+### Gewinnvergleichmethode
+Man vergleicht zwischen zwei potentiellen Anlagen:
+
+Jährlicher Nettoerlös - Variable Kosten - Fixkosten = Jährlicher Gewinn
+
+### Rentabilitätsvergleich
+Diese Methode ist sinnvoll, wenn unterschiedliche Kapitaleinsätze für die Investition notwendig sind.
+
+Rentabilität = (Reingewinn + Zinsen) / eingesetztes Kapital * 100
+
+### Payback-Frist: Durchschnittsmethode
 $"Kapitaleinsatz" / "Jährlicher Cashflow"$
 
 ### Kennzahlen Produktion

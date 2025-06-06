@@ -16,6 +16,36 @@ Beispiel soft link bbb referenziert aaa: `ln -s aaa bbb`
 
 Der soft link hat eine neue ino, und man hat alle berechtigungen darauf. Wenn aaa gelöscht dann referenziert bbb auf nichts, weil über namen referenziert wird. dann kann man bbb nicht mehr öffnen. wenn aaa wieder erzeugt wird dann geht es wieder.
 
+### Welchen Wert haben EXIT_SUCCESS und EXIT_FAILURE?
+EXIT_SUCCESS = 0
+
+EXIT_FAILURE =/= 0 (meist 1)
+
+### Was ist die Sichtbarkeit einer globalen statischen Variable?
+DIe Variable ist nur innerhalb der Datei bis zum Programmende sichtbar. Wenn die Variable im Header deklariert wurde (schlecht), dann ist sie bei jedem Import in eine Datei eine andere Variable.
+
+### Was ist die Sichtbarkeit einer globalen Variable?
+Die Variable ist sichtbar in allen Dateien bis zum Programmende.
+
+### Was ist die Sichtbarkeit einer lokalen statischen Variable?
+Die Variable ist bis zum Programmende in der Funktion sichtbar.
+
+### Wie kann dieser Code mit "void" verbessert werden? `int helloWorld() { printf("Hello World);}`
+
+```
+int helloWorld(void) {
+	(void) printf("Hello World);
+}
+```
+
+### Wie iniziiert man einen String "ZHAW" und welche Grösse hat der String?
+
+```
+char myString[] = "ZHAW"
+```
+
+Der String hat die Grösse von 5 chars, da das letzte Zeichen \0 das Ende des Strings markieren muss.
+
 ### Was ist inode?
 
 ### Was macht reguläre files aus?
