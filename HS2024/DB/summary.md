@@ -3,59 +3,49 @@
 $sigma_(A = 'abc')(S)"$
 ###### Projektion
 $pi_"Attribut1, Attribut2, ..."(R)$
+
 Bei Bags werden keine Duplikate entfernt
 ###### Umbenennung
 $rho_(S(A',B'))(R(A, B))$
-###### Kreuzprodukt
-$R xx S$
-###### Natürlicher Verbund (Join)
-$R |><| S$
+###### Kreuzprodukt $R xx S$
+###### Natürlicher Verbund (Join) $R |><| S$
 Wenn keine übereinstimmende Spalten Crossjoin
-###### Theta-Join
-$R |><|_(A < B) S$
+###### Theta-Join $R |><|_(A < B) S$
 Nur bei diesem Join Tabellennamen behalten (z.B. R.A und S.A)
 Logik operatoren: oder = $vv$, und = $^^$
-###### Vereinigung
-$R uu S$
+###### Vereinigung $R uu S$
 Bei Bags nimmt man die grössere Anzahl
-###### Bag concatenation
-$R ⊔ S$
+###### Bag concatenation $R ⊔ S$
 Man nimmt die Summe
-###### Durchschnitt
-$R nn S$
+###### Durchschnitt $R nn S$
 Bei Bags nimmt man die kleinere Anzahl
-###### Differenz
-$R " "\\ " "S$
+###### Differenz $R " "\\ " "S$
 Bei Bags nimmt man die Differenz
-###### Duplikat-Elimination
-$delta(R)$
+###### Duplikat-Elimination $delta(R)$
 ###### Outer-Join
-Full $⟗(R, S)$
-Left $⟕(R, S)$ (behält alle linken Einträge)
-Right $⟖(R, S)$
-###### Erweiterte Projektion
-$pi_(3 * A -> X, B)(R)$
-
+- Full $⟗(R, S)$
+- Left $⟕(R, S)$ (behält alle linken Einträge)
+- Right $⟖(R, S)$
+###### Erweiterte Projektion $pi_(3 * A -> X, B)(R)$
 
 ### Entity Relationship-Diagramme
 
 ###### Keys
-Unterstrichen -> PK
-Umkreist -> K
-Mehrere Umkreist -> Zusammengesetzter K
-Mehrere Umkreist &/ Unterstrichen -> Zusammengesetzter PK
-
+- Unterstrichen -> PK
+- Umkreist -> K
+- Mehrere Umkreist -> Zusammengesetzter K
+- Mehrere Umkreist &/ Unterstrichen -> Zusammengesetzter PK
 ###### Beziehungen
-A mit PK X
-B mit PK Y
+- A mit PK X
+- B mit PK Y
 
-1 zu 1 -> (X), (Y)
-1 zu m -> (Y)
-m zu m -> (X, Y)
+- 1 zu 1 -> (X), (Y)
+- 1 zu m -> (Y)
+- m zu m -> (X, Y)
 
-ID: Hat selbst noch anderen PK. PK + Referenz = weiterer K (komplexe attribute)
-ISA: Andere Tabelle aber gleicher PK (spezialfall)
-zusammengesetzte Beziehung: weitere beziehung darf nur existieren, wenn diese existiert. zb hatgeliefert->liefert
+- ID: Hat selbst noch anderen PK. PK + Referenz = weiterer K (komplexe attribute)
+- ISA: Andere Tabelle aber gleicher PK (spezialfall)
+- zusammengesetzte Beziehung: weitere beziehung darf nur existieren, wenn diese existiert. zb hatgeliefert->liefert
 
 ### SQL
 
@@ -172,8 +162,7 @@ Aggregationen
 - AVG
 - SUM und AVG ignorieren NULL, COUNT nicht
 
-Group By
-Es gibt eine Gruppe mit allen NULL-Werten
+Group By: Es gibt eine Gruppe mit allen NULL-Werten
 ```sql
 SELECT ... FROM A WHERE ... GROUP BY x HAVING SUM(y) > 10
 ```

@@ -4,27 +4,31 @@ T -> G -> M -> k -> 1 -> m -> $mu$ -> n -> p -> f
 
 ### Kraft, Ladung, Energie
 
-###### Kraft
-
-$F = m * a$
+###### Kraft $F = m * a$
 
 Ladung Elektron : $1.602189 * 10^(-19)$
+
 Masse Elektron : $9.11 * 10^(-31)$
+
 Masse Proton : $1.67262 * 10^(-27)$
 ###### Gravitationskräfte zwischen zwei Massen / Kraft auf Ladung q1, verursacht durch Ladung q2
 
 $F_G = gamma (m_1 * m_2) / r^2$
+
 $gamma = 6.674 * 10^-11$ = Gravitationskonstante
 
 ###### Coulombkraft zwischen zwei Ladungen
 
 $F_12 = 1 / (4 pi epsilon_0) * (q_1 * q_2) / (|r_12|^2) * n_12$
+
 oder
-$F_12 = 1 / (4pi * epsilon_0) * (q_1 * q_2) / (r_12^2)$
-(r = Abstand wenn man nur dern Betrag will)
+
+$F_12 = 1 / (4pi * epsilon_0) * (q_1 * q_2) / (r_12^2)$ (r = Abstand wenn man nur den Betrag will)
 
 $r_12 = r_1 - r_2$ = Distanzvektor von Ladung 12 zu Ladung q1
+
 $n_12 = r_12 / |r_12|$ = Einheitsvektor von Ladung q2 zu Ladung q1
+
 $epsilon_o = 8.859 ** 10^-12$ = Elektrische Feldkonstante
 
 Gravitation kann auf der atomaren Ebene vernachlässigt werden.
@@ -32,11 +36,9 @@ Gravitation kann auf der atomaren Ebene vernachlässigt werden.
 ###### Potentielle Energie einer Masse im Schwerefeld der Erde
 $E_(pot) = mgh$
 
-###### Kinetische Energie
-$E_"kin" = (mv^2) / 2$
+###### Kinetische Energie $E_"kin" = (mv^2) / 2$
 
-###### Federenergie
-$E_"spring" = k * (x - L)^2 / 2$
+###### Federenergie $E_"spring" = k * (x - L)^2 / 2$
 
 ###### Potentielle Energie einer Ladung bei einer Spannung
 $E_"pot.el" = Uq$
@@ -56,44 +58,49 @@ $E_"mech" = F * s$
 
 ### Veränderungsraten, Strom, Spannung, Leistung, Widerstand, Batterie
 
-Strom [Ampère] = Ladung [Coulomb] / Zeit [s]
+###### Strom [Ampère] = Ladung [Coulomb] / Zeit [s]
 $I = Q / t$
 
-Leistung [Watt] = Energie [Joule] / Zeit [s]
+######Leistung [Watt] = Energie [Joule] / Zeit [s]
 $P = E / t$
 
 $1"J" = 1 "Ws"$
-$1 "kWh" = 3.6 * 10^6 "Ws" = 3.6 * 10^6 "J"$
 
-Wirkungsgrad
-$eta = P_"output" / P_"input"$
+$1 "kWh" = 3.6 * 10^6 "Ws" = 3.6 * 10^6 "J"$
+###### Wirkungsgrad $eta = P_"output" / P_"input"$
 t/wirkungsgrad = neue dauer
 
 $I = U_0 / R_"tot"$
+
 $P_"tot" = I * U_0$
+
 $P_"last" = I^2 * R_"last"$
+
 -> Plast/Ptot
+###### Wirkungsgrade
+- Elektromotor : 80 - 99%
+- Transformator : 80 - 99%
+- Elektroheizung : 100%
+- Verbrennungsmotor : 30 - 40%
+- Solarzelle : 15 - 24%
+- Windturbine : 45 - 55%
+- Wasserkraftwerk : 80 - 90%
+- Kohlekraftwerk : 40 - 45%
+- Mensch (mech. Arbeit) : ≈ 25%
 
-Elektromotor : 80 - 99%
-Transformator : 80 - 99%
-Elektroheizung : 100%
-Verbrennungsmotor : 30 - 40%
-Solarzelle : 15 - 24%
-Windturbine : 45 - 55%
-Wasserkraftwerk : 80 - 90%
-Kohlekraftwerk : 40 - 45%
-Mensch (mech. Arbeit) : ≈ 25%
-
-Elektrische Leistung
+###### Elektrische Leistung
 $P_"el" = U*I$
 
-Ohm’sches Gesetz
+###### Ohm’sches Gesetz
 $U = R*I$
+
 $P = I^2 * R$
+
 $P = U^2 / R$
+
 $P = W / t$
 
-Elektrischer Widerstand eines Drahtes
+###### Elektrischer Widerstand eines Drahtes
 $R = (rho * l) / A$
 
 | Material       | $rho$                     |
@@ -106,29 +113,27 @@ $R = (rho * l) / A$
 | Meerwasser     | $5 * 10^5$                |
 
 **Spannungsmessung:** hoher Innenwiderstand
+
 **Strommessung:** niedriger Innenwiderstand
 ### Schaltungen
-Knotenregel
-$I_"in" = I_"out"$
+Knotenregel = $I_"in" = I_"out"$
 
-Maschenregel
-$U_0 = U_1 + U_2 ...$
+Maschenregel = $U_0 = U_1 + U_2 ...$
 
-Serienschaltung
-$R = R_1 + R_2$
+Serienschaltung = $R = R_1 + R_2$
 
-Paralellschaltung
-$R = 1 / (1 / R_1 + 1 / R_2)$
+Paralellschaltung = $R = 1 / (1 / R_1 + 1 / R_2)$
 
 ### Kondensator / RC-Schaltkreis
 
-Kapazität C [Farad]
+###### Kapazität C [Farad]
 $C = Q / U_C$
+
 $C = epsi_0 * epsi_r * A / d$
 
 ![|100x0](assets/Pasted%20image%2020250123104348.png)
 ![|150x0](assets/Pasted%20image%2020250123104421.png)
-Strom durch den Kondensator
+###### Strom durch den Kondensator
 $I = Q / (Delta t)$
 
 $I(t) = (U_0 - U_C(t)) / R$
@@ -148,6 +153,7 @@ Tiefpassfilter -> begrenzt hohe frequenz. x < fg -> Uout unter 70.7% U0 weil je 
 Hochpassfilter -> begrenzt tiefe Frequenz
 
 Bei Grenzfrequenz $f_g$ : Ausgangsspannung beträgt 70.7% der Eingangsspannung.
+
 $f_g = 1 / (2pi * R * C) = 1 / (2pi * tau)$
 
 
@@ -168,32 +174,34 @@ $I/t = Q / t^2$
 
 $I(oo) = U_0 / R$
 
-**Zeitkonstante**
+###### Zeitkonstante
 $tau = L / R$
+
 I steigt zu 63%
 
 ### LC-Schwingkreis
 ![|300x0](assets/Pasted%20image%2020241027120838.png)
+
 $f = 1 / (2pi sqrt(LC))$
 
 ### Gedämpfter Schwingkreis / LCR-Schwingkreis
 
 $f = 1 / (2pi) sqrt(1 / (LC) - R^2 / (4L^2))$
 
-Schwingt, wenn:
-$R < 2 sqrt(L / C)$
+Schwingt, wenn: $R < 2 sqrt(L / C)$
 
-**Zeitkonstante**
+###### Zeitkonstante
 
 $tau = (2L) / R$
 
 ### Signale
 
-**Blindwiderstand**
+###### Blindwiderstand
 Je höher die Frequenz, desto kleiner der Blindwiderstand und desto grösser der Stromfluss.
+
 $X = 1 / (2pi f C)$
 
-**Sinussignal**
+###### Sinussignal
 
 $U(t) = U_0 * sin(2 pi f t + varphi)$
 
@@ -202,6 +210,7 @@ $sin(x + pi/2) = cos(x)$
 $sin(0) = 0$
 
 1Hz -> T = 1
+
 2Hz -> T = 0.5
 
 ![|400x0](assets/Pasted%20image%2020241027140706.png)
@@ -211,61 +220,61 @@ $sin(0) = 0$
 ### Halbleiter
 Dotiert wird auf Silizium.
 
-**P-Dotierung**
+###### P-Dotierunh
 Ein Elektron zu wenig -> positive Ladung.
 Bor, Aluminium
 
-**N-Dotierung**
+###### N-Dotierung
 Ein Elektron zu viel -> negative Ladung. Phosphor
 
-**PN-Übergang**
+###### PN-Übergang
 Ein positiver Strom kann nur in P->N Richtung fliessen.
 
 ### Transistor
 
 P-Transistor : Strom fliesst, wenn kein Strom beim Gate fliesst.
+
 N-Transistor : Strom fliesst, wenn ein Strom beim Gate fliesst. (Spannung von Gate zu Source muss Grenzwert erreichen)
 
 ![|200x0](assets/Pasted%20image%2020241027141537.png)
 
 Der Strom kann auch nur in eine Richtung fliessen (von Source zu Drain), wie bei einem Halbleiter.
 
-**Open Drain**
+###### Open Drain
 Ein NOT-Gate mit einem Open Drain und Pull-Up ist nicht effizient, weil konstant Strom fliesst.
 
-**Push-Pull**
+###### Push-Pull
 Bei einem NOT-Gate mit Push-Pull fliesst nur Strom, wenn beim Output Strom fliessen soll.
 
 ### Logik-Gatter
-
-NAND : <2
-NOR  : =0
-XOR  : =1
-XNOR : =0 || =2
+- NAND : <2
+- NOR  : =0
+- XOR  : =1
+- XNOR : =0 || =2
 
 ![](assets/Pasted%20image%2020241229143711.png)
 ###### NOR
-![|200x0](assets/assets/Pasted%20image%2020250123094142.png)
+![|200x0](assets/Pasted%20image%2020250123094142.png)
 ###### NAND
 ![|200](assets/Pasted%20image%2020250123094211.png)
 ###### OR
 ![|200x0](assets/Pasted%20image%2020250123094257.png)
 
-
-
-**1 Bit Halbaddierer**
+###### 1 Bit Halbaddierer
 ![|300x0](assets/Pasted%20image%2020241028164820.png)
 
-**1 Bit Volladdierer**
+###### 1 Bit Volladdierer
 ![|300x0](assets/Pasted%20image%2020241028164854.png)
 
 1 Bit Volladdierer mit Carrier vom letzten Volladdierer
+
 4 Bit Volladdierer verbindet 4 von diesen.
+
 ![|400x0](assets/Pasted%20image%2020241028165004.png)
 
 ### Flipflops
 
-**SR-Flipflop**
+###### SR-Flipflop
 
 | S   | R   | Q   | !Q  |
 | --- | --- | --- | --- |
@@ -274,7 +283,7 @@ XNOR : =0 || =2
 | 0   | 1   | 0   | 1   |
 | 1   | 1   | 0   | 0   |
 
-**JK-Flipflop**
+###### JK-Flipflop
 
 | J   | K   | Flanke | Q Next |
 | --- | --- | ------ | ------ |
@@ -283,7 +292,7 @@ XNOR : =0 || =2
 | 0   | 1   | h      | 0      |
 | 0   | 0   | 1,0,t  | Q      |
 
-**D-Flipflop**
+###### D-Flipflop
 
 | D   | Flanke | Q Next |
 | --- | ------ | ------ |
@@ -291,30 +300,33 @@ XNOR : =0 || =2
 | 1   | h      | 1      |
 | X   | 1,0,t  | Q      |
 
-**Asynchronzähler**
+###### Asynchronzähler
 
 ![|400x0](assets/Pasted%20image%2020241028164657.png)
 
 ### Sensoren
 
-**Sensorkette**
+###### Sensorkette
 Sensoren -> Multiplexer -> Verstärker -> Sample&Hold -> A/D-Wandler -> Messrechner
 
 Multiplexen = Auswählen des Messsignals mit dem Multiplexer
+
 Sample & Hold = Abtasten und Halten des Messsignals
 
 N-Bit-AD-Wandler hat 2^N Messstufen
-relative Abweichung = 1 / 2^N 
+
+relative Abweichung = 1 / 2^N
+
 wenn <= 8 Bits dann 1 / (2^N - 1)
 
-**Dehnmessung**
+###### Dehnmessung
 
 $(Delta R) / R = (k * Delta l) / l = k * epsi$
 
-**Photodiode**
+###### Photodiode
 Photonoen erzeugen ein Elektron-Loch-Paar, so dass Elektronen zwischen den zwei Halbleitern durchfliessen können.
 
-**CO2-Messer**
+###### CO2-Messer
 Mehr CO2 absorbiert Strahlung von 4.27μm, welche von einer Glühbirne erzeugt wird. Je weniger Strahlung gemessen wird, desto mehr CO2 ist vorhanden.
 
 ### Elektrische magnetische Felder
@@ -323,6 +335,7 @@ Ein Magnetisches Feld wird erzeugt durch
 - Ströme (bewegte elektrische Ladungen)
 - zeitlich veränderliche elektrische Felder
 - magnetische Momente
+
 und ein Elektrisches Feld durch
 - (ruhende) Ladungen
 - zeitlich veränderliche magnetische Felder
@@ -331,12 +344,15 @@ Die magnetische Kraft wirkt nur auf bewegte elektrische Ladungen. Dies ist die L
 
 ###### Einheiten
 E = elektrisches Feld : Volt / Meter oder Newton / Coulomb = Kraft / Ladung
+
 Richting des E-Feldes : + zu -
+
 B = magnetische Feldstärke : Tesla oder kg / (s C)
-Richting des B-Feldes : von N zu S / - zu +
-(technische stromrichtung: + zu -)
+
+Richting des B-Feldes : von N zu S / - zu + (technische stromrichtung: + zu -)
 
 r = Ort der Ladung q
+
 v = Geschwindigkeit der Ladung q
 
 ###### Elektrisches Feld Plattenkondensator
@@ -345,34 +361,34 @@ $E = U / d " oder " E = Q / (epsilon_0 * A)$
 
 $|E| = 1 / (4 pi epsilon_0) * q_1 / r^2$
 
-Dadurch Coulomb-Kraft
-$vec F = q_2 * vec E$
+Dadurch Coulomb-Kraft $vec F = q_2 * vec E$
 
-**Lorentz-Kraft [Newton]**
+###### Lorentz-Kraft [Newton]
 $vec F_L = q * (vec v xx vec B)$
-Wenn $vec v$ senkrecht auf $vec B$ steht, dann gilt $m = (rqB) / v$
-(Magnetische Kraft auf eine bewegte Ladung)
 
-**Elektromagnetische Kraft auf Ladung q**
+Wenn $vec v$ senkrecht auf $vec B$ steht, dann gilt $m = (rqB) / v$ (Magnetische Kraft auf eine bewegte Ladung)
+
+###### Elektromagnetische Kraft auf Ladung q
 $F_"elmag" = q * (vec E + vec v xx vec B)$
-Wenn kein b F = qE -> a=F/m
-(Elektrisches Feld, Tintenstrahldrucker)
 
-**Energiedichte w (Energie pro Volumen [Joule])**
+Wenn kein b F = qE -> a=F/m (Elektrisches Feld, Tintenstrahldrucker)
+
+###### Energiedichte w (Energie pro Volumen [Joule])
 $w = epsi_0 / 2 * vec E^2 + (epsi_0 c^2) / 2 vec B^2$
 
 $w = F * d = q * E * d = q * U$
+
 $1eV = 1.6 * 10^−19 J$
 
 $w = (m * v^2) / 2 = E_"kin"$
 
-**Gesamtenergie**
+###### Gesamtenergie
 $epsi = w / V$
 
-**Impuls eines Teilchens**
+###### Impuls eines Teilchens
 $p = m v = q B r$
 
-**Gleichförmig drehende Schlaufe im Magnetfeld**
+###### Gleichförmig drehende Schlaufe im Magnetfeld
 $U(t) = U_0 sin(omega t + phi_0)$
 
 ### Elektrodynamik
@@ -385,19 +401,15 @@ $Phi_(vec E) = 1/e_0 q$
 
 ###### Fluss der Feldes E durch eine Fläche A
 
-Fläche
-$Phi = A * E$
+Fläche $Phi = A * E$
 
-Senkrecht zu Zylinderboden
-$Phi = 2 pi r^2 * E$
+Senkrecht zu Zylinderboden $Phi = 2 pi r^2 * E$
 
-Paralell zu Zylinderboden
-$Phi = 2 pi r h * E$
+Paralell zu Zylinderboden $Phi = 2 pi r h * E$
 
-Kugel
-$Phi = 4 pi r^2 * E$
+Kugel $Phi = 4 pi r^2 * E$
 
-Schiefe Ebene mit WInkel theta zwischen normale und Feldvektoren
+Schiefe Ebene mit Winkel theta zwischen normale und Feldvektoren
 $Phi = A * B * cos(theta)$
 
 ###### Spannung über einen Kondensator
@@ -414,18 +426,23 @@ y ist dabei ein beliebiger geschlossener Weg
 $mu_0 * I = int_y vec B d y$
 
 ###### Nicht stationärer Fall
-Ein zeitlich veränderlicher Fluss eines E-Feldes führt zu einem B-Feld. Ein zeitlich veränderlicher Fluss eines B-Feldes führt zu einem E-Feld.
+Ein zeitlich veränderlicher Fluss eines E-Feldes führt zu einem B-Feld.
+
+Ein zeitlich veränderlicher Fluss eines B-Feldes führt zu einem E-Feld.
 
 ![|200x0](assets/Pasted%20image%2020241231150326.png)
+
 ![|200x0](assets/Pasted%20image%2020241231150352.png)
+
 Fläche $S = Lvt -> U_ind = -BLv$
 ###### Magnetfeld im Abstand r
 $B = (mu_0 I) / (2 pi r)$
 
 ###### Magnetfeld im Inneren einer Spule
-
 $B = mu_r mu_0 N / l I$
+
 $mu_0 = 1.2567 * 10^−6$
+
 $mu_r$ = Permeabilitätszahl der Spulenfüllung
 
 ![|400x0](assets/Pasted%20image%2020241231144500.png)
@@ -452,17 +469,23 @@ Wellenlänge $lambda = c/f$ [m]
 Wellenzahl $k = 2 pi / lambda$
 
 Ausbreitungsgeschwindigkeit $c = lambda / T$
+
 Lichgeschwindigkeit $c_0 = 3 * 10^8 m/s$
 
-Werden zwei identische Wellen überlagert, so kann sich die maximale Intensität vervierfachen.
-Die Flankensteilheit von Signalen in der Realität ist immer endlich.
+Werden zwei identische Wellen überlagert, so kann sich die maximale Intensität vervierfachen. Die Flankensteilheit von Signalen in der Realität ist immer endlich.
 
 Ein Tiefpassfilter hat einen Einfluss auf die Flankensteilheit eines Signals.  
+
 Signale mit unendlich steilen Flanken sind in der Realität nicht möglich.  
+
 Nicht alle digitalen Signale haben die gleiche Flankensteilheit.  
+
 Signale mit steilen Flanken transportieren nicht weniger Energie als Signale mit weniger steilen Flanken.  
-Die Flankensteilheit von Signalen ist relevant für die Signalqualität.  
+
+Die Flankensteilheit von Signalen ist relevant für die Signalqualität. 
+
 Die Flankensteilheit eines Signals beeinflusst die Frequenzen im Signal.  
+
 Reale Signale haben nie eine unendliche Flankensteilheit.
 
 ###### Brechnungsindex
@@ -476,8 +499,7 @@ $c_0 = n_"Meduim" * c_"Medium"$
 Das Licht wird im optisch dichteren Material zum Lot hin gebrochen
 = n1 < n2
 
-Snellius-Gesetz
-$(sin(alpha)) / (sin(beta)) = c_1 / c_2 = (c_0 / n_1) / (c_0 / n_2) = n_2 / n_1$
+Snellius-Gesetz $(sin(alpha)) / (sin(beta)) = c_1 / c_2 = (c_0 / n_1) / (c_0 / n_2) = n_2 / n_1$
 
 ![|200x0](assets/Pasted%20image%2020250123104517.png)
 
@@ -485,6 +507,7 @@ $(sin(alpha)) / (sin(beta)) = c_1 / c_2 = (c_0 / n_1) / (c_0 / n_2) = n_2 / n_1$
 
 ###### Totalreflexion
 Wenn $n_2 > n_1$ und $sin(beta) > n_1 / n_2$ dann kann das Licht nicht in das Medium 1 heraustreten.
+
 ![|230x0](assets/Pasted%20image%2020241231170517.png)
 
 ###### Intensität (Kugelwellen)
@@ -506,14 +529,15 @@ $H(r) = 10"dB" * log_10((I(r)) / 10^-12) = 10"dB" * log_10("SNR")$
 
 $"Faktor" = 10^(x/10)$
 
-6dB = Faktor 4
-3dB = Faktor 2
-17 dB = Faktor 50 = 10 + 10 - 3 = 10 x 10 / 2
-2I => +3dB
+- 6dB = Faktor 4
+- 3dB = Faktor 2
+- 17 dB = Faktor 50 = 10 + 10 - 3 = 10 x 10 / 2
+- 2I => +3dB
 
 x W wird um 10dB reduziert -> nur noch x/10 W Leistung
 
 Schallintensiztät->Schallintensitätpegel = in Dezibel
+
 2 gleiche Quellen = doppelte Intensität -> nochmals in Dezibel umrechnen oder faustregel +3db
 
 ###### Signal to Noise Ratio (SNR)
@@ -555,10 +579,12 @@ Dieser Anteil der Intensität wird reflektiert.
 
 ###### Wien'sches Verschiebungsgesetz
 Maximum des Spektrums $lambda_"max" = b / T$ [m]
+
 $b = 2.8978 ** 10^−3$
 
 ###### Strahler
 $S$ = Strahlungsintensität pro Frequenz und Raumwinkel [W/m^2sr]
+
 $P_"rad"$ = Abgestrahlene Leistung [W]
 
 Leistung Heizstab $P_"el" + P_"therm" = 0$
@@ -575,11 +601,14 @@ Es gilt:
 - $P_"rad" = -(dE) / (dt) = sigma A(T^4 - T^4_"env")$
 
 $sigma = 5.67 * 10^-8$
+
 $h = 6.626 * 10^-34$ = Plank'sches Wirkungsquant
+
 $k_B = 1.38 * 10^-23$ = Boltzmann-Konstante
 
 ###### Grauer Strahler
 Ein Teil ($P_"rad"$) wird reflektiert.
+
 Es gilt:
 - $epsi(lambda) < 1$
 - $S(lambda, T) = epsi(lambda) (2 h pi c^2) / lambda^5 1 / (e^((hc) / (lambda k_B T) - 1))$
@@ -587,8 +616,7 @@ Es gilt:
 
 ###### Thermische Energiebilanz
 
-Energiestrom für Wärmeleitung
-$P_"cond" = Ah(T - T_"env")$
+Energiestrom für Wärmeleitung $P_"cond" = Ah(T - T_"env")$
 
 h = Wärmeübergangskoeffizient
 
