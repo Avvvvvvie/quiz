@@ -156,7 +156,7 @@ Verhaltensgrundsätze:
 - Wie verhalten wir uns gegenüber Anspruchsgruppen?
 - Was sind unsere Grundsätze?
 
-### Was braucht es für die Entwicklung einer Unternehmensstrategie
+### Was braucht es für die Entwicklung einer Unternehmensstrategie?
 - Unternehmensleitbild
 - Unternehmensanalyse
 - Umweltanalyse
@@ -335,8 +335,6 @@ Wenn ein Produkt z.B. teuer ist und von hoher Qualität, dann ist es besser, wen
 - Die Qualität des Produkts, der Preis, der Vertrieb und die Promotion müssen aufeinander abgestimmt sein. (4P)
 - Permanente Marktorientierung
 - Klare Prioritäten
-
-### Was gibt es für Vermarktungsobjekte
 
 ### Was sind Ziele von Vermarktung?
 - Umsatz
