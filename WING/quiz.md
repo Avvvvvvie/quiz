@@ -105,16 +105,8 @@ Es ist der Wert eines Unternehmens aus Sicht seiner Shareholder. (Wird gemessen 
 ### Was sind die Merkmale einer Strategie?
 weitsichtig, langfristig, kontinuierlich, zielgerichtet, nachhaltig, abgrenzbar
 
-### Was ist das 5-Kräfte-Modell von Porter?
-Gefahren durch folgende 5 Kräfte werden untersucht:
-- Kunden
-- Lieferanten
-- Ersatzprodukte
-- potenzielle / neue Kunde
-- RIvalität mit Konkurrenz
-
 ### Wie funktioniert die SWOT-Analyse?
-In der Inwelt (im Unternehmen) gibt es Stärken und Schwächen. In der Umwelt (unabhängig vom Unternehmen) gibt es Chancen und Gefahren. Diese sollen alle identifiziert werden, sowie die Kombinationen. (Englisch: Strengths, Weaknesses, Opportunities und Threats) 
+In der Inwelt (im Unternehmen) gibt es Stärken und Risiken. In der Umwelt (unabhängig vom Unternehmen) gibt es Chancen und Gefahren. Diese sollen alle identifiziert werden, sowie die Kombinationen. (Englisch: Strengths, Weaknesses, Opportunities und Threats) 
 ```mermaid
 quadrantChart
 y-axis "Schwächen" --> "Stärken"
@@ -126,7 +118,7 @@ quadrant-4 Vermeiden
 ```
 
 ### Wie funktioniert die PESTEL-Analyse?
-Es wird der Einfluss folgender Umweltfaktoren untersucht.
+Es wird der Einfluss folgender Umweltfaktoren untersucht. (Chancen und Risiken)
 - Political
 - Economical
 - Social
@@ -141,19 +133,6 @@ Es werden folgende 5 Aspekte untersucht:
 - Bedrohung durch Markteintritt von neuen Konkurrenten
 - Bedrohung durch Ersatzprodukte
 - Rivalität mit bestehender Konkurrenz
-
-### Was gibt es für Wachstums- und Wettbewerbsstrategien?
-4 Branchenwettbewerbsstrategien
-- Kostenführerschaft
-- Kosten
-- Differenzierung
-- Differenzierungsfokus
-
-4 Produkt-Markt-Strategien
-- Alte Märkte -Bewährungsstrategie (Marktdurchdringung durch Erhöhen der Kaufrate durch Abwerben, Heimlieferung...)
-- Neue Märkte -Entwicklungsstrategie (Neue Zielgruppe wie Ausland)
-- Neue Produkte -Entwicklungsstrategie (Innovation und Optimierung)
-- Diversifikation -Ausbruchsstartegie (ähnliche Produkte in Katalog aufnehmen oder Produkte, welche man für Produkt braucht)
 
 ### Wie sieht der Strategiefindungsprozess aus?
 1. Analyse
@@ -227,8 +206,9 @@ quadrantChart
 - (Personen, Prozesse, Physische Einrichtungen)
 
 ### Wie macht man eine quantitative/qualitative Marktanalyse?
-- Quantitativ: Marktdaten und -grössen ermitteln
-- Qualitativ: Kundenbedürfnisse ermitteln und verstehen
+Quantitativ: Marktdaten und -grössen ermitteln
+
+Qualitativ: Kundenbedürfnisse ermitteln und verstehen
 
 ### Was sind primäre und sekundäre Marktforschung?
 - Primär: Ermittlung neuer Daten
@@ -351,7 +331,10 @@ Die Ziele vom Marketing: Umsatz, Marktanteile, Deckungsbeiträge etc.
 Die Ziele vom PR: Image, Vertrauen, Reputation, Wissen, Akzeptanz
 
 ### Was ist der harmonische Marketing-Mix?
-Wenn ein Produkt ZB teuer ist und von hoher Qualität, dann ist es besser, wenn es auch nur in exklusiven SHops verkauft wird. Andersrum wenn ein Produkt sehr Billig ist, ist es komisch, wenn es nur exklusiv verfügbar ist. Es muss also alles abgestimmt sein: Die Qualität des Produkts, der Preis, der Vertrieb und die Promotion.
+Wenn ein Produkt z.B. teuer ist und von hoher Qualität, dann ist es besser, wenn es auch nur in exklusiven Shops verkauft wird. Andersrum wenn ein Produkt sehr Billig ist, ist es komisch, wenn es nur exklusiv verfügbar ist. Für einen harmonischen Mix gilt:
+- Die Qualität des Produkts, der Preis, der Vertrieb und die Promotion müssen aufeinander abgestimmt sein. (4P)
+- Permanente Marktorientierung
+- Klare Prioritäten
 
 ### Was gibt es für Vermarktungsobjekte
 
@@ -496,7 +479,7 @@ $"flüssige Mittel" / "kurzfristiges Fremdkapital" * 100 20$
 $("flüssige Mittel" + "Forderungen" + "Vorräte") / "kurzfristiges Fremdkapital" * 100 = "Umlaufvermögen" / "kurzfristiges Fremdkapital" ~~ 100..200$
 
 ### Was gibt es für Kennzahlen zur Sicherheit?
-**Eigenkapitalquote** $"Eigenkapital" / "Gesamtkapital" * 100 30\%$
+**Eigenkapitalquote** $"Eigenkapital" / "Gesamtkapital" * 100 > 30\%$
 
 **Fremdkapitalquote** $"Fremdkapital" / "Gesamtkapital" * 100 < 70\%$
 
@@ -509,16 +492,20 @@ $("flüssige Mittel" + "Forderungen" + "Vorräte") / "kurzfristiges Fremdkapital
 ### Was gibt es für Kennzahlen zur Rentabilität
 **Eigenkapitalrendite** $"Gewinn" / "Eigenkapital" * 100 >= 8\%$
 
-**Gesamtkapitalrendite** $("Gewinn" + "Fremdkapitalzinsen") / ("Eigenkapital" + "Fremdkapital") * 100 >= 6\%$
+**Gesamtkapitalrendite** $("Gewinn" + "Fremdkapitalzinsen") / ("Eigenkapital" + "Fremdkapital") * 100  = (("Gewinn" + "Zinsen") * 100) / "Gesamtksoten" >= 6\%$
 
 **Umsatzrentabilität** $"Gewinn" / "Umsatz" * 100 >= 1.5\%..2.5\%$
 
-**EBIT-Marge** $"EBIT" / "Umsatz" * 100 2\%$
+**EBIT-Marge** $"EBIT" / "Umsatz" * 100\%$
+
+**Intensität Anlagevermögen** $("Anlagevermögen" * 100) / "Gesamtvermögen"$
+
+**Fremdfinanzierugnsgrad** $("Fremdkapital" * 100) / "Gesamtkapital"$
 
 ### Was ist der Leverage Effect?
 Wenn man mit mehr Fremdkapital mehr Gewinn erreichen kann, gibt es den Leverage-Effekt. Ein höherer Verschuldungsgrad bringt aber auch mehr Risiko mit sich.
 
-### Wie funktioniert der Prozess der Kostenverrechnung
+### Wie funktioniert der Prozess der Kostenverrechnung?
 Begriffe:
 - Kostenart = Welche Kosten fallen an?
 - Kostenstellen = Wo fallen Kosten an?

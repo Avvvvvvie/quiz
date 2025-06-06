@@ -1002,3 +1002,5 @@ Insgesamt 20 Bytes:
 - 2 Bytes unused
 - 4 Bytes Client IP Address (vom Client gesetzt für Renew ö.Ä.)
 - 4 Bytes Your Client IP Address (vom Server gesetzt in Antwort)
+
+### Was ist das Interface eines Host konkret? Kabel? Code? Port?
