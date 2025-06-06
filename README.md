@@ -1,3 +1,2 @@
 - The quiz content is taken from my obsidian vault
-- The quiz content is not 100% complete yet, because there are still unanswered questions
-- The unanswered questions show up at the end of the quiz
+- Unanswered questions will show up at the end of the quiz
