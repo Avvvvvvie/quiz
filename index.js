@@ -27,6 +27,7 @@ class Quiz {
     constructor(name) {
         this.name = name
         this.path = absoluteURI(name);
+        this.blob = blobURI(name);
     }
 }
 
@@ -35,7 +36,7 @@ function absoluteURI(path) {
 }
 
 function blobURI(path) {
-    return url + encodeURI(path);
+    return blob + encodeURI(path);
 }
 
 function getQuizzes(callback) {
@@ -127,7 +128,21 @@ function createQuizSelection(quizzes) {
         quizzes.forEach((quiz) => {
             let quizItem = document.createElement('li');
             quizItem.className = 'quiz-item';
-            quizItem.textContent = quiz.name;
+
+            let quizName = document.createElement('span');
+            quizName.classList.add('quiz-name');
+            quizName.textContent = quiz.name;
+            quizItem.appendChild(quizName);
+
+            let quizLink = document.createElement('a');
+            quizLink.href = quiz.blob;
+            quizLink.classList.add('quiz-link');
+            quizLink.setAttribute('target', '_blank');
+            quizLink.onclick = (e) => {
+                e.stopPropagation(); // Prevent the quizItem click event
+            }
+            quizItem.appendChild(quizLink);
+
             quizItem.addEventListener('click', () => {
                 loadQuiz(quiz);
             });
