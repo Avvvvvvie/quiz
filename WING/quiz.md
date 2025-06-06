@@ -629,7 +629,8 @@ Nettoerlös * anzahl verkaufte Produkte
 - Order to Make (Die Beschaffung gescheit erst, wenn es Beschaffungsbedarf gibt)
 - Just in Time: Zum richtigen Zeitpunkt
 - Just in Sequence: Zum richtigen Zeitpunkt in der richtigen Reihenfolge mit der richtigen Menge
-Bei Restaurant ist es nicht kritisch, wenn ein Kunde zu viel kommt. Beim Auto ist es kritisch, wenn ein Teil des Autos nicht geliefert werden kann. Es kommt darauf an, ob man die Ware erst hat, wenn man das Produkt spezifiziert hat. Und Lager kostet.
+
+Bei einem Restaurant ist es nicht kritisch, wenn ein Kunde zu viel kommt. Beim Auto ist es kritisch, wenn ein Teil des Autos nicht geliefert werden kann. Es kommt darauf an, ob man die Ware erst hat, wenn man das Produkt spezifiziert hat. Und Lager kostet.
 
 ### Was ist Insourcing und dessen Vor- und Nachteile?
 Verlagerung von zuvor im Markt bezogenen Leistungen in die eigene Wertschöpfung. Man hat zusätzliche Fixkosten, aber muss keinen zusätzlichen Preis zahlen.
