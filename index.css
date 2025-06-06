@@ -40,8 +40,6 @@ table th {
 }
 table td, table th {
     padding: .8rem;
-    font-weight: bold;
-    color: #636363;
     border: 1px solid #cecece;
 }
 table tbody tr {
@@ -103,14 +101,17 @@ h3 {
 
 h4 {
     font-size: 1.2em;
+    margin: 0;
 }
 
 h5 {
     font-size: 1.1em;
+    margin: 0;
 }
 
 h6 {
     font-size: 1em;
+    margin: 0;
 }
 
 ul {
