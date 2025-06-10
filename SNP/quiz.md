@@ -235,7 +235,7 @@ In diesen Files kann die Lese-/Schreibposition beliebig verändert werden. Die D
 - Abstrahieren von Hardwareressourcen über OS-Konzepte (Tasks, Filesystem)
 - Hardwarebeschleunigung und Entlastung (Cache)
 
-### Was ist der Unterscheid von einem Prozess, einem Thrad und einem Task?
+### Was ist der Unterscheid von einem Prozess, einem Thread und einem Task?
 Task: Aufgabe, die von der CPU bearbeitet wird.
 
 Prozess: Ein Prozess ist ein Task und ein Programm in Ausführung. Ein Prozess hat ein eigenes Memory und ein Stack.
@@ -272,3 +272,35 @@ Die CPU hat Operations-Modi
 Die Ressourcen des Threads werden direkt nach der Terminierung des Threads freigegeben. Der Thread kann also nichts zurückgeben und man darf nicht pthread_join auf diesen Thread machen.
 
 ### Wieso kann man nicht einer Variable vom Typ Array (Z.B. int[]) einen anderen Array vom gleichen Typ zuweisen?
+
+### Was ist die Race Condition?
+Bei der Race Condition ist das Ergebnis davon abhängig, in welcher Reihenfolge Aufgaben ausgeführt werden. Diese Reihenfolge ist aber nicht vorseherbar und so können Bugs entstehen.
+
+### Wie vermeidet man die Race Condition?
+- Sperren gemeinsamer Ressourcen für exklusiven Zugriff
+- Der nächsten Aufgabe Signalisieren, wenn die gemeinsame Ressource frei ist.
+- Warten, biss die gemeinsame Ressource frei ist.
+
+### Was sind die Nachteile von einem Mutex?
+- Benötigt mehr Zeit
+- Fehlerhafte Anwendung kann zu Deadlock, fehlendem Unlock, Rekursion... führen.
+
+### Was sind potentielle Probleme bei einem Sephamore?
+- Unpassende Anzahl von Wait- gegenüber Signal-Aufrufen
+- Fehlerhafte Anwendung -> Deadlock, Livelock
+
+### Wie entsteht ein Deadlock?
+A ist in Critical Section 1 und wartet auf Critical Section 2. B ist in Critical Section 2 und wartet auf Critical Section 1. So kann keiner von beiden etwas tun.
+
+### Wie kann man einen Deadlock verhindern?
+- Mehrere Locks gleichzeitig vermeiden
+- Globale fixe Reihenfolge der Locks festlegen.
+- Freigabe vorheriger Locks bei Misserfolg.
+
+### Wie entsteht ein Livelock?
+Alle Tasks sind damit beschäftigt, sich aus dem Weg zu gehen, so dass keine Produktiven Aufgaben mehr erledigt werden.
+
+### Was sind Starvation und Priority Inversion?
+Starvation: Ein Task kommt nie an die Reihe, da andere Tasks immer vorrang haben / sich vordrängen.
+
+Priority Inversion: Ein Task mit tieferer Prio blockiert ein Task mit höherer Prio.
