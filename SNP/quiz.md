@@ -227,8 +227,8 @@ In diesen Files kann die Lese-/Schreibposition beliebig verändert werden. Die D
 - Die CPU signalisiert über den Systembus die gewünschten Zugriffe
 
 ### Was ist der Unterschied von RAM und ROM?
-- RAM ist random access memory und behält Daten, solange es Srom gibt
-- ROM ist read only memory und ist unabhängigt von der Stromversorgung. Daten werden zur Produktionszeit definiert.
+- RAM ist random access memory und behält Daten, solange es Strom gibt
+- ROM ist read only memory und ist unabhängig von der Stromversorgung. Daten werden zur Produktionszeit definiert.
 
 ### Was sind die Aufgaben des Betriebssystems?
 - Verwalten von Hardwareressourcen (CPU, IO, Memory)
