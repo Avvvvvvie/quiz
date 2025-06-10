@@ -262,3 +262,13 @@ Threads: Leichtgewichtige Tasks. Wenn es ok/gut ist, dass die Memory geteilt ist
 Die CPU hat Operations-Modi
 - Kernel Mode: Alles erlaubt
 - User Mode: Nicht alles erlaubt, kein direkter Zugriff auf die Hardware
+
+### Wie entsteht ein Zombie und ein Waise? Was passiert mit ihnen?
+
+
+### Was ist der Unterscheid zwischen fork() und execv()?
+
+### Was macht pthread_detach? Auf was mus man achten?
+Die Ressourcen des Threads werden direkt nach der Terminierung des Threads freigegeben. Der Thread kann also nichts zurückgeben und man darf nicht pthread_join auf diesen Thread machen.
+
+### Wieso kann man nicht einer Variable vom Typ Array (Z.B. int[]) einen anderen Array vom gleichen Typ zuweisen?
