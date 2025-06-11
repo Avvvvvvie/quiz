@@ -206,7 +206,7 @@ int is_power_of_two(int value) {
 }
 
 void print_binary(unsigned int value, int print_new_line) {
-    int bits = sizeof(value) * 8 -1;
+    int bits = sizeof(value) * 8 - 1;
     for (int i=bits; i >= 0; i--) {
         int is_set = ((value >> i) & 0x01) == 0x01;
         printf ("%d", is_set >= 1 ? 1 : 0);
@@ -217,6 +217,168 @@ void print_binary(unsigned int value, int print_new_line) {
     if (print_new_line) {
         printf("\n");
     }
+}
+```
+
+```c
+/**
+ *  Print numbers in various forms
+ * 
+ *  In this version, printbin uses "bitwise and" to test the bits
+ */
+#include <stdio.h>
+#include <limits.h>
+
+
+/**
+ *  Print number hexadecimal
+ */
+void printhex (int num) {
+    printf("0x%X", num);
+}
+
+/**
+ *  Print number decimal
+ */
+void printnum (int num) {
+    printf("%d", num);
+}
+
+/**
+ *  Print number in binary form
+ */
+void printbin(int num) {
+    unsigned int testBit = INT_MAX + 1u;
+    int oneFound = 0;
+    int bit;
+    
+    while (testBit != 0) {
+        bit = (num & testBit) != 0;
+        if (oneFound || bit != 0) {
+            printf("%d", bit);
+            oneFound = 1;
+        }
+        testBit = testBit >> 1;
+    }
+}
+
+
+/**
+ *  Demonstrates the print functions
+ */
+int main (void) {
+
+    printnum(0xCCCCCCCC);
+    putchar('\n');
+
+    printhex(0xCCCCCCCC);
+    putchar('\n');
+    
+    printbin(0xCCCCCCCC);
+    putchar('\n');
+
+    printbin(0xCCCC);
+    putchar('\n');
+
+    return 0;
+}
+
+
+/**
+ *  Print numbers in binary form
+ * 
+ *  In this version, printbin uses "bitwise and" to test the bits
+ */
+#include <stdio.h>
+#include <limits.h>
+
+
+/**
+ *  Another function that prints a number in binary form; this variant 
+ *  demonstrates the use of a configuration parameter for various 
+ *  settings
+ * 
+ *  @param   num     number to print
+ *  @param   config  configuration
+ *                   0...31   bit to mark
+ *                   +64      mark bit
+ *                   +128     print leading zeros
+ *                   +256     terminate with linefeed
+ */
+void printbin2 (int num, int config) {
+    
+    //  name configuration bits for better readability
+    const int MARK_BIT = 1<<6;
+    const int LEADING_ZEROS = 1<<7;
+    const int LINEFEED = 1<<8;
+    
+    unsigned int testBit = INT_MAX + 1u;
+    int oneFound, bit, nBit;
+
+    // if LEADING_ZEROS is set:
+    // set oneFound for all bits to be printed
+    oneFound = (config & LEADING_ZEROS);
+    
+    // if MARK_BIT is set:
+    // - mask bit nr to be marked (config & 31)
+    // - set bit with this nr (1 << ...)
+    // - else nBit is 0: no bits will be marked
+    nBit = (config & MARK_BIT) ? 1 << (config & 31) : 0; 
+    
+    // for all bits
+    while (testBit != 0) {
+        bit = (num & testBit) != 0;
+        if (oneFound || bit != 0) {
+            
+            // bit should be marked: print with ()
+            if (testBit==nBit) printf("(%d)", bit);
+            
+            // else print bit
+            else printf("%d", bit);
+            oneFound = 1;
+        }
+        
+        // continue with next bit
+        testBit = testBit >> 1;
+    }
+    
+    // if LINEFEED is set: print a \n character
+    if (config & LINEFEED) printf("\n");
+}
+
+
+/**
+ *  Demonstrates the print functions
+ */
+int main (void) {
+
+    const int MARK  = 1<<6;
+    const int ZEROS = 1<<7;
+    const int LF    = 1<<8;
+
+    printf("With leading zeros and linefeed:\n");
+    printbin2(0xCCCC, LF+ZEROS);
+    
+    printf("\nWithout leading zeros:\n");
+    printbin2(0xCCCC, LF);
+
+    printf("\nMark bit 3:\n");
+    printbin2(0xCCCC, LF+ZEROS+MARK+3);
+
+    int a = 0xcccc0000;
+    int b = 0xaaaaaaaa;
+
+    printf("\nBit Operations:\n\n");
+    printbin2(a, ZEROS); printf("  0x%X  a\n", a);
+    printbin2(b, ZEROS); printf("  0x%X  b\n\n", b);
+    
+    printbin2(a & b, ZEROS); printf("  0x%X  a & b\n", a & b);
+    printbin2(a | b, ZEROS); printf("  0x%X  a | b\n", a | b);
+    printbin2(a ^ b, ZEROS); printf("  0x%X  a ^ b\n\n", a ^ b);
+
+    printbin2(~a, ZEROS); printf("  0x%X  ~a\n", ~a);
+
+    return 0;
 }
 ```
 
@@ -241,11 +403,13 @@ static int a; /* als 0 initiiert, lebt bis programmende */
 extern int a; /* " */
 ```
 
-##### Variable Sizes
-- int = 4 Bytes
-- short = 2 Bytes
-- char = 1 Byte
-- pointer = 4 Bytes
+##### Size of Types
+- Size of char: 1 bytes
+- Size of int: 4 bytes
+- Size of short: 2 bytes
+- Size of float: 4 bytes
+- Size of double: 8 bytes
+- Size of pointer: 8 bytes
 
 ##### Type cast
 ```c
@@ -364,6 +528,12 @@ bool b1 = true;
 bool b2 = false;
 ```
 
+##### Second Last Digit
+```c
+int z = 123;
+z = (z % 100) - (z % 10)) / 10;
+```
+
 ### IO
 ##### Basic Methods
 ```c
@@ -376,19 +546,29 @@ getchar(); // read one charater
 int day, month, year;
 a = scanf("%d%d%d", &day, &month, &year);
 ```
-##### Formatting
+##### Formatting printf
 - %d, %i = int
 - %u = unsigned int
 - %c = char
-- %s = string bis \0
+- %s = string until \0
 - %20s = string of 20 chars
-- %f = double, float (nur printf)
+- %f = double, float (only printf)
+- %e = Scientific notation (mantissa/exponent), lowercase
 - %5.4f = 5 lang vor komma, 4 lang nach komma
 - %lf = %f für double für scanf
-- %g
-- %zd
-- %x, %X
-- %o
+- %g = Use the shortest representation: %e or %f
+- %zd = print size_t
+- %x, %X unsigned hexadecimal integer 7fa, 7FA
+- %o = Unsigned octal
+- \%% = %
+- %a = Hexadecimal floating point, lowercase
+- %p = pointer address
+
+##### Print Dez to Hex
+```c
+int a = 5;
+printf("%x\n", a);
+```
 
 ##### User Input with scanf
 ```c
@@ -715,6 +895,8 @@ int isDuplicate(char array[MAX_WORDS][MAX_LENGTH + 1], size_t n, char *mystring)
 ```
 
 ### Pointers
+
+Addition and substraction allowed but no multiplication or division
 ##### Pointer declarations
 ```c
 int *p;
@@ -1170,6 +1352,32 @@ thread_t id = pthread_self()
 - In parent process after child terminates: Child is Zombie until wait was called.
 - Parent terminates without waiting for child: Child is orphaned and will be adopted by the first started process.
 
+### Signals
+
+| Signal  | Default Aktion | Beschreibung                                             |
+| ------- | -------------- | -------------------------------------------------------- |
+| SIGINT  | Term           | Interrupt-Signal von der Tastatur (CTRL-C)               |
+| SIGQUIT | Core           | Quit-Signal von der Tastatur (CTRL-\)                    |
+| SIGABRT | Core           | Abort-Signal via abort () oder assert ()                 |
+| SIGKILL | Term           | Kill-Signal                                              |
+| SIGSEGV | Core           | Unzulässiger Speicherzugriff                             |
+| SIGALRM | Term           | Timer-Signal durch alarm () ausgelöst                    |
+| SIGTERM | Term           | Terminierungs-Signal                                     |
+| SIGSTOP | Stop           | Stoppt den Prozess (oder ignoriert falls gestoppt)       |
+| SIGCONT | Cont           | Reaktiviert den Prozess (oder ignoriert falls am Laufen) |
+
+| sa_flags   | Meaning                      |
+| ---------- | ---------------------------- |
+| SA_SIGINFO | sa_sigaction will be handler |
+| 0          | sa_handler will be handler   |
+
+| Handler | Meaning      |
+| ------- | ------------ |
+| SIG_IGN | Ignore       |
+| SIG_DFL | Default      |
+| handler | Any function |
+
+
 ##### Signal graceful termination
 ```c
 #include <sys/types.h>
@@ -1291,6 +1499,48 @@ int main () {
 	}
 	if (WIFSIGNALED (ws)) {
 		printf("child signal=%d (status=0x%04X)\n", WTERMSIG(ws), ws);
+	}
+}
+```
+
+##### Signal User Interrupt
+```c
+#include <stdio.h> #include <stdlib.h> #include <unistd.h> #include <sys/wait.h> #include <signal.h> #define PERROR_AND_EXIT(M) do{perror(M);exit(EXIT_FAILURE);} while(0)
+void do_work() { for(;;){} }
+
+static void handler(int sig, siginfo_t *siginfo, void *context) {
+	printf("User Interrupt\n");
+}
+
+int main(void) {
+	pid_t cpid = fork();
+	if (cpid == -1) {
+		PERROR_AND_EXIT("fork");
+	}
+	if (cpid > 0) {
+		// parent will print on user interrupt
+		struct sigaction a = { 0 };
+		a.sa_flags = SA_SIGINFO;
+		a.sa_sigaction = handler;
+		if (sigfillset(&a.sa_mask) == -1) {
+			PERROR_AND_EXIT("sigfillset");
+		} if (sigaction(SIGINT, &a, NULL) == -1) {
+			PERROR_AND_EXIT("sigaction");
+		}
+		
+		do_work();
+	} else {
+		// child will ignore user interrupt
+		struct sigaction a = { 0 };
+		a.sa_flags = SA_SIGINFO;
+		a.sa_sigaction = SIG_IGN;
+		if (sigfillset(&a.sa_mask) == -1) {
+			PERROR_AND_EXIT("sigfillset");
+		} if (sigaction(SIGINT, &a, NULL) == -1) {
+			PERROR_AND_EXIT("sigaction");
+		}
+		
+		do_work();
 	}
 }
 ```
@@ -1796,46 +2046,49 @@ Named, Between Processes
 #include <unistd.h>
 #include <stdio.h>
 #include <limits.h>
+
 #include <semaphore.h>
-#define FATAL (M) do { perror (M); exit(EXIT_FAILURE); } while(0)
-#define CHECK(E,A,M) if((E) == (A));else fprintf(stderr,"ERROR: "M": exp=%d, act=%d\n",E????
+
+#define FATAL(M) do { perror(M); exit(EXIT_FAILURE); } while(0)
+#define CHECK(E,A,M) if((E)==(A));else fprintf(stderr,"ERROR: "M": exp=%d, act=%d\n",E,A)
 #define N 10000
 
-// shared variable: init in one thread, then use in both
-volatile int array [N] = { 0 };
+volatile int array[N] = { 0 }; // shared variable: init in one thread, then use in both
+
 sem_t sem;
-// initialize the data and calculate min value of all
-void *min(void *arg) {
-	for(int i = 0; i < N; i++) {
-		// init the shared data -N/2. . .N-1-N
-		array[i] = i - N/2;
-	}
-	if (sem_post(&sem) == -1) FATAL("post");
-	int value = INT_MAX;
-	for(int i = 0; i < N; i++) {
-		if (value > array[i]) value = array[i];
-	}
-	CHECK(-N/2, value, "wrong min value");
-	return NULL;
+
+void *min(void *arg) // initialize the data and calculate min value of all
+{
+    for(int i = 0; i < N; i++) array[i] = i - N/2; // init the shared data -N/2...N-1-N/2
+    if (sem_post(&sem) == -1) FATAL("post");
+
+    int value = INT_MAX;
+    for(int i = 0; i < N; i++) if (value > array[i]) value = array[i];
+    CHECK(-N/2, value, "wrong min value");
+    return NULL;
 }
-// calculate max value of already initialized data
-void *max(void *arg) {
-	if (sem_wait(&sem) == -1) FATAL("wait");
-	int value = INT_MIN;
-	for(int i = 0; i < N; i++) {
-		if (value < array[i]) value = array[i];
-	}
-	CHECK(N-1-N/2, value, "wrong max value");
-	return NULL;
+void *max(void *arg) // calculate max value of already initialized data
+{
+    if (sem_wait(&sem) == -1) FATAL("wait");
+
+    int value = INT_MIN;
+    for(int i = 0; i < N; i++) if (value < array[i]) value = array[i];
+    CHECK(N-1-N/2, value, "wrong max value");
+    return NULL;
 }
-int main (void) {
-	if (sem_init(&sem, 0, 0) == -1) FATAL("sem");
-	pthread_t th_max;
-	pthread_t th_min;
-	if (pthread_create(&th_max, NULL, max, NULL) != 0) FATAL("create");
-	if (pthread_create(&th_min, NULL, min, NULL) != 0) FATAL("create");
-	if (pthread_join(th_max, NULL) != 0) FATAL("join");
-	if (pthread_join(th_min, NULL) !- 0) FATAL("join");
+
+int main(void)
+{
+    if (sem_init(&sem, 0, 0) == -1) FATAL("sem");
+
+    pthread_t th_max;
+    pthread_t th_min;
+
+    if (pthread_create(&th_max, NULL, max, NULL) != 0) FATAL("create");
+    if (pthread_create(&th_min, NULL, min, NULL) != 0) FATAL("create");
+
+    if (pthread_join(th_max, NULL) != 0) FATAL("join");
+    if (pthread_join(th_min, NULL) != 0) FATAL("join");
 }
 ```
 
@@ -1844,6 +2097,11 @@ P08 -> basicSequence
 
 Action needed 3 Times -> Wait 3 Times
 
+##### Deadlock Conditions
+1. In Critical Section
+2. Trying to access other critical Section
+3. First section is not getting freed
+4. Another task has the sections in opposite order
 ##### Avoid Deadlock with Fixed Order
 ```c
 int first = fromB < toB ? fromB : toB;
@@ -2042,3 +2300,7 @@ ln -s a b
 ```
 ln a b
 ```
+
+
+## ASCII Table
+![](assets/Pasted%20image%2020250610195908.png)

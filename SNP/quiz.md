@@ -289,8 +289,11 @@ Bei der Race Condition ist das Ergebnis davon abhängig, in welcher Reihenfolge 
 - Unpassende Anzahl von Wait- gegenüber Signal-Aufrufen
 - Fehlerhafte Anwendung -> Deadlock, Livelock
 
-### Wie entsteht ein Deadlock?
-A ist in Critical Section 1 und wartet auf Critical Section 2. B ist in Critical Section 2 und wartet auf Critical Section 1. So kann keiner von beiden etwas tun.
+### Was sind die Bedingungen für ein Deadlock?
+1. In Critical Section
+2. Hold-and-wait: in der Critical Section wird eine andere Critical Section geöffnet
+3. No Preemption: bei Blockade der zweiten Critical Section wird die erste nicht freigegeben
+4. Circular wait: bei anderer Task sind die Critical Section Zugriffe vertauscht, zuerst die innere und dann die Äussere
 
 ### Wie kann man einen Deadlock verhindern?
 - Mehrere Locks gleichzeitig vermeiden
