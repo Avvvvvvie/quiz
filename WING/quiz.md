@@ -762,7 +762,7 @@ Fremd: Neue Ideen, evt. von Konkurrenz, Vergleich der Mitarbeiter, keine interne
 ### Was gibt es für Methoden zur Beurteilung von Bewerbern?
 - Job-Interview
 - Test-Verfahren (ZB Persönlichkeit, Intelligenz, Reaktion, Graphologishc, Stimme...)
-- Assesment-Verfahren (Komplexe zb mit mehreren Leuten, Rollenspiele, Gruppendiskussionstest)
+- Assessment-Verfahren (Komplexe zb mit mehreren Leuten, Rollenspiele, Gruppendiskussionstest, Fallstudie)
 
 ### Was gibt es für Fragenthemen in einem Interview?
 - Systematik / Planung
@@ -871,7 +871,7 @@ Es wird die Amortisation = Payback-Frist berechnet. Dafür gibt es 2 Methoden.
 ### Wie funktioniert die Kapitalwertmethode?
 Es wird mit einer Abzinsung i und einer Zeit n gerechnet. Pro Anlage wird damit berechnet: 
 
-$-"Anschaffungskosten" + "Liquidationserlös"$$+ ("Erwartete Erlöse pro Jahr" - "Wartungskosten pro Jahr")$$* Sum_k=1^n 1/(1+i)^k$$= "Kapitalwert$
+$-"Anschaffungskosten" + "Liquidationserlös"$$+ ("Erwartete Erlöse pro Jahr" - "Wartungskosten pro Jahr")$$* Sigma_(k=1)^n 1/(1+i)^k$$= "Kapitalwert$
 
 Wenn die Erlöse/Kosten pro Jahr unterscheidlich sind, müssen sie einzeln mit den Zinsen multipliziert werden.
 

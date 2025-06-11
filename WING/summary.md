@@ -46,6 +46,8 @@ Es werden folgende 5 Aspekte untersucht:
 - Neue Produkte - Entwicklungsstrategie (Innovation und Optimierung)
 - Diversifikation - Ausbruchsstartegie (ähnliche Produkte in Katalog aufnehmen oder Produkte, welche man für Produkt braucht)
 
+vertikale und horizontale Diversifikation
+
 ### 4 Strategien zu den 3 Strossrichtungen
 - Bewährungsstrategie
 - Entwicklungsstartegie (neue Produkte oder Märkte)
@@ -159,6 +161,15 @@ Einstand2 / Schlüsselzahl = VPmwst2
 VPmwst3 * Schlüsselzahl = Einstand4
 
 Kurs = 1.1.CHF -> Währung * 1.1 = Preis CHF
+
+Cash Flow = ???
+
+Betriebsbuchhaltung = ???
+
+Gewinn = Erlöse – variable Kosten – fixe Kosten
+
+Der Cash Flow zeigt dem Unternehmen auf, welche finanziellen Mittel es verwenden kann, ohne die eigene Substanz zu schmälern.
+
 ### Kennzahlen Liquidität
 ###### Grad 1
 $"flüssige Mittel" / "kurzfristiges Fremdkapital" * 100 20$
@@ -319,6 +330,12 @@ $"Jahresverbrauch" / "Durchschn. Lagerbestand"$
 ###### Durchschnittliche Lagerdauer
 $360 / "Lagerumschlagshäufigkeit"$
 
+### Zahlungsreihe bei einem Zinssatz i
+Abzinsfaktor = $1/(1+i)^k$
+
+Wert $t_k = "Wert"_k * "Abzinsfaktor"_k$
+
+Lösung = $Sigma t_k$
 
 ### Kapitalwertmethode
 Es wird mit einer Abzinsung i und einer Zeit n gerechnet. Pro Anlage wird damit berechnet: 
@@ -326,6 +343,15 @@ Es wird mit einer Abzinsung i und einer Zeit n gerechnet. Pro Anlage wird damit 
 $-"Anschaffungskosten" + "Liquidationserlös" * 1/(1+i)^n$$+ ("Erwartete Erlöse pro Jahr" - "Wartungskosten pro Jahr")$$* Sigma_(k=1)^n 1/(1+i)^k$$= "Kapitalwert$
 
 Wenn die Erlöse/Kosten pro Jahr unterscheidlich sind, müssen sie einzeln mit den Zinsen multipliziert werden. Bei den Anschaffungskosten ist i=1
+
+![|600x0](assets/Pasted%20image%2020250611094135.png)
+
+### Kostenvergleichsmethode
+Man vergleicht zwischen zwei potentiellen Anlagen:
+
+Je die Jährliche Betriebskosten + Materialkosten = Variable Kosten
+
+Je die Kalkulatorische Abschreibung und Zinsen = Fixe Kosten
 
 ### Gewinnvergleichmethode
 Man vergleicht zwischen zwei potentiellen Anlagen:
@@ -337,9 +363,10 @@ Diese Methode ist sinnvoll, wenn unterschiedliche Kapitaleinsätze für die Inve
 
 Rentabilität = (Reingewinn + Zinsen) / eingesetztes Kapital * 100
 
-### Payback-Frist: Durchschnittsmethode
-$"Kapitaleinsatz" / "Jährlicher Cashflow"$
+### Payback-Frist ???
+Durchschnittsmethode: $"Kapitaleinsatz" / "Jährlicher Cashflow"$
 
+Kumulationsmethode: Die Einzahlungsüberschüsse werden addiert, bis die Summe der kumulierten Werte dem ursprünglichen Investitionsbetrag entspricht. Dies bietet sich an, wenn die Gewinne pro Periode nicht konstant sind oder die Abschreibungen nicht linear berechnet sind.
 ### Kennzahlen Produktion
 ###### Rentabilität
 $("Ertrag" - "Aufwand") / "Kapitaleinsatz" = "Gewinn" / "Kapitaleinsatz"$
@@ -352,3 +379,10 @@ $"Ertag" / "Aufwand"$
 
 ###### Fehlerquote
 $"Fehlerhafte Produkte" / "Total hergestellte Produkte"$
+
+### Vorwärts- und Rückwärtsterminierung
+Vorwärts: Man berechnet den frühsten Endtermin nach dem Auftragseingang. Danach fügt man noch etwas Reservezeit ein. Vorteil: Wenig Zeitdruck, Terminsicherheit. Nachteil: Längere Liegezeit, höhere Kapitalbindung?
+
+Rückwärts: Man berechnet den spätesten Starttermin, um am Kundentemin fertig zu sein. Vorteil: Wenig Liegezeit. Nachteil: Hoher Zeitdruck und hohes Risiko.
+
+Leistungserstellung = Effektive Zeit zur Herstellung ohne Lager?

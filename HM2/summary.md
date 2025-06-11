@@ -6,6 +6,15 @@ $(del f) / (del x) f(x) * g(x) = f'(x) * g(x) + f(x) * g'(x)$
 
 $(del f) / (del x) (f(x)) / (g(x)) = (f'(x) * g(x) - f(x) * g'(x)) / (g(x)^2)$
 
+$log(x)' = 1/x$
+
+$(e^(5x))' = 5 * e^(5x)$
+
+### Inverse
+
+$(a, b; c, d)^-1 = 1/(ad - bc) (d, -b; -c, a)$
+
+$(a, b, c|1,0,0;d, e, f|0,1,0;g, h, i|0,0,1)$
 
 ### Linearisierung
 
@@ -16,7 +25,11 @@ Jakobi Matrix: $Df = ((del f_1) / (del x_1),...,(del f_1) / (del x_n);...,...,..
 Linearisierung: $g(x) = f(vec x_0) + Df(vec x_0) * (vec x - vec x_0)$
 
 
-### Newton Verfahren
+### Newton Verfahren für nichtlineare Gleichungssysteme
+
+(Es gilt: f(x) = vec 0)
+
+Basic: x1 = x0 - f(x) / f'(x)
 
 Ungedämpft:
 
@@ -51,9 +64,9 @@ $(a_0;...;a_n) = (1,x_0,...,x_0^n;...,...,...,...;1,x_n,...,x_n^n)^-1 (y_0;...;y
 $P_n(x) = a_0 + a_1 x + a_2 x^2 + ... + a_n x^n$
 
 
-### Lagrange Interpolationsformel
+### Lagrange Interpolationsformel bei n+2 Stützpunkten
 
-$P_(n)(x) = Sigma_(i=0)^n  l_i(x) * y_i$
+$P_(n+1)(x) = Sigma_(i=0)^n  l_i(x) * y_i$
 
 $l_i$ sind die n+1 Lagrangepolynome:
 
@@ -107,11 +120,13 @@ $S_i(x) = a_i + b_i (x - x_i) + c_i (x - x_i)^2 ...$
 
 ### Algorithmus: Natürliche kubische Splinefunktion
 
+n = Anzahl Splines. i bis n-1. n = 3 -> A ist 2x2
+
 $a_i = y_i$, $h_i = x_(i+1) - x_i$
 
 $c_0 = 0$, $c_n = 0$
 
-für $c_1 - c_(n-1)$ lösen von $Ac = z$
+für $c_1 - c_(n-1)$ !!! lösen von $Ac = z$
 
 $A = (2(h_0 + h_1),h_1,0,0,0;h_1,2(h_1 + h_2), h_2,0,0;0,h_2,2(h_2 + h_3),h_3,0;0,...,...,...,0;0,0,h_(n-3),2(h_(n-3) + h_(n-2)),h_(n-2);0,0,0,h_(n-2),2(h_(n-2) + h_(n-1)))$
 
@@ -124,8 +139,11 @@ $b_i = (y_(i+1) - y_i) / h_i - h_i / 3 (c_(i+1) + 2 c_i)$
 
 $d_i = 1/(3 h_i) (c_(i+1) - c_i)$
 
+$S_i(x) = a_i + b_i (x - x_i) + c_i (x - x_i)^2 ...$
 
 ### Lineares Ausgleichssystem
+
+Normalengleichungssystem
 
 $A^T A vec lambda = A^T vec y$
 
@@ -137,7 +155,7 @@ Fehlerfunktional:
 
 $||y - f(x)||_2^2$ bzw $||y - A vec lambda||_2^2$
 
-### Allgemeines Ausgleichsproblem
+### Allgemeines Ausgleichsproblem, Nichtlinear, Quadratmittelproblem
 
 Von Hand:
 
@@ -145,7 +163,7 @@ $g(lambda) = (y_0 - f(x_0);...;y_n - f(x_n))$
 
 $E(f) = g(lambda)^2$
 
-$E(f) -> "min" => (del E(f)) / (del lambda_i) = 0$
+$||E(f)||_2 -> "min" => (del E(f)) / (del lambda_i) = 0$
 
 Mit Jakobi-Matrix / Newton Verfahren:
 
@@ -171,7 +189,7 @@ Trapez:
 
 $T(f) = (b - a) * (f(a) + f(b)) / 2$
 
-$Tf(h) = h * ((f(a) + f(b))/2 * Sigma_(i=1)^(n-1) f(x_i))$
+$Tf(h) = h * ((f(a) + f(b))/2 + Sigma_(i=1)^(n-1) f(x_i))$
 
 Simpson:
 
@@ -200,9 +218,13 @@ $n = 3: (b-1)/2 [5/9 * f(-sqrt(0.6)*(b-a)/2+(b+a)/2) + 9/8 * f((b+a)/2)]$ $+ (b-
 
 ### Romberg-Extrapolation
 
-$T_(n,0) = (b - a) / 2^n * ((f(a) + f(b)) / 2 + Sigma_(i=1)^(n-1) f(a + i * (b - a) / 2^n))$ 
+$int_a^b$
 
-$T_(n,m) = (4^k * T_(n+1,m-1) - T_(n, m-1)) / (4^m - 1)$
+$h_j = (b - a) / 2^j$, $n = 2^j$, $k = 0 ...$
+
+$T_(j,0) = (b - a) / 2^j * ((f(a) + f(b)) / 2 + Sigma_(i=1)^(n-1) f(a + i * (b - a) / 2^j))$ 
+
+$T_(j,k) = (4^k * T_(j+1,k-1) - T_(j, k-1)) / (4^k - 1)$
 
 ### DGL Separierung der Variablen
 
@@ -215,7 +237,6 @@ $int x^2 dx = int 1 / y dy$
 ### Klassisches Euler-Verfahren
 
 $dy / dx = f(x, y(x))$ mit $y(x_0) = y_0$
-
 
 $x_(i+1) = x_i + h$
 
@@ -279,6 +300,16 @@ $...$
 
 $y_(k+1) = y_k + h * (b_1 k_1 + b_2 k_2 ...)$
 
+### Butcher Schema
+Linke Seite: $c_1 - c_s$ = Skalar von h von k1 bis ks
+
+Unten: $b_1 - b_s$ = Kombination von allen k für die Berechnung der Steigung
+
+Mitte: $a_(2,1) - a_(s, s-1)$ = Kombination von vorherigen k in nächstem k
+
+Startet mit 0 | 0 oder bei $a_21$
+
+
 ### DGL n-ter Ordnung zu 1. Ordnung
 
 $x''' = 2 x'' + 3 x'$
@@ -288,6 +319,8 @@ $x''' = 2 z_3 + 3 z_2 + 5$
 $(z_1';z_2';z_3') = (z_2;z_3;2 z_3 + 3 z_2 + 5)$
 
 $A = (0,1,0;0,0,1;0,3,2)$, $b = (0;0;5)$
+
+$z' = Az + b$
 
 ### Stabilität
 
@@ -301,7 +334,7 @@ Da monoton sinkend, gilt: $y_i > y_i + h * f'(y_i)$
 
 Ergebnis: $h < ...$
 
-### Stailitätsintervall:
+### Stabilitätsintervall:
 
 Wenn $y' = -alpha y$ als $y_(i+1) = g(h alpha) * y_i$ geschrieben werden kann, dann ist das Verfahren für alle Alpha stabil, wo $|g(x)| < 1$ gilt. Diese Stabilitätsfunktion berechnet man bei ($**$)
 

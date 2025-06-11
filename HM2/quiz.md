@@ -226,7 +226,7 @@ grosses h: kleinerer Rundungsfehler
 
 Dies ist die kurznotation für ein s-stufiges Runge-Kutta-Verfahren.
 
-Linke Seite: $c1 - c_s$ = Skalar von h von k1 bis ks
+Linke Seite: $c_1 - c_s$ = Skalar von h von k1 bis ks
 
 Unten: $b_1 - b_s$ = Kombination von allen k für die Berechnung der Steigung
 
