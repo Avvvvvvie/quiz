@@ -1,2 +1,2 @@
 - The quiz content is taken from my obsidian vault
-- Unanswered questions will show up at the end of the quiz
+- Additional, unanswered questions will show up at the end of the quiz
