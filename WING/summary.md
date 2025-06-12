@@ -42,7 +42,7 @@ Es werden folgende 5 Aspekte untersucht:
 
 ### 4 Produkt-Markt-Srategien
 - Alte Märkte - Bewährungsstrategie (Marktdurchdringung/Penetration durch Erhöhen der Kaufrate durch Abwerben, Heimlieferung...)
-- Neue Märkte - Marktentwicklungsstrategie (Neue Zielgruppe wie Ausland, Suche nach neuen Märkten, die man mit dem gegenwärtigen Leistungsangebot bedienen kann.)
+- Neue Märkte - Marktentwicklungsstrategie (Neue Zielgruppe wie Ausland, Suche nach neuen Märkten, die man mit dem gegenwärtigen Leistungsangebot bedienen kann. Oder leichte Anpassung für neue Zielgruppe. Kunden müssen sich ändern)
 - Neue Produkte - Produktentwicklungsstrategie (Innovation und Optimierung. Verbesserung des bisherigen Leistungs- angebotes)
 - Diversifikation - Ausbruchsstartegie (ähnliche Produkte in Katalog aufnehmen oder Produkte, welche man für Produkt braucht)
 
@@ -62,8 +62,8 @@ Diversifikation: horizontal = höher in produktionskette, vertikal = verwandte p
 
 ### Harmonischer Marketing Mix
 - Die Qualität des Produkts, der Preis, der Vertrieb und die Promotion müssen aufeinander abgestimmt sein. (4P)
-- ==Permanente Marktorientierung==
-- ==Klare Prioritäten==
+- Permanente Marktorientierung
+- Klare Prioritäten
 
 ### Marktsegmentierung
 - Verhaltensorientiert
@@ -189,12 +189,7 @@ VPmwst3 * Schlüsselzahl = Einstand4
 
 Kurs = 1.1.CHF -> Währung * 1.1 = Preis CHF
 
-Cash Flow = ???
-
-Betriebsbuchhaltung = ???
-
 Gewinn = Erlöse – variable Kosten – fixe Kosten
-
 
 FIBU = Bilanz, Erfolgsrechnung und Geldflussrechnung
 
@@ -235,6 +230,11 @@ $("flüssige Mittel" + "Forderungen" + "Vorräte") / "kurzfristiges Fremdkapital
 
 **Fremdfinanzierugnsgrad** $("Fremdkapital" * 100) / "Gesamtkapital"$
 75% = ok aber auch hoch
+
+### Teilkostenrechnung
+- Fixkosten / (Erlös - Einzelkosten) = Anzahl Stücke um Fixkosten zu decken
+- Fixkosten / (Verkaufte Stücke) = Preis pro Stück
+
 
 ### Betriebsabrechnung BAB
 
@@ -396,7 +396,8 @@ Diese Methode ist sinnvoll, wenn unterschiedliche Kapitaleinsätze für die Inve
 
 Rentabilität = (Reingewinn + Zinsen) / $avg$eingesetztes Kapital * 100
 
-### Payback-Frist ???
+Der «Wert am Ende der Nutzungsdauer» ist irrelevant für die Renditevergleichsmethode.
+### Payback-Frist
 - Durchschnittsmethode: $"Kapitaleinsatz" / "Jährlicher Cashflow"$
 	- Indirekter Cashflow = Reingewinn + Abschreibungen + FK-Zinsen
 	- Direkter Cashflow = Jährlicher Nettoerlös – (jährliche Betriebs- und Materialkosten)

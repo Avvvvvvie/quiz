@@ -1,4 +1,4 @@
-10 seiten zsf zur sep
+f10 seiten zsf zur sep
 
 woche 13 nicht prüfungsrelevant (ordnungsmomente)
 
@@ -242,7 +242,7 @@ Qualitativ: Kundenbedürfnisse ermitteln und verstehen
 	- Beruf, Ausbildung, Einkommen
 - Soziodemographisch
 
-### Was gibt es für Preisstrategien / Orientierungen
+### Was gibt es für Preisstrategien / Orientierungen?
 - Kostenorientiert: Abhängig von den Kosten der Produktion
 - Nachfrageorientiert: Abhängig von der Anzahl Käufer
 - Wettbewerbsorientiert: Abhängig von der Konkurrenz
@@ -577,6 +577,7 @@ Aus der Teilkostenrechnung resultiert kein Gewinn oder Verlust, sondern ein Deck
 - Verkaufskalkulation
 
 ### Wie macht man die Einkaufskalkulation?
+```
 Bruttokreditaufpreis
 -Rabatte
 = Nettokreditkaufspreis
@@ -584,15 +585,19 @@ Bruttokreditaufpreis
 = Nettobareinkaufspreis
 +Bezugskosten
 = Einstandspreis
+```
 
 ### Wie macht man die Betriebskalkulation?
+```
 Einstandspreis
 +Gemeinkosten
 = Selbstkosten
 +Reingewinn
 = Nettoverkaufspreis
+```
 
 ### Wie macht man die Verkaufskalkulation?
+```
 Nettoverkaufspreis
 +Verkaufssonderkosten
 = Nettobarverkaufspreis
@@ -600,6 +605,7 @@ Nettoverkaufspreis
 = Nettokreditverkaufspreis
 +Rabatt
 = Bruttokreditverkaufspreis
+```
 
 ### Was gibt es für Beschaffungsobjekte?
 - Rohstoffe (Hauptbestandteile des Produkts)
