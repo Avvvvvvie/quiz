@@ -8,7 +8,7 @@ zweck - nutzen - tägliches
 dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nicht rohnrbruch
 
 
-### Was gibt es für Handlungsebenen des Managements?
+### Was sind die 3 Handlungsebenen des Managements?
 1. **Normatives Management**: Aufbau unternehmerischer Legitimations- und Verständigungspotentiale
 2. **Strategisches Management**: Aufbau nachhaltiger Wettbewerbsvorteile
 3. **Operatives Management**: Gewährleistung effizienter Abläufe und Problemlösungs- routinen
@@ -544,7 +544,7 @@ Beispiel:
 ### Was sind Zuschlagssätze?
 In der Betriebskostenrechnung kann man beim Verteilen der Kostenstellen auf die Kostenträger je den Zuschlagssatz berechnen. Dies ist das Verhältnis der Gesamtkosten der einzelnen Kostenstelle zu den Gesamtkosten der Kostenträger.
 
-### Was gibt es für Zuschlagssätze?
+### Wie berechnet man Zuschlagssätze?
 ###### Grundformel Zuschlagssatz
 $"Endstellenkosten der Hauptkostenstelle" / "Bezugsgrösse der Hauptkostenstelle" * 100$
 
@@ -607,7 +607,7 @@ Nettoverkaufspreis
 = Bruttokreditverkaufspreis
 ```
 
-### Was gibt es für Beschaffungsobjekte?
+### Nenne 5 Beschaffungsobjekte.
 - Rohstoffe (Hauptbestandteile des Produkts)
 - Hilfsstoffe (Nebenbestandteile des Produkts)
 - Betriebsstoffe (Werden bei der Herstellung verbraucht)
@@ -635,7 +635,7 @@ Nettoerlös * anzahl verkaufte Produkte
 5. Bestellungen
 6. Wareneingangskontrolle
 
-### Was gibt es für Beschaffungsstrategien?
+### Was sind 4 Beschaffungsstrategien?
 - Order to Stock (Beschaffungsmenge ist grösser als Beschaffungsbedarf)
 - Order to Make (Die Beschaffung gescheit erst, wenn es Beschaffungsbedarf gibt)
 - Just in Time: Zum richtigen Zeitpunkt
@@ -677,12 +677,12 @@ A Güter sind sehr wertvoll, C Güter sind nicht wertvoll. Als Faustregel hat ma
 ### Wie funktioniert die XYZ-Analyse?
 X-Güter haben regelmässigen Bedarf, Y schwankenden und Z unregelmässigen Bedarf. Dies ist wichtig für die Lagerorganisation. Häufig genutzte Güter sollten besser erreichbar sein.
 
-### Was gibt es für Lagerorganisationen?
+### Nenne 3 Arten von Lagerorganisation.
 - Eingangslager: Vor der Produktion, versorgen Produktion mit nötigen Materialien.
 - Zwischenlager: Parallel zur Produktion
 - Fertigwarenlager: Fertigprodukte und Handelswaren
 
-### Was gibt es für Lagerfunktionen?
+### Welche 5 Funktionen hat ein Lager?
 - Zeitüberbrückung (Als Puffer oder um möglichst schnell zu liefern)
 - Sicherung (Um Schwankungen ausgleichen)
 - Spekulation (Um die Ware beim besten Preis zu kaufen)
@@ -720,7 +720,7 @@ Werbung, Auswahl, Einstellung, Einführung
 
 Interne Personalgewinnung: Verlängerung Vertrag, Beförderung etc.
 
-### Was gibt es für Stellen?
+### Wie kann man Stellen unterteilen?
 - Linienstelle
 	- Führt Weisungen aus
 	- Ist Weisungsberechtigt
@@ -760,19 +760,19 @@ Eigen: Bereits integriert, tieferes Risiko, kürzere Einarbeitung, Beförderung 
 
 Fremd: Neue Ideen, evt. von Konkurrenz, Vergleich der Mitarbeiter, keine interne Intrigen
 
-### Was sind die Kriterien der Personalauswahl?
+### Welche Kriterien beeinflussen die Personalauswahl?
 - Leistungsfähigkeit
 - Leistungswille
 - Entwicklungsmöglichkeiten
 - Leistungspotenzial
 
-### Was für Unterlagen gibt es zur Personalauswahl?
+### Welche Unterlagen kannst du zu deiner Bewerbung einreichen?
 - Lebenslauf
 - Motivationsschreiben
 - Zeugnisse
 - Allfällige Referenzen
 
-### Was gibt es für Methoden zur Beurteilung von Bewerbern?
+### Mit welchen Methoden können Bewerber beurteilt werden?
 - Job-Interview
 - Test-Verfahren (ZB Persönlichkeit, Intelligenz, Reaktion, Graphologishc, Stimme...)
 - Assessment-Verfahren (Komplexe zb mit mehreren Leuten, Rollenspiele, Gruppendiskussionstest, Fallstudie)
@@ -788,8 +788,7 @@ Fremd: Neue Ideen, evt. von Konkurrenz, Vergleich der Mitarbeiter, keine interne
 - Soziale Kompetenz
 - Führungsanspruch
 
-### Was gibt es für 6 Kompetenzen?
-- Fachkompetenz
+### Welche 5 Kompetenzen können im Job Hilfreich sein, neben der Fachkompetenz?
 - Sozialkompetenz
 - Interkulturelle Kompetenz
 - Führungskompetenz
@@ -803,13 +802,13 @@ Man wird beurteilt durch...
 - Kunden
 - Vorgesetzer
 
-### Was gibt es für Personalentwicklung?
+### Personalentwicklung geschieht nicht nur bevor man arbeitet, sondern auch...?
 - into the job: Berufsausbildung, Traineeprogramm, Einarbeitung
 - along the job: Laufbahnplanung, Potenzialanalyse, Karriere- und Nachfolgeplanung
 - near the job: Qualitätszirkel, Projektarbeit
 - out of the job: Outplacement, Pensionsvorbereitung
 
-### Was gibt es für Personalhonorierung?
+### Wie kann das Personal honoriert werden? (Verschiedene Lohnarten)
 - Reine Lohnformen
 	- Zeitlohn
 	- Akkordlohn
@@ -819,13 +818,12 @@ Man wird beurteilt durch...
 ### Was ist die Humankapitaltheorie?
 Es gibt einen Zielkonflikt bei der Mitarbeiterentwicklung: Die Firmen investieren in die Ausbildung, aber Mitarbeiter können danach einfach so judihui weggehen. Je Firmenspezifischer die Ausbildung, desto eher sollte die Firma für die Ausbildung zahlen. Aber die Firma könnte auch mehr bezahlen für ihr Image. Damit macht sie ihre MA aber für andere FIrmen attraktiv.
 
-### Was gibt es für monetäre Anreize zu Arbeiten?
-- Lohn
+### Was reizt monetär an, zu arbeiten, ausser Lohn?
 - Erfolgsbeteiligung
 - Betriebliche Sozialleistungen
 - Betriebliches Vorschlagswesen
 
-### Was gibt es für nicht-monetäre Anreize zu Arbeiten?
+### Was gibt es für nicht-monetäre Anreize zu arbeiten?
 - Ausbildungsmöglichkeiten
 - Aufstiegsmöglichkeiten
 - Gruppenmitgliedschaft
