@@ -5,8 +5,7 @@ woche 13 nicht prüfungsrelevant (ordnungsmomente)
 woche 12 relaveant
 
 zweck - nutzen - tägliches
-dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nicht rohnrbruch
-
+dienstleistung nicht outsourcebar meistens. zb nicht hotlines, beratung aber nicht rohrbruch
 
 ### Was sind die 3 Handlungsebenen des Managements?
 1. **Normatives Management**: Aufbau unternehmerischer Legitimations- und Verständigungspotentiale
