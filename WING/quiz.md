@@ -165,6 +165,13 @@ Verhaltensgrundsätze:
 - Differenzierung, um Kunden zu gewinnen
 - Wirtschaftlichkeit, um preislich erfolg zu haben
 
+### Was sind horizontale, vertikale und laterale Diversifikation?
+Horizontal = Einen weiteren Schritt in der Produktionskette übernehmen
+
+Vertikal = Ähnliche Produkte anbieten
+
+Lateral = Völlig andere Produkte anbieten
+
 ### Was sind die 4 Branchen-Wettbewerbsstrategien?
 ```mermaid
 quadrantChart

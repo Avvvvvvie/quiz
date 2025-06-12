@@ -484,7 +484,7 @@ Aus dem letzten Bit kann man herauslesen: 0 = individual address
 In der Filtering Database steht, welche Adresse hinter welchem Port ist. Der Switch erhält Frames mit Absender und Empfänger und sendet sie zu den Ports mit dem Empfänger. Wenn der Empfänger hinter dem Input-Ports ist, wird das Frame verworfen. Wenn der Port des Empfängers unbekannt ist, wird das Frame an alle Output-Ports gesendet.
 
 ### Was machen Repeater / Hubs?
-- Verstärken ankommende Signale auf einem Port und leiteen sie "in bester Qualität" weiter
+- Verstärken ankommende Signale auf einem Port und leiten sie "in bester Qualität" weiter
 - Keine Fehlererkennung
 
 ### Was macht ein Switch?
@@ -692,16 +692,16 @@ Netzadresse, Netzmaske, Port, Gateway
 
 ### ![](assets/Pasted%20image%2020250514091723.png)
 | Wert            | alternative | interfaces |
-| --------------- | --- | ---------- |
-| 255 (1111’1111) | /24 | 256 - 2    |
-| 254 (1111’1110)  | /23 | 512 - 2    |
-| 252 (1111’1100) | /22 | 1'024 – 2  |
-| 248 (1111’1000) | /21 | 2'048 - 2  |
-| 240 (1111’0000) | /20 | 4'096 - 2  |
-| 224 (1110’0000) | /19 | 8'192 - 2  |
-| 192 (1100’0000) | /18 | 16'384 - 2 |
-| 128 (1000’0000) | /17 | 32'768 – 2 |
-| 0 (0000’0000)   | /16 | 65'536 – 2 |
+| --------------- | ----------- | ---------- |
+| 255 (1111’1111) | /24         | 256 - 2    |
+| 254 (1111’1110) | /23         | 512 - 2    |
+| 252 (1111’1100) | /22         | 1'024 – 2  |
+| 248 (1111’1000) | /21         | 2'048 - 2  |
+| 240 (1111’0000) | /20         | 4'096 - 2  |
+| 224 (1110’0000) | /19         | 8'192 - 2  |
+| 192 (1100’0000) | /18         | 16'384 - 2 |
+| 128 (1000’0000) | /17         | 32'768 – 2 |
+| 0 (0000’0000)   | /16         | 65'536 – 2 |
 
 ### Was ist Classful Routing?
 Die ersten 4 Adress Bits werden genutzt, um die Klasse anzugeben. Die D Klasse ist für Multiclass-Adressen und die E Klasse reserviert für zukünftige Nutzung. Dies wird nicht mehr zur Vergabe von Blöcken benutzt. Die Klassen haben eine fixe Anzahl Maskenbits (8, 16, 24) Die Klassen haben einen präfixfreien Präfix.
@@ -823,6 +823,9 @@ Protocol: 01 (Octet 10)
 Type: 03 (Octet 21)
 
 Original Data (Octet 29 ff)
+
+1hex = 1byte
+
 
 ### Ein Host 160.85.31.3 versucht, das folgende Paket an Host 160.85.29.99 zu senden: 4500 0028 8b10 0000 0711 a8a4 a055 1f03 a055 1d63 8b0d 829d 0014 a348 030a 0000 7504 1137 407c 0800. Erkennen Sie in diesem Paket die IP Adressen von Sender und Destination?
 Sender: a055 1f03

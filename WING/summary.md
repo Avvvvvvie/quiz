@@ -26,7 +26,7 @@ Chancen und Risiken dieser Umweltfaktoren analysieren:
 - Environmental (x ist nachhaltig, y nicht)
 - Legal (gute gesetze, hohe unfallgefahr)
 
-### Fünf Kräfte Modell
+### Fünf Kräfte Modell (Branchenanalyse)
 Es werden folgende 5 Aspekte untersucht:
 - Verhandlungsstärke der Lieferanten
 - Verhandlungsstärke der Kunden
@@ -41,12 +41,12 @@ Es werden folgende 5 Aspekte untersucht:
 - Differenzierungsfokus (segmentspezifisch)
 
 ### 4 Produkt-Markt-Srategien
-- Alte Märkte - Bewährungsstrategie (Marktdurchdringung durch Erhöhen der Kaufrate durch Abwerben, Heimlieferung...)
-- Neue Märkte - Entwicklungsstrategie (Neue Zielgruppe wie Ausland)
-- Neue Produkte - Entwicklungsstrategie (Innovation und Optimierung)
+- Alte Märkte - Bewährungsstrategie (Marktdurchdringung/Penetration durch Erhöhen der Kaufrate durch Abwerben, Heimlieferung...)
+- Neue Märkte - Marktentwicklungsstrategie (Neue Zielgruppe wie Ausland, Suche nach neuen Märkten, die man mit dem gegenwärtigen Leistungsangebot bedienen kann.)
+- Neue Produkte - Produktentwicklungsstrategie (Innovation und Optimierung. Verbesserung des bisherigen Leistungs- angebotes)
 - Diversifikation - Ausbruchsstartegie (ähnliche Produkte in Katalog aufnehmen oder Produkte, welche man für Produkt braucht)
 
-vertikale und horizontale Diversifikation
+Diversifikation: horizontal = höher in produktionskette, vertikal = verwandte produkte oder lateral = nicht verwandte produkte Diversifikation
 
 ### 4 Strategien zu den 3 Strossrichtungen
 - Bewährungsstrategie
@@ -89,13 +89,34 @@ vertikale und horizontale Diversifikation
 - Räumliche Preisdifferenzierung: In- und Auslandpreise (z.B. Medikamente)
 - Preisdifferenzierung nach Käuferschichten: Studententarife, Verbilligung für Aktionäre
 - Preisdifferenzierung nach Abnahmemenge: Mengenrabatte, Treueprämien, Bundling etc.
-- Skimming
-- Penetration
+- Skimming = zuerst hoch dann tief
+- Penetration = zuerst tief dann hoch
 - Gratis-Angebot / Freemium
 - Beachtung psychologischer Effekte: 19.50 statt 20
 
-Preiselastisch = Wenn die Nachfrage mit steigendem Preis sinkt.
+Preiselastisch = Wenn die Nachfrage mit steigendem Preis sinkt. (medikamente+grundnahrung=nicht preiselastisch)
 
+### Marktgrössen
+- Marktkapazität: Wenn der Preis keien Rolle spielt
+- Marktpotenzial: Wenn alle Knden kaufbereit sind
+- Marktvolumen: Umsatz aller Firmen
+- Marktanteil: Umsatz der eigenen Firma
+- Sättigungsgrad: Marktvoluem / Marktpotenzial * 100%
+
+### Marktsegmentierung
+- Verhaltensorientiert
+	- Preisverhalten
+	- Mediennutzung
+	- Produktwahl
+	- Einkaufsstättenwahl
+- Psychographisch
+	- Lebensstil, Risikoneigung
+	- Einstellungen, Absichten, Motive
+- Geographisch
+	- Alter, Geschlecht etc.
+	- Beruf, Ausbildung, Einkommen
+- Soziodemographisch
+- Positionierung = Abgrenzung zur Konkurrenz zb städtisch
 ### AIDA = Attention Interest Desire Action
 
 ### Cashflow Schemas
@@ -104,7 +125,7 @@ Preiselastisch = Wenn die Nachfrage mit steigendem Preis sinkt.
 - Expandierende Firma: Investiert mehr als Geld aus Geschäftsbereich
 - Startup mit Problemen: Verliert Geld im Geschäftsbereich, viel Geld kommt aus Finanzierungsbereich (Kredite)
 
-### Bilanz
+### Bilanz = Vermögen VS Schulden
 Bilanz / Aktive:
 - Umlaufvermögen: Bargeld, Lager, Forderungen, Aktive Rechnungsabgrenzungen, FLL
 - Anlagevermögen: Anlagen, Maschinen, Patente, Beteiligungen
@@ -116,7 +137,7 @@ Passive: Schulden
 
 Da der Gewinn dabei ist, haben beide dasselbe Total
 
-### Erfolgsrechnung
+### Erfolgsrechnung = Aufwand VS Ertrag
 - Ertrag / Verkaufserlöse
 	- Betriebsertrag = Total Passiven Bilanz
 	- Betriebsfremder Ertrag
@@ -134,6 +155,12 @@ Da der Gewinn dabei ist, haben beide dasselbe Total
 	- (Ausserordentlicher Aufwand)
 	- Steuern = Netto-/Reingewinn (net income NI / EAT)
 
+### Geldflussrechnung / Cashflow
+Der Cash Flow zeigt dem Unternehmen auf, welche finanziellen Mittel es verwenden kann, ohne die eigene Substanz zu schmälern.
+- aus Betriebstätigkeit
+- aus Investitionstätigkeit
+- aus Finanzierungstätigkeit
+![|400x0](assets/Pasted%20image%2020250612083710.png)
 ### Allgemeine Kennzahlen & Begriffe
 
 Bruttogewinn = Nettoerlös – Handelswarenaufwand = Deckungsbeitrag pro Stück
@@ -168,7 +195,8 @@ Betriebsbuchhaltung = ???
 
 Gewinn = Erlöse – variable Kosten – fixe Kosten
 
-Der Cash Flow zeigt dem Unternehmen auf, welche finanziellen Mittel es verwenden kann, ohne die eigene Substanz zu schmälern.
+
+FIBU = Bilanz, Erfolgsrechnung und Geldflussrechnung
 
 ### Kennzahlen Liquidität
 ###### Grad 1
@@ -208,7 +236,11 @@ $("flüssige Mittel" + "Forderungen" + "Vorräte") / "kurzfristiges Fremdkapital
 **Fremdfinanzierugnsgrad** $("Fremdkapital" * 100) / "Gesamtkapital"$
 75% = ok aber auch hoch
 
-### Betriebsabrechnung
+### Betriebsabrechnung BAB
+
+Betriebsbuchhaltung = BAB, Gesamtkalkulation, Einzelkalkulation
+Kostenartenrechnung = Einzel VS Gesamtkosten
+Teilkostenrechnung = Nur Direkte Kosten
 
 - Satz = (3) * 100 / (1)
 - (2) * Satz = (4)
@@ -231,25 +263,24 @@ Herstellkosten + Verwaltungs-Gemeinkosten
 ```
 
 ```
-Nettoverkaufspreis + Verkaufssonderkosten
-= Nettobarverkaufspreis + Skonto
-= Nettokreditverkaufspreis + Rabatt
-= Bruttokreditverkaufspreis (= Offerten-Preis)
-+ MwSt. 
-= Bruttokreditverkaufspreis (inkl. MwSt.)
+= Nettoverkaufspreis 
++ Verkaufssonderkosten = Nettobarverkaufspreis
++ Skonto = Nettokreditverkaufspreis
++ Rabatt = Bruttokreditverkaufspreis (= Offerten-Preis)
++ MwSt. = Bruttokreditverkaufspreis (inkl. MwSt.)
 ```
-### Einkaufskalkulation
+### Einkaufskalkulation Handelsbetrieb
 ```
-Bruttokreditaufpreis
+Bruttokreditaufpreis = Katalogpreis
 - Rabatte
-= Nettokreditkaufspreis
+= Nettokreditkaufspreis = Rechnungsbetrag
 - Skonto
 = Nettobareinkaufspreis
 + Bezugskosten
 = Einstandspreis (1)
 ```
 
-### Betriebskalkulation
+### Betriebskalkulation Handelsbetrieb
 ```
 Einstandspreis = 100%
 + Gemeinkosten = 50%
@@ -262,9 +293,9 @@ Bruttogewinn = % von Nettoverkaufspreis
 
 Reingewinn = % von Selbstkosten
 
-### Verkaufskalkulation
+### Verkaufskalkulation Handelsbetrieb
 ```
-Nettoverkaufspreis
+Nettoverkaufspreis = Nettoerlös
 +Verkaufssonderkosten
 = Nettobarverkaufspreis
 + Skonto
@@ -276,7 +307,7 @@ Nettoverkaufspreis
 ```
 
 ### Make or Buy
-Break-Even Analyse: Ab welcher Menge lohnt es sich, selbst herzustellen? Es gibt zwar einen zusätzlichen fixen Herstellungspreis, aber einen viel tieferen variablen Preis.
+Break-Even Analyse: Ab welcher Menge lohnt es sich, selbst herzustellen? Es gibt zwar einen zusätzlichen fixen Herstellungspreis, aber einen viel tieferen variablen Preis. Make: K = Variable Kosten pro Stück + Fixkosten. Buy: K = Variable Kosten pro Stück
 
 Vorteile Buy
 - Konzentration auf Kerngeschäft
@@ -344,10 +375,12 @@ $-"Anschaffungskosten" + "Liquidationserlös" * 1/(1+i)^n$$+ ("Erwartete Erlöse
 
 Wenn die Erlöse/Kosten pro Jahr unterscheidlich sind, müssen sie einzeln mit den Zinsen multipliziert werden. Bei den Anschaffungskosten ist i=1
 
+Aufzinsung = $* (1 + i)^n$. In dieser Methode muss man aber abzinsen, weil das Geld weniger Wert ist in Zukunft.
+
 ![|600x0](assets/Pasted%20image%2020250611094135.png)
 
 ### Kostenvergleichsmethode
-Man vergleicht zwischen zwei potentiellen Anlagen:
+Man vergleicht zwischen zwei potentiellen Anlagen Gesamtkosten:
 
 Je die Jährliche Betriebskosten + Materialkosten = Variable Kosten
 
@@ -361,12 +394,13 @@ Jährlicher Nettoerlös - Variable Kosten - Fixkosten = Jährlicher Gewinn
 ### Rentabilitätsvergleich
 Diese Methode ist sinnvoll, wenn unterschiedliche Kapitaleinsätze für die Investition notwendig sind.
 
-Rentabilität = (Reingewinn + Zinsen) / eingesetztes Kapital * 100
+Rentabilität = (Reingewinn + Zinsen) / $avg$eingesetztes Kapital * 100
 
 ### Payback-Frist ???
-Durchschnittsmethode: $"Kapitaleinsatz" / "Jährlicher Cashflow"$
-
-Kumulationsmethode: Die Einzahlungsüberschüsse werden addiert, bis die Summe der kumulierten Werte dem ursprünglichen Investitionsbetrag entspricht. Dies bietet sich an, wenn die Gewinne pro Periode nicht konstant sind oder die Abschreibungen nicht linear berechnet sind.
+- Durchschnittsmethode: $"Kapitaleinsatz" / "Jährlicher Cashflow"$
+	- Indirekter Cashflow = Reingewinn + Abschreibungen + FK-Zinsen
+	- Direkter Cashflow = Jährlicher Nettoerlös – (jährliche Betriebs- und Materialkosten)
+- Kumulationsmethode: Die Einzahlungsüberschüsse werden addiert, bis die Summe der kumulierten Werte dem ursprünglichen Investitionsbetrag entspricht. Dies bietet sich an, wenn die Gewinne pro Periode nicht konstant sind oder die Abschreibungen nicht linear berechnet sind.
 ### Kennzahlen Produktion
 ###### Rentabilität
 $("Ertrag" - "Aufwand") / "Kapitaleinsatz" = "Gewinn" / "Kapitaleinsatz"$
@@ -386,3 +420,8 @@ Vorwärts: Man berechnet den frühsten Endtermin nach dem Auftragseingang. Danac
 Rückwärts: Man berechnet den spätesten Starttermin, um am Kundentemin fertig zu sein. Vorteil: Wenig Liegezeit. Nachteil: Hoher Zeitdruck und hohes Risiko.
 
 Leistungserstellung = Effektive Zeit zur Herstellung ohne Lager?
+
+### Betriebseigen oder Betriebsfremd
+Eigen: Bereits integriert, tieferes Risiko, kürzere Einarbeitung, Beförderung Motiviert, schneller, weniger Pensionskasse evt
+
+Fremd: Neue Ideen, evt. von Konkurrenz, Vergleich der Mitarbeiter, keine interne Intrigen
