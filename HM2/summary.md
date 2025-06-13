@@ -57,14 +57,17 @@ Auflösen:
 
 $vec delta = -Df^-1(vec x^((k))) f(vec x^((k)))$
 
-### Vandermonde
+### Polynominterpolation mit Vandermonde
 
 $(a_0;...;a_n) = (1,x_0,...,x_0^n;...,...,...,...;1,x_n,...,x_n^n)^-1 (y_0;...;y_n)$
 
 $P_n(x) = a_0 + a_1 x + a_2 x^2 + ... + a_n x^n$
 
+Grad n bei n+1 Stützpunken.
 
-### Lagrange Interpolationsformel bei n+2 Stützpunkten
+Überstimmt = Mehr Daten als Grad des Polynoms
+
+### Lagrange Polynominterpolationsformel bei n+2 Stützpunkten
 
 $P_(n+1)(x) = Sigma_(i=0)^n  l_i(x) * y_i$
 
@@ -141,9 +144,7 @@ $d_i = 1/(3 h_i) (c_(i+1) - c_i)$
 
 $S_i(x) = a_i + b_i (x - x_i) + c_i (x - x_i)^2 ...$
 
-### Lineares Ausgleichssystem
-
-Normalengleichungssystem
+### Lineares Ausgleichssystem, Normalengleichungssystem
 
 $A^T A vec lambda = A^T vec y$
 

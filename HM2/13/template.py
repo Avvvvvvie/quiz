@@ -42,3 +42,4 @@ def runge_kutta_sys(f, a, b, y0, n):
         y[:,i+1] = y[:,i] + (h / 6) * (k1 + 2 * k2 + 2 * k3 + k4)
 
     return x, y
+    

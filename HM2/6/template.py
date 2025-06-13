@@ -33,5 +33,3 @@ def polyfit(x,y,degree):
 
 def curve_fit_error(A, lam, y):
     return np.linalg.norm(y - (A @ lam), 2) ** 2
-
-### for ln, see ln.py

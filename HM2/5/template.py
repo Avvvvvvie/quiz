@@ -3,7 +3,7 @@ from scipy.interpolate import CubicSpline
 import matplotlib.pyplot as plt
 from sympy import factorial
 
-
+#
 def natural_cubic_spline(x, y):
     def compute_c(y, h):
         n = len(y) - 1
@@ -67,7 +67,7 @@ def not_a_knot_spline_scipy(x, y):
     return lambda xx: spline(xx)
 
 
-def natural_spline_matrix_4(x, y):
+def natural_spline_matrix_manual(x, y):
     equations = np.array([
     ###  a        b           c                d
         [1, 0, 0, x[0], 0, 0, x[0] ** 2, 0, 0, x[0] ** 3, 0, 0],
