@@ -194,7 +194,7 @@ def periodic_spline_matrix(x, y):
 def not_a_knot_spline_matrix(x, y):
     equations, b, matrix_size, n = spline_base(x, y)
 
-    #f''' = 6d ...
+    # f''' = 6d ... = 0
     equation = np.zeros(matrix_size)
     for j in range(3, 4):
         equation[j * n] = x[1] * (j - 2) * (j - 1) * j
