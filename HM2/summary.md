@@ -339,6 +339,6 @@ Ergebnis: $h < ...$
 
 Wenn $y' = -alpha y$ als $y_(i+1) = g(h alpha) * y_i$ geschrieben werden kann, dann ist das Verfahren für alle Alpha stabil, wo $|g(x)| < 1$ gilt. Diese Stabilitätsfunktion berechnet man bei ($**$)
 
-Eulerverfahren: 1 + x
+Eulerverfahren: 1 + x, h < 2 / alpha
 
 s-stufiges Runge Kutta: Polynom von Grad s
