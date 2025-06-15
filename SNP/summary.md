@@ -38,6 +38,8 @@
 
 ##### <unistd.h>
 - fork()
+- sleep()
+- pipe
 
 ##### <sys/wait.h>
 - wait
