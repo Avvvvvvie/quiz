@@ -44,6 +44,9 @@
 ##### <sys/wait.h>
 - wait
 
+##### <signal.h>
+- kill
+
 ## C Snippets
 
 ### Code Structure
