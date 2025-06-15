@@ -530,7 +530,7 @@ int comparison = strcmp("hans", "haus"); // n < u -> <0
 
 char[] source[10] = "Hellooooo";
 char[] dest[10];
-char[] mydest = strcpy(dest, source);
+char[] mydest = strcpy(dest, source); // returns pointer to dest
 
 char[5] s1 = "hi"; // needs to be large enough
 char[3] s2 = "hi";
@@ -569,10 +569,11 @@ int i = atoi(str);
 ```c
 for(i = 0; *(pc + i); i++, len++);
 ```
-##### Copy string size
+##### Copy string
 ```c
-char origin[] = "...";
-char issue = (char*)malloc(sizeof(origin) / sizeof(char) + 1);
+char origin[] = "hello";
+char * issue = (char*) malloc(strlen(origin) + 1);
+strcpy(issue, origin);
 ```
 ##### Iterate tokens
 ```c
@@ -1493,11 +1494,11 @@ thread_t id = pthread_self()
 | SIGSTOP | Stop           | Stoppt den Prozess (oder ignoriert falls gestoppt)       |
 | SIGCONT | Cont           | Reaktiviert den Prozess (oder ignoriert falls am Laufen) |
 
-| sa_flags   | Meaning                              |
-| ---------- | ------------------------------------ |
-| SA_SIGINFO | sa_sigaction will be handler         |
-| SA_RESTART | needed for sscanf                    |
-| 0          | sa_handler will be handler (default) |
+| sa_flags   | Meaning                                                                                    |
+| ---------- | ------------------------------------------------------------------------------------------ |
+| SA_SIGINFO | sa_sigaction will be handler. siginfo_t will be passed to the handler to get a lot of info |
+| SA_RESTART | needed for sscanf                                                                          |
+| 0          | sa_handler will be handler (default)                                                       |
 
 | Handler | Meaning      |
 | ------- | ------------ |
@@ -1870,7 +1871,7 @@ int main () {
 #include <sys/socket.h>
 #include <sys/un.h>
 #include <unistd.h>
-#define SRV_SOCK "/tmp/my-server-socket. sock"
+#define SRV_SOCK "/tmp/my-server-socket.sock"
 #define CLI_SOCK "/tmp/my-client-socket.sock"
 #define BUFFER_SIZE 8192
 #define ERR() do { perror(""); exit(1); } while (0)
@@ -1880,6 +1881,9 @@ int main () {
 #include "defs.h"
 int main (int argc, const char* argv[]) {
 	// server: connection-less UNIX socket
+	// AF_UNIX = local communication
+	// DGRAM = connectionless, unreliable messages of a fixed maximum length
+	// protocol = 0 cuz omly one exists for this
 	int fd = socket(AF_UNIX, SOCK_DGRAM, 0);
 	if (fd < 0) ERR();
 	struct sockaddr_un a = { AF_UNIX, SRV_SOCK };
@@ -1906,15 +1910,16 @@ int main(int argc, const char* argv[]) {
 	int fd = socket(AF_UNIX, SOCK_DGRAM, 0);
 	if (fd < 0) ERR();
 	struct sockaddr_un a = { AF_UNIX, CLI_SOCK } ;
-	unlink(CLI_SOCK) ;
+	unlink(CLI_SOCK);
+	// assign address to socket
 	if (bind(fd, (void*) &a, sizeof(a))<0) ERR();
+	// send all agrs
 	for(int i = 1; i < argc; i++) {
 		const char *p = argv[i];
-		int len = strlen (p)+  1;
-		struct sockaddr_un s = { AF_UNIX, SRV_SOCK } ;
-		int n = sendto (fd, p, len, 0,
-			(void*) &s, sizeof(s));
-			
+		int len = strlen(p) + 1;
+		struct sockaddr_un s = { AF_UNIX, SRV_SOCK };
+		// sendto(sockfd, buf, len, flags, dest, addlen)
+		int n = sendto(fd, p, len, 0, (void*) &s, sizeof(s));
 		if (n < 0) ERR();
 	}
 	close(fd);
@@ -2002,6 +2007,8 @@ void sendRequest(int communicationSocket, char* buffer, int len) {
 
 ##### TCP Server
 ```c
+static int ListeningSocket = 0;
+static int connectedSocket = 0;
 void server_init(char * portNumber) {
 	struct addrinfo hints, *server_info, *p;
 	
@@ -2055,6 +2062,16 @@ void sendResponse(char* response, int resp_len) {
 
 void server_close_connection(void) {
 	close(connectedSocket);
+}
+
+void server_close_connection(void) {
+   close(connectedSocket);
+}
+
+int wait_client(void) {
+   connectedSocket = accept(ListeningSocket, 0, 0);
+   printf("Client connected\n");
+   return connectedSocket;
 }
 ```
 
@@ -2257,7 +2274,7 @@ int second = fromB > toB ? fromB : toB;
 ```
 
 ##### Producer-Consumer Problem
-Synchronized
+Synchronized with FIFO
 ```c
 // Producer
 while (1) {
@@ -2268,14 +2285,13 @@ while (1) {
 
 // Consumer
 while (1) {
-// blocks until one item available
-item = sync_get (sync_fifo) ;
-consume_item(item) ;
-
+	// blocks until one item available
+	item = sync_get(sync_fifo) ;
+	consume_item(item) ;
 }
 ```
 
-Unsynchronized
+Unsynchronized with semaphore and mutex
 ```c
 Semaphore space_left = capacity(fifo);
 Semaphore space_used = 0;
