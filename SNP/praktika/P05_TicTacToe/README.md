@@ -55,7 +55,6 @@ ___
 
 ### 4.1 Teilaufgabe test_model_init 
 Das Programm besteht aus folgenden Files:
-
 | Datei | ToDo |
 | :-- | :-- |
 |Makefile | -> gegeben, d.h. nichts anzupassen |

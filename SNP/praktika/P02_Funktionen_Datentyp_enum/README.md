@@ -175,7 +175,6 @@ ___
 ## 4. Bewertung
 
 Die gegebenenfalls gestellten Theorieaufgaben und der funktionierende Programmcode müssen der Praktikumsbetreuung gezeigt werden. Die Lösungen müssen mündlich erklärt werden können.
-
 | Aufgabe | Kriterium | Gewicht |
 | :-- | :-- | :-- |
 | alle | Sie können das funktionierende Programm inklusive funktionierende Tests demonstrieren und erklären. |  |

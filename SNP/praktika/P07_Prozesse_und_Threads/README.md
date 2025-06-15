@@ -487,19 +487,19 @@ ___
 
 Die gegebenenfalls gestellten Theorieaufgaben und der funktionierende Programmcode müssen der Praktikumsbetreuung gezeigt werden. Die Lösungen müssen mündlich erklärt werden.
 
-| Aufgabe | Kriterium                                                  | Punkte |
-| :------ | :--------------------------------------------------------- | :----- |
-|         | Sie können die gestellten Fragen erklären.                 |        |
-| 1       | Prozess mit `fork()` erzeugen                              | 0.5    |
-| 2       | Prozess mit `fork()` und `exec()`: Programm Image ersetzen | 0.5    |
-| 3       | Prozesshierarchie analysieren                              | 0.5    |
-| 4       | Zeitlicher Ablauf von Prozessen                            | 0.5    |
-| 5       | Waisenkinder (Orphan Processes)                            | 0.5    |
-| 6       | Terminierte, halbtote Prozesse (Zombies)                   | 0.5    |
-| 7       | Auf Terminieren von Kindprozessen warten                   | 0.5    |
-| 8       | Kindprozess als Kopie des Elternprozesses                  | 0.5    |
-| 9       | Unterschied von Threads gegenüber Prozessen                | 0.5    |
-| 10      | Dämon Prozesse                                             | (4)    |
+| Aufgabe | Kriterium | Punkte |
+| :-- | :-- | :-- |
+|  | Sie können die gestellten Fragen erklären. |  |
+| 1 | Prozess mit `fork()` erzeugen | 0.5 |
+| 2 | Prozess mit `fork()` und `exec()`: Programm Image ersetzen | 0.5 |
+| 3 | Prozesshierarchie analysieren | 0.5 |
+| 4 | Zeitlicher Ablauf von Prozessen | 0.5 |
+| 5 | Waisenkinder (Orphan Processes) | 0.5 |
+| 6 | Terminierte, halbtote Prozesse (Zombies) | 0.5 |
+| 7 | Auf Terminieren von Kindprozessen warten | 0.5 |
+| 8 | Kindprozess als Kopie des Elternprozesses | 0.5 |
+| 9 | Unterschied von Threads gegenüber Prozessen | 0.5 |
+| 10 | Dämon Prozesse | (4) |
 
 
 ___
