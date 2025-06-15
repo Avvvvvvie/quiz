@@ -1533,10 +1533,10 @@ static pid_t start_child(int wait_for_signal) {
 }
 static void wait_for_child () {
 	int wsts;
-	pid t wpid = wait(&wsts) ; // wait blocking for any child to terminate
+	pid_t wpid = wait(&wsts) ; // wait blocking for any child to terminate
 	if (wpid == -1) PERROR_AND_EXIT("wait");
 	// WIFEXITED gets exit code 
-	if (WIFEXITED(wsts)) printf("Child %d: exit=%d (status=0x%04X)\n", wpid, WTERMSIG(wsts) , wsts);
+	if (WIFEXITED(wsts)) printf ("Child %d: exit=%d (status=0x%04X) \n", wpid, WEXITSTATUS(wsts), wsts);
 	// WIFSIGNALED gets signal value
 	if (WIFSIGNALED(wsts)) printf("Child %d: signal=%d (status=0x%04X)\n", wpid, WTERMSIG(wsts) , wsts);
 }
@@ -1552,12 +1552,6 @@ int main () {
 	if (kill(cpid2, SIGTERM) == -1) PERROR_AND_EXIT("kill");
 	wait_for_child(); // waits blocking until some child terminates
 	wait_for_child(); // waits blocking until some child terminates	
-}
-
-printf ("Child %d: exit=%d (status=0x%04X) \n", wpid, WEXITSTATUS (wsts) , wsts) ;
-
-
-
 }
 ```
 
