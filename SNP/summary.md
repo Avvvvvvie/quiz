@@ -1384,7 +1384,7 @@ int main () {
 }
 ```
 
-##### Pthread with argument
+##### Pthread with char argument
 ```c
 #include <pthread.h>
 
@@ -1404,6 +1404,20 @@ if (pthr != 0) perror("Could not create thread");
 
 pthread_join(thread1, NULL);
 pthread_join(thread2, NULL);
+```
+
+##### Pthread with integer argument
+```c
+void * routine(void *arg) {
+	int i = *(int*)arg;
+}
+
+int main (void) {
+	pthread_t myThread;
+	int i = 10;
+	if(pthread_create(&myThread, NULL, routine, &i) != 0) FATAL("create");
+	...
+}
 ```
 ##### Pthread with return value
 
@@ -1436,6 +1450,7 @@ int main () {
 	exit(EXIT_SUCCESS);
 }
 ```
+
 
 ##### Detach
 pthread_detach =  Thread resources are freed after it terminates, not after pthread_join. This means there is no return value and you cannot join anymore.
@@ -1664,8 +1679,10 @@ signal(SIGTSTP, &handler);
 ```
 ### Pipes
 Both ends of the FIFO pipe have their own file descriptor.
-- Anonymous: `pipe(int[2]); fork()
-- Named: `mkfifo()`
+- Anonymous: `pipe(int[2]); fork()`
+- Named: `mkfifo()` (works across processes)
+
+##### Anonymous Pipe
 
 ```c
 #include <sys/types.h>
@@ -1754,7 +1771,18 @@ read(fd[0], &x, sizeof(x));
 ```c
 #include <sys/types.h
 #include <sys/stat.h>
-int mkfifo(const char *pathname, mode_t mode);
+#include <errno.h>
+#include <fcntl.h>
+if(mkfifo("mypath", mode) == -1) {
+	if(errno != EEXIST) {
+		
+	}
+}
+int fd = open("mypath", O_WRONLY);
+if(write(fd, &x, sizeof(x)) == -1) {
+
+}
+close(fd);
 ```
 
 ##### Multiple Readers/Writers
@@ -1802,7 +1830,7 @@ int main () {
 		PERROR_AND_EXIT("fork");
 	}
 	if (cpid > 0) { // parent: shares queue descriptor with child
-		if (mq_unlink (QNAME) ==- 1) {
+		if (mq_unlink(QNAME) ==- 1) {
 			PERROR_AND_EXIT("mq_unlink"); // remove it from the filesystem again
 		}
 		// buffer allows for final '\0' to allow interpretation as string
@@ -1830,7 +1858,7 @@ int main () {
 			PERROR_AND_EXIT("mq_send");
 		}
 		sleep(2);
-		if (mq send(q, "Queue", sizeof ("Queue"), 1) ==- 1) {
+		if (mq send(q, "Queue", sizeof("Queue"), 1) ==- 1) {
 			PERROR_AND_EXIT("mq_send");
 		}
 	}
@@ -2074,8 +2102,9 @@ int main (void) {
 	pthread_t th_inc;
 	pthread_t th_dec;
 
+	// pass value to thread
 	int inc = +1;
-	int dec =- 1;
+	int dec = -1;
 	if (pthread_create(&th_inc, NULL, count, &inc) != 0) FATAL("create") ;
 	if (pthread_create(&th_dec, NULL, count, &dec) != 0) FATAL("create");
 
@@ -2084,10 +2113,11 @@ int main (void) {
 
 	// N times increment and N tmies decrement is expected to result in value 0 again
 	if (value !- 0) fprintf(stderr, "ERROR: exp-$d, act-%d\n", 0, value);
+	// pthread_mutex_destroy(&mutex)
 }
 ```
 
-##### Rekursive Locks
+##### Recursive Locks
 ```c
 #include <sys/types.h>
 #include <pthread.h>
@@ -2138,12 +2168,12 @@ int main (void) {
 
 Unnamed, Between Threads
 
-| sem_t sem;                         | semaphore instance                       |
-| ---------------------------------- | ---------------------------------------- |
-| sem_init (&sem, 0, initial_value); | init memory semaphore with initial count |
-| sem_wait (&sem);                   | wait opertation                          |
-| sem_post (&sem);                   | signal operation                         |
-| sem destroy (&sem);                | cleanup                                  |
+| sem_t sem;                         | semaphore instance                           |
+| ---------------------------------- | -------------------------------------------- |
+| sem_init (&sem, 0, initial_value); | init memory semaphore with initial int value |
+| sem_wait (&sem);                   | wait opertation                              |
+| sem_post (&sem);                   | signal operation                             |
+| sem_destroy (&sem);                | cleanup                                      |
 
 Named, Between Processes
 
@@ -2159,6 +2189,7 @@ Named, Between Processes
 - 1 = 1 tasks can pass
 - post = +1
 - wait = -1 when available
+- 0700 = owner only, 0777 = everyone
 
 ##### Unnamed Sephamore
 
