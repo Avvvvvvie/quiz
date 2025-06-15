@@ -1472,10 +1472,11 @@ thread_t id = pthread_self()
 | SIGSTOP | Stop           | Stoppt den Prozess (oder ignoriert falls gestoppt)       |
 | SIGCONT | Cont           | Reaktiviert den Prozess (oder ignoriert falls am Laufen) |
 
-| sa_flags   | Meaning                      |
-| ---------- | ---------------------------- |
-| SA_SIGINFO | sa_sigaction will be handler |
-| 0          | sa_handler will be handler   |
+| sa_flags   | Meaning                              |
+| ---------- | ------------------------------------ |
+| SA_SIGINFO | sa_sigaction will be handler         |
+| SA_RESTART | needed for sscanf                    |
+| 0          | sa_handler will be handler (default) |
 
 | Handler | Meaning      |
 | ------- | ------------ |
@@ -1651,6 +1652,10 @@ int main(void) {
 }
 ```
 
+##### Simple Signal (Not portable)
+```c
+signal(SIGTSTP, &handler);
+```
 ### Pipes
 Both ends of the FIFO pipe have their own file descriptor.
 - Anonymous: `pipe(int[2]); fork()
