@@ -232,6 +232,7 @@ void print_binary(unsigned int value, int print_new_line) {
 }
 ```
 
+##### Print Binary and Hexadecimal
 ```c
 /**
  *  Print numbers in various forms
@@ -317,7 +318,7 @@ int main (void) {
  *                   +128     print leading zeros
  *                   +256     terminate with linefeed
  */
-void printbin2 (int num, int config) {
+void printbin2(int num, int config) {
     
     //  name configuration bits for better readability
     const int MARK_BIT = 1<<6;
