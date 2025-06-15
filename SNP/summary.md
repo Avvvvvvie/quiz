@@ -1471,7 +1471,6 @@ thread_t id = pthread_self()
 | SIGTERM | Term           | Terminierungs-Signal                                     |
 | SIGSTOP | Stop           | Stoppt den Prozess (oder ignoriert falls gestoppt)       |
 | SIGCONT | Cont           | Reaktiviert den Prozess (oder ignoriert falls am Laufen) |
-|         |                |                                                          |
 
 | sa_flags   | Meaning                      |
 | ---------- | ---------------------------- |
