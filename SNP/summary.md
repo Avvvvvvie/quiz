@@ -1,4 +1,4 @@
-
+[SNP Laboratories — SNP Labs documentation](https://github.zhaw.ch/pages/SNP/snp_students/build/html/index.html)
 ## Standard Librabry
 
 ```c
@@ -1457,6 +1457,12 @@ thread_t id = pthread_self()
 - In parent process before child terminates: blocked until child terminates
 - In parent process after child terminates: Child is Zombie until wait was called.
 - Parent terminates without waiting for child: Child is orphaned and will be adopted by the first started process.
+- wait(NULL) will return int child_pid
+- wait(&status) will give the status
+	- if WIFEXITED(status) it has a int code WEXITSTATUS(status)
+	- if WIFSIGNALED(status) it exited because of a signal psignal(int WTERMSIG(stat), "Exit signal");
+- waitpid(pid, NULL) waits for the child with int pid
+- waitpid(pid, &stat, WNOHANG) just check if its finished, save status
 
 ### Signals
 
@@ -1703,7 +1709,7 @@ int main () {
 			char msg [MSIZE];
 			n = read(fd[0], msg, MSIZE);
 			if (n == -1) PERROR_AND_EXIT("read") ;
-			write (STDOUT_FILENO, msg, n) ;
+			write(STDOUT_FILENO, msg, n) ;
 		} while (n>0);
 		if (close(fd[0]) == -1) PERROR_AND_EXIT ("close");
 		if (wait(NULL) ==- 1) PERROR_AND_EXIT("wait");
@@ -1738,6 +1744,12 @@ else if (errno == EAGAIN) // has to wait for poll interval - avoid spin-lock
 else // real error
 ```
 
+##### Read and Write Integer
+```c
+int x;
+write(fd[1], &x, sizeof(x));
+read(fd[0], &x, sizeof(x));
+```
 ##### Named Pipe
 ```c
 #include <sys/types.h

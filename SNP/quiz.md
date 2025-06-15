@@ -1,20 +1,3 @@
-[SNP Laboratories — SNP Labs documentation](https://github.zhaw.ch/pages/SNP/snp_students/build/html/index.html)
-
-virtueller speicher dies ist alles in der memory
-stack (wächst)
-heap (dynamische daten)
-daten (static, global...)
-programm
-
-was ist ein system call
-systemschnittstelle
-function provided by the kernel
-
-prozesse...
-
-Beispiel 
-
-
 
 ### Welchen Wert haben EXIT_SUCCESS und EXIT_FAILURE?
 EXIT_SUCCESS = 0
