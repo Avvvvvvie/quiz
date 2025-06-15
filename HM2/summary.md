@@ -121,6 +121,10 @@ $(a_0,...,a_n,b_0,...,b_n,...)^T = A^-1 vec y$
 
 $S_i(x) = a_i + b_i (x - x_i) + c_i (x - x_i)^2 ...$
 
+Mit h:
+$S_i(x_i) = y_i$ ...
+$S_n'(x) = b_n + 2 c_n (x-x_n) + 3 d_n (x - x_n)^2$
+$S_n''(x) = 2 c_n + 6 d_n (x - x_n)$
 ### Algorithmus: Natürliche kubische Splinefunktion
 
 n = Anzahl Splines. i bis n-1. n = 3 -> A ist 2x2

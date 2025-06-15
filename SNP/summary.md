@@ -50,6 +50,16 @@ int main(void)
 }
 ```
 
+##### Main with arguments
+```c
+int main(int argc, char *argv[]){
+	if (argc < 2) return EXIT_FAILURE;
+	while (*argv) {
+	
+	}
+	return EXIT_SUCCESS;
+}
+```
 ##### Preprocessor
 ```c
 #define LENGTH 100
@@ -116,6 +126,8 @@ switch(myenum) {
 		...
 		break;
 }
+
+int cond = 1 < 2; // 1 = true, 0 = false
 ```
 
 ##### Loops
@@ -464,7 +476,25 @@ void print_struct(const struct a *p) {
 print_struct(&myA);
 ```
 
-##### Strings
+##### Booleans
+```c
+#define bool int
+#define false 0
+#define true 1
+// or
+#include <stdbool.h>
+
+bool b1 = true;
+bool b2 = false;
+```
+
+##### Second Last Digit
+```c
+int z = 123;
+z = (z % 100) - (z % 10)) / 10;
+```
+
+### Strings
 
 End of string = \0 = 0000000 -> Space = Amount of chars + 1
 
@@ -490,11 +520,13 @@ char[] source[10] = "Hellooooo";
 char[] dest[10];
 char[] mydest = strcpy(dest, source);
 
-char[5] s1 = "hi"; // needs to
-be large enough
+char[5] s1 = "hi"; // needs to be large enough
 char[3] s2 = "hi";
-char[5] mycat = strcat(s1, s2); // "hihi"
+char[5] myconcatenation = strcat(s1, s2); // "hihi"
+```
 
+##### Uppercase and Lowercase
+```c
 const char toLower(const char c) {
     return c | (1 << 5);
 }
@@ -502,36 +534,88 @@ const char toLower(const char c) {
 const char toUpper(const char c) {
   return c & ~(1 << 5);
 }
-
+```
+##### Compare two strings
+```c
 if (strcmp(string1, string2) == 0) {
     // strings are equal
 }
+```
 
-// convert integer to string
+##### Integer to string
+```c
 char str[8];
 int i = 5;
 sprintf(str, "%d",i);
-
-// convert string to integer
-i = atoi(str);
 ```
 
-##### Booleans
+##### String to integer
 ```c
-#define bool int
-#define false 0
-#define true 1
-// or
-#include <stdbool.h>
-
-bool b1 = true;
-bool b2 = false;
+int i = atoi(str);
+```
+##### Length of string (pointer)
+```c
+for(i = 0; *(pc + i); i++, len++);
+```
+##### Copy string size
+```c
+char origin[] = "...";
+char issue = (char*)malloc(sizeof(origin) / sizeof(char) + 1);
+```
+##### Iterate tokens
+```c
+char* token = strtok(str, "delimiter");
+while (token != NULL) {
+	printf(" % s\n", token);
+	token = strtok(NULL, " ");
+}
 ```
 
-##### Second Last Digit
+##### Edit Tokens
 ```c
-int z = 123;
-z = (z % 100) - (z % 10)) / 10;
+#include <stdlib.h> 
+#include <stdio.h> 
+#include <string.h> 
+#define SWAPCHAR(x, y) ((x)^=(y),(y)^=(x),(x)^=(y)) 
+char origin[] = "abcde abcdef abcdefg abcdefgh"; 
+ 
+int main(void){
+	(void) printf("\n%s", origin); 
+	char *word = strtok(origin, " "); 
+	char *issue = NULL; 
+	issue = (char*)malloc(sizeof(origin) / sizeof(char) + 1);
+	
+	while (word != NULL) {
+	    size_t len = strlen(word);
+	    if(len == 5) {
+	        SWAPCHAR(word[1], word[2]);
+	    } else if(len > 5) {
+	        SWAPCHAR(word[len - 3], word[len - 2]);
+	    }
+	    strcat(issue, word);
+	    strcat(issue, " ");
+	    word = strtok(NULL, " ");
+	} 
+	printf("\n\n%s",issue);
+	if (issue) free((void *)issue);
+    return EXIT_SUCCESS;
+}
+```
+##### Iterate arguments and swap chars in string
+```c
+int main(int argc, char *argv[]){
+	if (argc < 2) return EXIT_FAILURE;
+	int len = 0; char *word; argv++;
+	while (*argv) {
+	    word = *argv;
+	    len = strlen(word);
+	    if (len > 4) SWAPCHAR(word[1], word[2]);
+	    if (len > 5) SWAPCHAR(word[len - 2], word[len - 3]);
+	    printf("%s ", word);
+	    argv++;
+	}
+	return EXIT_SUCCESS;
+}
 ```
 
 ### IO
@@ -746,11 +830,6 @@ snprintf(s,  max_len, "%s,%s,%d", person->name, person->first_name, person->age)
 sscanf(s, "%[^,],%[^,],%d", person->name, person->first_name, &(person->age));
 ```
 
-
-
-
-
-
 ### Arrays
 address of element with index 1 = start address + 1 * sizeof(Element) Bytes
 
@@ -894,9 +973,22 @@ int isDuplicate(char array[MAX_WORDS][MAX_LENGTH + 1], size_t n, char *mystring)
 }
 ```
 
-### Pointers
+##### Primes from 2 to 100
+```c
+int prim[100], i,j;
+for(i = 0; i < 100; i++) prim[i] = i;
+for(i = 2; i < 100; i++) {
+	if (prim[i]) {
+		printf("%d ", prim[i]);
+		for (j = 2 * i; j < 100; j += i) {
+			prim[j] = 0;
+		}
+	}
+}
+```
 
-Addition and substraction allowed but no multiplication or division
+### Pointers
+Addition allowed but no substraction, multiplication or division
 ##### Pointer declarations
 ```c
 int *p;
@@ -917,6 +1009,8 @@ ip = &i; // ip is now address of i
 
 int *ip;
 *ip = 25; // 25 is written somewhere unknown
+
+p + p[0] - p[2] // string starting from p[2] if p is string
 ```
 
 ##### Void Pointer
@@ -1365,6 +1459,7 @@ thread_t id = pthread_self()
 | SIGTERM | Term           | Terminierungs-Signal                                     |
 | SIGSTOP | Stop           | Stoppt den Prozess (oder ignoriert falls gestoppt)       |
 | SIGCONT | Cont           | Reaktiviert den Prozess (oder ignoriert falls am Laufen) |
+|         |                |                                                          |
 
 | sa_flags   | Meaning                      |
 | ---------- | ---------------------------- |
