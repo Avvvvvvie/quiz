@@ -1,0 +1,5 @@
+```
+#!/bin/bash
+./main.e 1
+./main.e 2
+./main.e 4
