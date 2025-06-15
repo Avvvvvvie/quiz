@@ -2,11 +2,11 @@
 
 ## Description
 
-![README](SNP/praktika/P01_Erste_Schritte_mit_C/README.md)
+![README](P01_Erste_Schritte_mit_C/README.md)
 
 ## Solution
 
-![a1](SNP/praktika/P01_Erste_Schritte_mit_C/a1.md)
+![a1](P01_Erste_Schritte_mit_C/a1.md)
 
 # P02
 
