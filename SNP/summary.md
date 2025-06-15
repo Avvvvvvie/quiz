@@ -36,6 +36,12 @@
 ##### <assert.h>
 - assert(boolean expression)
 
+##### <unistd.h>
+- fork()
+
+##### <sys/wait.h>
+- wait
+
 ## C Snippets
 
 ### Code Structure
