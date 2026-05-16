@@ -1,0 +1,2 @@
+Host delegates to compute device that has compute units with processing elements. These compute units of execution (processes/threads) that have tasks/iterations.
+![](/assets/Pasted%20image%2020260323100104.png)
