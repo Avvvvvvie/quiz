@@ -1,0 +1,5 @@
+- This is a collection of quizzes for comp sci at ZHAW
+- The quiz content is taken from my obsidian vault
+- How helpful a quiz is depends on the subject
+- Additional, unanswered questions will show up at the end of the quiz
+- New feature: draw in the space below the quiz
