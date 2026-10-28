@@ -34,7 +34,7 @@ function renderMarkdown(text) {
 
 const path = resolvePath(new URLSearchParams(window.location.search).get("path"))
 
-document.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     if(!path) document.getElementById('content').innerHTML = "No file path provided"
 
     readFile(absoluteURI(path), (text) => {
