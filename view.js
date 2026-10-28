@@ -6,7 +6,7 @@ function readFile(path, callback) {
         })
 }
 
-let url = 'https://avvvvvvie.github.io/quiz'
+let url = 'https://raw.githubusercontent.com/Avvvvvvie/quiz/refs/heads/main'
 function absoluteURI(path) {
     return url + encodeURI(path)
 }
