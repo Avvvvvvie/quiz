@@ -14,11 +14,23 @@
     <script src="markdown-it-img-size.js"></script>
     <script src="markdown-it-checkbox.js"></script>
     <script src="view.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.9.0/github-markdown.min.css"
+    />
+    <style>
+        #content {
+            width: 55rem;
+            max-width: calc(100% - 2rem);
+            margin: auto;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <main id="content">
+    <main id="content" class="markdown-body">
     </main>
 </body>
 </html>

@@ -6,7 +6,7 @@ function readFile(path, callback) {
         })
 }
 
-let url = 'https://avvvvvvie.github.io/quiz/'
+let url = 'https://avvvvvvie.github.io/quiz'
 function absoluteURI(path) {
     return url + encodeURI(path)
 }
@@ -17,7 +17,7 @@ function resolvePath(path) {
   }
 
   if (path.startsWith("/")) {
-    return new URL(path, url).href
+    return url + path
   }
 
   return path
@@ -34,10 +34,10 @@ function renderMarkdown(text) {
 
 const path = resolvePath(new URLSearchParams(window.location.search).get("path"))
 
-document.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     if(!path) document.getElementById('content').innerHTML = "No file path provided"
 
-    readFile(absoluteURI(path), (text) => {
+    readFile(path, (text) => {
         document.getElementById('content').innerHTML = renderMarkdown(text)
     })
 })
