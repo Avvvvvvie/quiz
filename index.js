@@ -109,7 +109,7 @@ function parseQuiz(text) {
 }
 
 function renderMarkdown(text) {
-    md = markdownit();
+    md = markdownit({ html: true });
     markdownItAsciimath(md, {});
     markdownItMermaid(md);
     markdownItImgSize(md);
