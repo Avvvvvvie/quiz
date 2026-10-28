@@ -37,7 +37,7 @@ const path = resolvePath(new URLSearchParams(window.location.search).get("path")
 document.addEventListener('load', () => {
     if(!path) document.getElementById('content').innerHTML = "No file path provided"
 
-    readFile(absoluteURI(path), () => {
+    readFile(absoluteURI(path), (text) => {
         document.getElementById('content').innerHTML = renderMarkdown(text)
     })
 })
